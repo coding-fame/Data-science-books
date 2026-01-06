@@ -1,0 +1,138 @@
+contents/
+├── intro.md
+├── ML Concepts.md
+├── 0_maths/
+│   ├── 0_essential.ipynb
+│   ├── 0_essential.md
+│   ├── 1_descriptive.ipynb
+│   ├── 1_descriptive.md
+│   ├── 1_statistics_fundamentals.ipynb
+│   ├── 1_statistics_fundamentals.md
+│   ├── 2_probability.ipynb
+│   ├── 2_probability.md
+│   ├── 3_inferential.ipynb
+│   ├── 3_inferential.MD
+│   ├── 4_linear_algebra.ipynb
+│   ├── 4_linear_algebra.MD
+│   ├── 5_calculus.ipynb
+│   ├── 5_calculus.md
+│   ├── 6_regression_analysis.ipynb
+│   ├── 6_regression_analysis.md
+├── 1_python
+│   ├── 1_basics.ipynb
+│   ├── 1_basics.md
+│   ├── 2_advanced.ipynb
+│   ├── 2_advanced.md
+│   ├── 3_data_structures.ipynb
+│   ├── 3_data_structures.md
+│   ├── 4_modules_packages.ipynb
+│   ├── 4_modules_packages.md
+│   ├── 5_functions.ipynb
+│   ├── 5_functions.md
+│   ├── 6_oop.ipynb
+│   ├── 6_oop.md
+│   ├── 7_error_handling.ipynb
+│   ├── 7_error_handling.md
+│   ├── 8_exceptions.ipynb
+│   ├── 8_exceptions.md
+│   ├── 9_regex.ipynb
+│   ├── 9_regex.md
+├── 2_numpy
+│   ├── 1_numpy.ipynb
+│   ├── 1_numpy.md
+├── 2_pandas
+│   ├── 1_series.ipynb
+│   ├── 1_series.md
+│   ├── 2_dataframes.ipynb
+│   ├── 2_dataframes.md
+│   ├── 3_visualization.ipynb
+│   ├── 3_visualization.md
+│   ├── 4_eda.ipynb
+│   ├── 4_eda.md
+│   ├── 5_feature_engineering.ipynb
+│   ├── 5_feature_engineering.md
+├── 3_ml
+│   ├── 1_foundations.ipynb
+│   ├── 1_foundations.md
+│   ├── 2_data_preparation.ipynb
+│   ├── 2_data_preparation.md
+│   ├── 2_train_test_split.ipynb
+│   ├── 2_train_test_split.md
+│   ├── 5_model_evaluation.ipynb
+│   ├── 5_model_evaluation.md
+│   ├── 6_deployment.ipynb
+│   ├── 6_deployment.md
+│   ├── 6_evaluation.ipynb
+│   ├── 6_evaluation.md
+│   ├── 6_ml_lifecycle.ipynb
+│   ├── 6_ml_lifecycle.md
+│   ├── 6_training.ipynb
+│   ├── 6_training.md
+│   ├── 7_optimization_and_training.ipynb
+│   ├── 7_optimization_and_training.md
+│   ├── 10_core_algo.ipynb
+│   ├── 10_core_algo.md
+│   ├── 11_supervised_learning.ipynb
+│   ├── 11_supervised_learning.ipynb
+│   ├── 12_regression.ipynb
+│   ├── 12_regression.md
+│   ├── 13_classification.ipynb
+│   ├── 13_classification.md
+│   ├── 14_decision_trees.ipynb
+│   ├── 14_decision_trees.md
+│   ├── 15_ensemble_methods.ipynb
+│   ├── 15_ensemble_methods.md
+│   ├── 16_svm.ipynb
+│   ├── 16_svm.md
+│   ├── 17_knn.ipynb
+│   ├── 17_knn.md
+│   ├── 18_naive_bayes.ipynb
+│   ├── 18_naive_bayes.md
+│   ├── 20_unsupervised_learning.ipynb
+│   ├── 20_unsupervised_learning.md
+│   ├── 21_clustering.ipynb
+│   ├── 21_clustering.md
+│   ├── B01_funda.md
+│   ├── ml14_dummy_var_one_hot.md
+│   ├── preprocessing_pipeline.md
+├── 4_dl
+│   ├── dl1_Introduction.md
+│   ├── dl2_Neuron.md
+│   ├── dl3_Libraries.md
+│   ├── dl4_Terminology.md
+│   ├── dl5_multi_layer.md
+│   ├── dl6_first_nn.md
+│   ├── dl7_evaluating_model.md
+│   ├── dl8_multiclass_classification.md
+│   ├── dl9_multiclass_classification_hand.md
+│   ├── dl10_saving_and_loading.md
+│   ├── dl11_checkpointing.md
+│   ├── dl12_visualizing_model_training.md
+│   ├── dl13_loss_functions_activation_functions_and_optimizers.md
+├── 5_nlp
+│   ├── nlp1.md
+│   ├── nlp2.md
+│   ├── nlp3.md
+│   ├── nlp4.md
+│   ├── nlp5.md
+│   ├── nlp6.md
+│   ├── nlp7.md
+├── 6_interview
+│   ├── dl.md
+│   ├── dvc.md
+│   ├── git.md
+│   ├── self introduction.md
+│   ├── ml.md
+│   ├── mlflow.md
+│   ├── pd.md
+│   ├── py.md
+│   ├── telephonic round.md
+│   ├── yaml.md
+├── 7_revision
+│   ├── 0_py_revision.md
+│   ├── 1_pd_revision.md
+│   ├── 2_np_revision.md
+│   ├── 3_ml_revision.md
+│   ├── 4_dl_revision.md
+│   ├── 4_maths_rev.md
+├──

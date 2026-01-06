@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=638b2d67" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -64,8 +64,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/3_ml/7_optimization_and_training';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="DL: Introduction" href="../4_dl/dl1_Introduction.html" />
-    <link rel="prev" title="Model Deployment" href="6_deployment.html" />
+    <link rel="next" title="ML: Life Cycle" href="6_ml_lifecycle.html" />
+    <link rel="prev" title="K-Means Clustering" href="21_clustering.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,10 +177,18 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_statistics_fundamentals.html">Statistics Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
 
 
@@ -190,16 +198,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
-
-
-
-
 
 
 
@@ -214,9 +213,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
 
 
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Programming</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1_python/1_basics.html">Python Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_python/2_advanced.html">Advanced Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_python/3_data_structures.html">Data Structures</a></li>
@@ -235,9 +231,6 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../1_python/8_exceptions.html">Exception Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_python/9_regex.html">Regular Expressions</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Wrangling</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
 
 
@@ -263,13 +256,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis (EDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
 
 
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
-<ul class="current nav bd-sidenav">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_foundations.html">ML Foundational</a></li>
 
 
@@ -282,8 +275,12 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="2_train_test_split.html">Train-Test Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_core_algo.html">Core Algo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
 
 
@@ -298,6 +295,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="13_classification.html">Classification Algorithms</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="10_core_algo.html">Core ML Algorithms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="14_decision_trees.html">Decision Trees</a></li>
 <li class="toctree-l1"><a class="reference internal" href="15_ensemble_methods.html">Ensemble Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
@@ -305,19 +303,11 @@
 
 <li class="toctree-l1"><a class="reference internal" href="17_knn.html">k-Nearest Neighbors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="21_clustering.html">Clustering Techniques</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
-
-
-
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="6_training.html">Model Training</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6_evaluation.html">Evaluation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6_deployment.html">Model Deployment</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5️⃣ Optimization &amp; Training</a></li>
@@ -328,33 +318,69 @@
 
 
 
+<li class="toctree-l1 has-children"><a class="reference internal" href="6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_deployment.html">Deployment</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron (MLP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network with Keras</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Evaluating Model Performance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification of IRIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Multiclass Classification Handwritten Digits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving and Loading a Deep Learning Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Checkpointing in Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions, Activation Functions, and Optimizers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Natural Language Processing</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Wrangling and Cleaning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Replacing and Correcting Words</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">Components in NLP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF, and IDF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Twitter Sentiment Analysis using TextBlob</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self%20introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
 </ul>
 
     </div>
@@ -777,15 +803,7 @@ document.write(`
 <p>For a parameter ( \theta ), the update rule is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>\<span class="n">theta</span> <span class="o">=</span> \<span class="n">theta</span> <span class="o">-</span> \<span class="n">alpha</span> \<span class="n">cdot</span> \<span class="n">nabla</span> <span class="n">J</span><span class="p">(</span>\<span class="n">theta</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-    \<span class="n">theta</span> <span class="o">=</span> \<span class="n">theta</span> <span class="o">-</span> \<span class="n">alpha</span> \<span class="n">cdot</span> \<span class="n">nabla</span> <span class="n">J</span><span class="p">(</span>\<span class="n">theta</span><span class="p">)</span>
-     <span class="o">^</span>
-<span class="ne">SyntaxError</span>: unexpected character after line continuation character
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>\theta = \theta - \alpha \cdot \nabla J(\theta)
 </pre></div>
 </div>
 </div>
@@ -835,15 +853,15 @@ Adjust weights using learning rate (α):</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pseudocode Implementation</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">gradient_descent</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="n">m</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>  <span class="c1"># Initial parameters</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
-        <span class="n">grad_m</span> <span class="o">=</span> <span class="n">calculate_gradient_m</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-        <span class="n">grad_b</span> <span class="o">=</span> <span class="n">calculate_gradient_b</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-        <span class="n">m</span> <span class="o">-=</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">grad_m</span>
-        <span class="n">b</span> <span class="o">-=</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">grad_b</span>
-    <span class="k">return</span> <span class="n">m</span><span class="p">,</span> <span class="n">b</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Pseudocode Implementation
+def gradient_descent(X, y, learning_rate=0.01, epochs=1000):
+    m, b = 0, 0  # Initial parameters
+    for _ in range(epochs):
+        grad_m = calculate_gradient_m(X, y, m, b)
+        grad_b = calculate_gradient_b(X, y, m, b)
+        m -= learning_rate * grad_m
+        b -= learning_rate * grad_b
+    return m, b
 </pre></div>
 </div>
 </div>
@@ -996,7 +1014,7 @@ Adjust weights using learning rate (α):</p>
 <p>The cost function is the Mean Squared Error (MSE):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">J</span><span class="p">(</span>\<span class="n">theta</span><span class="p">)</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="mi">2</span><span class="n">m</span><span class="p">}</span> \<span class="n">sum_</span><span class="p">{</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span><span class="o">^</span><span class="n">m</span> <span class="p">(</span><span class="n">h_</span>\<span class="n">theta</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="p">{(</span><span class="n">i</span><span class="p">)})</span> <span class="o">-</span> <span class="n">y</span><span class="o">^</span><span class="p">{(</span><span class="n">i</span><span class="p">)})</span><span class="o">^</span><span class="mi">2</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>J(\theta) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})^2
 </pre></div>
 </div>
 </div>
@@ -1029,61 +1047,61 @@ Adjust weights using learning rate (α):</p>
 <h3>Code<a class="headerlink" href="#code" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
 
-<span class="c1"># --- Manual Gradient Descent ---</span>
+# --- Manual Gradient Descent ---
 
-<span class="c1"># Generate synthetic data</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Feature values</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">X</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Target with noise</span>
+# Generate synthetic data
+np.random.seed(42)
+X = 2 * np.random.rand(100, 1)  # Feature values
+y = 4 + 3 * X + np.random.randn(100, 1)  # Target with noise
 
-<span class="c1"># Add bias term (x0 = 1) for intercept</span>
-<span class="n">X_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">X</span><span class="p">]</span>
+# Add bias term (x0 = 1) for intercept
+X_b = np.c_[np.ones((100, 1)), X]
 
-<span class="c1"># Hyperparameters</span>
-<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.1</span>
-<span class="n">n_iterations</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_b</span><span class="p">)</span>
+# Hyperparameters
+learning_rate = 0.1
+n_iterations = 1000
+m = len(X_b)
 
-<span class="c1"># Initialize parameters randomly</span>
-<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+# Initialize parameters randomly
+theta = np.random.randn(2, 1)
 
-<span class="c1"># Gradient Descent loop</span>
-<span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iterations</span><span class="p">):</span>
-    <span class="n">gradients</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">X_b</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X_b</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span>
-    <span class="n">theta</span> <span class="o">=</span> <span class="n">theta</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">gradients</span>
+# Gradient Descent loop
+for iteration in range(n_iterations):
+    gradients = (2/m) * X_b.T.dot(X_b.dot(theta) - y)
+    theta = theta - learning_rate * gradients
 
-<span class="c1"># Results</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Manual Gradient Descent Results:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Theta: </span><span class="si">{</span><span class="n">theta</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# Results
+print(&quot;Manual Gradient Descent Results:&quot;)
+print(f&quot;Theta: {theta.ravel()}&quot;)
 
-<span class="c1"># Plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X_b</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Manual GD Fit&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Manual Gradient Descent&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+# Plot
+plt.scatter(X, y, label=&quot;Data&quot;)
+plt.plot(X, X_b.dot(theta), color=&#39;red&#39;, label=&quot;Manual GD Fit&quot;)
+plt.title(&quot;Manual Gradient Descent&quot;)
+plt.legend()
+plt.show()
 
-<span class="c1"># --- Using Scikit-learn ---</span>
+# --- Using Scikit-learn ---
 
-<span class="c1"># Train model</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">theta_sklearn</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span>
+# Train model
+model = LinearRegression()
+model.fit(X, y)
+theta_sklearn = [model.intercept_[0], model.coef_[0][0]]
 
-<span class="c1"># Results</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Scikit-learn Results:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Theta: </span><span class="si">{</span><span class="n">theta_sklearn</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# Results
+print(&quot;\nScikit-learn Results:&quot;)
+print(f&quot;Theta: {theta_sklearn}&quot;)
 
-<span class="c1"># Plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Scikit-learn Fit&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Scikit-learn Linear Regression&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+# Plot
+plt.scatter(X, y, label=&quot;Data&quot;)
+plt.plot(X, model.predict(X), color=&#39;green&#39;, label=&quot;Scikit-learn Fit&quot;)
+plt.title(&quot;Scikit-learn Linear Regression&quot;)
+plt.legend()
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1140,165 +1158,165 @@ Adjust weights using learning rate (α):</p>
 <p>Both Lasso and Ridge Regression modify the standard linear regression objective by adding a <strong>penalty term</strong> to the loss function. In ordinary least squares (OLS) regression, the goal is to minimize the sum of squared errors:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>\<span class="n">text</span><span class="p">{</span><span class="n">Loss</span><span class="p">}</span><span class="n">_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">OLS</span><span class="p">}}</span> <span class="o">=</span> \<span class="n">sum_</span><span class="p">{</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span><span class="o">^</span><span class="p">{</span><span class="n">n</span><span class="p">}</span> <span class="p">(</span><span class="n">y_i</span> <span class="o">-</span> \<span class="n">hat</span><span class="p">{</span><span class="n">y</span><span class="p">}</span><span class="n">_i</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
-<span class="err">```</span> 
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>\text{Loss}_{\text{OLS}} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+``` 
 
-<span class="n">However</span><span class="p">,</span> <span class="n">OLS</span> <span class="n">can</span> <span class="n">overfit</span> <span class="n">when</span> <span class="n">there</span> <span class="n">are</span> <span class="n">many</span> <span class="n">features</span> <span class="ow">or</span> <span class="n">when</span> <span class="n">features</span> <span class="n">are</span> <span class="n">highly</span> <span class="n">correlated</span><span class="p">,</span> <span class="n">leading</span> <span class="n">to</span> <span class="n">large</span> <span class="n">coefficient</span> <span class="n">values</span> <span class="ow">and</span> <span class="n">poor</span> <span class="n">generalization</span> <span class="n">to</span> <span class="n">new</span> <span class="n">data</span><span class="o">.</span> <span class="n">Regularization</span> <span class="n">addresses</span> <span class="n">this</span> <span class="n">by</span> <span class="n">constraining</span> <span class="n">the</span> <span class="n">coefficients</span><span class="o">.</span>
+However, OLS can overfit when there are many features or when features are highly correlated, leading to large coefficient values and poor generalization to new data. Regularization addresses this by constraining the coefficients.
 
-<span class="c1">## Ridge Regression (L2 Regularization)</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Concept</span><span class="o">**</span><span class="p">:</span> <span class="n">Ridge</span> <span class="n">Regression</span> <span class="n">adds</span> <span class="n">a</span> <span class="n">penalty</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="o">**</span><span class="nb">sum</span> <span class="n">of</span> <span class="n">the</span> <span class="n">squared</span> <span class="n">coefficients</span><span class="o">**</span> <span class="p">(</span><span class="n">L2</span> <span class="n">norm</span><span class="p">)</span> <span class="n">to</span> <span class="n">the</span> <span class="n">OLS</span> <span class="n">loss</span> <span class="n">function</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Loss</span> <span class="n">Function</span><span class="o">**</span><span class="p">:</span>
-  <span class="err">```</span>
-  <span class="n">Minimize</span><span class="p">:</span> <span class="n">Residual</span> <span class="n">Sum</span> <span class="n">of</span> <span class="n">Squares</span> <span class="o">+</span> <span class="n">α</span> <span class="o">*</span> <span class="p">(</span><span class="n">Σcoefficients</span><span class="err">²</span><span class="p">)</span>
-  <span class="err">```</span>
-  <span class="n">Here</span><span class="p">,</span> <span class="n">α</span> <span class="p">(</span><span class="err">`</span><span class="n">alpha</span><span class="err">`</span><span class="p">)</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">regularization</span> <span class="n">parameter</span> <span class="n">that</span> <span class="n">controls</span> <span class="n">the</span> <span class="n">strength</span> <span class="n">of</span> <span class="n">the</span> <span class="n">penalty</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Effect</span><span class="o">**</span><span class="p">:</span> <span class="n">Shrinks</span> <span class="n">the</span> <span class="n">coefficients</span> <span class="n">toward</span> <span class="n">zero</span> <span class="n">but</span> <span class="n">does</span> <span class="ow">not</span> <span class="nb">set</span> <span class="n">them</span> <span class="n">exactly</span> <span class="n">to</span> <span class="n">zero</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Use</span> <span class="n">Case</span><span class="o">**</span><span class="p">:</span> <span class="n">Ideal</span> <span class="n">when</span> <span class="nb">all</span> <span class="n">features</span> <span class="n">are</span> <span class="n">potentially</span> <span class="n">relevant</span><span class="p">,</span> <span class="ow">and</span> <span class="n">multicollinearity</span> <span class="n">exists</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="n">highly</span> <span class="n">correlated</span> <span class="n">predictors</span><span class="p">)</span><span class="o">.</span> <span class="n">It</span> <span class="n">reduces</span> <span class="n">the</span> <span class="n">impact</span> <span class="n">of</span> <span class="n">less</span> <span class="n">important</span> <span class="n">features</span> <span class="n">without</span> <span class="n">eliminating</span> <span class="n">them</span><span class="o">.</span>
+## Ridge Regression (L2 Regularization)
+- **Concept**: Ridge Regression adds a penalty based on the **sum of the squared coefficients** (L2 norm) to the OLS loss function.
+- **Loss Function**:
+  ```
+  Minimize: Residual Sum of Squares + α * (Σcoefficients²)
+  ```
+  Here, α (`alpha`) is the regularization parameter that controls the strength of the penalty.
+- **Effect**: Shrinks the coefficients toward zero but does not set them exactly to zero.
+- **Use Case**: Ideal when all features are potentially relevant, and multicollinearity exists (e.g., highly correlated predictors). It reduces the impact of less important features without eliminating them.
 
-<span class="c1">## Lasso Regression (L1 Regularization)</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Concept</span><span class="o">**</span><span class="p">:</span> <span class="n">Lasso</span> <span class="n">Regression</span> <span class="n">adds</span> <span class="n">a</span> <span class="n">penalty</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="o">**</span><span class="nb">sum</span> <span class="n">of</span> <span class="n">the</span> <span class="n">absolute</span> <span class="n">values</span> <span class="n">of</span> <span class="n">the</span> <span class="n">coefficients</span><span class="o">**</span> <span class="p">(</span><span class="n">L1</span> <span class="n">norm</span><span class="p">)</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Loss</span> <span class="n">Function</span><span class="o">**</span><span class="p">:</span>
-  <span class="err">```</span>
-  <span class="n">Minimize</span><span class="p">:</span> <span class="n">Residual</span> <span class="n">Sum</span> <span class="n">of</span> <span class="n">Squares</span> <span class="o">+</span> <span class="n">α</span> <span class="o">*</span> <span class="p">(</span><span class="n">Σ</span><span class="o">|</span><span class="n">coefficients</span><span class="o">|</span><span class="p">)</span>
-  <span class="err">```</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Effect</span><span class="o">**</span><span class="p">:</span> <span class="n">Can</span> <span class="n">shrink</span> <span class="n">some</span> <span class="n">coefficients</span> <span class="n">to</span> <span class="n">exactly</span> <span class="n">zero</span><span class="p">,</span> <span class="n">effectively</span> <span class="n">performing</span> <span class="o">**</span><span class="n">feature</span> <span class="n">selection</span><span class="o">**.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Use</span> <span class="n">Case</span><span class="o">**</span><span class="p">:</span> <span class="n">Best</span> <span class="n">when</span> <span class="n">many</span> <span class="n">features</span> <span class="n">are</span> <span class="n">irrelevant</span> <span class="ow">or</span> <span class="n">redundant</span><span class="p">,</span> <span class="n">simplifying</span> <span class="n">the</span> <span class="n">model</span> <span class="n">by</span> <span class="n">excluding</span> <span class="n">unimportant</span> <span class="n">predictors</span><span class="o">.</span>
+## Lasso Regression (L1 Regularization)
+- **Concept**: Lasso Regression adds a penalty based on the **sum of the absolute values of the coefficients** (L1 norm).
+- **Loss Function**:
+  ```
+  Minimize: Residual Sum of Squares + α * (Σ|coefficients|)
+  ```
+- **Effect**: Can shrink some coefficients to exactly zero, effectively performing **feature selection**.
+- **Use Case**: Best when many features are irrelevant or redundant, simplifying the model by excluding unimportant predictors.
 
-<span class="c1">## Key Differences</span>
-<span class="o">|</span> <span class="n">Aspect</span>               <span class="o">|</span> <span class="n">Ridge</span> <span class="n">Regression</span>                  <span class="o">|</span> <span class="n">Lasso</span> <span class="n">Regression</span>                  <span class="o">|</span>
-<span class="o">|----------------------|-----------------------------------|-----------------------------------|</span>
-<span class="o">|</span> <span class="o">**</span><span class="n">Penalty</span> <span class="n">Type</span><span class="o">**</span>     <span class="o">|</span> <span class="n">L2</span> <span class="n">norm</span> <span class="p">(</span>\<span class="p">(</span>\<span class="nb">sum</span> \<span class="n">beta_j</span><span class="o">^</span><span class="mi">2</span>\<span class="p">))</span>      <span class="o">|</span> <span class="n">L1</span> <span class="n">norm</span> <span class="p">(</span>\<span class="p">(</span>\<span class="nb">sum</span> <span class="o">|</span>\<span class="n">beta_j</span><span class="o">|</span>\<span class="p">))</span>     <span class="o">|</span>
-<span class="o">|</span> <span class="o">**</span><span class="n">Coefficient</span> <span class="n">Effect</span><span class="o">**|</span> <span class="n">Shrinks</span> <span class="n">but</span> <span class="n">keeps</span> <span class="nb">all</span> <span class="n">non</span><span class="o">-</span><span class="n">zero</span>    <span class="o">|</span> <span class="n">Can</span> <span class="nb">set</span> <span class="n">some</span> <span class="n">to</span> <span class="n">zero</span>             <span class="o">|</span>
-<span class="o">|</span> <span class="o">**</span><span class="n">Feature</span> <span class="n">Selection</span><span class="o">**|</span> <span class="n">No</span>                                <span class="o">|</span> <span class="n">Yes</span>                              <span class="o">|</span>
-<span class="o">|</span> <span class="o">**</span><span class="n">Multicollinearity</span><span class="o">**|</span> <span class="n">Handles</span> <span class="n">well</span> <span class="n">by</span> <span class="n">shrinking</span> <span class="n">coefficients</span> <span class="o">|</span> <span class="n">May</span> <span class="n">arbitrarily</span> <span class="n">select</span> <span class="n">one</span> <span class="kn">from</span><span class="w"> </span><span class="nn">correlated</span> <span class="n">features</span> <span class="o">|</span>
+## Key Differences
+| Aspect               | Ridge Regression                  | Lasso Regression                  |
+|----------------------|-----------------------------------|-----------------------------------|
+| **Penalty Type**     | L2 norm (\(\sum \beta_j^2\))      | L1 norm (\(\sum |\beta_j|\))     |
+| **Coefficient Effect**| Shrinks but keeps all non-zero    | Can set some to zero             |
+| **Feature Selection**| No                                | Yes                              |
+| **Multicollinearity**| Handles well by shrinking coefficients | May arbitrarily select one from correlated features |
 
-<span class="c1">## Additional Method: Elastic Net</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Concept</span><span class="o">**</span><span class="p">:</span> <span class="n">Combines</span> <span class="n">L1</span> <span class="ow">and</span> <span class="n">L2</span> <span class="n">penalties</span><span class="p">,</span> <span class="n">offering</span> <span class="n">a</span> <span class="n">balance</span> <span class="n">between</span> <span class="n">Lasso</span> <span class="ow">and</span> <span class="n">Ridge</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Loss</span> <span class="n">Function</span><span class="o">**</span><span class="p">:</span>
-    <span class="err">```</span>  
-    <span class="n">Minimize</span><span class="p">:</span> <span class="n">Residual</span> <span class="n">Sum</span> <span class="n">of</span> <span class="n">Squares</span> <span class="o">+</span> <span class="n">λ</span><span class="err">₁</span> <span class="o">*</span> <span class="p">(</span><span class="n">Σ</span> <span class="o">|</span><span class="n">coefficients</span><span class="o">|</span><span class="p">)</span> <span class="o">+</span> <span class="n">λ</span><span class="err">₂</span> <span class="o">*</span> <span class="p">(</span><span class="n">Σ</span> <span class="n">coefficients</span><span class="err">²</span><span class="p">)</span>  
-    <span class="err">```</span>  
-<span class="o">-</span> <span class="o">**</span><span class="n">Use</span> <span class="n">Case</span><span class="o">**</span><span class="p">:</span> <span class="n">Useful</span> <span class="n">when</span> <span class="n">there</span> <span class="n">are</span> <span class="n">groups</span> <span class="n">of</span> <span class="n">correlated</span> <span class="n">features</span><span class="p">,</span> <span class="k">as</span> <span class="n">it</span> <span class="n">can</span> <span class="n">select</span> <span class="n">entire</span> <span class="n">groups</span> <span class="n">rather</span> <span class="n">than</span> <span class="n">just</span> <span class="n">one</span><span class="o">.</span>
+## Additional Method: Elastic Net
+- **Concept**: Combines L1 and L2 penalties, offering a balance between Lasso and Ridge.
+- **Loss Function**:
+    ```  
+    Minimize: Residual Sum of Squares + λ₁ * (Σ |coefficients|) + λ₂ * (Σ coefficients²)  
+    ```  
+- **Use Case**: Useful when there are groups of correlated features, as it can select entire groups rather than just one.
 
-<span class="o">---</span>
+---
 
-<span class="c1">## Tools and Methods</span>
-<span class="n">To</span> <span class="n">implement</span> <span class="n">Lasso</span> <span class="ow">and</span> <span class="n">Ridge</span> <span class="n">Regression</span> <span class="n">effectively</span><span class="p">,</span> <span class="n">we</span> <span class="n">rely</span> <span class="n">on</span> <span class="n">the</span> <span class="n">following</span> <span class="n">tools</span> <span class="ow">and</span> <span class="n">methods</span><span class="p">:</span>
+## Tools and Methods
+To implement Lasso and Ridge Regression effectively, we rely on the following tools and methods:
 
-<span class="o">-</span> <span class="o">**</span><span class="n">Python</span> <span class="n">Library</span><span class="o">**</span><span class="p">:</span> <span class="o">**</span><span class="n">Scikit</span><span class="o">-</span><span class="n">learn</span><span class="o">**</span> <span class="p">(</span><span class="err">`</span><span class="n">sklearn</span><span class="err">`</span><span class="p">)</span> <span class="n">provides</span> <span class="n">robust</span> <span class="n">implementations</span><span class="p">:</span>
-  <span class="o">-</span> <span class="err">`</span><span class="n">Ridge</span><span class="err">`</span> <span class="ow">and</span> <span class="err">`</span><span class="n">Lasso</span><span class="err">`</span> <span class="k">for</span> <span class="n">basic</span> <span class="n">models</span><span class="o">.</span>
-  <span class="o">-</span> <span class="err">`</span><span class="n">RidgeCV</span><span class="err">`</span> <span class="ow">and</span> <span class="err">`</span><span class="n">LassoCV</span><span class="err">`</span> <span class="k">for</span> <span class="n">automatic</span> \<span class="p">(</span>\<span class="k">lambda</span>\<span class="p">)</span> <span class="n">selection</span> <span class="n">via</span> <span class="n">cross</span><span class="o">-</span><span class="n">validation</span><span class="o">.</span>
-  <span class="o">-</span> <span class="err">`</span><span class="n">ElasticNetCV</span><span class="err">`</span> <span class="k">for</span> <span class="n">combining</span> <span class="n">L1</span> <span class="ow">and</span> <span class="n">L2</span> <span class="n">penalties</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Data</span> <span class="n">Preprocessing</span><span class="o">**</span><span class="p">:</span>
-  <span class="o">-</span> <span class="o">**</span><span class="n">Feature</span> <span class="n">Scaling</span><span class="o">**</span><span class="p">:</span> <span class="n">Use</span> <span class="err">`</span><span class="n">StandardScaler</span><span class="err">`</span> <span class="n">to</span> <span class="n">standardize</span> <span class="n">features</span> <span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">variance</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="k">as</span> <span class="n">regularization</span> <span class="ow">is</span> <span class="n">sensitive</span> <span class="n">to</span> <span class="n">feature</span> <span class="n">scales</span><span class="o">.</span>
-  <span class="o">-</span> <span class="n">Handle</span> <span class="n">missing</span> <span class="n">values</span> <span class="ow">and</span> <span class="n">encode</span> <span class="n">categorical</span> <span class="n">variables</span> <span class="k">if</span> <span class="n">necessary</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Hyperparameter</span> <span class="n">Tuning</span><span class="o">**</span><span class="p">:</span> \<span class="p">(</span>\<span class="k">lambda</span>\<span class="p">)</span> <span class="p">(</span><span class="ow">or</span> <span class="err">`</span><span class="n">alpha</span><span class="err">`</span> <span class="ow">in</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span><span class="p">)</span> <span class="n">controls</span> <span class="n">regularization</span> <span class="n">strength</span><span class="o">.</span> <span class="n">Cross</span><span class="o">-</span><span class="n">validation</span> <span class="n">selects</span> <span class="n">the</span> <span class="n">optimal</span> <span class="n">value</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Evaluation</span> <span class="n">Metrics</span><span class="o">**</span><span class="p">:</span> <span class="n">Mean</span> <span class="n">Squared</span> <span class="n">Error</span> <span class="p">(</span><span class="n">MSE</span><span class="p">)</span> <span class="ow">or</span> <span class="n">R</span><span class="o">-</span><span class="n">squared</span> <span class="n">to</span> <span class="n">assess</span> <span class="n">model</span> <span class="n">performance</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Visualization</span><span class="o">**</span><span class="p">:</span> <span class="n">Plot</span> <span class="n">coefficients</span> <span class="n">to</span> <span class="n">compare</span> <span class="n">the</span> <span class="n">effects</span> <span class="n">of</span> <span class="n">regularization</span><span class="o">.</span>
+- **Python Library**: **Scikit-learn** (`sklearn`) provides robust implementations:
+  - `Ridge` and `Lasso` for basic models.
+  - `RidgeCV` and `LassoCV` for automatic \(\lambda\) selection via cross-validation.
+  - `ElasticNetCV` for combining L1 and L2 penalties.
+- **Data Preprocessing**:
+  - **Feature Scaling**: Use `StandardScaler` to standardize features (mean=0, variance=1), as regularization is sensitive to feature scales.
+  - Handle missing values and encode categorical variables if necessary.
+- **Hyperparameter Tuning**: \(\lambda\) (or `alpha` in scikit-learn) controls regularization strength. Cross-validation selects the optimal value.
+- **Evaluation Metrics**: Mean Squared Error (MSE) or R-squared to assess model performance.
+- **Visualization**: Plot coefficients to compare the effects of regularization.
 
-<span class="o">---</span>
+---
 
-<span class="c1">## Example: Synthetic Dataset</span>
-<span class="n">To</span> <span class="n">illustrate</span> <span class="n">Lasso</span> <span class="ow">and</span> <span class="n">Ridge</span> <span class="n">Regression</span><span class="p">,</span> <span class="n">we</span><span class="err">’</span><span class="n">ll</span> <span class="n">create</span> <span class="n">a</span> <span class="n">synthetic</span> <span class="n">dataset</span> <span class="k">with</span><span class="p">:</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Relevant</span> <span class="n">Features</span><span class="o">**</span><span class="p">:</span> <span class="err">`</span><span class="n">X1</span><span class="err">`</span><span class="p">,</span> <span class="err">`</span><span class="n">X2</span><span class="err">`</span><span class="p">,</span> <span class="err">`</span><span class="n">X3</span><span class="err">`</span> <span class="p">(</span><span class="k">with</span> <span class="n">coefficients</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">true</span> <span class="n">model</span><span class="p">)</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Irrelevant</span> <span class="n">Feature</span><span class="o">**</span><span class="p">:</span> <span class="err">`</span><span class="n">X4</span><span class="err">`</span> <span class="p">(</span><span class="n">random</span> <span class="n">noise</span><span class="p">)</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Correlated</span> <span class="n">Feature</span><span class="o">**</span><span class="p">:</span> <span class="err">`</span><span class="n">X5</span><span class="err">`</span> <span class="p">(</span><span class="n">highly</span> <span class="n">correlated</span> <span class="k">with</span> <span class="err">`</span><span class="n">X1</span><span class="err">`</span><span class="p">)</span><span class="o">.</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Target</span><span class="o">**</span><span class="p">:</span> \<span class="p">(</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="n">X1</span> <span class="o">+</span> <span class="mi">2</span><span class="n">X2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="n">X3</span> <span class="o">+</span> \<span class="n">text</span><span class="p">{</span><span class="n">noise</span><span class="p">}</span> \<span class="p">)</span><span class="o">.</span>
+## Example: Synthetic Dataset
+To illustrate Lasso and Ridge Regression, we’ll create a synthetic dataset with:
+- **Relevant Features**: `X1`, `X2`, `X3` (with coefficients 3, 2, 0.5 in the true model).
+- **Irrelevant Feature**: `X4` (random noise).
+- **Correlated Feature**: `X5` (highly correlated with `X1`).
+- **Target**: \( y = 3X1 + 2X2 + 0.5X3 + \text{noise} \).
 
-<span class="n">We</span><span class="err">’</span><span class="n">ll</span> <span class="n">compare</span> <span class="n">Linear</span> <span class="n">Regression</span><span class="p">,</span> <span class="n">Ridge</span><span class="p">,</span> <span class="n">Lasso</span><span class="p">,</span> <span class="ow">and</span> <span class="n">Elastic</span> <span class="n">Net</span><span class="o">.</span>
+We’ll compare Linear Regression, Ridge, Lasso, and Elastic Net.
 
-<span class="c1">### Python One-Stop Solution</span>
-<span class="n">Below</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">complete</span> <span class="n">Python</span> <span class="n">script</span> <span class="n">that</span> <span class="n">generates</span> <span class="n">the</span> <span class="n">data</span><span class="p">,</span> <span class="n">trains</span> <span class="n">the</span> <span class="n">models</span><span class="p">,</span> <span class="n">evaluates</span> <span class="n">performance</span><span class="p">,</span> <span class="ow">and</span> <span class="n">visualizes</span> <span class="n">the</span> <span class="n">results</span><span class="o">.</span>
+### Python One-Stop Solution
+Below is a complete Python script that generates the data, trains the models, evaluates performance, and visualizes the results.
 
-<span class="err">```</span><span class="n">python</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span><span class="p">,</span> <span class="n">RidgeCV</span><span class="p">,</span> <span class="n">LassoCV</span><span class="p">,</span> <span class="n">ElasticNetCV</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+```python
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression, RidgeCV, LassoCV, ElasticNetCV
+from sklearn.metrics import mean_squared_error
+import matplotlib.pyplot as plt
 
-<span class="c1"># Generate synthetic data</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">n_samples</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">X1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>
-<span class="n">X2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>
-<span class="n">X3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>
-<span class="n">X4</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>  <span class="c1"># irrelevant</span>
-<span class="n">X5</span> <span class="o">=</span> <span class="n">X1</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>  <span class="c1"># correlated with X1</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">X1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">X2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">X3</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;X1&#39;</span><span class="p">:</span> <span class="n">X1</span><span class="p">,</span> <span class="s1">&#39;X2&#39;</span><span class="p">:</span> <span class="n">X2</span><span class="p">,</span> <span class="s1">&#39;X3&#39;</span><span class="p">:</span> <span class="n">X3</span><span class="p">,</span> <span class="s1">&#39;X4&#39;</span><span class="p">:</span> <span class="n">X4</span><span class="p">,</span> <span class="s1">&#39;X5&#39;</span><span class="p">:</span> <span class="n">X5</span><span class="p">})</span>
+# Generate synthetic data
+np.random.seed(42)
+n_samples = 100
+X1 = np.random.randn(n_samples)
+X2 = np.random.randn(n_samples)
+X3 = np.random.randn(n_samples)
+X4 = np.random.randn(n_samples)  # irrelevant
+X5 = X1 + 0.1 * np.random.randn(n_samples)  # correlated with X1
+y = 3*X1 + 2*X2 + 0.5*X3 + np.random.randn(n_samples)
+X = pd.DataFrame({&#39;X1&#39;: X1, &#39;X2&#39;: X2, &#39;X3&#39;: X3, &#39;X4&#39;: X4, &#39;X5&#39;: X5})
 
-<span class="c1"># Split data into training and test sets</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+# Split data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-<span class="c1"># Scale features</span>
-<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
-<span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+# Scale features
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
 
-<span class="c1"># Define range of alphas for regularization</span>
-<span class="n">alphas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>  <span class="c1"># [0.001, 0.01, 0.1, 1, 10, 100, 1000]</span>
+# Define range of alphas for regularization
+alphas = np.logspace(-3, 3, 7)  # [0.001, 0.01, 0.1, 1, 10, 100, 1000]
 
-<span class="c1"># Train models</span>
-<span class="c1"># 1. Linear Regression (no regularization)</span>
-<span class="n">lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+# Train models
+# 1. Linear Regression (no regularization)
+lr = LinearRegression()
+lr.fit(X_train_scaled, y_train)
 
-<span class="c1"># 2. Ridge Regression</span>
-<span class="n">ridge</span> <span class="o">=</span> <span class="n">RidgeCV</span><span class="p">(</span><span class="n">alphas</span><span class="o">=</span><span class="n">alphas</span><span class="p">)</span>
-<span class="n">ridge</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+# 2. Ridge Regression
+ridge = RidgeCV(alphas=alphas)
+ridge.fit(X_train_scaled, y_train)
 
-<span class="c1"># 3. Lasso Regression</span>
-<span class="n">lasso</span> <span class="o">=</span> <span class="n">LassoCV</span><span class="p">(</span><span class="n">alphas</span><span class="o">=</span><span class="n">alphas</span><span class="p">)</span>
-<span class="n">lasso</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+# 3. Lasso Regression
+lasso = LassoCV(alphas=alphas)
+lasso.fit(X_train_scaled, y_train)
 
-<span class="c1"># 4. Elastic Net</span>
-<span class="n">elastic</span> <span class="o">=</span> <span class="n">ElasticNetCV</span><span class="p">(</span><span class="n">alphas</span><span class="o">=</span><span class="n">alphas</span><span class="p">,</span> <span class="n">l1_ratio</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span>
-<span class="n">elastic</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+# 4. Elastic Net
+elastic = ElasticNetCV(alphas=alphas, l1_ratio=[0.1, 0.5, 0.9])
+elastic.fit(X_train_scaled, y_train)
 
-<span class="c1"># Predict on test set</span>
-<span class="n">y_pred_lr</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
-<span class="n">y_pred_ridge</span> <span class="o">=</span> <span class="n">ridge</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
-<span class="n">y_pred_lasso</span> <span class="o">=</span> <span class="n">lasso</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
-<span class="n">y_pred_elastic</span> <span class="o">=</span> <span class="n">elastic</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
+# Predict on test set
+y_pred_lr = lr.predict(X_test_scaled)
+y_pred_ridge = ridge.predict(X_test_scaled)
+y_pred_lasso = lasso.predict(X_test_scaled)
+y_pred_elastic = elastic.predict(X_test_scaled)
 
-<span class="c1"># Evaluate models using MSE</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Model Performance (MSE) ===&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Linear Regression MSE: </span><span class="si">{</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_lr</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ridge MSE: </span><span class="si">{</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_ridge</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best alpha for Ridge: </span><span class="si">{</span><span class="n">ridge</span><span class="o">.</span><span class="n">alpha_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lasso MSE: </span><span class="si">{</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_lasso</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best alpha for Lasso: </span><span class="si">{</span><span class="n">lasso</span><span class="o">.</span><span class="n">alpha_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ElasticNet MSE: </span><span class="si">{</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_elastic</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best alpha for ElasticNet: </span><span class="si">{</span><span class="n">elastic</span><span class="o">.</span><span class="n">alpha_</span><span class="si">}</span><span class="s2">, Best l1_ratio: </span><span class="si">{</span><span class="n">elastic</span><span class="o">.</span><span class="n">l1_ratio_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# Evaluate models using MSE
+print(&quot;=== Model Performance (MSE) ===&quot;)
+print(f&quot;Linear Regression MSE: {mean_squared_error(y_test, y_pred_lr):.4f}&quot;)
+print(f&quot;Ridge MSE: {mean_squared_error(y_test, y_pred_ridge):.4f}&quot;)
+print(f&quot;Best alpha for Ridge: {ridge.alpha_}&quot;)
+print(f&quot;Lasso MSE: {mean_squared_error(y_test, y_pred_lasso):.4f}&quot;)
+print(f&quot;Best alpha for Lasso: {lasso.alpha_}&quot;)
+print(f&quot;ElasticNet MSE: {mean_squared_error(y_test, y_pred_elastic):.4f}&quot;)
+print(f&quot;Best alpha for ElasticNet: {elastic.alpha_}, Best l1_ratio: {elastic.l1_ratio_}&quot;)
 
-<span class="c1"># Extract coefficients</span>
-<span class="n">coef_lr</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">coef_</span>
-<span class="n">coef_ridge</span> <span class="o">=</span> <span class="n">ridge</span><span class="o">.</span><span class="n">coef_</span>
-<span class="n">coef_lasso</span> <span class="o">=</span> <span class="n">lasso</span><span class="o">.</span><span class="n">coef_</span>
-<span class="n">coef_elastic</span> <span class="o">=</span> <span class="n">elastic</span><span class="o">.</span><span class="n">coef_</span>
+# Extract coefficients
+coef_lr = lr.coef_
+coef_ridge = ridge.coef_
+coef_lasso = lasso.coef_
+coef_elastic = elastic.coef_
 
-<span class="c1"># Plot coefficients</span>
-<span class="n">features</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">coef_lr</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Linear Regression&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">coef_ridge</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ridge&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">coef_lasso</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Lasso&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">coef_elastic</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ElasticNet&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)),</span> <span class="n">features</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Coefficient Value&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Comparison of Coefficients Across Models&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+# Plot coefficients
+features = X.columns
+plt.figure(figsize=(10, 6))
+plt.plot(coef_lr, &#39;o&#39;, label=&#39;Linear Regression&#39;)
+plt.plot(coef_ridge, &#39;o&#39;, label=&#39;Ridge&#39;)
+plt.plot(coef_lasso, &#39;o&#39;, label=&#39;Lasso&#39;)
+plt.plot(coef_elastic, &#39;o&#39;, label=&#39;ElasticNet&#39;)
+plt.xticks(range(len(features)), features)
+plt.ylabel(&#39;Coefficient Value&#39;)
+plt.title(&#39;Comparison of Coefficients Across Models&#39;)
+plt.legend()
+plt.grid(True)
+plt.show()
 
-<span class="c1"># Feature selection by Lasso</span>
-<span class="n">selected_features</span> <span class="o">=</span> <span class="n">features</span><span class="p">[</span><span class="n">coef_lasso</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Lasso Feature Selection ===&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Features selected by Lasso: </span><span class="si">{</span><span class="n">selected_features</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of features selected: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">selected_features</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# Feature selection by Lasso
+selected_features = features[coef_lasso != 0].tolist()
+print(&quot;=== Lasso Feature Selection ===&quot;)
+print(f&quot;Features selected by Lasso: {selected_features}&quot;)
+print(f&quot;Number of features selected: {len(selected_features)}&quot;)
 </pre></div>
 </div>
 </div>
@@ -1491,18 +1509,18 @@ Adjust weights using learning rate (α):</p>
 <h3>Step 1: Import Libraries and Load Data<a class="headerlink" href="#step-1-import-libraries-and-load-data" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">GridSearchCV</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
 
-<span class="c1"># Load Iris dataset</span>
-<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+# Load Iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
 
-<span class="c1"># Split into training and test sets</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+# Split into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 </pre></div>
 </div>
 </div>
@@ -1518,11 +1536,11 @@ Adjust weights using learning rate (α):</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>
-    <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
-    <span class="s1">&#39;min_samples_split&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>param_grid = {
+    &#39;n_estimators&#39;: [50, 100, 200],
+    &#39;max_depth&#39;: [None, 10, 20, 30],
+    &#39;min_samples_split&#39;: [2, 5, 10]
+}
 </pre></div>
 </div>
 </div>
@@ -1532,14 +1550,14 @@ Adjust weights using learning rate (α):</p>
 <h3>Step 3: Initialize and Run GridSearchCV<a class="headerlink" href="#step-3-initialize-and-run-gridsearchcv" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the Random Forest Classifier</span>
-<span class="n">rf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Initialize the Random Forest Classifier
+rf = RandomForestClassifier(random_state=42)
 
-<span class="c1"># Initialize GridSearchCV with 5-fold cross-validation</span>
-<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">rf</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+# Initialize GridSearchCV with 5-fold cross-validation
+grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=5, scoring=&#39;accuracy&#39;, n_jobs=-1)
 
-<span class="c1"># Fit the grid search to the data</span>
-<span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+# Fit the grid search to the data
+grid_search.fit(X_train, y_train)
 </pre></div>
 </div>
 </div>
@@ -1553,15 +1571,15 @@ Adjust weights using learning rate (α):</p>
 <h3>Step 4: Analyze the Results<a class="headerlink" href="#step-4-analyze-the-results" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Best parameters and best score</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best Parameters: </span><span class="si">{</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best Cross-Validation Accuracy: </span><span class="si">{</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_score_</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Best parameters and best score
+print(f&quot;Best Parameters: {grid_search.best_params_}&quot;)
+print(f&quot;Best Cross-Validation Accuracy: {grid_search.best_score_:.4f}&quot;)
 
-<span class="c1"># Test the best model on the test set</span>
-<span class="n">best_rf</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">best_rf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-<span class="n">test_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test Accuracy: </span><span class="si">{</span><span class="n">test_accuracy</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# Test the best model on the test set
+best_rf = grid_search.best_estimator_
+y_pred = best_rf.predict(X_test)
+test_accuracy = accuracy_score(y_test, y_pred)
+print(f&quot;Test Accuracy: {test_accuracy:.4f}&quot;)
 </pre></div>
 </div>
 </div>
@@ -1569,9 +1587,9 @@ Adjust weights using learning rate (α):</p>
 <p><strong>Sample Output:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Best</span> <span class="n">Parameters</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;min_samples_split&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
-<span class="n">Best</span> <span class="n">Cross</span><span class="o">-</span><span class="n">Validation</span> <span class="n">Accuracy</span><span class="p">:</span> <span class="mf">0.9583</span>
-<span class="n">Test</span> <span class="n">Accuracy</span><span class="p">:</span> <span class="mf">1.0000</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Best Parameters: {&#39;max_depth&#39;: None, &#39;min_samples_split&#39;: 2, &#39;n_estimators&#39;: 100}
+Best Cross-Validation Accuracy: 0.9583
+Test Accuracy: 1.0000
 </pre></div>
 </div>
 </div>
@@ -1587,18 +1605,18 @@ Adjust weights using learning rate (α):</p>
 <h3>Step 1: Import Libraries and Load Data<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_breast_cancer</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">GridSearchCV</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">xgboost</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xgb</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.metrics import accuracy_score
+import xgboost as xgb
 
-<span class="c1"># Load dataset</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">data</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">target</span>
+# Load dataset
+data = load_breast_cancer()
+X = data.data
+y = data.target
 
-<span class="c1"># Split data</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 </pre></div>
 </div>
 </div>
@@ -1615,12 +1633,12 @@ Adjust weights using learning rate (α):</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
-    <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-    <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>
-    <span class="s1">&#39;subsample&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>param_grid = {
+    &#39;learning_rate&#39;: [0.01, 0.1, 0.2],
+    &#39;max_depth&#39;: [3, 5, 7],
+    &#39;n_estimators&#39;: [50, 100, 200],
+    &#39;subsample&#39;: [0.8, 1.0]
+}
 </pre></div>
 </div>
 </div>
@@ -1630,12 +1648,12 @@ Adjust weights using learning rate (α):</p>
 <h3>Step 3: Initialize and Run GridSearchCV<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize XGBoost Classifier</span>
-<span class="n">xgb_clf</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">XGBClassifier</span><span class="p">(</span><span class="n">use_label_encoder</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">eval_metric</span><span class="o">=</span><span class="s1">&#39;logloss&#39;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Initialize XGBoost Classifier
+xgb_clf = xgb.XGBClassifier(use_label_encoder=False, eval_metric=&#39;logloss&#39;)
 
-<span class="c1"># Initialize and fit GridSearchCV</span>
-<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">xgb_clf</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+# Initialize and fit GridSearchCV
+grid_search = GridSearchCV(xgb_clf, param_grid, cv=5, scoring=&#39;accuracy&#39;, n_jobs=-1)
+grid_search.fit(X_train, y_train)
 </pre></div>
 </div>
 </div>
@@ -1648,10 +1666,10 @@ Adjust weights using learning rate (α):</p>
 <h3>Step 4: Analyze the Results<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Results</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best Parameters: </span><span class="si">{</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best CV Accuracy: </span><span class="si">{</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_score_</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test Accuracy: </span><span class="si">{</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Results
+print(f&quot;Best Parameters: {grid_search.best_params_}&quot;)
+print(f&quot;Best CV Accuracy: {grid_search.best_score_:.4f}&quot;)
+print(f&quot;Test Accuracy: {accuracy_score(y_test, grid_search.best_estimator_.predict(X_test)):.4f}&quot;)
 </pre></div>
 </div>
 </div>
@@ -1659,9 +1677,9 @@ Adjust weights using learning rate (α):</p>
 <p><strong>Sample Output:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Best</span> <span class="n">Parameters</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;subsample&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">}</span>
-<span class="n">Best</span> <span class="n">CV</span> <span class="n">Accuracy</span><span class="p">:</span> <span class="mf">0.9714</span>
-<span class="n">Test</span> <span class="n">Accuracy</span><span class="p">:</span> <span class="mf">0.9737</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Best Parameters: {&#39;learning_rate&#39;: 0.1, &#39;max_depth&#39;: 3, &#39;n_estimators&#39;: 100, &#39;subsample&#39;: 1.0}
+Best CV Accuracy: 0.9714
+Test Accuracy: 0.9737
 </pre></div>
 </div>
 </div>
@@ -1707,12 +1725,12 @@ Adjust weights using learning rate (α):</p>
 <p>A basic method where we split the dataset into training and testing sets and manually adjust parameters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVC</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.svm import SVC
+from sklearn.model_selection import train_test_split
 
-<span class="c1"># Create and train model with manually selected parameters</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+# Create and train model with manually selected parameters
+model = SVC(kernel=&#39;rbf&#39;, C=30, gamma=&#39;auto&#39;)
+model.fit(X_train, y_train)
 </pre></div>
 </div>
 </div>
@@ -1724,18 +1742,18 @@ Adjust weights using learning rate (α):</p>
 <p>Instead of a single train-test split, K-Fold Cross Validation divides data into multiple subsets (folds) and trains on different combinations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">cross_val_score</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVC</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.model_selection import cross_val_score
+from sklearn.svm import SVC
+from sklearn.datasets import load_iris
 
-<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+iris = load_iris()
+X = iris.data
+y = iris.target
 
-<span class="c1"># Try different kernel and C values</span>
-<span class="n">sc1</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">),</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">sc2</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">),</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">sc3</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">),</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+# Try different kernel and C values
+sc1 = cross_val_score(svm.SVC(kernel=&#39;linear&#39;, C=10, gamma=&#39;auto&#39;), X, y, cv=5)
+sc2 = cross_val_score(svm.SVC(kernel=&#39;rbf&#39;, C=10, gamma=&#39;auto&#39;), X, y, cv=5)
+sc3 = cross_val_score(svm.SVC(kernel=&#39;rbf&#39;, C=20, gamma=&#39;auto&#39;), X, y, cv=5)
 </pre></div>
 </div>
 </div>
@@ -1748,27 +1766,27 @@ Adjust weights using learning rate (α):</p>
 It evaluates every combination of hyperparameters and selects the best performing one.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">GridSearchCV</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVC</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.model_selection import GridSearchCV
+from sklearn.svm import SVC
+from sklearn.datasets import load_iris
 
-<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+iris = load_iris()
 
-<span class="c1"># Define the hyperparameter grid</span>
-<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
-    <span class="s1">&#39;kernel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="s1">&#39;linear&#39;</span><span class="p">]</span>
-<span class="p">}</span>
+# Define the hyperparameter grid
+param_grid = {
+    &#39;C&#39;: [1, 10, 20],
+    &#39;kernel&#39;: [&#39;rbf&#39;, &#39;linear&#39;]
+}
 
-<span class="c1"># Initialize GridSearchCV with cross-validation</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">SVC</span><span class="p">(</span><span class="n">gamma</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">),</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">return_train_score</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+# Initialize GridSearchCV with cross-validation
+clf = GridSearchCV(SVC(gamma=&#39;auto&#39;), param_grid, cv=5, return_train_score=False)
 
-<span class="c1"># Fit the model and find the best parameters</span>
-<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+# Fit the model and find the best parameters
+clf.fit(iris.data, iris.target)
 
-<span class="c1"># Print the best parameters and score</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Best Parameters:&quot;</span><span class="p">,</span> <span class="n">clf</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Best Score:&quot;</span><span class="p">,</span> <span class="n">clf</span><span class="o">.</span><span class="n">best_score_</span><span class="p">)</span>
+# Print the best parameters and score
+print(&quot;Best Parameters:&quot;, clf.best_params_)
+print(&quot;Best Score:&quot;, clf.best_score_)
 </pre></div>
 </div>
 </div>
@@ -1780,26 +1798,26 @@ It evaluates every combination of hyperparameters and selects the best performin
 <p>Instead of an exhaustive search, RandomizedSearchCV selects a limited number of parameter combinations randomly, reducing computation time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVC</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.model_selection import RandomizedSearchCV
+from sklearn.svm import SVC
+from sklearn.datasets import load_iris
 
-<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+iris = load_iris()
 
-<span class="c1"># Define the hyperparameter distribution</span>
-<span class="n">param_dist</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
-    <span class="s1">&#39;kernel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="s1">&#39;linear&#39;</span><span class="p">]</span>
-<span class="p">}</span>
+# Define the hyperparameter distribution
+param_dist = {
+    &#39;C&#39;: [1, 10, 20],
+    &#39;kernel&#39;: [&#39;rbf&#39;, &#39;linear&#39;]
+}
 
-<span class="c1"># Initialize RandomizedSearchCV</span>
-<span class="n">rs</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">SVC</span><span class="p">(</span><span class="n">gamma</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">),</span> <span class="n">param_dist</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">return_train_score</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+# Initialize RandomizedSearchCV
+rs = RandomizedSearchCV(SVC(gamma=&#39;auto&#39;), param_dist, cv=5, return_train_score=False, n_iter=2)
 
-<span class="c1"># Fit the model and find the best parameters</span>
-<span class="n">rs</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+# Fit the model and find the best parameters
+rs.fit(iris.data, iris.target)
 
-<span class="c1"># Print the best parameters</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Best Parameters:&quot;</span><span class="p">,</span> <span class="n">rs</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+# Print the best parameters
+print(&quot;Best Parameters:&quot;, rs.best_params_)
 </pre></div>
 </div>
 </div>
@@ -1880,19 +1898,19 @@ where (\Omega(f_k) = \gamma T + \frac{1}{2} \lambda |w|^2) (T = # leaves, w = le
 <h3>Step 1: Import Libraries and Load Data<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_breast_cancer</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">xgboost</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xgb</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+import xgboost as xgb
 
-<span class="c1"># Load dataset</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">target</span>  <span class="c1"># 0 = malignant, 1 = benign</span>
+# Load dataset
+data = load_breast_cancer()
+X = pd.DataFrame(data.data, columns=data.feature_names)
+y = data.target  # 0 = malignant, 1 = benign
 
-<span class="c1"># Split into training and testing sets</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+# Split into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 </pre></div>
 </div>
 </div>
@@ -1902,9 +1920,9 @@ where (\Omega(f_k) = \gamma T + \frac{1}{2} \lambda |w|^2) (T = # leaves, w = le
 <h3>Step 2: Train the XGBoost Model<a class="headerlink" href="#step-2-train-the-xgboost-model" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize and train the classifier</span>
-<span class="n">xgb_clf</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">XGBClassifier</span><span class="p">(</span><span class="n">use_label_encoder</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">eval_metric</span><span class="o">=</span><span class="s1">&#39;logloss&#39;</span><span class="p">)</span>
-<span class="n">xgb_clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Initialize and train the classifier
+xgb_clf = xgb.XGBClassifier(use_label_encoder=False, eval_metric=&#39;logloss&#39;)
+xgb_clf.fit(X_train, y_train)
 </pre></div>
 </div>
 </div>
@@ -1918,16 +1936,16 @@ where (\Omega(f_k) = \gamma T + \frac{1}{2} \lambda |w|^2) (T = # leaves, w = le
 <h3>Step 3: Make Predictions and Evaluate<a class="headerlink" href="#step-3-make-predictions-and-evaluate" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Predict on test set</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">xgb_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Predict on test set
+y_pred = xgb_clf.predict(X_test)
 
-<span class="c1"># Evaluate accuracy</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# Evaluate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f&quot;Accuracy: {accuracy:.2f}&quot;)
 
-<span class="c1"># Detailed report</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Classification Report:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">target_names</span><span class="p">))</span>
+# Detailed report
+print(&quot;\nClassification Report:&quot;)
+print(classification_report(y_test, y_pred, target_names=data.target_names))
 </pre></div>
 </div>
 </div>
@@ -1935,11 +1953,11 @@ where (\Omega(f_k) = \gamma T + \frac{1}{2} \lambda |w|^2) (T = # leaves, w = le
 <p><strong>Sample Output:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Accuracy</span><span class="p">:</span> <span class="mf">0.97</span>
-<span class="n">Classification</span> <span class="n">Report</span><span class="p">:</span>
-              <span class="n">precision</span>    <span class="n">recall</span>  <span class="n">f1</span><span class="o">-</span><span class="n">score</span>   <span class="n">support</span>
-   <span class="n">malignant</span>       <span class="mf">0.98</span>      <span class="mf">0.95</span>      <span class="mf">0.96</span>        <span class="mi">43</span>
-      <span class="n">benign</span>       <span class="mf">0.97</span>      <span class="mf">0.99</span>      <span class="mf">0.98</span>        <span class="mi">71</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Accuracy: 0.97
+Classification Report:
+              precision    recall  f1-score   support
+   malignant       0.98      0.95      0.96        43
+      benign       0.97      0.99      0.98        71
 </pre></div>
 </div>
 </div>
@@ -1950,8 +1968,8 @@ where (\Omega(f_k) = \gamma T + \frac{1}{2} \lambda |w|^2) (T = # leaves, w = le
 <p>Visualize the top features contributing to the model:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot feature importance</span>
-<span class="n">xgb</span><span class="o">.</span><span class="n">plot_importance</span><span class="p">(</span><span class="n">xgb_clf</span><span class="p">,</span> <span class="n">max_num_features</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Plot feature importance
+xgb.plot_importance(xgb_clf, max_num_features=10)
 </pre></div>
 </div>
 </div>
@@ -1962,30 +1980,30 @@ where (\Omega(f_k) = \gamma T + \frac{1}{2} \lambda |w|^2) (T = # leaves, w = le
 <p>Optimize the model with a grid search:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">GridSearchCV</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.model_selection import GridSearchCV
 
-<span class="c1"># Define parameter grid</span>
-<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
-    <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-    <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
-<span class="p">}</span>
+# Define parameter grid
+param_grid = {
+    &#39;learning_rate&#39;: [0.01, 0.1, 0.2],
+    &#39;max_depth&#39;: [3, 5, 7],
+    &#39;n_estimators&#39;: [50, 100, 200]
+}
 
-<span class="c1"># Initialize GridSearchCV</span>
-<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">xgb</span><span class="o">.</span><span class="n">XGBClassifier</span><span class="p">(</span><span class="n">use_label_encoder</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">eval_metric</span><span class="o">=</span><span class="s1">&#39;logloss&#39;</span><span class="p">),</span>
-                           <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+# Initialize GridSearchCV
+grid_search = GridSearchCV(xgb.XGBClassifier(use_label_encoder=False, eval_metric=&#39;logloss&#39;),
+                           param_grid, cv=5, scoring=&#39;accuracy&#39;)
 
-<span class="c1"># Fit the model</span>
-<span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+# Fit the model
+grid_search.fit(X_train, y_train)
 
-<span class="c1"># Results</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best Parameters: </span><span class="si">{</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best CV Accuracy: </span><span class="si">{</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_score_</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# Results
+print(f&quot;Best Parameters: {grid_search.best_params_}&quot;)
+print(f&quot;Best CV Accuracy: {grid_search.best_score_:.2f}&quot;)
 
-<span class="c1"># Test with best model</span>
-<span class="n">best_xgb</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span>
-<span class="n">y_pred_best</span> <span class="o">=</span> <span class="n">best_xgb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test Accuracy with Best Model: </span><span class="si">{</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_best</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# Test with best model
+best_xgb = grid_search.best_estimator_
+y_pred_best = best_xgb.predict(X_test)
+print(f&quot;Test Accuracy with Best Model: {accuracy_score(y_test, y_pred_best):.2f}&quot;)
 </pre></div>
 </div>
 </div>
@@ -2001,25 +2019,25 @@ where (\Omega(f_k) = \gamma T + \frac{1}{2} \lambda |w|^2) (T = # leaves, w = le
 <h3>Code<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_boston</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.datasets import load_boston
+from sklearn.metrics import mean_squared_error
 
-<span class="c1"># Load data</span>
-<span class="n">boston</span> <span class="o">=</span> <span class="n">load_boston</span><span class="p">()</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">boston</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">boston</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">target</span>
+# Load data
+boston = load_boston()
+X = pd.DataFrame(boston.data, columns=boston.feature_names)
+y = boston.target
 
-<span class="c1"># Split data</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-<span class="c1"># Train the regressor</span>
-<span class="n">xgb_reg</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">XGBRegressor</span><span class="p">(</span><span class="n">objective</span><span class="o">=</span><span class="s1">&#39;reg:squarederror&#39;</span><span class="p">)</span>
-<span class="n">xgb_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+# Train the regressor
+xgb_reg = xgb.XGBRegressor(objective=&#39;reg:squarederror&#39;)
+xgb_reg.fit(X_train, y_train)
 
-<span class="c1"># Predict and evaluate</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">xgb_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean Squared Error: </span><span class="si">{</span><span class="n">mse</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# Predict and evaluate
+y_pred = xgb_reg.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+print(f&quot;Mean Squared Error: {mse:.2f}&quot;)
 </pre></div>
 </div>
 </div>
@@ -2027,7 +2045,7 @@ where (\Omega(f_k) = \gamma T + \frac{1}{2} \lambda |w|^2) (T = # leaves, w = le
 <p><strong>Sample Output:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Mean</span> <span class="n">Squared</span> <span class="n">Error</span><span class="p">:</span> <span class="mf">9.52</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Mean Squared Error: 9.52
 </pre></div>
 </div>
 </div>
@@ -2045,12 +2063,12 @@ where (\Omega(f_k) = \gamma T + \frac{1}{2} \lambda |w|^2) (T = # leaves, w = le
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">classification_report</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.metrics import classification_report
 
-<span class="c1"># Detailed evaluation</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classification Report:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
-<span class="n">xgb</span><span class="o">.</span><span class="n">plot_importance</span><span class="p">(</span><span class="n">xgb_clf</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+# Detailed evaluation
+print(&quot;Classification Report:\n&quot;, classification_report(y_test, y_pred))
+xgb.plot_importance(xgb_clf)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -2090,20 +2108,20 @@ where (\Omega(f_k) = \gamma T + \frac{1}{2} \lambda |w|^2) (T = # leaves, w = le
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="6_deployment.html"
+       href="21_clustering.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Model Deployment</p>
+        <p class="prev-next-title">K-Means Clustering</p>
       </div>
     </a>
     <a class="right-next"
-       href="../4_dl/dl1_Introduction.html"
+       href="6_ml_lifecycle.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">DL: Introduction</p>
+        <p class="prev-next-title">ML: Life Cycle</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

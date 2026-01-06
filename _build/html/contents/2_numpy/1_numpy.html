@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=638b2d67" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -177,10 +177,18 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
-<ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_statistics_fundamentals.html">Statistics Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
 
 
@@ -190,16 +198,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
-
-
-
-
 
 
 
@@ -214,9 +213,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
 
 
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Programming</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1_python/1_basics.html">Python Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_python/2_advanced.html">Advanced Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_python/3_data_structures.html">Data Structures</a></li>
@@ -235,9 +231,6 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../1_python/8_exceptions.html">Exception Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_python/9_regex.html">Regular Expressions</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Wrangling</span></p>
-<ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">NumPy (<strong>Numerical Python</strong>)</a></li>
 
 
@@ -263,12 +256,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis (EDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
 
 
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/1_foundations.html">ML Foundational</a></li>
 
@@ -282,8 +275,12 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train-Test Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core Algo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
 
 
@@ -298,6 +295,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/13_classification.html">Classification Algorithms</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core ML Algorithms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/14_decision_trees.html">Decision Trees</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
@@ -305,19 +303,11 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/17_knn.html">k-Nearest Neighbors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../3_ml/21_clustering.html">Clustering Techniques</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
-
-
-
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Model Training</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Model Deployment</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
@@ -328,33 +318,69 @@
 
 
 
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Deployment</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron (MLP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network with Keras</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Evaluating Model Performance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification of IRIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Multiclass Classification Handwritten Digits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving and Loading a Deep Learning Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Checkpointing in Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions, Activation Functions, and Optimizers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Natural Language Processing</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Wrangling and Cleaning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Replacing and Correcting Words</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">Components in NLP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF, and IDF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Twitter Sentiment Analysis using TextBlob</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self%20introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
 </ul>
 
     </div>
@@ -686,9 +712,9 @@ document.write(`
 <h3>Creating a NumPy Array with a Single Value<a class="headerlink" href="#creating-a-numpy-array-with-a-single-value" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">55</span>
-<span class="n">value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+age = 55
+value = np.array(age)
 </pre></div>
 </div>
 </div>
@@ -698,9 +724,9 @@ document.write(`
 <h3>Creating a NumPy Array with Multiple Values<a class="headerlink" href="#creating-a-numpy-array-with-multiple-values" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">details</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
-<span class="n">sales</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">details</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+details = [10, 20, 30, 40, 50]
+sales = np.array(details)
 </pre></div>
 </div>
 </div>
@@ -710,9 +736,9 @@ document.write(`
 <h3>Creating a 2D NumPy Array (Matrix)<a class="headerlink" href="#creating-a-2d-numpy-array-matrix" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">details</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]]</span>
-<span class="n">sales</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">details</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+details = [[10, 20], [30, 40]]
+sales = np.array(details)
 </pre></div>
 </div>
 </div>
@@ -728,18 +754,12 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">array_1d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="n">array_2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+array_1d = np.array([1, 2, 3])
+array_2d = np.array([[1, 2, 3], [4, 5, 6]])
 
-<span class="nb">print</span><span class="p">(</span><span class="n">array_1d</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>  <span class="c1"># Output: 1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">array_2d</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>  <span class="c1"># Output: 2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-2
+print(array_1d.ndim)  # Output: 1
+print(array_2d.ndim)  # Output: 2
 </pre></div>
 </div>
 </div>
@@ -757,39 +777,28 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Zeros</span>
-<span class="n">zeros</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">zeros</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># [[0. 0. 0.]</span>
-<span class="c1">#  [0. 0. 0.]]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Zeros
+zeros = np.zeros((2, 3))
+print(zeros)
+# Output:
+# [[0. 0. 0.]
+#  [0. 0. 0.]]
 
-<span class="c1"># Ones</span>
-<span class="n">ones</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ones</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># [[1. 1.]</span>
-<span class="c1">#  [1. 1.]</span>
-<span class="c1">#  [1. 1.]]</span>
+# Ones
+ones = np.ones((3, 2))
+print(ones)
+# Output:
+# [[1. 1.]
+#  [1. 1.]
+#  [1. 1.]]
 
-<span class="c1"># Range</span>
-<span class="n">range_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Start, stop, step</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">range_arr</span><span class="p">)</span>  <span class="c1"># Output: [0 2 4 6 8]</span>
+# Range
+range_arr = np.arange(0, 10, 2)  # Start, stop, step
+print(range_arr)  # Output: [0 2 4 6 8]
 
-<span class="c1"># Linearly spaced</span>
-<span class="n">linspace</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># Start, stop, num</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">linspace</span><span class="p">)</span>  <span class="c1"># Output: [0.   0.25 0.5  0.75 1.  ]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0. 0. 0.]
- [0. 0. 0.]]
-[[1. 1.]
- [1. 1.]
- [1. 1.]]
-[0 2 4 6 8]
-[0.   0.25 0.5  0.75 1.  ]
+# Linearly spaced
+linspace = np.linspace(0, 1, 5)  # Start, stop, num
+print(linspace)  # Output: [0.   0.25 0.5  0.75 1.  ]
 </pre></div>
 </div>
 </div>
@@ -805,38 +814,27 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uniform random</span>
-<span class="n">rand_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">rand_arr</span><span class="p">)</span>
-<span class="c1"># Output: e.g.,</span>
-<span class="c1"># [[0.5488135  0.71518937 0.60276338]</span>
-<span class="c1">#  [0.54488318 0.4236548  0.64589411]]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Uniform random
+rand_arr = np.random.rand(2, 3)
+print(rand_arr)
+# Output: e.g.,
+# [[0.5488135  0.71518937 0.60276338]
+#  [0.54488318 0.4236548  0.64589411]]
 
-<span class="c1"># Normal random</span>
-<span class="n">norm_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">norm_arr</span><span class="p">)</span>
-<span class="c1"># Output: e.g.,</span>
-<span class="c1"># [[ 1.76405235  0.40015721]</span>
-<span class="c1">#  [ 0.97873798  2.2408932 ]]</span>
+# Normal random
+norm_arr = np.random.randn(2, 2)
+print(norm_arr)
+# Output: e.g.,
+# [[ 1.76405235  0.40015721]
+#  [ 0.97873798  2.2408932 ]]
 
-<span class="c1"># Random integers</span>
-<span class="n">int_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">int_arr</span><span class="p">)</span>
-<span class="c1"># Output: e.g.,</span>
-<span class="c1"># [[4 7]</span>
-<span class="c1">#  [2 9]</span>
-<span class="c1">#  [5 1]]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.74049883 0.47674581 0.82981895]
- [0.52627286 0.69714133 0.80257283]]
-[[-0.36685527 -2.11132025]
- [-0.39101698 -0.97766632]]
-[[1 7]
- [0 0]
- [5 3]]
+# Random integers
+int_arr = np.random.randint(0, 10, size=(3, 2))
+print(int_arr)
+# Output: e.g.,
+# [[4 7]
+#  [2 9]
+#  [5 1]]
 </pre></div>
 </div>
 </div>
@@ -858,29 +856,17 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
 
-<span class="n">details</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">]])</span>
-<span class="n">sales</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">details</span><span class="p">)</span>
+details = np.array([[10, 20, 30], [40, 50, 60]])
+sales = np.array(details)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">sales</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Output: (2, 3) → 2 rows, 3 columns</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sales</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>  <span class="c1"># Output: 1 → 1D array</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sales</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-<span class="sd">&quot;&quot;&quot; [[10 40]</span>
-<span class="sd">    [20 50]</span>
-<span class="sd">    [30 60]] &quot;&quot;&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 3)
-2
-[[10 40]
- [20 50]
- [30 60]]
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39; [[10 40]\n    [20 50]\n    [30 60]] &#39;
+print(sales.shape)  # Output: (2, 3) → 2 rows, 3 columns
+print(sales.ndim)  # Output: 1 → 1D array
+print(sales.T)
+&quot;&quot;&quot; [[10 40]
+    [20 50]
+    [30 60]] &quot;&quot;&quot;
 </pre></div>
 </div>
 </div>
@@ -894,22 +880,15 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>  <span class="c1"># [0 1 2 3 4 5]</span>
-<span class="n">reshaped</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">reshaped</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># [[0 1 2]</span>
-<span class="c1">#  [3 4 5]]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>arr = np.arange(6)  # [0 1 2 3 4 5]
+reshaped = arr.reshape(2, 3)
+print(reshaped)
+# Output:
+# [[0 1 2]
+#  [3 4 5]]
 
-<span class="n">flattened</span> <span class="o">=</span> <span class="n">reshaped</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">flattened</span><span class="p">)</span>  <span class="c1"># Output: [0 1 2 3 4 5]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0 1 2]
- [3 4 5]]
-[0 1 2 3 4 5]
+flattened = reshaped.flatten()
+print(flattened)  # Output: [0 1 2 3 4 5]
 </pre></div>
 </div>
 </div>
@@ -931,16 +910,11 @@ document.write(`
 <h3>Accessing Elements Using Indexing<a class="headerlink" href="#accessing-elements-using-indexing" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">details</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
-<span class="n">sales</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">details</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+details = [10, 20, 30, 40, 50]
+sales = np.array(details)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">sales</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Access first element</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+print(sales[0])  # Access first element
 </pre></div>
 </div>
 </div>
@@ -950,16 +924,11 @@ document.write(`
 <h3>Accessing Elements Using Slicing<a class="headerlink" href="#accessing-elements-using-slicing" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">details</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
-<span class="n">sales</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">details</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+details = [10, 20, 30, 40, 50]
+sales = np.array(details)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">sales</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>  <span class="c1"># Access elements from index 2 onward</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[30 40 50]
+print(sales[2:])  # Access elements from index 2 onward
 </pre></div>
 </div>
 </div>
@@ -969,22 +938,12 @@ document.write(`
 <h3>Creating a Matrix and Selecting Elements<a class="headerlink" href="#creating-a-matrix-and-selecting-elements" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>          <span class="c1"># Print the matrix</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>     <span class="c1"># Access element at row 0, column 0</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>     <span class="c1"># Access element at row 1, column 1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>     <span class="c1"># Access element at row 2, column 2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[10 20 30]
- [40 50 60]
- [70 80 90]]
-10
-50
-90
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+matrix = np.array([[10, 20, 30], [40, 50, 60], [70, 80, 90]])
+print(matrix)          # Print the matrix
+print(matrix[0,0])     # Access element at row 0, column 0
+print(matrix[1,1])     # Access element at row 1, column 1
+print(matrix[2,2])     # Access element at row 2, column 2
 </pre></div>
 </div>
 </div>
@@ -1001,23 +960,11 @@ document.write(`
 <h3>Example of Index Error<a class="headerlink" href="#example-of-index-error" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">details</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
-<span class="n">sales</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">details</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+details = [10, 20, 30, 40, 50]
+sales = np.array(details)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">sales</span><span class="p">[</span><span class="mi">22</span><span class="p">])</span>  <span class="c1"># Trying to access an out-of-bounds index</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">details</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">sales</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">details</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">sales</span><span class="p">[</span><span class="mi">22</span><span class="p">])</span>  <span class="c1"># Trying to access an out-of-bounds index</span>
-
-<span class="ne">IndexError</span>: index 22 is out of bounds for axis 0 with size 5
+print(sales[22])  # Trying to access an out-of-bounds index
 </pre></div>
 </div>
 </div>
@@ -1025,7 +972,7 @@ document.write(`
 <p>🔴 <strong>Error Message:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ne">IndexError</span><span class="p">:</span> <span class="n">index</span> <span class="mi">22</span> <span class="ow">is</span> <span class="n">out</span> <span class="n">of</span> <span class="n">bounds</span> <span class="k">for</span> <span class="n">axis</span> <span class="mi">0</span> <span class="k">with</span> <span class="n">size</span> <span class="mi">5</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IndexError: index 22 is out of bounds for axis 0 with size 5
 </pre></div>
 </div>
 </div>
@@ -1045,17 +992,17 @@ document.write(`
 <h3><strong>1. Element-wise Operations</strong><a class="headerlink" href="#element-wise-operations" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
 
-<span class="c1"># Arithmetic</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># np.add(a, b) Output: [5 7 9]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: [ 4 10 18]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># np.subtract(a, b) Output: [-1  0  1]</span>
+# Arithmetic
+print(a + b)  # np.add(a, b) Output: [5 7 9]
+print(a * b)  # Output: [ 4 10 18]
+print(a - 2)  # np.subtract(a, b) Output: [-1  0  1]
 
-<span class="c1"># Universal functions (ufuncs)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>  <span class="c1"># Output: [1.         1.41421356 1.73205081]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>   <span class="c1"># Output: [ 54.59815003 148.4131591  403.42879349]</span>
+# Universal functions (ufuncs)
+print(np.sqrt(a))  # Output: [1.         1.41421356 1.73205081]
+print(np.exp(b))   # Output: [ 54.59815003 148.4131591  403.42879349]
 </pre></div>
 </div>
 </div>
@@ -1066,18 +1013,18 @@ document.write(`
 <p>Operate on arrays of different shapes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
-<span class="n">scalar</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">arr</span> <span class="o">*</span> <span class="n">scalar</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># [[2 4]</span>
-<span class="c1">#  [6 8]]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>arr = np.array([[1, 2], [3, 4]])
+scalar = 2
+print(arr * scalar)
+# Output:
+# [[2 4]
+#  [6 8]]
 
-<span class="n">row_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">arr</span> <span class="o">+</span> <span class="n">row_vec</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># [[2 4]</span>
-<span class="c1">#  [4 6]]</span>
+row_vec = np.array([1, 2])
+print(arr + row_vec)
+# Output:
+# [[2 4]
+#  [4 6]]
 </pre></div>
 </div>
 </div>
@@ -1093,11 +1040,11 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>       <span class="c1"># Output: 10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>      <span class="c1"># Output: 2.5</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>       <span class="c1"># Output: 1.118033988749895</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>  <span class="c1"># Output: [3 4] (column-wise max)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>arr = np.array([[1, 2], [3, 4]])
+print(np.sum(arr))       # Output: 10
+print(np.mean(arr))      # Output: 2.5
+print(np.std(arr))       # Output: 1.118033988749895
+print(np.max(arr, axis=0))  # Output: [3 4] (column-wise max)
 </pre></div>
 </div>
 </div>
@@ -1112,15 +1059,15 @@ document.write(`
 <h3><strong>Dot Product</strong><a class="headerlink" href="#dot-product" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a = np.array([[1, 2], [3, 4]])
+b = np.array([[5, 6], [7, 8]])
 
-<span class="c1"># Matrix multiplication</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># [[19 22]</span>
-<span class="c1">#  [43 50]]</span>
+# Matrix multiplication
+result = np.dot(a, b)
+print(result)
+# Output:
+# [[19 22]
+#  [43 50]]
 </pre></div>
 </div>
 </div>
@@ -1133,12 +1080,12 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
 
-<span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trace of the Matrix:&quot;</span><span class="p">,</span> <span class="n">matrix</span><span class="o">.</span><span class="n">trace</span><span class="p">())</span>  
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of Diagonal Elements:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()))</span>
+print(&quot;Trace of the Matrix:&quot;, matrix.trace())  
+print(&quot;Sum of Diagonal Elements:&quot;, sum(matrix.diagonal()))
 </pre></div>
 </div>
 </div>
@@ -1148,10 +1095,10 @@ document.write(`
 <h3><strong>Transpose</strong><a class="headerlink" href="#transpose" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># [[1 3]</span>
-<span class="c1">#  [2 4]]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(a.T)
+# Output:
+# [[1 3]
+#  [2 4]]
 </pre></div>
 </div>
 </div>
@@ -1161,14 +1108,14 @@ document.write(`
 <h3><strong>Inverse and Determinant</strong><a class="headerlink" href="#inverse-and-determinant" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.linalg</span><span class="w"> </span><span class="kn">import</span> <span class="n">inv</span><span class="p">,</span> <span class="n">det</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from numpy.linalg import inv, det
 
-<span class="nb">print</span><span class="p">(</span><span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="c1"># Output: e.g.,</span>
-<span class="c1"># [[-2.   1. ]</span>
-<span class="c1">#  [ 1.5 -0.5]]</span>
+print(inv(a))
+# Output: e.g.,
+# [[-2.   1. ]
+#  [ 1.5 -0.5]]
 
-<span class="nb">print</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>  <span class="c1"># Output: -2.0000000000000004</span>
+print(det(a))  # Output: -2.0000000000000004
 </pre></div>
 </div>
 </div>
@@ -1178,16 +1125,16 @@ document.write(`
 <h3><strong>Eigenvalues and Eigenvectors</strong><a class="headerlink" href="#eigenvalues-and-eigenvectors" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.linalg</span><span class="w"> </span><span class="kn">import</span> <span class="n">eig</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from numpy.linalg import eig
 
-<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">eig</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues:&quot;</span><span class="p">,</span> <span class="n">eigenvalues</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvectors:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">eigenvectors</span><span class="p">)</span>
-<span class="c1"># Output: e.g.,</span>
-<span class="c1"># Eigenvalues: [-0.37228132  5.37228132]</span>
-<span class="c1"># Eigenvectors:</span>
-<span class="c1"># [[-0.82456484 -0.41597356]</span>
-<span class="c1">#  [ 0.56576746 -0.90937671]]</span>
+eigenvalues, eigenvectors = eig(a)
+print(&quot;Eigenvalues:&quot;, eigenvalues)
+print(&quot;Eigenvectors:\n&quot;, eigenvectors)
+# Output: e.g.,
+# Eigenvalues: [-0.37228132  5.37228132]
+# Eigenvectors:
+# [[-0.82456484 -0.41597356]
+#  [ 0.56576746 -0.90937671]]
 </pre></div>
 </div>
 </div>
@@ -1202,10 +1149,10 @@ document.write(`
 <h3><strong>Basic Statistics</strong><a class="headerlink" href="#basic-statistics" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>  <span class="c1"># Output: 3.0</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">75</span><span class="p">))</span>  <span class="c1"># Output: 4.0</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>  <span class="c1"># Output: 2.0</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data = np.array([1, 2, 3, 4, 5])
+print(np.median(data))  # Output: 3.0
+print(np.percentile(data, 75))  # Output: 4.0
+print(np.var(data))  # Output: 2.0
 </pre></div>
 </div>
 </div>
@@ -1215,9 +1162,9 @@ document.write(`
 <h3><strong>Random Sampling</strong><a class="headerlink" href="#random-sampling" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample from normal distribution</span>
-<span class="n">sample</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>  <span class="c1"># Output: Random array, e.g., [-0.12  0.45 ...]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Sample from normal distribution
+sample = np.random.normal(loc=0, scale=1, size=10)
+print(sample)  # Output: Random array, e.g., [-0.12  0.45 ...]
 </pre></div>
 </div>
 </div>
@@ -1231,16 +1178,16 @@ document.write(`
 <h3><strong>Concatenation</strong><a class="headerlink" href="#concatenation" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>  <span class="c1"># Output: [1 2 3 4]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a = np.array([1, 2])
+b = np.array([3, 4])
+print(np.concatenate((a, b)))  # Output: [1 2 3 4]
 
-<span class="c1"># Stack vertically</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># [[1 2]</span>
-<span class="c1">#  [3 4]]</span>
+# Stack vertically
+c = np.vstack((a, b))
+print(c)
+# Output:
+# [[1 2]
+#  [3 4]]
 </pre></div>
 </div>
 </div>
@@ -1250,9 +1197,9 @@ document.write(`
 <h3><strong>Splitting</strong><a class="headerlink" href="#splitting" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
-<span class="n">split_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">split_arr</span><span class="p">)</span>  <span class="c1"># Output: [array([1, 2]), array([3, 4]), array([5, 6])]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>arr = np.array([1, 2, 3, 4, 5, 6])
+split_arr = np.split(arr, 3)
+print(split_arr)  # Output: [array([1, 2]), array([3, 4]), array([5, 6])]
 </pre></div>
 </div>
 </div>
@@ -1265,9 +1212,9 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>  <span class="c1"># Output: [1 2 3 4]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>  <span class="c1"># Output: [1 3 0 2] (indices of sorted order)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>arr = np.array([3, 1, 4, 2])
+print(np.sort(arr))  # Output: [1 2 3 4]
+print(np.argsort(arr))  # Output: [1 3 0 2] (indices of sorted order)
 </pre></div>
 </div>
 </div>

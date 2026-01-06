@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=638b2d67" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -177,10 +177,18 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
-<ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_statistics_fundamentals.html">Statistics Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
 
 
@@ -190,16 +198,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
-
-
-
-
 
 
 
@@ -214,9 +213,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
 
 
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Programming</span></p>
-<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_basics.html">Python Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_advanced.html">Advanced Python</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Structures</a></li>
@@ -235,9 +231,6 @@
 
 <li class="toctree-l1"><a class="reference internal" href="8_exceptions.html">Exception Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9_regex.html">Regular Expressions</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Wrangling</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
 
 
@@ -263,12 +256,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis (EDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
 
 
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/1_foundations.html">ML Foundational</a></li>
 
@@ -282,8 +275,12 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train-Test Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core Algo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
 
 
@@ -298,6 +295,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/13_classification.html">Classification Algorithms</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core ML Algorithms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/14_decision_trees.html">Decision Trees</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
@@ -305,19 +303,11 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/17_knn.html">k-Nearest Neighbors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../3_ml/21_clustering.html">Clustering Techniques</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
-
-
-
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Model Training</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Model Deployment</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
@@ -328,33 +318,69 @@
 
 
 
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Deployment</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron (MLP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network with Keras</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Evaluating Model Performance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification of IRIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Multiclass Classification Handwritten Digits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving and Loading a Deep Learning Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Checkpointing in Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions, Activation Functions, and Optimizers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Natural Language Processing</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Wrangling and Cleaning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Replacing and Correcting Words</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">Components in NLP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF, and IDF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Twitter Sentiment Analysis using TextBlob</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self%20introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
 </ul>
 
     </div>
@@ -814,7 +840,7 @@ document.write(`
 <h3>Example:<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span>  <span class="c1"># String for a class label in ML</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>label = &quot;cat&quot;  # String for a class label in ML
 </pre></div>
 </div>
 </div>
@@ -835,12 +861,12 @@ document.write(`
 <h3>Examples:<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Single-line string</span>
-<span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;dog&quot;</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Single-line string
+label = &quot;dog&quot;
 
-<span class="c1"># Multiline string for NLP tasks</span>
-<span class="n">text_data</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;This is a sample review.</span>
-<span class="s2">It spans multiple lines.&quot;&quot;&quot;</span>
+# Multiline string for NLP tasks
+text_data = &quot;&quot;&quot;This is a sample review.
+It spans multiple lines.&quot;&quot;&quot;
 </pre></div>
 </div>
 </div>
@@ -856,15 +882,9 @@ document.write(`
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Machine Learning&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: M</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span>  <span class="c1"># Output: L</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M
-L
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>text = &quot;Machine Learning&quot;
+print(text[0])  # Output: M
+print(text[8])  # Output: L
 </pre></div>
 </div>
 </div>
@@ -876,13 +896,8 @@ L
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Machine Learning&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">])</span>  <span class="c1"># Output: Machine</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Machine
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>text = &quot;Machine Learning&quot;
+print(text[0:7])  # Output: Machine
 </pre></div>
 </div>
 </div>
@@ -894,17 +909,11 @@ L
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="s2">&quot;ML&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># M</span>
-<span class="c1"># L</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M
-L
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>for char in &quot;ML&quot;:
+    print(char)
+# Output:
+# M
+# L
 </pre></div>
 </div>
 </div>
@@ -922,8 +931,8 @@ L
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;ML&quot;</span>
-<span class="c1"># text[0] = &quot;D&quot;  # Error: &#39;str&#39; object does not support item assignment</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>text = &quot;ML&quot;
+# text[0] = &quot;D&quot;  # Error: &#39;str&#39; object does not support item assignment
 </pre></div>
 </div>
 </div>
@@ -939,13 +948,8 @@ L
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="s2">&quot;Logistic&quot;</span> <span class="o">+</span> <span class="s2">&quot;Regression&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>  <span class="c1"># Output: LogisticRegression</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>model = &quot;Logistic&quot; + &quot;Regression&quot;
+print(model)  # Output: LogisticRegression
 </pre></div>
 </div>
 </div>
@@ -957,13 +961,8 @@ L
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;spam&quot;</span> <span class="o">*</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>  <span class="c1"># Output: spamspamspam</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>spamspamspam
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>label = &quot;spam&quot; * 3
+print(label)  # Output: spamspamspam
 </pre></div>
 </div>
 </div>
@@ -977,13 +976,8 @@ L
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Deep Learning&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>  <span class="c1"># Output: 13</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>text = &quot;Deep Learning&quot;
+print(len(text))  # Output: 13
 </pre></div>
 </div>
 </div>
@@ -998,14 +992,8 @@ L
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ma&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Machine Learning&#39;</span><span class="p">)</span>  <span class="c1"># Output: True</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;AI&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Machine Learning&#39;</span><span class="p">)</span>   <span class="c1"># Output: False</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-False
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(&#39;Ma&#39; in &#39;Machine Learning&#39;)  # Output: True
+print(&#39;AI&#39; in &#39;Machine Learning&#39;)   # Output: False
 </pre></div>
 </div>
 </div>
@@ -1017,12 +1005,7 @@ False
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;DL&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;Machine Learning&#39;</span><span class="p">)</span>  <span class="c1"># Output: True</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(&#39;DL&#39; not in &#39;Machine Learning&#39;)  # Output: True
 </pre></div>
 </div>
 </div>
@@ -1078,16 +1061,11 @@ False
 <h3>Example: Text Preprocessing<a class="headerlink" href="#example-text-preprocessing" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clean and tokenize text for NLP</span>
-<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;  Machine Learning is fun!  &quot;</span>
-<span class="n">cleaned</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<span class="n">tokens</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>  <span class="c1"># Output: [&#39;machine&#39;, &#39;learning&#39;, &#39;is&#39;, &#39;fun!&#39;]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;machine&#39;, &#39;learning&#39;, &#39;is&#39;, &#39;fun!&#39;]
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Clean and tokenize text for NLP
+text = &quot;  Machine Learning is fun!  &quot;
+cleaned = text.strip().lower()
+tokens = cleaned.split(&quot; &quot;)
+print(tokens)  # Output: [&#39;machine&#39;, &#39;learning&#39;, &#39;is&#39;, &#39;fun!&#39;]
 </pre></div>
 </div>
 </div>
@@ -1101,16 +1079,10 @@ False
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">original</span> <span class="o">=</span> <span class="s2">&quot;Neural Network&quot;</span>
-<span class="n">modified</span> <span class="o">=</span> <span class="n">original</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Neural&quot;</span><span class="p">,</span> <span class="s2">&quot;Convolutional&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">modified</span><span class="p">)</span>  <span class="c1"># Output: Convolutional Network</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">original</span><span class="p">)</span>  <span class="c1"># Output: Neural Network (unchanged)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Convolutional Network
-Neural Network
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>original = &quot;Neural Network&quot;
+modified = original.replace(&quot;Neural&quot;, &quot;Convolutional&quot;)
+print(modified)  # Output: Convolutional Network
+print(original)  # Output: Neural Network (unchanged)
 </pre></div>
 </div>
 </div>
@@ -1128,9 +1100,9 @@ Neural Network
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tokenize text for ML</span>
-<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Machine Learning, Deep Learning&quot;</span>
-<span class="n">tokens</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>  <span class="c1"># Output: [&#39;Machine Learning&#39;, &#39;Deep Learning&#39;]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Tokenize text for ML
+text = &quot;Machine Learning, Deep Learning&quot;
+tokens = text.split(&quot;, &quot;)  # Output: [&#39;Machine Learning&#39;, &#39;Deep Learning&#39;]
 </pre></div>
 </div>
 </div>
@@ -1217,16 +1189,10 @@ Neural Network
 <p>“Mutable” means you can change a list after creating it. This is handy in ML when updating values like weights.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>  <span class="c1"># Output: [0.1, 0.2, 0.3]</span>
-<span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># Update first item</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>  <span class="c1"># Output: [0.5, 0.2, 0.3]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.1, 0.2, 0.3]
-[0.5, 0.2, 0.3]
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>weights = [0.1, 0.2, 0.3]
+print(weights)  # Output: [0.1, 0.2, 0.3]
+weights[0] = 0.5  # Update first item
+print(weights)  # Output: [0.5, 0.2, 0.3]
 </pre></div>
 </div>
 </div>
@@ -1283,13 +1249,8 @@ Neural Network
 <p>Use <code class="docutils literal notranslate"><span class="pre">len()</span></code> to count items in a list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">))</span>  <span class="c1"># Output: 4</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>values = [10, 20, 30, 40]
+print(len(values))  # Output: 4
 </pre></div>
 </div>
 </div>
@@ -1314,19 +1275,12 @@ Neural Network
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mf">0.9</span><span class="p">))</span>  <span class="c1"># Output: 2</span>
-<span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>  <span class="c1"># Output: [0.9, 0.8, 0.9, 0.95]</span>
-<span class="n">scores</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>  <span class="c1"># Output: [0.8, 0.9, 0.9, 0.95]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-[0.9, 0.8, 0.9, 0.95]
-[0.8, 0.9, 0.9, 0.95]
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>scores = [0.9, 0.8, 0.9]
+print(scores.count(0.9))  # Output: 2
+scores.append(0.95)
+print(scores)  # Output: [0.9, 0.8, 0.9, 0.95]
+scores.sort()
+print(scores)  # Output: [0.8, 0.9, 0.9, 0.95]
 </pre></div>
 </div>
 </div>
@@ -1334,35 +1288,26 @@ Neural Network
 <p><strong>ML Use:</strong> Use <code class="docutils literal notranslate"><span class="pre">append()</span></code> to collect model accuracies during training.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a list</span>
-<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Creating a list
+fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
 
-<span class="c1"># Adding elements</span>
-<span class="n">fruits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
-<span class="n">fruits</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;grape&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>  <span class="c1"># Output: [&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;, &#39;orange&#39;, &#39;grape&#39;, &#39;kiwi&#39;]</span>
+# Adding elements
+fruits.append(&quot;orange&quot;)
+fruits.extend([&quot;grape&quot;, &quot;kiwi&quot;])
+print(fruits)  # Output: [&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;, &#39;orange&#39;, &#39;grape&#39;, &#39;kiwi&#39;]
 
-<span class="c1"># Inserting and removing</span>
-<span class="n">fruits</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="p">)</span>
-<span class="n">fruits</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>  <span class="c1"># Output: kiwi</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>  <span class="c1"># Output: [&#39;apple&#39;, &#39;mango&#39;, &#39;cherry&#39;, &#39;orange&#39;, &#39;grape&#39;]</span>
+# Inserting and removing
+fruits.insert(1, &quot;mango&quot;)
+fruits.remove(&quot;banana&quot;)
+print(fruits.pop())  # Output: kiwi
+print(fruits)  # Output: [&#39;apple&#39;, &#39;mango&#39;, &#39;cherry&#39;, &#39;orange&#39;, &#39;grape&#39;]
 
-<span class="c1"># Sorting and reversing</span>
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>  <span class="c1"># Output: [1, 1, 3, 4, 5]</span>
-<span class="n">numbers</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>  <span class="c1"># Output: [5, 4, 3, 1, 1]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;, &#39;orange&#39;, &#39;grape&#39;, &#39;kiwi&#39;]
-kiwi
-[&#39;apple&#39;, &#39;mango&#39;, &#39;cherry&#39;, &#39;orange&#39;, &#39;grape&#39;]
-[1, 1, 3, 4, 5]
-[5, 4, 3, 1, 1]
+# Sorting and reversing
+numbers = [3, 1, 4, 1, 5]
+numbers.sort()
+print(numbers)  # Output: [1, 1, 3, 4, 5]
+numbers.reverse()
+print(numbers)  # Output: [5, 4, 3, 1, 1]
 </pre></div>
 </div>
 </div>
@@ -1414,17 +1359,7 @@ kiwi
 <p><strong>Syntax:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;iterable&#39; is not defined
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>new_list = [expression for item in iterable if condition]
 </pre></div>
 </div>
 </div>
@@ -1522,8 +1457,8 @@ kiwi
 <p>Parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> are commonly used, but they are optional.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">employee_ids</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">)</span>  <span class="c1"># Output: (10, 20, 30, 40, 50)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>employee_ids = (10, 20, 30, 40, 50)
+print(employee_ids)  # Output: (10, 20, 30, 40, 50)
 </pre></div>
 </div>
 </div>
@@ -1534,9 +1469,9 @@ kiwi
 <p>Convert other iterables (like lists) into tuples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">]</span>
-<span class="n">t</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>  <span class="c1"># Output: (11, 22, 33)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a = [11, 22, 33]
+t = tuple(a)
+print(t)  # Output: (11, 22, 33)
 </pre></div>
 </div>
 </div>
@@ -1547,11 +1482,11 @@ kiwi
 <p>A single-element tuple must include a trailing comma.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1"># Not a tuple</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;int&#39;&gt;</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>number = (9)  # Not a tuple
+print(type(number))  # Output: &lt;class &#39;int&#39;&gt;
 
-<span class="n">name</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Daniel&quot;</span><span class="p">,)</span>  <span class="c1"># Single-element tuple</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;tuple&#39;&gt;</span>
+name = (&quot;Daniel&quot;,)  # Single-element tuple
+print(type(name))  # Output: &lt;class &#39;tuple&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -1562,8 +1497,8 @@ kiwi
 <p>Parentheses are optional when creating tuples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">emp_ids</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">emp_ids</span><span class="p">)</span>  <span class="c1"># Output: (10, 20, 30, 40)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>emp_ids = 10, 20, 30, 40
+print(emp_ids)  # Output: (10, 20, 30, 40)
 </pre></div>
 </div>
 </div>
@@ -1579,9 +1514,9 @@ kiwi
 <p>Access elements using their position.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: 10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: 60</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>t = (10, 20, 30, 40, 50, 60)
+print(t[0])  # Output: 10
+print(t[-1])  # Output: 60
 </pre></div>
 </div>
 </div>
@@ -1592,9 +1527,9 @@ kiwi
 <p>Extract a subset of elements using slicing.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>  <span class="c1"># Output: (30, 40, 50)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># Output: (10, 30, 50)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>t = (10, 20, 30, 40, 50, 60)
+print(t[2:5])  # Output: (30, 40, 50)
+print(t[::2])  # Output: (10, 30, 50)
 </pre></div>
 </div>
 </div>
@@ -1610,8 +1545,8 @@ kiwi
 <p>Combine multiple values into a tuple without explicitly using parentheses:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="mf">3.5</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># Output: (1, &#39;apple&#39;, 3.5)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data = 1, &quot;apple&quot;, 3.5
+print(data)  # Output: (1, &#39;apple&#39;, 3.5)
 </pre></div>
 </div>
 </div>
@@ -1622,8 +1557,8 @@ kiwi
 <p>Split a tuple’s items into separate variables:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">data</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>  <span class="c1"># Output: 1 apple 3.5</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x, y, z = data
+print(x, y, z)  # Output: 1 apple 3.5
 </pre></div>
 </div>
 </div>
@@ -1631,11 +1566,11 @@ kiwi
 <p>This is often used in functions to return multiple values:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_range</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def get_range(numbers):
+    return min(numbers), max(numbers)
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">get_range</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: (10, 40)</span>
+result = get_range([10, 20, 30, 40])
+print(result)  # Output: (10, 40)
 </pre></div>
 </div>
 </div>
@@ -1648,8 +1583,8 @@ kiwi
 <p>Tuples are immutable, meaning their elements cannot be modified after creation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
-<span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">70</span>  <span class="c1"># Raises TypeError: &#39;tuple&#39; object does not support item assignment</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>t = (10, 20, 30, 40)
+t[1] = 70  # Raises TypeError: &#39;tuple&#39; object does not support item assignment
 </pre></div>
 </div>
 </div>
@@ -1664,10 +1599,10 @@ kiwi
 <p>Combine two tuples into one.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-<span class="n">t3</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">+</span> <span class="n">t2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t3</span><span class="p">)</span>  <span class="c1"># Output: (10, 20, 30, 40, 50, 60)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>t1 = (10, 20, 30)
+t2 = (40, 50, 60)
+t3 = t1 + t2
+print(t3)  # Output: (10, 20, 30, 40, 50, 60)
 </pre></div>
 </div>
 </div>
@@ -1678,9 +1613,9 @@ kiwi
 <p>Repeat the elements of a tuple.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">*</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>  <span class="c1"># Output: (10, 20, 30, 10, 20, 30, 10, 20, 30)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>t1 = (10, 20, 30)
+t2 = t1 * 3
+print(t2)  # Output: (10, 20, 30, 10, 20, 30, 10, 20, 30)
 </pre></div>
 </div>
 </div>
@@ -1691,8 +1626,8 @@ kiwi
 <p>Find the number of elements in a tuple.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>  <span class="c1"># Output: 4</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>t = (10, 20, 30, 40)
+print(len(t))  # Output: 4
 </pre></div>
 </div>
 </div>
@@ -1703,9 +1638,9 @@ kiwi
 <p>Check if an item exists:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">in</span> <span class="n">t</span><span class="p">)</span>      <span class="c1"># Output: True</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">t</span><span class="p">)</span>  <span class="c1"># Output: True</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>t = (1, 2, 3)
+print(2 in t)      # Output: True
+print(5 not in t)  # Output: True
 </pre></div>
 </div>
 </div>
@@ -1722,9 +1657,9 @@ kiwi
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>  <span class="c1"># Output: 2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># Output: 3</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>t = (1, 2, 2, 3)
+print(t.count(2))  # Output: 2
+print(t.index(3))  # Output: 3
 </pre></div>
 </div>
 </div>
@@ -1732,7 +1667,7 @@ kiwi
 <p>You can explore all tuple methods using the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="nb">tuple</span><span class="p">))</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(dir(tuple))
 </pre></div>
 </div>
 </div>
@@ -1775,9 +1710,9 @@ kiwi
 <p>While tuples themselves are immutable, they can contain mutable objects like lists, which <em>can</em> be modified:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
-<span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>  <span class="c1"># Output: (1, 2, [3, 4, 5])</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>t = (1, 2, [3, 4])
+t[2].append(5)
+print(t)  # Output: (1, 2, [3, 4, 5])
 </pre></div>
 </div>
 </div>
@@ -1845,8 +1780,8 @@ kiwi
 <p>List the items inside curly braces, separated by commas:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = {1, 2, 3, 4}
+print(s)  # Output: {1, 2, 3, 4}
 </pre></div>
 </div>
 </div>
@@ -1854,8 +1789,8 @@ kiwi
 <p>Duplicates are automatically removed:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = {1, 2, 2, 3}
+print(s)  # Output: {1, 2, 3}
 </pre></div>
 </div>
 </div>
@@ -1866,9 +1801,9 @@ kiwi
 <p>Convert any iterable (like a list or tuple) into a set:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>lst = [1, 2, 2, 3]
+s = set(lst)
+print(s)  # Output: {1, 2, 3}
 </pre></div>
 </div>
 </div>
@@ -1879,8 +1814,8 @@ kiwi
 <p>Using <code class="docutils literal notranslate"><span class="pre">{}</span></code> creates an empty <strong>dictionary</strong>, not a set. Use <code class="docutils literal notranslate"><span class="pre">set()</span></code> instead:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">empty_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">empty_set</span><span class="p">)</span>  <span class="c1"># Output: set()</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>empty_set = set()
+print(empty_set)  # Output: set()
 </pre></div>
 </div>
 </div>
@@ -1920,9 +1855,9 @@ kiwi
 <p>Imagine you have a list of predicted labels with duplicates: <code class="docutils literal notranslate"><span class="pre">[&quot;cat&quot;,</span> <span class="pre">&quot;dog&quot;,</span> <span class="pre">&quot;cat&quot;,</span> <span class="pre">&quot;bird&quot;]</span></code>. Converting it to a set gives you unique labels:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;bird&quot;</span><span class="p">]</span>
-<span class="n">unique_labels</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">)</span>  <span class="c1"># Output: {&#39;cat&#39;, &#39;dog&#39;, &#39;bird&#39;}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>labels = [&quot;cat&quot;, &quot;dog&quot;, &quot;cat&quot;, &quot;bird&quot;]
+unique_labels = set(labels)
+print(unique_labels)  # Output: {&#39;cat&#39;, &#39;dog&#39;, &#39;bird&#39;}
 </pre></div>
 </div>
 </div>
@@ -1950,9 +1885,9 @@ kiwi
 <p>Use the <code class="docutils literal notranslate"><span class="pre">add()</span></code> method to insert one item:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = {1, 2, 3}
+s.add(4)
+print(s)  # Output: {1, 2, 3, 4}
 </pre></div>
 </div>
 </div>
@@ -1966,12 +1901,12 @@ kiwi
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="n">s</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 3}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = {1, 2, 3}
+s.remove(2)
+print(s)  # Output: {1, 3}
 
-<span class="n">s</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># No error, even though 5 isn’t there</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 3}</span>
+s.discard(5)  # No error, even though 5 isn’t there
+print(s)  # Output: {1, 3}
 </pre></div>
 </div>
 </div>
@@ -1982,8 +1917,8 @@ kiwi
 <p>Use <code class="docutils literal notranslate"><span class="pre">clear()</span></code> to empty the set:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: set()</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s.clear()
+print(s)  # Output: set()
 </pre></div>
 </div>
 </div>
@@ -1999,9 +1934,9 @@ kiwi
 <p>Combines all items from two sets:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">|</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4, 5}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a = {1, 2, 3}
+b = {3, 4, 5}
+print(a | b)  # Output: {1, 2, 3, 4, 5}
 </pre></div>
 </div>
 </div>
@@ -2013,7 +1948,7 @@ kiwi
 <p>Finds items common to both sets:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: {3}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(a &amp; b)  # Output: {3}
 </pre></div>
 </div>
 </div>
@@ -2025,7 +1960,7 @@ kiwi
 <p>Items in the first set but not the second:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: {1, 2}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(a - b)  # Output: {1, 2}
 </pre></div>
 </div>
 </div>
@@ -2037,7 +1972,7 @@ kiwi
 <p>Items in either set, but not both:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">^</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 4, 5}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(a ^ b)  # Output: {1, 2, 4, 5}
 </pre></div>
 </div>
 </div>
@@ -2051,9 +1986,9 @@ kiwi
 <p>Use <code class="docutils literal notranslate"><span class="pre">in</span></code> or <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> to test if an item exists in a set. This is <strong>fast</strong> (O(1) time complexity) due to sets using hash tables internally:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">in</span> <span class="n">s</span><span class="p">)</span>      <span class="c1"># Output: True</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">4</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: True</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = {1, 2, 3}
+print(2 in s)      # Output: True
+print(4 not in s)  # Output: True
 </pre></div>
 </div>
 </div>
@@ -2066,8 +2001,8 @@ kiwi
 <p>Create sets concisely using set comprehensions:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {0, 1, 4, 9, 16}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = {x**2 for x in range(5)}
+print(s)  # Output: {0, 1, 4, 9, 16}
 </pre></div>
 </div>
 </div>
@@ -2080,9 +2015,9 @@ kiwi
 <p>A common ML task is cleaning data. Sets make it easy to remove duplicates:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">unique_data</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">unique_data</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data = [1, 2, 2, 3, 3, 4]
+unique_data = set(data)
+print(unique_data)  # Output: {1, 2, 3, 4}
 </pre></div>
 </div>
 </div>
@@ -2095,8 +2030,8 @@ kiwi
 <p>A <strong>frozenset</strong> is an <strong>immutable version</strong> of a set. Once created, it can’t be changed:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>  <span class="c1"># Output: frozenset({1, 2, 3})</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>fs = frozenset([1, 2, 3])
+print(fs)  # Output: frozenset({1, 2, 3})
 </pre></div>
 </div>
 </div>
@@ -2114,9 +2049,9 @@ kiwi
 <p>For example, in NLP, you might use a set to store a vocabulary:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">]</span>
-<span class="n">vocab</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">vocab</span><span class="p">)</span>  <span class="c1"># Output: {&#39;the&#39;, &#39;cat&#39;, &#39;dog&#39;}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>tokens = [&quot;the&quot;, &quot;cat&quot;, &quot;the&quot;, &quot;dog&quot;]
+vocab = set(tokens)
+print(vocab)  # Output: {&#39;the&#39;, &#39;cat&#39;, &#39;dog&#39;}
 </pre></div>
 </div>
 </div>
@@ -2206,10 +2141,10 @@ kiwi
 <p>Use curly braces to list key-value pairs:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Model settings in ML</span>
-<span class="n">settings</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;learning_rate&quot;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="mi">64</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="c1"># Output: {&#39;learning_rate&#39;: 0.01, &#39;batch_size&#39;: 64}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Example: Model settings in ML
+settings = {&quot;learning_rate&quot;: 0.01, &quot;batch_size&quot;: 64}
+print(settings)
+# Output: {&#39;learning_rate&#39;: 0.01, &#39;batch_size&#39;: 64}
 </pre></div>
 </div>
 </div>
@@ -2220,15 +2155,15 @@ kiwi
 <p>The <code class="docutils literal notranslate"><span class="pre">dict()</span></code> function creates a dictionary from pairs or keyword arguments:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using keyword arguments</span>
-<span class="n">model</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s2">&quot;cross_entropy&quot;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s2">&quot;sgd&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
-<span class="c1"># Output: {&#39;loss&#39;: &#39;cross_entropy&#39;, &#39;optimizer&#39;: &#39;sgd&#39;}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Using keyword arguments
+model = dict(loss=&quot;cross_entropy&quot;, optimizer=&quot;sgd&quot;)
+print(model)
+# Output: {&#39;loss&#39;: &#39;cross_entropy&#39;, &#39;optimizer&#39;: &#39;sgd&#39;}
 
-<span class="c1"># From a list of pairs</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;positive&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;negative&quot;</span><span class="p">)])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
-<span class="c1"># Output: {1: &#39;positive&#39;, 0: &#39;negative&#39;}</span>
+# From a list of pairs
+labels = dict([(1, &quot;positive&quot;), (0, &quot;negative&quot;)])
+print(labels)
+# Output: {1: &#39;positive&#39;, 0: &#39;negative&#39;}
 </pre></div>
 </div>
 </div>
@@ -2239,11 +2174,11 @@ kiwi
 <p>Create an empty dictionary and add data later:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">data</span><span class="p">[</span><span class="s2">&quot;feature1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">data</span><span class="p">[</span><span class="s2">&quot;feature2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="c1"># Output: {&#39;feature1&#39;: 10, &#39;feature2&#39;: 20}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data = {}
+data[&quot;feature1&quot;] = 10
+data[&quot;feature2&quot;] = 20
+print(data)
+# Output: {&#39;feature1&#39;: 10, &#39;feature2&#39;: 20}
 </pre></div>
 </div>
 </div>
@@ -2286,9 +2221,9 @@ kiwi
 <h3>Basic Access<a class="headerlink" href="#basic-access" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">settings</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;learning_rate&quot;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="mi">64</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="s2">&quot;batch_size&quot;</span><span class="p">])</span>
-<span class="c1"># Output: 64</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>settings = {&quot;learning_rate&quot;: 0.01, &quot;batch_size&quot;: 64}
+print(settings[&quot;batch_size&quot;])
+# Output: 64
 </pre></div>
 </div>
 </div>
@@ -2299,8 +2234,8 @@ kiwi
 <p>The <code class="docutils literal notranslate"><span class="pre">get()</span></code> method avoids errors by returning a default value if the key is missing:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;optimizer&quot;</span><span class="p">,</span> <span class="s2">&quot;adam&quot;</span><span class="p">))</span>
-<span class="c1"># Output: adam (default since &quot;optimizer&quot; isn’t in the dictionary)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(settings.get(&quot;optimizer&quot;, &quot;adam&quot;))
+# Output: adam (default since &quot;optimizer&quot; isn’t in the dictionary)
 </pre></div>
 </div>
 </div>
@@ -2312,14 +2247,14 @@ kiwi
 You can access keys, values, or both:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">settings</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
-<span class="c1"># Output: learning_rate 0.01</span>
-<span class="c1">#         batch_size 64</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>for key in settings:
+    print(key, settings[key])
+# Output: learning_rate 0.01
+#         batch_size 64
 
-<span class="c1"># Using items() for key-value pairs</span>
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">settings</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+# Using items() for key-value pairs
+for key, value in settings.items():
+    print(key, value)
 </pre></div>
 </div>
 </div>
@@ -2334,9 +2269,9 @@ You can access keys, values, or both:</p>
 <h3>Adding a New Pair<a class="headerlink" href="#adding-a-new-pair" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">settings</span><span class="p">[</span><span class="s2">&quot;epochs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="c1"># Output: {&#39;learning_rate&#39;: 0.01, &#39;batch_size&#39;: 64, &#39;epochs&#39;: 100}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>settings[&quot;epochs&quot;] = 100
+print(settings)
+# Output: {&#39;learning_rate&#39;: 0.01, &#39;batch_size&#39;: 64, &#39;epochs&#39;: 100}
 </pre></div>
 </div>
 </div>
@@ -2346,9 +2281,9 @@ You can access keys, values, or both:</p>
 <h3>Changing a Value<a class="headerlink" href="#changing-a-value" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">settings</span><span class="p">[</span><span class="s2">&quot;learning_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.005</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="s2">&quot;learning_rate&quot;</span><span class="p">])</span>
-<span class="c1"># Output: 0.005</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>settings[&quot;learning_rate&quot;] = 0.005
+print(settings[&quot;learning_rate&quot;])
+# Output: 0.005
 </pre></div>
 </div>
 </div>
@@ -2365,9 +2300,9 @@ You can access keys, values, or both:</p>
 <p>Removes a specific key-value pair:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">settings</span><span class="p">[</span><span class="s2">&quot;batch_size&quot;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="c1"># Output: {&#39;learning_rate&#39;: 0.005, &#39;epochs&#39;: 100}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>del settings[&quot;batch_size&quot;]
+print(settings)
+# Output: {&#39;learning_rate&#39;: 0.005, &#39;epochs&#39;: 100}
 </pre></div>
 </div>
 </div>
@@ -2378,9 +2313,9 @@ You can access keys, values, or both:</p>
 <p>Removes a key and returns its value:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epochs</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;epochs&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>  <span class="c1"># Output: 100</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>  <span class="c1"># Output: {&#39;learning_rate&#39;: 0.005}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>epochs = settings.pop(&quot;epochs&quot;)
+print(epochs)  # Output: 100
+print(settings)  # Output: {&#39;learning_rate&#39;: 0.005}
 </pre></div>
 </div>
 </div>
@@ -2391,9 +2326,9 @@ You can access keys, values, or both:</p>
 <p>Empties the dictionary:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">settings</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="c1"># Output: {}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>settings.clear()
+print(settings)
+# Output: {}
 </pre></div>
 </div>
 </div>
@@ -2403,9 +2338,9 @@ You can access keys, values, or both:</p>
 <h3>4. Deleting the Entire Dictionary<a class="headerlink" href="#deleting-the-entire-dictionary" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Deleting the entire dictionary object</span>
-<span class="k">del</span> <span class="n">d</span>
-<span class="c1"># Now, d is no longer accessible.</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Deleting the entire dictionary object
+del d
+# Now, d is no longer accessible.
 </pre></div>
 </div>
 </div>
@@ -2418,9 +2353,9 @@ You can access keys, values, or both:</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">len()</span></code> function counts the number of pairs:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-<span class="c1"># Output: 2</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data = {&quot;age&quot;: 25, &quot;name&quot;: &quot;Alice&quot;}
+print(len(data))
+# Output: 2
 </pre></div>
 </div>
 </div>
@@ -2474,26 +2409,26 @@ You can access keys, values, or both:</p>
 <h3>Example<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a dictionary</span>
-<span class="n">student</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;grades&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">88</span><span class="p">]}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Creating a dictionary
+student = {&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 20, &quot;grades&quot;: [85, 90, 88]}
 
-<span class="c1"># Accessing and modifying</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>  <span class="c1"># Output: Alice</span>
-<span class="n">student</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;N/A&quot;</span><span class="p">))</span>  <span class="c1"># Output: N/A</span>
+# Accessing and modifying
+print(student[&quot;name&quot;])  # Output: Alice
+student[&quot;age&quot;] = 21
+print(student.get(&quot;id&quot;, &quot;N/A&quot;))  # Output: N/A
 
-<span class="c1"># Adding and removing</span>
-<span class="n">student</span><span class="p">[</span><span class="s2">&quot;major&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CS&quot;</span>
-<span class="k">del</span> <span class="n">student</span><span class="p">[</span><span class="s2">&quot;grades&quot;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">))</span>  <span class="c1"># Output: 21</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>  <span class="c1"># Output: {&#39;name&#39;: &#39;Alice&#39;, &#39;major&#39;: &#39;CS&#39;}</span>
+# Adding and removing
+student[&quot;major&quot;] = &quot;CS&quot;
+del student[&quot;grades&quot;]
+print(student.pop(&quot;age&quot;))  # Output: 21
+print(student)  # Output: {&#39;name&#39;: &#39;Alice&#39;, &#39;major&#39;: &#39;CS&#39;}
 
-<span class="c1"># Iterating</span>
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">student</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># name: Alice</span>
-<span class="c1"># major: CS</span>
+# Iterating
+for key, value in student.items():
+    print(f&quot;{key}: {value}&quot;)
+# Output:
+# name: Alice
+# major: CS
 </pre></div>
 </div>
 </div>
@@ -2509,10 +2444,10 @@ You can access keys, values, or both:</p>
 <h3>Example: Mapping Features to Indices<a class="headerlink" href="#example-mapping-features-to-indices" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;income&quot;</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">]</span>
-<span class="n">feature_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">f</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">features</span><span class="p">)}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">feature_map</span><span class="p">)</span>
-<span class="c1"># Output: {&#39;age&#39;: 0, &#39;income&#39;: 1, &#39;score&#39;: 2}</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>features = [&quot;age&quot;, &quot;income&quot;, &quot;score&quot;]
+feature_map = {f: i for i, f in enumerate(features)}
+print(feature_map)
+# Output: {&#39;age&#39;: 0, &#39;income&#39;: 1, &#39;score&#39;: 2}
 </pre></div>
 </div>
 </div>
@@ -2565,12 +2500,12 @@ You can access keys, values, or both:</p>
 <h3>Example: Hyperparameters in ML<a class="headerlink" href="#example-hyperparameters-in-ml" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hyperparams</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;learning_rate&quot;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">,</span>
-    <span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
-    <span class="s2">&quot;epochs&quot;</span><span class="p">:</span> <span class="mi">10</span>
-<span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hyperparams</span><span class="p">[</span><span class="s2">&quot;learning_rate&quot;</span><span class="p">])</span>  <span class="c1"># Output: 0.001</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>hyperparams = {
+    &quot;learning_rate&quot;: 0.001,
+    &quot;batch_size&quot;: 32,
+    &quot;epochs&quot;: 10
+}
+print(hyperparams[&quot;learning_rate&quot;])  # Output: 0.001
 </pre></div>
 </div>
 </div>

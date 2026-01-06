@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=638b2d67" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -177,10 +177,18 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
-<ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_statistics_fundamentals.html">Statistics Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
 
 
@@ -190,16 +198,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
-
-
-
-
 
 
 
@@ -214,9 +213,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
 
 
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Programming</span></p>
-<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_basics.html">Python Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_advanced.html">Advanced Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3_data_structures.html">Data Structures</a></li>
@@ -235,9 +231,6 @@
 
 <li class="toctree-l1"><a class="reference internal" href="8_exceptions.html">Exception Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9_regex.html">Regular Expressions</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Wrangling</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
 
 
@@ -263,12 +256,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis (EDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
 
 
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/1_foundations.html">ML Foundational</a></li>
 
@@ -282,8 +275,12 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train-Test Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core Algo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
 
 
@@ -298,6 +295,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/13_classification.html">Classification Algorithms</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core ML Algorithms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/14_decision_trees.html">Decision Trees</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
@@ -305,19 +303,11 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/17_knn.html">k-Nearest Neighbors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../3_ml/21_clustering.html">Clustering Techniques</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
-
-
-
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Model Training</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Model Deployment</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
@@ -328,33 +318,69 @@
 
 
 
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Deployment</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron (MLP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network with Keras</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Evaluating Model Performance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification of IRIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Multiclass Classification Handwritten Digits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving and Loading a Deep Learning Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Checkpointing in Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions, Activation Functions, and Optimizers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Natural Language Processing</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Wrangling and Cleaning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Replacing and Correcting Words</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">Components in NLP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF, and IDF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Twitter Sentiment Analysis using TextBlob</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self%20introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
 </ul>
 
     </div>
@@ -749,9 +775,9 @@ These are functions created by developers to meet specific requirements.</p>
 <h4>Example:<a class="headerlink" href="#example" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">clean_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="c1"># Code to remove errors from data</span>
-    <span class="k">pass</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def clean_data(data):
+    # Code to remove errors from data
+    pass
 </pre></div>
 </div>
 </div>
@@ -789,10 +815,10 @@ These are functions created by developers to meet specific requirements.</p>
 <h3>Syntax<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">function_name</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Explain what the function does&quot;&quot;&quot;</span>
-    <span class="c1"># Code goes here</span>
-    <span class="k">return</span> <span class="n">result</span>  <span class="c1"># Optional</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def function_name(parameters):
+    &quot;&quot;&quot;Explain what the function does&quot;&quot;&quot;
+    # Code goes here
+    return result  # Optional
 </pre></div>
 </div>
 </div>
@@ -807,17 +833,12 @@ These are functions created by developers to meet specific requirements.</p>
 <h4>Example:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds two numbers&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def add_numbers(a, b):
+    &quot;&quot;&quot;Adds two numbers&quot;&quot;&quot;
+    return a + b
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># Calling the function</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 8</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+result = add_numbers(5, 3)  # Calling the function
+print(result)  # Output: 8
 </pre></div>
 </div>
 </div>
@@ -836,20 +857,14 @@ These are functions created by developers to meet specific requirements.</p>
 <h3><strong>Example:</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">first</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is the first function&quot;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def first():
+    print(&quot;This is the first function&quot;)
 
-<span class="k">def</span><span class="w"> </span><span class="nf">second</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is the second function&quot;</span><span class="p">)</span>
+def second():
+    print(&quot;This is the second function&quot;)
 
-<span class="n">first</span><span class="p">()</span>  <span class="c1"># Calling the first function</span>
-<span class="n">second</span><span class="p">()</span>  <span class="c1"># Calling the second function</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the first function
-This is the second function
+first()  # Calling the first function
+second()  # Calling the second function
 </pre></div>
 </div>
 </div>
@@ -864,28 +879,16 @@ This is the second function
 <h3>Example:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">preprocess_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="c1"># Clean the data</span>
-    <span class="k">return</span> <span class="n">cleaned_data</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def preprocess_data(data):
+    # Clean the data
+    return cleaned_data
 
-<span class="k">def</span><span class="w"> </span><span class="nf">analyze_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="n">cleaned</span> <span class="o">=</span> <span class="n">preprocess_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="c1"># Analyze the cleaned data</span>
-    <span class="k">return</span> <span class="n">result</span>
+def analyze_data(data):
+    cleaned = preprocess_data(data)
+    # Analyze the cleaned data
+    return result
 
-<span class="n">analyze_data</span><span class="p">(</span><span class="n">raw_data</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="c1"># Analyze the cleaned data</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="k">return</span> <span class="n">result</span>
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">analyze_data</span><span class="p">(</span><span class="n">raw_data</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;raw_data&#39; is not defined
+analyze_data(raw_data)
 </pre></div>
 </div>
 </div>
@@ -905,9 +908,9 @@ A function that does not take any parameters.</p>
 <h4>Example:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">start_training</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training started!&quot;</span><span class="p">)</span>
-<span class="n">start_training</span><span class="p">()</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def start_training():
+    print(&quot;Training started!&quot;)
+start_training()
 </pre></div>
 </div>
 </div>
@@ -922,9 +925,9 @@ These use inputs to do their job.</p>
 <h4>Example:<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">train_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">epochs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Training </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">epochs</span><span class="si">}</span><span class="s2"> rounds&quot;</span><span class="p">)</span>
-<span class="n">train_model</span><span class="p">(</span><span class="s2">&quot;Neural Network&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def train_model(model, epochs):
+    print(f&quot;Training {model} for {epochs} rounds&quot;)
+train_model(&quot;Neural Network&quot;, 10)
 </pre></div>
 </div>
 </div>
@@ -942,9 +945,9 @@ These use inputs to do their job.</p>
 <h4>Example:<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">show_message</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Task complete&quot;</span><span class="p">)</span>
-<span class="n">show_message</span><span class="p">()</span>  <span class="c1"># Output: Task complete</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def show_message():
+    print(&quot;Task complete&quot;)
+show_message()  # Output: Task complete
 </pre></div>
 </div>
 </div>
@@ -963,12 +966,12 @@ These use inputs to do their job.</p>
 <h4>Example:<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_accuracy</span><span class="p">(</span><span class="n">true</span><span class="p">,</span> <span class="n">predicted</span><span class="p">):</span>
-    <span class="n">accuracy</span> <span class="o">=</span> <span class="c1"># Calculate accuracy here</span>
-    <span class="k">return</span> <span class="n">accuracy</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def get_accuracy(true, predicted):
+    accuracy = # Calculate accuracy here
+    return accuracy
 
-<span class="n">score</span> <span class="o">=</span> <span class="n">get_accuracy</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+score = get_accuracy(y_true, y_pred)
+print(f&quot;Accuracy: {score}&quot;)
 </pre></div>
 </div>
 </div>
@@ -983,13 +986,13 @@ These use inputs to do their job.</p>
 <h4>Example:<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_scores</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">true_labels</span><span class="p">):</span>
-    <span class="n">accuracy</span> <span class="o">=</span> <span class="mf">0.95</span>  <span class="c1"># Example value</span>
-    <span class="n">error</span> <span class="o">=</span> <span class="mf">0.05</span>     <span class="c1"># Example value</span>
-    <span class="k">return</span> <span class="n">accuracy</span><span class="p">,</span> <span class="n">error</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def get_scores(predictions, true_labels):
+    accuracy = 0.95  # Example value
+    error = 0.05     # Example value
+    return accuracy, error
 
-<span class="n">acc</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">get_scores</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_true</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">acc</span><span class="si">}</span><span class="s2">, Error: </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+acc, err = get_scores(y_pred, y_true)
+print(f&quot;Accuracy: {acc}, Error: {err}&quot;)
 </pre></div>
 </div>
 </div>
@@ -1004,11 +1007,11 @@ These use inputs to do their job.</p>
 <h3><strong>Example:</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">m1</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This function returns nothing&quot;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def m1():
+    print(&quot;This function returns nothing&quot;)
 
-<span class="n">x</span> <span class="o">=</span> <span class="n">m1</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Output: None</span>
+x = m1()
+print(x)  # Output: None
 </pre></div>
 </div>
 </div>
@@ -1026,10 +1029,10 @@ These use inputs to do their job.</p>
 <h3>Example:<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_model</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">layers</span><span class="p">):</span>  <span class="c1"># Formal: model_type, layers</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Building </span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2"> with </span><span class="si">{</span><span class="n">layers</span><span class="si">}</span><span class="s2"> layers&quot;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def build_model(model_type, layers):  # Formal: model_type, layers
+    print(f&quot;Building {model_type} with {layers} layers&quot;)
 
-<span class="n">build_model</span><span class="p">(</span><span class="s2">&quot;CNN&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># Actual: &quot;CNN&quot;, 3</span>
+build_model(&quot;CNN&quot;, 3)  # Actual: &quot;CNN&quot;, 3
 </pre></div>
 </div>
 </div>
@@ -1047,10 +1050,10 @@ These use inputs to do their job.</p>
 <h4>Example:<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">subtract</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">subtract</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># Output: 5</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">subtract</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  <span class="c1"># Output: -5</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def subtract(x, y):
+    return x - y
+print(subtract(10, 5))  # Output: 5
+print(subtract(5, 10))  # Output: -5
 </pre></div>
 </div>
 </div>
@@ -1064,11 +1067,11 @@ These use inputs to do their job.</p>
 <h4>Example:<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2"> on </span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def predict(model, data):
+    print(f&quot;Using {model} on {data}&quot;)
 
-<span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="s2">&quot;test_set&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;DL&quot;</span><span class="p">)</span>  <span class="c1"># Works either way</span>
-<span class="n">predict</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;DL&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="s2">&quot;test_set&quot;</span><span class="p">)</span>
+predict(data=&quot;test_set&quot;, model=&quot;DL&quot;)  # Works either way
+predict(model=&quot;DL&quot;, data=&quot;test_set&quot;)
 </pre></div>
 </div>
 </div>
@@ -1083,11 +1086,11 @@ Provide default values for parameters; they become optional during the call.</p>
 <h4>Example:<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">train</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Training </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">epochs</span><span class="si">}</span><span class="s2"> epochs&quot;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def train(model, epochs=5):
+    print(f&quot;Training {model} for {epochs} epochs&quot;)
 
-<span class="n">train</span><span class="p">(</span><span class="s2">&quot;RNN&quot;</span><span class="p">)</span>      <span class="c1"># Uses epochs=5</span>
-<span class="n">train</span><span class="p">(</span><span class="s2">&quot;RNN&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># Overrides with epochs=10</span>
+train(&quot;RNN&quot;)      # Uses epochs=5
+train(&quot;RNN&quot;, 10)  # Overrides with epochs=10
 </pre></div>
 </div>
 </div>
@@ -1106,10 +1109,10 @@ Python allows functions to accept variable numbers of arguments.</p>
 <h4>Example with <code class="docutils literal notranslate"><span class="pre">*args</span></code>:<a class="headerlink" href="#example-with-args" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">add_features</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="o">*</span><span class="n">features</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">features</span><span class="p">:</span>
-        <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="n">add_features</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">,</span> <span class="s2">&quot;shape&quot;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def add_features(model, *features):
+    for f in features:
+        model.add(f)
+add_features(model, &quot;color&quot;, &quot;size&quot;, &quot;shape&quot;)
 </pre></div>
 </div>
 </div>
@@ -1120,10 +1123,10 @@ Python allows functions to accept variable numbers of arguments.</p>
 <h4>Example with <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>:<a class="headerlink" href="#example-with-kwargs" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">set_settings</span><span class="p">(</span><span class="o">**</span><span class="n">options</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">options</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">set_settings</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def set_settings(**options):
+    for key, value in options.items():
+        print(f&quot;{key}: {value}&quot;)
+set_settings(learning_rate=0.01, batch_size=32)
 </pre></div>
 </div>
 </div>
@@ -1134,16 +1137,16 @@ Python allows functions to accept variable numbers of arguments.</p>
 <h3><strong>Combining All</strong><a class="headerlink" href="#combining-all" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">describe_person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="o">*</span><span class="n">hobbies</span><span class="p">,</span> <span class="o">**</span><span class="n">details</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Name: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, Age: </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hobbies:&quot;</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">hobbies</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Details:&quot;</span><span class="p">,</span> <span class="n">details</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def describe_person(name, age=18, *hobbies, **details):
+    print(f&quot;Name: {name}, Age: {age}&quot;)
+    print(&quot;Hobbies:&quot;, &quot;, &quot;.join(hobbies))
+    print(&quot;Details:&quot;, details)
 
-<span class="n">describe_person</span><span class="p">(</span><span class="s2">&quot;David&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="s2">&quot;reading&quot;</span><span class="p">,</span> <span class="s2">&quot;swimming&quot;</span><span class="p">,</span> <span class="n">job</span><span class="o">=</span><span class="s2">&quot;Engineer&quot;</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s2">&quot;USA&quot;</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># Name: David, Age: 22</span>
-<span class="c1"># Hobbies: reading, swimming</span>
-<span class="c1"># Details: {&#39;job&#39;: &#39;Engineer&#39;, &#39;country&#39;: &#39;USA&#39;}</span>
+describe_person(&quot;David&quot;, 22, &quot;reading&quot;, &quot;swimming&quot;, job=&quot;Engineer&quot;, country=&quot;USA&quot;)
+# Output:
+# Name: David, Age: 22
+# Hobbies: reading, swimming
+# Details: {&#39;job&#39;: &#39;Engineer&#39;, &#39;country&#39;: &#39;USA&#39;}
 </pre></div>
 </div>
 </div>
@@ -1159,7 +1162,7 @@ Python allows functions to accept variable numbers of arguments.</p>
 <h3>Syntax:<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">arguments</span><span class="p">:</span> <span class="n">expression</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>lambda arguments: expression
 </pre></div>
 </div>
 </div>
@@ -1168,8 +1171,8 @@ Python allows functions to accept variable numbers of arguments.</p>
 <h4>Example:<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">double</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>  <span class="c1"># Output: 8</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>double = lambda x: x * 2
+print(double(4))  # Output: 8
 </pre></div>
 </div>
 </div>
@@ -1189,9 +1192,9 @@ Python allows functions to accept variable numbers of arguments.</p>
 <h4>Example:<a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">squared</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">squared</span><span class="p">))</span>  <span class="c1"># Output: [1, 4, 9]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data = [1, 2, 3]
+squared = map(lambda x: x**2, data)
+print(list(squared))  # Output: [1, 4, 9]
 </pre></div>
 </div>
 </div>
@@ -1206,9 +1209,9 @@ Filters elements based on a condition.</p>
 <h4>Example:<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">evens</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">evens</span><span class="p">))</span>  <span class="c1"># Output: [2, 4]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>numbers = [1, 2, 3, 4]
+evens = filter(lambda x: x % 2 == 0, numbers)
+print(list(evens))  # Output: [2, 4]
 </pre></div>
 </div>
 </div>
@@ -1223,10 +1226,10 @@ Applies a function cumulatively to elements in an iterable.</p>
 <h4>Example:<a class="headerlink" href="#id18" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">reduce</span>
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">total</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>  <span class="c1"># Output: 10</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from functools import reduce
+numbers = [1, 2, 3, 4]
+total = reduce(lambda x, y: x + y, numbers)
+print(total)  # Output: 10
 </pre></div>
 </div>
 </div>
@@ -1254,12 +1257,12 @@ Applies a function cumulatively to elements in an iterable.</p>
 <h3><strong>Example: Factorial</strong><a class="headerlink" href="#example-factorial" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Output: 120 (5 * 4 * 3 * 2 * 1)</span>
+print(factorial(5))  # Output: 120 (5 * 4 * 3 * 2 * 1)
 </pre></div>
 </div>
 </div>
@@ -1269,12 +1272,12 @@ Applies a function cumulatively to elements in an iterable.</p>
 <h3><strong>Fibonacci Sequence</strong><a class="headerlink" href="#fibonacci-sequence" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span>
-    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def fibonacci(n):
+    if n &lt;= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>  <span class="c1"># Output: 8 (0, 1, 1, 2, 3, 5, 8)</span>
+print(fibonacci(6))  # Output: 8 (0, 1, 1, 2, 3, 5, 8)
 </pre></div>
 </div>
 </div>
@@ -1289,22 +1292,22 @@ Applies a function cumulatively to elements in an iterable.</p>
 <h3><strong>Syntax</strong><a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Before the function&quot;</span><span class="p">)</span>
-        <span class="n">func</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After the function&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">wrapper</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def decorator(func):
+    def wrapper():
+        print(&quot;Before the function&quot;)
+        func()
+        print(&quot;After the function&quot;)
+    return wrapper
 
-<span class="nd">@decorator</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">say_hello</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+@decorator
+def say_hello():
+    print(&quot;Hello!&quot;)
 
-<span class="n">say_hello</span><span class="p">()</span>
-<span class="c1"># Output:</span>
-<span class="c1"># Before the function</span>
-<span class="c1"># Hello!</span>
-<span class="c1"># After the function</span>
+say_hello()
+# Output:
+# Before the function
+# Hello!
+# After the function
 </pre></div>
 </div>
 </div>
@@ -1314,23 +1317,23 @@ Applies a function cumulatively to elements in an iterable.</p>
 <h3><strong>With Arguments</strong><a class="headerlink" href="#with-arguments" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-        <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-                <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">wrapper</span>
-    <span class="k">return</span> <span class="n">decorator</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def repeat(n):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for _ in range(n):
+                func(*args, **kwargs)
+        return wrapper
+    return decorator
 
-<span class="nd">@repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">cheer</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Go, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+@repeat(3)
+def cheer(name):
+    print(f&quot;Go, {name}!&quot;)
 
-<span class="n">cheer</span><span class="p">(</span><span class="s2">&quot;Team&quot;</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># Go, Team!</span>
-<span class="c1"># Go, Team!</span>
-<span class="c1"># Go, Team!</span>
+cheer(&quot;Team&quot;)
+# Output:
+# Go, Team!
+# Go, Team!
+# Go, Team!
 </pre></div>
 </div>
 </div>
@@ -1343,11 +1346,11 @@ Applies a function cumulatively to elements in an iterable.</p>
 <p>Annotations provide metadata about parameter and return types (not enforced).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def add(a: int, b: int) -&gt; int:
+    return a + b
 
-<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>  <span class="c1"># Output: 7</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="o">.</span><span class="vm">__annotations__</span><span class="p">)</span>  <span class="c1"># Output: {&#39;a&#39;: &lt;class &#39;int&#39;&gt;, &#39;b&#39;: &lt;class &#39;int&#39;&gt;, &#39;return&#39;: &lt;class &#39;int&#39;&gt;}</span>
+print(add(3, 4))  # Output: 7
+print(add.__annotations__)  # Output: {&#39;a&#39;: &lt;class &#39;int&#39;&gt;, &#39;b&#39;: &lt;class &#39;int&#39;&gt;, &#39;return&#39;: &lt;class &#39;int&#39;&gt;}
 </pre></div>
 </div>
 </div>
@@ -1386,37 +1389,37 @@ Applies a function cumulatively to elements in an iterable.</p>
 <p>Let’s combine everything into a versatile calculator function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculator</span><span class="p">(</span><span class="n">operation</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">precision</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;A flexible calculator with variable arguments and precision control.&quot;&quot;&quot;</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">log_result</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-        <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
-            <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Operation &#39;</span><span class="si">{</span><span class="n">operation</span><span class="si">}</span><span class="s2">&#39; result: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">result</span>
-        <span class="k">return</span> <span class="n">wrapper</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def calculator(operation: str, *args, precision: int = 2, **kwargs) -&gt; float:
+    &quot;&quot;&quot;A flexible calculator with variable arguments and precision control.&quot;&quot;&quot;
+    def log_result(func):
+        def wrapper(*a, **kw):
+            result = func(*a, **kw)
+            print(f&quot;Operation &#39;{operation}&#39; result: {result}&quot;)
+            return result
+        return wrapper
     
-    <span class="nd">@log_result</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">compute</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">operation</span> <span class="o">==</span> <span class="s2">&quot;add&quot;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">),</span> <span class="n">precision</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">operation</span> <span class="o">==</span> <span class="s2">&quot;multiply&quot;</span><span class="p">:</span>
-            <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
-            <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
-                <span class="n">result</span> <span class="o">*=</span> <span class="n">num</span>
-            <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">precision</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">operation</span> <span class="o">==</span> <span class="s2">&quot;power&quot;</span><span class="p">:</span>
-            <span class="n">base</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;base&quot;</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-            <span class="n">exponent</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;exponent&quot;</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="mi">2</span><span class="p">)</span>
-            <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">base</span> <span class="o">**</span> <span class="n">exponent</span><span class="p">,</span> <span class="n">precision</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unsupported operation&quot;</span><span class="p">)</span>
+    @log_result
+    def compute():
+        if operation == &quot;add&quot;:
+            return round(sum(args), precision)
+        elif operation == &quot;multiply&quot;:
+            result = 1
+            for num in args:
+                result *= num
+            return round(result, precision)
+        elif operation == &quot;power&quot;:
+            base = kwargs.get(&quot;base&quot;, args[0])
+            exponent = kwargs.get(&quot;exponent&quot;, args[1] if len(args) &gt; 1 else 2)
+            return round(base ** exponent, precision)
+        else:
+            raise ValueError(&quot;Unsupported operation&quot;)
 
-    <span class="k">return</span> <span class="n">compute</span><span class="p">()</span>
+    return compute()
 
-<span class="c1"># Usage</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">calculator</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="mf">1.234</span><span class="p">,</span> <span class="mf">2.345</span><span class="p">,</span> <span class="mf">3.456</span><span class="p">))</span>  <span class="c1"># Output: Operation &#39;add&#39; result: 7.04</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">calculator</span><span class="p">(</span><span class="s2">&quot;multiply&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>         <span class="c1"># Output: Operation &#39;multiply&#39; result: 24</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">calculator</span><span class="p">(</span><span class="s2">&quot;power&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">exponent</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># Output: Operation &#39;power&#39; result: 8</span>
+# Usage
+print(calculator(&quot;add&quot;, 1.234, 2.345, 3.456))  # Output: Operation &#39;add&#39; result: 7.04
+print(calculator(&quot;multiply&quot;, 2, 3, 4))         # Output: Operation &#39;multiply&#39; result: 24
+print(calculator(&quot;power&quot;, base=2, exponent=3))  # Output: Operation &#39;power&#39; result: 8
 </pre></div>
 </div>
 </div>

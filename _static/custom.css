@@ -1,189 +1,229 @@
-/*-----------------------*/
-/* Google Fonts */
-/*-----------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
 
-/*-----------------------*/
-/* Core Variables */
-/*-----------------------*/
+/* =========================================================
+   ROOT VARIABLES (LIGHT MODE)
+========================================================= */
 :root {
   --primary-color: #0056b3;
   --secondary-color: #27AE60;
   --accent-color: #E67E22;
-  --text-color: #2C3E50;
-  --light_bg: #F8F9FA;
-  --code_bg_light: #e6f2ff;
-  --code_bg_dark: #2C3E50;
-  --code_text_light: #24292E;
-  --code_text_dark: #C9D1D9;
+  --text-color: #1f2937;
+  --muted-text: #4b5563;
+  --bg-color: #ffffff;
+  --light-bg: #F8F9FA;
+  --hover-bg: #e6f2ff;
+  --code-bg-light: #e6f2ff;
+  --code-bg-dark: #0D1117;
+  --code-text-light: #24292E;
+  --code-text-dark: #C9D1D9;
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --hover_bg: #e6f2ff;
 }
 
-/*-----------------------*/
-/* Base Styling */
-/*-----------------------*/
+/* =========================================================
+   BASE TYPOGRAPHY (READING OPTIMIZED)
+========================================================= */
+html {
+  font-size: 16.5px;
+}
+
 body {
-  font-family: Martian mono, Consolas, monospace;
-  /* Consolas for body text */
-  line-height: 1.5;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.75;
   color: var(--text-color);
-  background-color: white;
+  background-color: var(--bg-color);
   margin: 0;
-  padding: 0;
 }
 
-/*-----------------------*/
-/* Header Styling */
-/*-----------------------*/
+/* Optimal book width */
+.bd-main {
+  max-width: 760px;
+  margin: auto;
+}
+
+/* Paragraphs & lists */
+p {
+  max-width: 70ch;
+  margin-bottom: 1.35rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================================================
+   HEADINGS + ANCHORS
+========================================================= */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Anonymous Pro", 'Source Code Pro', sans-serif;
-  /* 'Inter', Inter for headings */
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: var(--primary-color);
+  font-size: 2.4rem;
+  margin: 2.8rem 0 1.5rem;
   border-bottom: 3px solid var(--primary-color);
-  padding-bottom: 0.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 2rem;
-  color: var(--secondary-color);
-  margin-top: 2rem;
-  padding-left: 0.5rem;
+  font-size: 1.9rem;
+  margin: 2.4rem 0 1.2rem;
   border-left: 4px solid var(--secondary-color);
+  padding-left: 0.6rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
+  margin-top: 2rem;
   color: var(--accent-color);
-  margin-top: 1.5rem;
 }
 
-/*-----------------------*/
-/* Code Blocks */
-/*-----------------------*/
+/* Hover anchors */
+.headerlink {
+  opacity: 0;
+  margin-left: 0.4rem;
+  font-size: 0.8em;
+  color: var(--muted-text);
+  transition: opacity 0.2s ease;
+}
+
+h1:hover .headerlink,
+h2:hover .headerlink,
+h3:hover .headerlink {
+  opacity: 1;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* =========================================================
+   CODE (INLINE + BLOCK)
+========================================================= */
 pre,
 .highlight {
-  font-family: 'Anonymous Pro', monospace;
-  /* Fira Code for code blocks */
-  background: var(--code_bg_light);
+  font-family: 'Fira Code', monospace;
+  background: var(--code-bg-light);
+  padding: 1.5rem;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  padding: 1.5rem;
   overflow-x: auto;
-  line-height: 1.5;
-  margin-bottom: 1.5em;
-  border: none;
 }
 
 pre code {
   background: none;
-  padding: 0;
-  border-radius: 0;
-  color: var(--code_text_light);
+  color: var(--code-text-light);
 }
 
 code {
   font-family: 'Fira Code', monospace;
-  /* Fira Code for inline code */
-  background-color: rgba(231, 126, 34, 0.1);
+  background-color: rgba(231, 126, 34, 0.12);
   color: #C0392B;
   padding: 0.2em 0.4em;
   border-radius: 4px;
 }
 
-/*-----------------------*/
-/* Dark Mode */
-/*-----------------------*/
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-color: #ECF0F1;
-    --light_bg: #2C3E50;
-    --code_bg_light: #0D1117;
-    --code_text_light: #C9D1D9;
-  }
-
-  body {
-    background: #1A252F;
-  }
-
-  pre,
-  .highlight {
-    background: var(--code_bg_dark);
-    color: var(--code_text_dark);
-  }
-
-  pre code {
-    color: var(--code_text_dark);
-  }
-
-  code {
-    background-color: rgba(231, 126, 34, 0.2);
-    color: #E67E22;
-  }
-}
-
-/* Tables */
+/* =========================================================
+   TABLES
+========================================================= */
 table {
   width: 100%;
   border-collapse: collapse;
-  box-shadow: var(--box-shadow);
+  margin: 2rem 0;
   border-radius: var(--border-radius);
   overflow: hidden;
-  margin: 2rem 0;
+  box-shadow: var(--box-shadow);
 }
 
 th,
 td {
   padding: 1rem;
-  text-align: left;
 }
 
 th {
-  background-color: var(--primary-color) !important;
-  color: white !important;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 tr:nth-child(even) {
   background-color: var(--light-bg);
 }
 
-/*-----------------------*/
-/* Sidebar & Navigation */
-/*-----------------------*/
+table tr:hover {
+  background-color: var(--hover-bg);
+}
+
+/* =========================================================
+   ADMONITIONS / CALLOUTS
+========================================================= */
+.admonition {
+  padding: 1.1rem 1.4rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.admonition.note {
+  border-left: 4px solid var(--primary-color);
+}
+
+.admonition.tip {
+  border-left: 4px solid var(--secondary-color);
+}
+
+.admonition.warning,
+.admonition.important {
+  border-left: 4px solid var(--accent-color);
+}
+
+/* =========================================================
+   MATH (LaTeX)
+========================================================= */
+.math {
+  font-size: 1.05rem;
+}
+
+.math-display {
+  margin: 1.8rem 0;
+  padding: 1rem;
+  background: var(--light-bg);
+  border-radius: var(--border-radius);
+}
+
+/* =========================================================
+   SIDEBAR + NAVBAR
+========================================================= */
 .bd-sidebar {
+  font-size: 0.92rem;
   background: var(--light-bg);
   border-right: 1px solid #DEE2E6;
 }
 
 .bd-navbar {
   background: var(--primary-color) !important;
-  box-shadow: var(--box-shadow);
 }
 
-.bd-navbar .navbar-nav .nav-link {
-  color: white !important;
-}
-
-.bd-navbar .navbar-nav .nav-link:hover {
-  color: var(--secondary-color) !important;
-}
-
-/*-----------------------*/
-/* Mobile Responsive */
-/*-----------------------*/
+/* =========================================================
+   MOBILE
+========================================================= */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -199,87 +239,65 @@ tr:nth-child(even) {
 
   .bd-sidebar {
     display: none;
-    /* Hide sidebar on mobile */
   }
 }
 
-/*-----------------------*/
-/* Custom Callouts */
-/*-----------------------*/
-div.alert-success {
-  background: rgba(39, 174, 96, 0.1);
-  border-color: var(--secondary-color);
-}
-
-div.alert-warning {
-  background: rgba(230, 126, 34, 0.1);
-  border-color: var(--accent-color);
-}
-
-/*-----------------------*/
-/* Dark Mode */
-/*-----------------------*/
+/* =========================================================
+   DARK MODE (SINGLE SOURCE OF TRUTH)
+========================================================= */
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: #ECF0F1;
-    --light_bg: #2C3E50;
-    --code_bg_light: #0D1117;
-    --code_text_light: #C9D1D9;
-    --hover_bg: #003366;
-  }
-
-  body {
-    background: #1A252F;
+    --bg-color: #1A252F;
+    --light-bg: #2C3E50;
+    --hover-bg: #003366;
   }
 
   pre,
   .highlight {
     background: var(--code-bg-dark);
-    border-color: #34495E;
-  }
-
-  pre code {
     color: var(--code-text-dark);
   }
 
   code {
-    background-color: rgba(231, 126, 34, 0.2);
+    background-color: rgba(231, 126, 34, 0.25);
     color: #E67E22;
   }
 
-  table {
-    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
+  table tr:nth-child(even) {
+    background-color: rgba(123, 146, 161, 0.12);
+  }
+}
+
+/* =========================================================
+   PRINT / PDF EXPORT
+========================================================= */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
   }
 
-  th {
-    background-color: var(--primary-color) !important;
+  a {
+    color: black;
+    border-bottom: none;
   }
 
-  tr:nth-child(even) {
-    background-color: rgba(123, 146, 161, 0.1);
+  pre,
+  code {
+    background: #f5f5f5 !important;
+    color: black !important;
   }
 
-  .bd-sidebar {
-    background: #2C3E50;
-    border-right: 1px solid #34495E;
-  }
-
+  .bd-sidebar,
   .bd-navbar {
-    background: var(--primary-color) !important;
+    display: none !important;
   }
-}
 
-@media (min-width: 768px) {
-  .bd-main {
-    max-width: 800px;
-    margin: 0 auto;
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
   }
-}
-
-table tr {
-  transition: background-color 0.2s ease;
-}
-
-table tr :hover {
-  background-color: var(--hover_bg);
 }

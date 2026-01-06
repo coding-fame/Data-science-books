@@ -4,7 +4,7 @@ author: "Gajanesh"
 copyright: "© 2025 Gajanesh. All rights reserved."
 # Execution Settings
 execute:
-  execute_notebooks: auto
+  execute_notebooks: off
   timeout: 180
   cache: "_build/.jupyter_cache"
   allow_errors: false
