@@ -1,0 +1,973 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>DL: Key Terminology &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=638b2d67" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/4_dl/dl4_Terminology';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="DL: Multi-Layer Perceptron (MLP) Models in Keras" href="dl5_multi_layer.html" />
+    <link rel="prev" title="DL: Libraries" href="dl3_Libraries.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_statistics_fundamentals.html">Statistics Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Programming</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_python/1_basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/9_regex.html">Regular Expressions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Wrangling</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis (EDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train-Test Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core Algo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Model Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Model Deployment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dl3_Libraries.html">Libraries</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dl5_multi_layer.html">Multi-Layer Perceptron (MLP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dl6_first_nn.html">First Neural Network with Keras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dl7_evaluating_model.html">Evaluating Model Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dl8_multiclass_classification.html">Multiclass Classification of IRIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dl9_multiclass_classification_hand.html">Multiclass Classification Handwritten Digits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dl10_saving_and_loading.html">Saving and Loading a Deep Learning Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dl11_checkpointing.html">Checkpointing in Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions, Activation Functions, and Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Natural Language Processing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Wrangling and Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Replacing and Correcting Words</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">Components in NLP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF, and IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Twitter Sentiment Analysis using TextBlob</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/book/edit/main/contents/4_dl/dl4_Terminology.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/book/issues/new?title=Issue%20on%20page%20%2Fcontents/4_dl/dl4_Terminology.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/4_dl/dl4_Terminology.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>DL: Key Terminology</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neuron"><strong>1. Neuron</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-layer-perceptrons-mlp"><strong>2. Multi-Layer Perceptrons (MLP)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neural-network"><strong>3. Neural Network</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-in-neural-networks"><strong>4. Layers in Neural Networks</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-layer"><strong>Input Layer</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-layers"><strong>Hidden Layers</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-layer"><strong>Output Layer</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weights-bias"><strong>5. Weights &amp; Bias</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weights"><strong>Weights</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bias"><strong>Bias</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activation-function"><strong>6. Activation Function</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-activation-functions"><strong>Types of Activation Functions</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-backpropagation"><strong>7. Forward &amp; Backpropagation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-propagation"><strong>Forward Propagation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backpropagation"><strong>Backpropagation</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-function"><strong>8. Cost Function</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizers"><strong>9. Optimizers</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent"><strong>10. Gradient Descent</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-gradient-descent-sgd"><strong>Stochastic Gradient Descent (SGD)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-rate"><strong>11. Learning Rate</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#batches-epochs"><strong>12. Batches &amp; Epochs</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batches"><strong>Batches</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#epochs"><strong>Epochs</strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="dl-key-terminology">
+<h1><strong>DL: Key Terminology</strong><a class="headerlink" href="#dl-key-terminology" title="Link to this heading">#</a></h1>
+<section id="neuron">
+<h2><strong>1. Neuron</strong><a class="headerlink" href="#neuron" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A <strong>neuron</strong> is the fundamental unit of the brain.</p></li>
+<li><p>In deep learning, neurons are the basic building blocks of <strong>neural networks</strong>.</p></li>
+<li><p>Each neuron <strong>receives an input, processes it, and generates an output</strong>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="multi-layer-perceptrons-mlp">
+<h2><strong>2. Multi-Layer Perceptrons (MLP)</strong><a class="headerlink" href="#multi-layer-perceptrons-mlp" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A <strong>single neuron</strong> is not capable of solving complex tasks.</p></li>
+<li><p>A <strong>group of neurons</strong> forms a <strong>multi-layer perceptron (MLP)</strong>.</p></li>
+<li><p>An MLP consists of:</p>
+<ul>
+<li><p><strong>Input layer</strong>: Receives the input.</p></li>
+<li><p><strong>Hidden layer(s)</strong>: Perform computations on the input data.</p></li>
+<li><p><strong>Output layer</strong>: Produces the final result.</p></li>
+</ul>
+</li>
+<li><p>Each layer has <strong>multiple neurons</strong>, and all neurons are <strong>fully connected</strong> to the next layer.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="neural-network">
+<h2><strong>3. Neural Network</strong><a class="headerlink" href="#neural-network" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Neural networks</strong> are the backbone of deep learning.</p></li>
+<li><p>They consist of <strong>multiple interconnected neurons (perceptrons)</strong>.</p></li>
+<li><p>The goal of a neural network is to <strong>find a mapping function</strong> that fits the data.</p></li>
+<li><p><strong>Weights and biases</strong> are updated during training to improve accuracy.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="layers-in-neural-networks">
+<h2><strong>4. Layers in Neural Networks</strong><a class="headerlink" href="#layers-in-neural-networks" title="Link to this heading">#</a></h2>
+<section id="input-layer">
+<h3><strong>Input Layer</strong><a class="headerlink" href="#input-layer" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The <strong>first layer</strong> that receives the input data.</p></li>
+</ul>
+</section>
+<section id="hidden-layers">
+<h3><strong>Hidden Layers</strong><a class="headerlink" href="#hidden-layers" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Processing layers</strong> between input and output.</p></li>
+<li><p>These layers extract and refine important features from data.</p></li>
+</ul>
+</section>
+<section id="output-layer">
+<h3><strong>Output Layer</strong><a class="headerlink" href="#output-layer" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The <strong>final layer</strong> that generates the output.</p></li>
+<li><p>Converts processed data into a <strong>meaningful prediction</strong>.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="weights-bias">
+<h2><strong>5. Weights &amp; Bias</strong><a class="headerlink" href="#weights-bias" title="Link to this heading">#</a></h2>
+<section id="weights">
+<h3><strong>Weights</strong><a class="headerlink" href="#weights" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Each <strong>input to a neuron is multiplied</strong> by a weight.</p></li>
+<li><p>If a neuron has multiple inputs, each input has its <strong>own weight</strong>.</p></li>
+<li><p><strong>Weights determine the importance</strong> of each input.</p></li>
+<li><p>Initially, weights are assigned randomly and are updated during training.</p>
+<ul>
+<li><p>For example: Input <code class="docutils literal notranslate"><span class="pre">a</span></code> with weight <code class="docutils literal notranslate"><span class="pre">W1</span></code> results in an output of <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*</span> <span class="pre">W1</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="bias">
+<h3><strong>Bias</strong><a class="headerlink" href="#bias" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>A bias value is added to the weighted sum.</p></li>
+<li><p>The final calculation becomes:<br />
+[
+Output = (Input \times Weight) + Bias
+]</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="activation-function">
+<h2><strong>6. Activation Function</strong><a class="headerlink" href="#activation-function" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Converts the <strong>weighted sum</strong> of inputs into an output signal.</p></li>
+<li><p><strong>Applies non-linearity</strong> to the model, enabling it to learn complex patterns.</p></li>
+<li><p>General form:<br />
+[
+f(WX + B)
+]</p></li>
+</ul>
+<section id="types-of-activation-functions">
+<h3><strong>Types of Activation Functions</strong><a class="headerlink" href="#types-of-activation-functions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Sigmoid</strong></p></li>
+<li><p><strong>Linear</strong></p></li>
+<li><p><strong>ReLU (Rectified Linear Unit)</strong></p></li>
+<li><p><strong>Tanh (Hyperbolic Tangent)</strong></p></li>
+<li><p><strong>Softmax</strong></p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="forward-backpropagation">
+<h2><strong>7. Forward &amp; Backpropagation</strong><a class="headerlink" href="#forward-backpropagation" title="Link to this heading">#</a></h2>
+<section id="forward-propagation">
+<h3><strong>Forward Propagation</strong><a class="headerlink" href="#forward-propagation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Data <strong>flows forward</strong> from the input layer to the output layer.</p></li>
+<li><p>Each neuron processes inputs and passes results to the next layer.</p></li>
+</ul>
+</section>
+<section id="backpropagation">
+<h3><strong>Backpropagation</strong><a class="headerlink" href="#backpropagation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Error correction mechanism</strong> used during training.</p></li>
+<li><p>Steps:</p>
+<ol class="arabic simple">
+<li><p>Network output is compared with the actual output using a <strong>loss function</strong>.</p></li>
+<li><p>Error is calculated.</p></li>
+<li><p>Weights are adjusted <strong>backward</strong> to minimize the error.</p></li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="cost-function">
+<h2><strong>8. Cost Function</strong><a class="headerlink" href="#cost-function" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Measures <strong>how well the model’s predictions match actual results</strong>.</p></li>
+<li><p>The goal of training is to <strong>minimize the cost function</strong>.</p></li>
+<li><p>Helps improve <strong>accuracy</strong> and <strong>reduce errors</strong>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="optimizers">
+<h2><strong>9. Optimizers</strong><a class="headerlink" href="#optimizers" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Optimizers adjust weights and biases</strong> to minimize the loss function.</p></li>
+<li><p>They help neural networks <strong>learn efficiently</strong>.</p></li>
+<li><p>Examples:</p>
+<ul>
+<li><p><strong>Gradient Descent</strong></p></li>
+<li><p><strong>Stochastic Gradient Descent (SGD)</strong></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="gradient-descent">
+<h2><strong>10. Gradient Descent</strong><a class="headerlink" href="#gradient-descent" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>An <strong>optimization algorithm</strong> used to find the minimum of the cost function.</p></li>
+<li><p>Starts from a random point and <strong>moves downhill</strong> along the gradient.</p></li>
+</ul>
+<section id="stochastic-gradient-descent-sgd">
+<h3><strong>Stochastic Gradient Descent (SGD)</strong><a class="headerlink" href="#stochastic-gradient-descent-sgd" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Instead of using the entire dataset, <strong>SGD updates weights using small batches of data</strong>.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="learning-rate">
+<h2><strong>11. Learning Rate</strong><a class="headerlink" href="#learning-rate" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Controls how much weights are updated</strong> in each step.</p></li>
+<li><p>Needs to be chosen carefully:</p>
+<ul>
+<li><p><strong>Too high</strong> → May miss the optimal point.</p></li>
+<li><p><strong>Too low</strong> → Training will be slow.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="batches-epochs">
+<h2><strong>12. Batches &amp; Epochs</strong><a class="headerlink" href="#batches-epochs" title="Link to this heading">#</a></h2>
+<section id="batches">
+<h3><strong>Batches</strong><a class="headerlink" href="#batches" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Instead of processing all data at once, it is split into <strong>smaller groups (batches)</strong>.</p></li>
+<li><p>Helps improve efficiency and prevent memory issues.</p></li>
+</ul>
+</section>
+<section id="epochs">
+<h3><strong>Epochs</strong><a class="headerlink" href="#epochs" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>One complete cycle of training</strong> on the entire dataset.</p></li>
+<li><p>More epochs = better learning (but too many may cause overfitting).</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\4_dl"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="dl3_Libraries.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">DL: Libraries</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="dl5_multi_layer.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>DL: Multi-Layer Perceptron (MLP) Models in Keras</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neuron"><strong>1. Neuron</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-layer-perceptrons-mlp"><strong>2. Multi-Layer Perceptrons (MLP)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neural-network"><strong>3. Neural Network</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-in-neural-networks"><strong>4. Layers in Neural Networks</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-layer"><strong>Input Layer</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-layers"><strong>Hidden Layers</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-layer"><strong>Output Layer</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weights-bias"><strong>5. Weights &amp; Bias</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weights"><strong>Weights</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bias"><strong>Bias</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activation-function"><strong>6. Activation Function</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-activation-functions"><strong>Types of Activation Functions</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-backpropagation"><strong>7. Forward &amp; Backpropagation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-propagation"><strong>Forward Propagation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backpropagation"><strong>Backpropagation</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-function"><strong>8. Cost Function</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizers"><strong>9. Optimizers</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent"><strong>10. Gradient Descent</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-gradient-descent-sgd"><strong>Stochastic Gradient Descent (SGD)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-rate"><strong>11. Learning Rate</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#batches-epochs"><strong>12. Batches &amp; Epochs</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batches"><strong>Batches</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#epochs"><strong>Epochs</strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

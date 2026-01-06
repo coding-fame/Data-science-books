@@ -1,0 +1,1069 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Foundational Concepts &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=638b2d67" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/3_ml/B01_funda';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_statistics_fundamentals.html">Statistics Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Programming</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_python/1_basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/9_regex.html">Regular Expressions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Wrangling</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis (EDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_train_test_split.html">Train-Test Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_core_algo.html">Core Algo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_naive_bayes.html">Naive Bayes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_training.html">Model Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_deployment.html">Model Deployment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron (MLP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network with Keras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Evaluating Model Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification of IRIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Multiclass Classification Handwritten Digits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving and Loading a Deep Learning Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Checkpointing in Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions, Activation Functions, and Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Natural Language Processing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Wrangling and Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Replacing and Correcting Words</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">Components in NLP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF, and IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Twitter Sentiment Analysis using TextBlob</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/book/edit/main/contents/3_ml/B01_funda.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/book/issues/new?title=Issue%20on%20page%20%2Fcontents/3_ml/B01_funda.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/3_ml/B01_funda.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Foundational Concepts</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Foundational Concepts</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-learning"><strong>Types of Learning</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bias-variance-tradeoff"><strong>2️⃣ Bias-Variance Tradeoff</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#overfitting-vs-underfitting"><strong>3️⃣ Overfitting vs. Underfitting</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-handling">2️⃣ Data Handling</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#core-algorithms">3️⃣ Core Algorithms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supervised-learning"><strong>Supervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-supervised-learning"><strong>1. Types of Supervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-regression"><strong>A. Regression</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-classification"><strong>B. Classification</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation-metrics"><strong>2. Model Evaluation Metrics</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-regression-metrics"><strong>A. Regression Metrics</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-classification-metrics"><strong>B. Classification Metrics</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation">4️⃣ Model Evaluation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-metrics"><strong>Classification Metrics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-metrics"><strong>Regression Metrics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering-metrics"><strong>Clustering Metrics</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-training">5️⃣ Optimization &amp; Training</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loss-functions"><strong>Loss Functions</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-algorithms"><strong>Optimization Algorithms</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regularization"><strong>Regularization</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-tuning"><strong>Hyperparameter Tuning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-thoughts"><strong>Final Thoughts</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ethical-practical-considerations"><strong>6⃣ Ethical &amp; Practical Considerations</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bias-and-fairness"><strong>1. Bias and Fairness</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-sources-of-bias"><strong>Common Sources of Bias</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mitigation-strategies"><strong>Mitigation Strategies</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-interpretability"><strong>2. Model Interpretability</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-techniques-for-interpretability"><strong>Key Techniques for Interpretability</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment-mlops"><strong>3. Deployment &amp; MLOps</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-deployment-approaches"><strong>Model Deployment Approaches</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mlops-machine-learning-operations"><strong>MLOps (Machine Learning Operations)</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#key-theories"><strong>7⃣ Key Theories</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#occams-razor"><strong>1. Occam’s Razor</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-free-lunch-theorem"><strong>2. No Free Lunch Theorem</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curse-of-dimensionality"><strong>3. Curse of Dimensionality</strong></a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="foundational-concepts">
+<h1><strong>Foundational Concepts</strong><a class="headerlink" href="#foundational-concepts" title="Link to this heading">#</a></h1>
+<section id="types-of-learning">
+<h2><strong>Types of Learning</strong><a class="headerlink" href="#types-of-learning" title="Link to this heading">#</a></h2>
+<p>Machine learning algorithms fall into four primary categories based on how they learn from data:</p>
+<ul class="simple">
+<li><p><strong>Supervised Learning</strong>: Learns from labeled data.</p>
+<ul>
+<li><p>Examples: Regression, classification (e.g., predicting house prices, spam detection).</p></li>
+</ul>
+</li>
+<li><p><strong>Unsupervised Learning</strong>: Finds hidden patterns in unlabeled data.</p>
+<ul>
+<li><p>Examples: Clustering, dimensionality reduction (e.g., customer segmentation, topic modeling).</p></li>
+</ul>
+</li>
+<li><p><strong>Semi-Supervised Learning</strong>: Uses a mix of labeled and unlabeled data.</p>
+<ul>
+<li><p>Example: Using a small amount of labeled medical images along with many unlabeled ones.</p></li>
+</ul>
+</li>
+<li><p><strong>Reinforcement Learning</strong>: An agent learns by interacting with an environment and receiving rewards or penalties.</p>
+<ul>
+<li><p>Example: Training an AI to play chess or optimize traffic lights.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="bias-variance-tradeoff">
+<h1><strong>2️⃣ Bias-Variance Tradeoff</strong><a class="headerlink" href="#bias-variance-tradeoff" title="Link to this heading">#</a></h1>
+</section>
+<hr class="docutils" />
+<section id="overfitting-vs-underfitting">
+<h1><strong>3️⃣ Overfitting vs. Underfitting</strong><a class="headerlink" href="#overfitting-vs-underfitting" title="Link to this heading">#</a></h1>
+</section>
+<hr class="docutils" />
+<section id="data-handling">
+<h1>2️⃣ Data Handling<a class="headerlink" href="#data-handling" title="Link to this heading">#</a></h1>
+<p><em>Data Handling Pipeline: Step-by-Step</em>*</p>
+</section>
+<hr class="docutils" />
+<section id="core-algorithms">
+<h1>3️⃣ Core Algorithms<a class="headerlink" href="#core-algorithms" title="Link to this heading">#</a></h1>
+<section id="supervised-learning">
+<h2><strong>Supervised Learning</strong><a class="headerlink" href="#supervised-learning" title="Link to this heading">#</a></h2>
+<section id="types-of-supervised-learning">
+<h3><strong>1. Types of Supervised Learning</strong><a class="headerlink" href="#types-of-supervised-learning" title="Link to this heading">#</a></h3>
+<section id="a-regression">
+<h4><strong>A. Regression</strong><a class="headerlink" href="#a-regression" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Predict <strong>continuous numerical values</strong>.</p></li>
+</ul>
+</section>
+<section id="b-classification">
+<h4><strong>B. Classification</strong><a class="headerlink" href="#b-classification" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Assign inputs to <strong>discrete categories (classes)</strong>.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="model-evaluation-metrics">
+<h2><strong>2. Model Evaluation Metrics</strong><a class="headerlink" href="#model-evaluation-metrics" title="Link to this heading">#</a></h2>
+<section id="a-regression-metrics">
+<h3><strong>A. Regression Metrics</strong><a class="headerlink" href="#a-regression-metrics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Mean Squared Error (MSE)</strong>: Average of squared errors.</p></li>
+<li><p><strong>Root Mean Squared Error (RMSE)</strong>: (\sqrt{MSE}).</p></li>
+<li><p><strong>Mean Absolute Error (MAE)</strong>: Average of absolute errors.</p></li>
+<li><p><strong>R² (R-Squared)</strong>: Proportion of variance explained by the model (0 to 1).</p></li>
+</ul>
+</section>
+<section id="b-classification-metrics">
+<h3><strong>B. Classification Metrics</strong><a class="headerlink" href="#b-classification-metrics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Accuracy</strong>: (Correct Predictions) / (Total Predictions).</p></li>
+<li><p><strong>Precision</strong>: (True Positives) / (True Positives + False Positives).</p></li>
+<li><p><strong>Recall</strong>: (True Positives) / (True Positives + False Negatives).</p></li>
+<li><p><strong>F1-Score</strong>: Harmonic mean of precision and recall.</p></li>
+<li><p><strong>ROC-AUC</strong>: Area under the ROC curve (measures class separation).</p></li>
+<li><p><strong>Confusion Matrix</strong>: Table showing true vs. predicted classes.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="model-evaluation">
+<h1>4️⃣ Model Evaluation<a class="headerlink" href="#model-evaluation" title="Link to this heading">#</a></h1>
+<section id="classification-metrics">
+<h2><strong>Classification Metrics</strong><a class="headerlink" href="#classification-metrics" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Accuracy, Precision, Recall, F1-Score, ROC-AUC.</p></li>
+<li><p>Confusion Matrix.</p></li>
+</ul>
+</section>
+<section id="regression-metrics">
+<h2><strong>Regression Metrics</strong><a class="headerlink" href="#regression-metrics" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Mean Squared Error (MSE), Root MSE (RMSE), Mean Absolute Error (MAE), R².</p></li>
+</ul>
+</section>
+<section id="clustering-metrics">
+<h2><strong>Clustering Metrics</strong><a class="headerlink" href="#clustering-metrics" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Silhouette Score, Davies-Bouldin Index.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="optimization-training">
+<h1>5️⃣ Optimization &amp; Training<a class="headerlink" href="#optimization-training" title="Link to this heading">#</a></h1>
+<section id="loss-functions">
+<h2><strong>Loss Functions</strong><a class="headerlink" href="#loss-functions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Cross-Entropy (classification), MSE (regression), Hinge Loss (SVM).</p></li>
+</ul>
+</section>
+<section id="optimization-algorithms">
+<h2><strong>Optimization Algorithms</strong><a class="headerlink" href="#optimization-algorithms" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Gradient Descent, Stochastic Gradient Descent (SGD), Adam.</p></li>
+</ul>
+</section>
+<section id="regularization">
+<h2><strong>Regularization</strong><a class="headerlink" href="#regularization" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>L1 (Lasso), L2 (Ridge), Dropout (in neural networks).</p></li>
+</ul>
+</section>
+<section id="hyperparameter-tuning">
+<h2><strong>Hyperparameter Tuning</strong><a class="headerlink" href="#hyperparameter-tuning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Grid Search, Random Search, Bayesian Optimization.</p></li>
+</ul>
+<hr class="docutils" />
+<section id="final-thoughts">
+<h3><strong>Final Thoughts</strong><a class="headerlink" href="#final-thoughts" title="Link to this heading">#</a></h3>
+<p>Mastering data handling and core algorithms is crucial for building reliable machine learning models. By following structured data processing steps, selecting the right algorithms, and evaluating performance effectively, you can develop robust and scalable ML solutions.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="ethical-practical-considerations">
+<h1><strong>6⃣ Ethical &amp; Practical Considerations</strong><a class="headerlink" href="#ethical-practical-considerations" title="Link to this heading">#</a></h1>
+<p>Ensuring fairness, transparency, and reliability in machine learning models is critical. Below are key considerations that help create responsible AI systems.</p>
+<section id="bias-and-fairness">
+<h2><strong>1. Bias and Fairness</strong><a class="headerlink" href="#bias-and-fairness" title="Link to this heading">#</a></h2>
+<p>Machine learning models can unintentionally reflect and amplify biases present in the data. Addressing bias ensures fair and equitable outcomes.</p>
+<section id="common-sources-of-bias">
+<h3><strong>Common Sources of Bias</strong><a class="headerlink" href="#common-sources-of-bias" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Data Bias</strong>: Skewed or unrepresentative datasets.</p></li>
+<li><p><strong>Algorithmic Bias</strong>: Models favor certain groups due to learned patterns.</p></li>
+<li><p><strong>Human Bias</strong>: Prejudices in data labeling and feature selection.</p></li>
+</ul>
+</section>
+<section id="mitigation-strategies">
+<h3><strong>Mitigation Strategies</strong><a class="headerlink" href="#mitigation-strategies" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Bias Detection</strong>: Use statistical tests and fairness metrics.</p>
+<ul>
+<li><p>Example: <strong>Demographic Parity</strong>, <strong>Equalized Odds</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Rebalancing Data</strong>: Use techniques like <strong>oversampling, undersampling</strong>, or <strong>data augmentation</strong>.</p></li>
+<li><p><strong>Fair Algorithms</strong>: Use models designed to mitigate bias (e.g., adversarial debiasing).</p></li>
+<li><p><strong>Regular Audits</strong>: Continuously monitor model predictions to identify and mitigate bias.</p></li>
+</ul>
+</section>
+</section>
+<section id="model-interpretability">
+<h2><strong>2. Model Interpretability</strong><a class="headerlink" href="#model-interpretability" title="Link to this heading">#</a></h2>
+<p>Understanding why a model makes certain predictions is essential for trust and debugging.</p>
+<section id="key-techniques-for-interpretability">
+<h3><strong>Key Techniques for Interpretability</strong><a class="headerlink" href="#key-techniques-for-interpretability" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>SHAP (SHapley Additive Explanations)</strong>: Measures feature contribution to predictions.</p></li>
+<li><p><strong>LIME (Local Interpretable Model-agnostic Explanations)</strong>: Creates interpretable approximations of model predictions.</p></li>
+<li><p><strong>Feature Importance</strong>: Identifies which input variables significantly impact outcomes.</p></li>
+<li><p><strong>Decision Trees &amp; Rule-based Models</strong>: Naturally interpretable models providing clear decision paths.</p></li>
+</ul>
+</section>
+</section>
+<section id="deployment-mlops">
+<h2><strong>3. Deployment &amp; MLOps</strong><a class="headerlink" href="#deployment-mlops" title="Link to this heading">#</a></h2>
+<p>Operationalizing machine learning models involves maintaining efficiency, scalability, and reliability.</p>
+<section id="model-deployment-approaches">
+<h3><strong>Model Deployment Approaches</strong><a class="headerlink" href="#model-deployment-approaches" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Batch Processing</strong>: Predictions on large datasets at scheduled intervals.</p></li>
+<li><p><strong>Real-Time Inference</strong>: Deploying models via APIs for instant predictions.</p></li>
+<li><p><strong>Edge Deployment</strong>: Running models on local devices (e.g., mobile phones, IoT devices).</p></li>
+</ul>
+</section>
+<section id="mlops-machine-learning-operations">
+<h3><strong>MLOps (Machine Learning Operations)</strong><a class="headerlink" href="#mlops-machine-learning-operations" title="Link to this heading">#</a></h3>
+<p>A set of practices that ensure smooth development, deployment, and monitoring of ML models.</p>
+<ul class="simple">
+<li><p><strong>CI/CD Pipelines for ML</strong></p>
+<ul>
+<li><p>Automates model training, testing, and deployment.</p></li>
+</ul>
+</li>
+<li><p><strong>Monitoring &amp; Maintenance</strong></p>
+<ul>
+<li><p>Tracks model drift and performance degradation.</p></li>
+</ul>
+</li>
+<li><p><strong>Version Control</strong></p>
+<ul>
+<li><p>Logs dataset, model architecture, and hyperparameter changes.</p></li>
+</ul>
+</li>
+<li><p><strong>Retraining Strategies</strong></p>
+<ul>
+<li><p>Periodic updates using fresh data to maintain accuracy.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-theories">
+<h1><strong>7⃣ Key Theories</strong><a class="headerlink" href="#key-theories" title="Link to this heading">#</a></h1>
+<p>Understanding fundamental theories in machine learning helps in making informed decisions when designing models.</p>
+<section id="occams-razor">
+<h2><strong>1. Occam’s Razor</strong><a class="headerlink" href="#occams-razor" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>“Among competing hypotheses, the one with the fewest assumptions should be selected.”</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Simpler models generalize better unless added complexity improves performance significantly.</p></li>
+<li><p>Example: A <strong>linear regression model</strong> is preferable over a <strong>deep neural network</strong> when the dataset is small and simple.</p></li>
+</ul>
+</section>
+<section id="no-free-lunch-theorem">
+<h2><strong>2. No Free Lunch Theorem</strong><a class="headerlink" href="#no-free-lunch-theorem" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>“No single algorithm performs best across all problems.”</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>The effectiveness of an algorithm depends on the problem and data characteristics.</p></li>
+<li><p>Example: Decision Trees work well for tabular data, but CNNs excel in image recognition.</p></li>
+</ul>
+</section>
+<section id="curse-of-dimensionality">
+<h2><strong>3. Curse of Dimensionality</strong><a class="headerlink" href="#curse-of-dimensionality" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>“As dimensions increase, data becomes sparse, making patterns harder to detect.”</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>High-dimensional data can degrade model performance due to increased complexity and computation.</p></li>
+<li><p><strong>Solution:</strong> Use <strong>Dimensionality Reduction</strong> techniques like <strong>PCA (Principal Component Analysis)</strong> or <strong>t-SNE</strong>.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\3_ml"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Foundational Concepts</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-learning"><strong>Types of Learning</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bias-variance-tradeoff"><strong>2️⃣ Bias-Variance Tradeoff</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#overfitting-vs-underfitting"><strong>3️⃣ Overfitting vs. Underfitting</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-handling">2️⃣ Data Handling</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#core-algorithms">3️⃣ Core Algorithms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supervised-learning"><strong>Supervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-supervised-learning"><strong>1. Types of Supervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-regression"><strong>A. Regression</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-classification"><strong>B. Classification</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation-metrics"><strong>2. Model Evaluation Metrics</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-regression-metrics"><strong>A. Regression Metrics</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-classification-metrics"><strong>B. Classification Metrics</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation">4️⃣ Model Evaluation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-metrics"><strong>Classification Metrics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-metrics"><strong>Regression Metrics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering-metrics"><strong>Clustering Metrics</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-training">5️⃣ Optimization &amp; Training</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loss-functions"><strong>Loss Functions</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-algorithms"><strong>Optimization Algorithms</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regularization"><strong>Regularization</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-tuning"><strong>Hyperparameter Tuning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-thoughts"><strong>Final Thoughts</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ethical-practical-considerations"><strong>6⃣ Ethical &amp; Practical Considerations</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bias-and-fairness"><strong>1. Bias and Fairness</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-sources-of-bias"><strong>Common Sources of Bias</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mitigation-strategies"><strong>Mitigation Strategies</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-interpretability"><strong>2. Model Interpretability</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-techniques-for-interpretability"><strong>Key Techniques for Interpretability</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment-mlops"><strong>3. Deployment &amp; MLOps</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-deployment-approaches"><strong>Model Deployment Approaches</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mlops-machine-learning-operations"><strong>MLOps (Machine Learning Operations)</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#key-theories"><strong>7⃣ Key Theories</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#occams-razor"><strong>1. Occam’s Razor</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-free-lunch-theorem"><strong>2. No Free Lunch Theorem</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curse-of-dimensionality"><strong>3. Curse of Dimensionality</strong></a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

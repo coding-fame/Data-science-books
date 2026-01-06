@@ -1,0 +1,1167 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Python Basics &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=638b2d67" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/1_python/1_basics';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Input/Output and Flow Control" href="2_advanced.html" />
+    <link rel="prev" title="Explanatory and Response Variables" href="../0_maths/6_regression_analysis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_statistics_fundamentals.html">Statistics Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Programming</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_regex.html">Regular Expressions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Wrangling</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis (EDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train-Test Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core Algo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Model Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Model Deployment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron (MLP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network with Keras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Evaluating Model Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification of IRIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Multiclass Classification Handwritten Digits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving and Loading a Deep Learning Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Checkpointing in Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions, Activation Functions, and Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Natural Language Processing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Wrangling and Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Replacing and Correcting Words</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">Components in NLP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF, and IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Twitter Sentiment Analysis using TextBlob</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/book/edit/main/contents/1_python/1_basics.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/book/issues/new?title=Issue%20on%20page%20%2Fcontents/1_python/1_basics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/1_python/1_basics.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Basics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-python-for-machine-learning">Why Use Python for Machine Learning?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-programming-applications">Python Programming Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#history-of-python">History of Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-keywords">2. Python Keywords</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-first-python-program">3. Your First Python Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-write-and-run-it">How to Write and Run It</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-python-code-runs">4. How Python Code Runs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#execution-steps">Execution Steps</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">5. Naming Conventions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-identifiers">What Are Identifiers?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments-in-a-program">Comments in a Program</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">6. Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-re-initialization">Variable Re-initialization:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">7. Data Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-types">Common Types</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-operators">8. Python Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">1. Arithmetic Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">2. Assignment Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unary-minus-operator">3. Unary Minus Operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relational-operators">4. Relational Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators">5. Logical Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">7. Membership Operators</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <hr class="docutils" />
+<section id="python-basics">
+<h1>Python Basics<a class="headerlink" href="#python-basics" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<section id="what-is-python">
+<h3>What is Python?<a class="headerlink" href="#what-is-python" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Python</strong> is a general purpose and high-level programming language.</p></li>
+<li><p><strong>General purpose</strong> means that many companies use Python to develop, test, and deploy software applications.</p></li>
+<li><p><strong>High-level programming</strong> means it’s human-readable and easy to understand.</p></li>
+<li><p><strong>Python</strong> is a popular, high-level programming language that’s easy to read and write.</p></li>
+<li><p><strong>High-level</strong> means it’s designed for humans to understand, not just machines.</p></li>
+<li><p>It’s widely used in many fields, especially Machine Learning (ML) and Deep Learning (DL).</p></li>
+</ul>
+</section>
+<section id="why-use-python-for-machine-learning">
+<h3>Why Use Python for Machine Learning?<a class="headerlink" href="#why-use-python-for-machine-learning" title="Link to this heading">#</a></h3>
+<p>Python is perfect for ML because:</p>
+<ul class="simple">
+<li><p>It’s simple to learn and use.</p></li>
+<li><p>It has powerful libraries like <strong>NumPy</strong> (for math), <strong>Pandas</strong> (for data handling), <strong>Scikit-learn</strong> (for ML models), and <strong>TensorFlow</strong> (for deep learning).</p></li>
+<li><p>These tools help you process data, build models, and train them efficiently.</p></li>
+</ul>
+</section>
+</section>
+<section id="python-programming-applications">
+<h2>Python Programming Applications<a class="headerlink" href="#python-programming-applications" title="Link to this heading">#</a></h2>
+<p>By using Python programming, we can develop:</p>
+<ol class="arabic simple">
+<li><p><strong>Standalone Applications:</strong><br />
+Applications that need to be installed on each machine to work.</p></li>
+<li><p><strong>Web Applications:</strong><br />
+Applications that follow a client-server architecture.</p></li>
+<li><p><strong>Database Applications:</strong><br />
+Applications that perform CRUD (create, update, retrieve, and delete) operations in a database.</p></li>
+<li><p><strong>Big Data Applications:</strong><br />
+Applications that can process large datasets (e.g., using PySpark).</p></li>
+<li><p><strong>Machine Learning:</strong><br />
+Applications that enable computers to learn automatically from past data.</p></li>
+</ol>
+<hr class="docutils" />
+<section id="history-of-python">
+<h3>History of Python<a class="headerlink" href="#history-of-python" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Created by Guido van Rossum in 1991.</p></li>
+<li><p>It’s <strong>open-source</strong>, meaning it’s free to use and download from <a class="reference external" href="https://www.python.org">www.python.org</a>.</p></li>
+<li><p>Supports <strong>functional programming</strong> (using functions) and <strong>object-oriented programming</strong> (using classes), which are great for organizing ML projects.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="python-keywords">
+<h2>2. Python Keywords<a class="headerlink" href="#python-keywords" title="Link to this heading">#</a></h2>
+<p>Keywords are special words in Python with specific meanings. You can’t use them as variable names. They’re important for writing ML code correctly.</p>
+<p>Here’s a table of common Python keywords:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Category</strong></p></th>
+<th class="head"><p><strong>Keywords</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Control Flow</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code>, <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code>, <code class="docutils literal notranslate"><span class="pre">pass</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Functions</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">def</span></code>, <code class="docutils literal notranslate"><span class="pre">lambda</span></code>, <code class="docutils literal notranslate"><span class="pre">return</span></code>, <code class="docutils literal notranslate"><span class="pre">yield</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Classes</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">class</span></code>, <code class="docutils literal notranslate"><span class="pre">with</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Modules</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">import</span></code>, <code class="docutils literal notranslate"><span class="pre">from</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Logic</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Constants</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code>, <code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Exceptions</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">try</span></code>, <code class="docutils literal notranslate"><span class="pre">except</span></code>, <code class="docutils literal notranslate"><span class="pre">finally</span></code>, <code class="docutils literal notranslate"><span class="pre">raise</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Key Points:</strong></p>
+<ul class="simple">
+<li><p>Keywords are lowercase, except <code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code>, and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p>Example in ML: Use <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> to check model accuracy during training.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="your-first-python-program">
+<h2>3. Your First Python Program<a class="headerlink" href="#your-first-python-program" title="Link to this heading">#</a></h2>
+<p>Let’s write a simple program, like one you might use to test an ML idea.</p>
+<section id="how-to-write-and-run-it">
+<h3>How to Write and Run It<a class="headerlink" href="#how-to-write-and-run-it" title="Link to this heading">#</a></h3>
+<p>You can use:</p>
+<ul class="simple">
+<li><p>Text editors (e.g., Notepad++, VS Code).</p></li>
+<li><p>IDEs (e.g., Jupyter Notebook, PyCharm) – great for ML because they show output instantly.</p></li>
+</ul>
+<p><strong>Example: Hello World</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code> shows text or results on the screen.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">World&quot;</span></code> is a <strong>string</strong> (text data).</p></li>
+</ul>
+<p><strong>Steps:</strong></p>
+<ol class="arabic">
+<li><p>Write the code in a file, e.g., <code class="docutils literal notranslate"><span class="pre">hello.py</span></code>.</p></li>
+<li><p>Run it with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>hello.py
+</pre></div>
+</div>
+</li>
+<li><p>See the output: <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code>.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="how-python-code-runs">
+<h2>4. How Python Code Runs<a class="headerlink" href="#how-python-code-runs" title="Link to this heading">#</a></h2>
+<p>Knowing how Python works helps when running big ML models.</p>
+<section id="execution-steps">
+<h3>Execution Steps<a class="headerlink" href="#execution-steps" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Source Code</strong>: Your Python file (e.g., <code class="docutils literal notranslate"><span class="pre">model.py</span></code>).</p></li>
+<li><p><strong>Byte Code</strong>: Python converts it to a faster format (stored as <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> files).</p></li>
+<li><p><strong>Python Virtual Machine (PVM)</strong>: Runs the byte code to give you results.</p></li>
+</ol>
+<p><strong>Why It Matters for ML:</strong></p>
+<ul class="simple">
+<li><p>Python is <strong>interpreted</strong>, so it runs line by line. This makes debugging ML code easier.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="naming-conventions">
+<h2>5. Naming Conventions<a class="headerlink" href="#naming-conventions" title="Link to this heading">#</a></h2>
+<p>Good names make your ML code easy to read and share.</p>
+<section id="what-are-identifiers">
+<h3>What Are Identifiers?<a class="headerlink" href="#what-are-identifiers" title="Link to this heading">#</a></h3>
+<p>Identifiers are names for things like variables, functions, or classes.</p>
+<p><strong>Rules:</strong></p>
+<ul class="simple">
+<li><p>Use letters, numbers, and underscores (<code class="docutils literal notranslate"><span class="pre">_</span></code>).</p></li>
+<li><p>Don’t start with a number. <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code></p></li>
+<li><p>They’re case-sensitive (e.g., <code class="docutils literal notranslate"><span class="pre">Data</span></code> ≠ <code class="docutils literal notranslate"><span class="pre">data</span></code>). <code class="docutils literal notranslate"><span class="pre">NameError</span></code></p></li>
+<li><p>Don’t use keywords (e.g., <code class="docutils literal notranslate"><span class="pre">if</span></code>). <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code></p></li>
+<li><p>Don’t use spaces (e.g. <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">b</span></code>). <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code></p></li>
+</ul>
+<p><strong>Best Practices for ML:</strong></p>
+<ul class="simple">
+<li><p><strong>Variables</strong>: Use <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">training_data</span></code>).</p></li>
+<li><p><strong>Functions</strong>: Use <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">predict_output</span></code>).</p></li>
+<li><p><strong>Classes</strong>: Use <code class="docutils literal notranslate"><span class="pre">PascalCase</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">NeuralNetwork</span></code>).</p></li>
+<li><p><strong>Constants</strong>: Use <code class="docutils literal notranslate"><span class="pre">UPPER_CASE</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">LEARNING_RATE</span></code>).</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># Good naming for an ML parameter</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="comments-in-a-program">
+<h2>Comments in a Program<a class="headerlink" href="#comments-in-a-program" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Single-line Comments:</strong><br />
+Use the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol.</p></li>
+<li><p><strong>Multi-line Comments:</strong><br />
+Enclose the comment between triple quotes (<code class="docutils literal notranslate"><span class="pre">'''</span> <span class="pre">...</span> <span class="pre">'''</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span> <span class="pre">...</span> <span class="pre">&quot;&quot;&quot;</span></code>).</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="variables">
+<h2>6. Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
+<p>A <strong>variable</strong> is a reserved memory location used to store values.
+Variables store data, like numbers or model results, for your program to use.</p>
+<section id="basics">
+<h3>Basics<a class="headerlink" href="#basics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Name</strong>: What you call it (e.g., <code class="docutils literal notranslate"><span class="pre">score</span></code>).</p></li>
+<li><p><strong>Value</strong>: What it holds (e.g., <code class="docutils literal notranslate"><span class="pre">95</span></code>).</p></li>
+<li><p><strong>Type</strong>: What kind of data it is (e.g., number).</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="mi">95</span>  <span class="c1"># Variable storing a model’s accuracy</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="variable-re-initialization">
+<h2>Variable Re-initialization:<a class="headerlink" href="#variable-re-initialization" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Re-initializing a variable replaces its old value with a new one.</p></li>
+</ul>
+<p><strong>In ML:</strong></p>
+<ul class="simple">
+<li><p>Variables might store training data, weights, or predictions.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="data-types">
+<h2>7. Data Types<a class="headerlink" href="#data-types" title="Link to this heading">#</a></h2>
+<p>A <strong>data type</strong> represents the type of data stored in a variable or memory.</p>
+<p>Data types tell Python what kind of data you’re working with. This is critical in ML for efficiency.</p>
+<section id="common-types">
+<h3>Common Types<a class="headerlink" href="#common-types" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>int</strong>: Whole numbers (e.g., <code class="docutils literal notranslate"><span class="pre">10</span></code> – epochs in training).</p></li>
+<li><p><strong>float</strong>: Decimals (e.g., <code class="docutils literal notranslate"><span class="pre">0.85</span></code> – accuracy score).</p></li>
+<li><p><strong>bool</strong>: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">is_trained</span></code>).</p></li>
+<li><p><strong>str</strong>: Text (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;model&quot;</span></code>).</p></li>
+<li><p><strong>list</strong>: Changeable list (e.g., <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code> – data points).</p></li>
+</ul>
+<p><strong>Check Type:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;float&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;float&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>ML Tip:</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">float</span></code> for model parameters like weights to allow precise calculations.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="python-operators">
+<h2>8. Python Operators<a class="headerlink" href="#python-operators" title="Link to this heading">#</a></h2>
+<p>An <strong>operator</strong> is a symbol that performs an operation on one or more operands (variables).
+Operators let you work with data, like doing math or checking conditions in ML.</p>
+<blockquote>
+<div><p><strong>Note:</strong> Python does not have increment (++) and decrement (–) operators.</p>
+</div></blockquote>
+<section id="arithmetic-operators">
+<h3>1. Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Link to this heading">#</a></h3>
+<p>Arithmetic operators perform basic mathematical operations.</p>
+<p>For calculations, like computing loss in ML.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> : Add</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> : Subtract</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> : Multiply</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> : Divide (gives a float)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**</span></code> : Power (e.g., <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">3</span></code> = 8)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%</span></code> : Modulus (remainder of division)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">//</span></code> : Floor division (integer quotient)</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loss</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">error</span>  <span class="c1"># Calculate part of a loss function</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">loss</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">error</span>  <span class="c1"># Calculate part of a loss function</span>
+
+<span class="ne">NameError</span>: name &#39;error&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="assignment-operators">
+<h3>2. Assignment Operators<a class="headerlink" href="#assignment-operators" title="Link to this heading">#</a></h3>
+<p>Assignment operators are used to assign values to variables.
+Update variables, like adjusting weights during training.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">=</span></code> : Set a value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+=</span></code> : Add and set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-=</span></code> : Subtract and set</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">weight</span> <span class="o">+=</span> <span class="mf">0.05</span>  <span class="c1"># Now weight is 0.15</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="unary-minus-operator">
+<h3>3. Unary Minus Operator<a class="headerlink" href="#unary-minus-operator" title="Link to this heading">#</a></h3>
+<p>The unary minus operator is used to change the sign of a number.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> : Unary minus operator.</p></li>
+</ul>
+</section>
+<section id="relational-operators">
+<h3>4. Relational Operators<a class="headerlink" href="#relational-operators" title="Link to this heading">#</a></h3>
+<p>Compare values, like checking if a model improved.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> : Greater than</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> : Less than</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> : Equal to</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">accuracy</span> <span class="o">&gt;</span> <span class="mf">0.9</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Great model!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="logical-operators">
+<h3>5. Logical Operators<a class="headerlink" href="#logical-operators" title="Link to this heading">#</a></h3>
+<p>Logical operators are used to combine conditional statements or create compound conditions.</p>
+<p>Combine conditions, like stopping training early.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">and</span></code> : Both must be true</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">or</span></code> : One must be true</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">not</span></code> : Flip the value</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">epochs</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">loss</span> <span class="o">&lt;</span> <span class="mf">0.1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stop training&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membership-operators">
+<h3>7. Membership Operators<a class="headerlink" href="#membership-operators" title="Link to this heading">#</a></h3>
+<p>Membership operators are used to test whether a value exists in a sequence (e.g., string, list, set, tuple, dictionary).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">in</span></code> : Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the element is found in the sequence.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> : Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the element is not found in the sequence.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Python is key for ML because it’s simple and has great tools.</p></li>
+<li><p>Learn keywords, variables, and data types to build solid code.</p></li>
+<li><p>Use operators for math and logic in ML tasks.</p></li>
+<li><p>Follow naming rules to keep your code clear and professional.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\1_python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../0_maths/6_regression_analysis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Explanatory and Response Variables</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2_advanced.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Input/Output and Flow Control</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-python-for-machine-learning">Why Use Python for Machine Learning?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-programming-applications">Python Programming Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#history-of-python">History of Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-keywords">2. Python Keywords</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-first-python-program">3. Your First Python Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-write-and-run-it">How to Write and Run It</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-python-code-runs">4. How Python Code Runs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#execution-steps">Execution Steps</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">5. Naming Conventions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-identifiers">What Are Identifiers?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments-in-a-program">Comments in a Program</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">6. Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-re-initialization">Variable Re-initialization:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">7. Data Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-types">Common Types</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-operators">8. Python Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">1. Arithmetic Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">2. Assignment Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unary-minus-operator">3. Unary Minus Operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relational-operators">4. Relational Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators">5. Logical Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">7. Membership Operators</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

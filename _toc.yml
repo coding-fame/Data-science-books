@@ -1,0 +1,167 @@
+format: jb-book
+root: contents/intro.md
+parts:
+  - caption: Mathematics
+    chapters:
+      - file: contents/0_maths/0_essential.ipynb
+        title: Essential Mathematics
+      - file: contents/0_maths/1_statistics_fundamentals.ipynb
+        title: Statistics Fundamentals
+      - file: contents/0_maths/1_descriptive.ipynb
+        title: Descriptive Statistics
+      - file: contents/0_maths/2_probability.ipynb
+        title: Probability Theory
+      - file: contents/0_maths/3_inferential.ipynb
+        title: Inferential Statistics
+      - file: contents/0_maths/4_linear_algebra.ipynb
+        title: Linear Algebra
+      - file: contents/0_maths/5_calculus.ipynb
+        title: Calculus
+      - file: contents/0_maths/6_regression_analysis.ipynb
+        title: Regression Analysis
+  - caption: Core Programming
+    chapters:
+      - file: contents/1_python/1_basics.ipynb
+        title: Python Basics
+      - file: contents/1_python/2_advanced.ipynb
+        title: Advanced Python
+      - file: contents/1_python/3_data_structures.ipynb
+        title: Data Structures
+      - file: contents/1_python/4_modules_packages.ipynb
+        title: Modules & Packages
+      - file: contents/1_python/5_functions.ipynb
+        title: Functions & Modular Programming
+      - file: contents/1_python/6_oop.ipynb
+        title: Object-Oriented Programming
+      - file: contents/1_python/7_error_handling.ipynb
+        title: Error Handling
+        sections:
+          - file: contents/1_python/8_exceptions.ipynb
+            title: Exception Management
+      - file: contents/1_python/9_regex.ipynb
+        title: Regular Expressions
+  - caption: Data Wrangling
+    chapters:
+      - file: contents/2_numpy/1_numpy.ipynb
+        title: NumPy Essentials
+      - file: contents/2_pandas/1_series.ipynb
+        title: Pandas Series
+      - file: contents/2_pandas/2_dataframes.ipynb
+        title: DataFrame Mastery
+      - file: contents/2_pandas/3_visualization.ipynb
+        title: Data Visualization
+      - file: contents/2_pandas/4_eda.ipynb
+        title: Exploratory Data Analysis (EDA)
+      - file: contents/2_pandas/5_feature_engineering.ipynb
+        title: Feature Engineering
+  - caption: Machine Learning
+    chapters:
+      - file: contents/3_ml/1_foundations.ipynb
+        title: ML Foundations
+      - file: contents/3_ml/2_data_preparation.ipynb
+        title: Data Preparation
+      - file: contents/3_ml/2_train_test_split.ipynb
+        title: Train-Test Validation
+      - file: contents/3_ml/10_core_algo.ipynb
+        title: Core Algo
+      - file: contents/3_ml/11_supervised_learning.ipynb
+        title: Supervised Learning
+      - file: contents/3_ml/12_regression.ipynb
+        title: Regression Algorithms
+      - file: contents/3_ml/13_classification.ipynb
+        title: Classification Models
+      - file: contents/3_ml/14_decision_trees.ipynb
+        title: Decision Trees
+      - file: contents/3_ml/15_ensemble_methods.ipynb
+        title: Ensemble Methods
+      - file: contents/3_ml/16_svm.ipynb
+        title: Support Vector Machines
+      - file: contents/3_ml/17_knn.ipynb
+        title: k-Nearest Neighbors
+      - file: contents/3_ml/18_naive_bayes.ipynb
+        title: Naive Bayes
+      - file: contents/3_ml/20_unsupervised_learning.ipynb
+        title: Unsupervised Learning
+        sections:
+          - file: contents/3_ml/21_clustering.ipynb
+            title: Clustering Techniques
+      - file: contents/3_ml/5_model_evaluation.ipynb
+        title: Model Evaluation
+      - file: contents/3_ml/6_ml_lifecycle.ipynb
+        title: ML Lifecycle
+        sections:
+          - file: contents/3_ml/6_training.ipynb
+            title: Model Training
+          - file: contents/3_ml/6_evaluation.ipynb
+            title: Evaluation
+          - file: contents/3_ml/6_deployment.ipynb
+            title: Model Deployment
+      - file: contents/3_ml/7_optimization_and_training.ipynb
+        title: Hyperparameter Optimization
+  - caption: Deep Learning
+    chapters:
+      - file: contents/4_dl/dl1_Introduction.md
+        title: Neural Networks
+      - file: contents/4_dl/dl2_Neuron.md
+        title: Neuron
+      - file: contents/4_dl/dl3_Libraries.md
+        title: Libraries
+      - file: contents/4_dl/dl4_Terminology.md
+        title: Terminology
+      - file: contents/4_dl/dl5_multi_layer.md
+        title: Multi-Layer Perceptron (MLP)
+      - file: contents/4_dl/dl6_first_nn.md
+        title: First Neural Network with Keras 
+      - file: contents/4_dl/dl7_evaluating_model.md
+        title: Evaluating Model Performance 
+      - file: contents/4_dl/dl8_multiclass_classification.md
+        title: Multiclass Classification of IRIS 
+      - file: contents/4_dl/dl9_multiclass_classification_hand.md
+        title: Multiclass Classification Handwritten Digits 
+      - file: contents/4_dl/dl10_saving_and_loading.md
+        title: Saving and Loading a Deep Learning Model 
+      - file: contents/4_dl/dl11_checkpointing.md
+        title: Checkpointing in Deep Learning 
+      - file: contents/4_dl/dl12_visualizing_model_training.md
+        title: Visualizing Model Training History 
+      - file: contents/4_dl/dl13_loss_functions_activation_functions_and_optimizers.md
+        title: Loss Functions, Activation Functions, and Optimizers 
+  - caption: Natural Language Processing
+    chapters:
+      - file: contents/5_nlp/nlp1.md
+        title: NLP Introduction
+      - file: contents/5_nlp/nlp2.md
+        title: Text Wrangling and Cleaning
+      - file: contents/5_nlp/nlp3.md
+        title: Replacing and Correcting Words
+      - file: contents/5_nlp/nlp4.md
+        title: Components in NLP
+      - file: contents/5_nlp/nlp5.md
+        title: Bag of Words, TF, and IDF
+      - file: contents/5_nlp/nlp6.md
+        title: Twitter Sentiment Analysis using TextBlob
+      - file: contents/5_nlp/nlp7.md
+        title: NLP with SpaCy
+  - caption: Career Preparation
+    chapters:
+      - file: contents/6_interview/1_technical_interviews.md
+        title: Technical Interviews
+        sections:
+          - file: contents/6_interview/1_python.md
+            title: Python Interview Prep
+          - file: contents/6_interview/1_pandas.md
+            title: Pandas Interview Prep
+      - file: contents/6_interview/2_ml_interviews.md
+        title: ML System Design
+        sections:
+          - file: contents/6_interview/2_theory.md
+            title: ML Theory Questions
+          - file: contents/6_interview/2_coding.md
+            title: ML Coding Challenges
+      - file: contents/6_interview/3_mlops.md
+        title: MLOps Practice
+        sections:
+          - file: contents/6_interview/3_version_control.md
+            title: Git & DVC
+          - file: contents/6_interview/3_workflow_tools.md
+            title: MLflow & CI/CD
