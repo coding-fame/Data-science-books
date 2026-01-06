@@ -16,7 +16,7 @@ html:
   use_issues_button: true
   use_download_button: true
   html_theme_options:
-    repository_url: "https://github.com/coding-fame/book"
+    repository_url: "https://github.com/coding-fame/Data-science-books"
     repository_branch: "main"
     path_to_docs: "docs"
     launch_buttons:
@@ -66,6 +66,6 @@ exclude_patterns:
   - "env"
 # Repository Settings
 repository:
-  url: "https://github.com/coding-fame/book"
+  url: "https://github.com/coding-fame/Data-science-books"
   path_to_docs: "docs"
   branch: "main"
