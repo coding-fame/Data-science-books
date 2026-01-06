@@ -1,0 +1,2188 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ML Concepts &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d567e03f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/ml';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_maths/0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0_maths/1_statistics_fundamentals.html">Statistics Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0_maths/1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="0_maths/2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0_maths/3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="0_maths/5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Programming</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_python/1_basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_python/2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_python/3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_python/4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_python/5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_python/6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_python/8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_python/9_regex.html">Regular Expressions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Wrangling</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_pandas/4_eda.html"><strong>What is Exploratory Data Analysis (EDA)?</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3_ml/1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/2_train_test_split.html">Train-Test Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/10_core_algo.html">Core Algo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_ml/21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_ml/6_training.html">Model Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_ml/6_deployment.html">Model Deployment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl3_Libraries.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl5_multi_layer.html">Multi-Layer Perceptron (MLP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl6_first_nn.html">First Neural Network with Keras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl7_evaluating_model.html">Evaluating Model Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl8_multiclass_classification.html">Multiclass Classification of IRIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl9_multiclass_classification_hand.html">Multiclass Classification Handwritten Digits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl10_saving_and_loading.html">Saving and Loading a Deep Learning Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl11_checkpointing.html">Checkpointing in Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions, Activation Functions, and Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Natural Language Processing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp2.html">Text Wrangling and Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp3.html">Replacing and Correcting Words</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp4.html">Components in NLP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp5.html">Bag of Words, TF, and IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp6.html">Twitter Sentiment Analysis using TextBlob</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/contents/ml.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ML Concepts</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ML Concepts</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-concepts"><strong>1. Core Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-related-terms"><strong>2. Data-Related Terms</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-related-terms"><strong>3. Model-Related Terms</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithms-and-techniques"><strong>4. Algorithms and Techniques</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-metrics"><strong>5. Evaluation Metrics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-and-loss"><strong>6. Optimization and Loss</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-concepts"><strong>7. Advanced Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment-and-practical-concepts"><strong>8. Deployment and Practical Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reinforcement-learning-terms"><strong>9. Reinforcement Learning Terms</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous"><strong>10. Miscellaneous</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning-and-neural-networks"><strong>1. Deep Learning and Neural Networks</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-language-processing-nlp"><strong>2. Natural Language Processing (NLP)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-vision"><strong>3. Computer Vision</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilistic-and-statistical-concepts"><strong>4. Probabilistic and Statistical Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emerging-trends-and-techniques"><strong>5. Emerging Trends and Techniques</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics-and-fairness-in-ml"><strong>6. Ethics and Fairness in ML</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-and-sequential-data"><strong>7. Time Series and Sequential Data</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-concepts"><strong>8. Miscellaneous Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-frameworks"><strong>9. Tools and Frameworks</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrics-and-evaluation-additional"><strong>10. Metrics and Evaluation (Additional)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#teaching-machine-learning-ml">Teaching machine learning (ML)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-understand-the-basics-of-machine-learning"><strong>Step 1: Understand the Basics of Machine Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-machine-learning">What is Machine Learning?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-machine-learning">Types of Machine Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-terms">Key Terms</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-up-your-environment"><strong>Step 2: Set Up Your Environment</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-learn-the-machine-learning-workflow"><strong>Step 3: Learn the Machine Learning Workflow</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-dive-into-supervised-learning"><strong>Step 4: Dive into Supervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-predicting-house-prices-regression">Example: Predicting House Prices (Regression)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">Data Preparation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-model">Train a Model</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluate-the-model">Evaluate the Model</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-email-spam-classification-classification">Example: Email Spam Classification (Classification)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Data Preparation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Train a Model</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Evaluate the Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-explore-unsupervised-learning"><strong>Step 5: Explore Unsupervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-customer-segmentation-clustering">Example: Customer Segmentation (Clustering)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-improve-your-models"><strong>Step 6: Improve Your Models</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-learn-advanced-topics"><strong>Step 7: Learn Advanced Topics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-practice-and-projects"><strong>Step 8: Practice and Projects</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-deploy-your-model"><strong>Step 9: Deploy Your Model</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-and-statistical">Mathematical and Statistical</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra"><strong>1. Linear Algebra</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculus"><strong>2. Calculus</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability"><strong>3. Probability</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics"><strong>4. Statistics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-theory"><strong>5. Information Theory</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-and-numerical-methods"><strong>6. Optimization and Numerical Methods</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-mathematical-concepts"><strong>7. Miscellaneous Mathematical Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary"><strong>Summary</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-numpy-and-feature-engineering"><strong>Pandas</strong>, <strong>NumPy</strong>, and <strong>Feature Engineering</strong>,</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-terminologies-and-concepts"><strong>1. Pandas Terminologies and Concepts</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-data-structures"><strong>Core Data Structures</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-import-export"><strong>Data Import/Export</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-inspection"><strong>Data Inspection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-selection-and-filtering"><strong>Data Selection and Filtering</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning"><strong>Data Cleaning</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transformation"><strong>Data Transformation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation-and-statistics"><strong>Aggregation and Statistics</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series"><strong>Time Series</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-terminologies-and-concepts"><strong>2. NumPy Terminologies and Concepts</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-data-structure"><strong>Core Data Structure</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-creation"><strong>Array Creation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-properties"><strong>Array Properties</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-indexing-and-slicing"><strong>Array Indexing and Slicing</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-operations"><strong>Array Operations</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-functions"><strong>Mathematical Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-number-generation"><strong>Random Number Generation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Linear Algebra</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-engineering-terminologies-and-concepts"><strong>3. Feature Engineering Terminologies and Concepts</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-creation"><strong>Feature Creation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-transformation"><strong>Feature Transformation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-missing-data"><strong>Handling Missing Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-selection"><strong>Feature Selection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionality-reduction"><strong>Dimensionality Reduction</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-categorical-data"><strong>Handling Categorical Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outlier-handling"><strong>Outlier Handling</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-scaling"><strong>Feature Scaling</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-augmentation-for-ml"><strong>Data Augmentation (for ML)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Miscellaneous</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="ml-concepts">
+<h1>ML Concepts<a class="headerlink" href="#ml-concepts" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="core-concepts">
+<h2><strong>1. Core Concepts</strong><a class="headerlink" href="#core-concepts" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Machine Learning (ML)</strong>: A subset of AI where models learn patterns from data to make predictions or decisions without explicit programming.</p></li>
+<li><p><strong>Supervised Learning</strong>: Training a model on labeled data (input-output pairs) to predict outcomes.</p>
+<ul>
+<li><p>Example: Predicting house prices (regression) or spam emails (classification).</p></li>
+</ul>
+</li>
+<li><p><strong>Unsupervised Learning</strong>: Finding patterns in unlabeled data without predefined outputs.</p>
+<ul>
+<li><p>Example: Clustering customers into groups.</p></li>
+</ul>
+</li>
+<li><p><strong>Reinforcement Learning</strong>: Learning through trial and error by receiving rewards/penalties from an environment.</p>
+<ul>
+<li><p>Example: Training a game-playing AI.</p></li>
+</ul>
+</li>
+<li><p><strong>Semi-Supervised Learning</strong>: Combining labeled and unlabeled data for training.</p></li>
+<li><p><strong>Self-Supervised Learning</strong>: Generating labels from the data itself (e.g., predicting missing words in a sentence).</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="data-related-terms">
+<h2><strong>2. Data-Related Terms</strong><a class="headerlink" href="#data-related-terms" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Features</strong>: Input variables used to make predictions (e.g., age, income).</p></li>
+<li><p><strong>Labels/Target</strong>: The output variable to predict in supervised learning (e.g., house price).</p></li>
+<li><p><strong>Dataset</strong>: A collection of data used for training, validation, and testing.</p></li>
+<li><p><strong>Training Data</strong>: The subset of data used to train the model.</p></li>
+<li><p><strong>Validation Data</strong>: A subset used to tune hyperparameters and avoid overfitting during training.</p></li>
+<li><p><strong>Test Data</strong>: A separate subset used to evaluate the final model performance.</p></li>
+<li><p><strong>Feature Engineering</strong>: The process of creating or transforming features to improve model performance.</p></li>
+<li><p><strong>Feature Selection</strong>: Choosing the most relevant features to reduce complexity and improve performance.</p></li>
+<li><p><strong>One-Hot Encoding</strong>: Converting categorical variables into binary vectors (e.g., colors: red = [1,0,0], blue = [0,1,0]).</p></li>
+<li><p><strong>Normalization/Standardization</strong>: Scaling features to a common range (e.g., 0 to 1) or standardizing to have mean 0 and variance 1.</p></li>
+<li><p><strong>Missing Data</strong>: Handling incomplete data using techniques like imputation (e.g., filling with mean) or removal.</p></li>
+<li><p><strong>Outliers</strong>: Data points that deviate significantly from the rest, often removed or treated separately.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="model-related-terms">
+<h2><strong>3. Model-Related Terms</strong><a class="headerlink" href="#model-related-terms" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Model</strong>: A mathematical representation of a system that makes predictions (e.g., linear regression, neural network).</p></li>
+<li><p><strong>Parameters</strong>: Values learned by the model during training (e.g., weights in a neural network).</p></li>
+<li><p><strong>Hyperparameters</strong>: Settings chosen before training (e.g., learning rate, number of trees in a random forest).</p></li>
+<li><p><strong>Overfitting</strong>: When a model learns the training data too well, including noise, and performs poorly on new data.</p></li>
+<li><p><strong>Underfitting</strong>: When a model is too simple and fails to capture the underlying patterns in the data.</p></li>
+<li><p><strong>Bias</strong>: Error due to overly simplistic assumptions in the model (leads to underfitting).</p></li>
+<li><p><strong>Variance</strong>: Error due to sensitivity to small fluctuations in the training data (leads to overfitting).</p></li>
+<li><p><strong>Bias-Variance Tradeoff</strong>: Balancing model complexity to minimize total error.</p></li>
+<li><p><strong>Regularization</strong>: Techniques to prevent overfitting by adding penalties (e.g., L1/L2 regularization, dropout).</p></li>
+<li><p><strong>Cross-Validation</strong>: Splitting data into k-folds to evaluate model performance robustly (e.g., k-fold cross-validation).</p></li>
+<li><p><strong>Ensemble Methods</strong>: Combining multiple models to improve performance (e.g., bagging, boosting).</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="algorithms-and-techniques">
+<h2><strong>4. Algorithms and Techniques</strong><a class="headerlink" href="#algorithms-and-techniques" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Linear Regression</strong>: Predicts continuous values by fitting a linear equation.</p></li>
+<li><p><strong>Logistic Regression</strong>: Predicts probabilities for binary classification.</p></li>
+<li><p><strong>Decision Trees</strong>: Splits data into branches based on feature values to make decisions.</p></li>
+<li><p><strong>Random Forest</strong>: An ensemble of decision trees using bagging.</p></li>
+<li><p><strong>Support Vector Machines (SVM)</strong>: Finds the optimal hyperplane to separate classes.</p></li>
+<li><p><strong>K-Nearest Neighbors (KNN)</strong>: Classifies data points based on the majority class of their k-nearest neighbors.</p></li>
+<li><p><strong>Naive Bayes</strong>: A probabilistic classifier based on Bayes’ theorem, assuming feature independence.</p></li>
+<li><p><strong>K-Means Clustering</strong>: Partitions data into k clusters by minimizing variance within clusters.</p></li>
+<li><p><strong>Principal Component Analysis (PCA)</strong>: Reduces dimensionality by projecting data onto principal components.</p></li>
+<li><p><strong>Gradient Descent</strong>: An optimization algorithm to minimize the loss function by iteratively adjusting parameters.</p></li>
+<li><p><strong>Stochastic Gradient Descent (SGD)</strong>: A variant of gradient descent using one sample per iteration.</p></li>
+<li><p><strong>Backpropagation</strong>: The algorithm used to train neural networks by propagating errors backward.</p></li>
+<li><p><strong>Neural Networks</strong>: Models inspired by the human brain, consisting of layers of interconnected nodes (neurons).</p></li>
+<li><p><strong>Convolutional Neural Networks (CNNs)</strong>: Neural networks for image data, using convolutional layers.</p></li>
+<li><p><strong>Recurrent Neural Networks (RNNs)</strong>: Neural networks for sequential data, like time series or text.</p></li>
+<li><p><strong>Gradient Boosting</strong>: An ensemble method that builds models sequentially, each correcting the errors of the previous one (e.g., XGBoost, LightGBM).</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="evaluation-metrics">
+<h2><strong>5. Evaluation Metrics</strong><a class="headerlink" href="#evaluation-metrics" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Accuracy</strong>: The ratio of correct predictions to total predictions (for classification).</p></li>
+<li><p><strong>Precision</strong>: The ratio of true positives to predicted positives (important when false positives are costly).</p></li>
+<li><p><strong>Recall (Sensitivity)</strong>: The ratio of true positives to actual positives (important when false negatives are costly).</p></li>
+<li><p><strong>F1 Score</strong>: The harmonic mean of precision and recall, balancing the two.</p></li>
+<li><p><strong>Confusion Matrix</strong>: A table showing true positives, true negatives, false positives, and false negatives.</p></li>
+<li><p><strong>Mean Squared Error (MSE)</strong>: The average squared difference between predicted and actual values (for regression).</p></li>
+<li><p><strong>Mean Absolute Error (MAE)</strong>: The average absolute difference between predicted and actual values.</p></li>
+<li><p><strong>R² Score</strong>: Measures the proportion of variance explained by the model (for regression).</p></li>
+<li><p><strong>ROC Curve</strong>: Plots true positive rate vs. false positive rate to evaluate classifier performance.</p></li>
+<li><p><strong>AUC (Area Under the Curve)</strong>: The area under the ROC curve, summarizing overall performance.</p></li>
+<li><p><strong>Log Loss</strong>: Measures the uncertainty of predictions in classification tasks.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="optimization-and-loss">
+<h2><strong>6. Optimization and Loss</strong><a class="headerlink" href="#optimization-and-loss" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Loss Function</strong>: A function that measures the error between predicted and actual values (e.g., MSE for regression, cross-entropy for classification).</p></li>
+<li><p><strong>Cost Function</strong>: The average loss over the entire dataset.</p></li>
+<li><p><strong>Optimization</strong>: The process of minimizing the loss function (e.g., using gradient descent).</p></li>
+<li><p><strong>Learning Rate</strong>: A hyperparameter that controls the step size during optimization.</p></li>
+<li><p><strong>Epoch</strong>: One full pass through the training dataset during training.</p></li>
+<li><p><strong>Batch Size</strong>: The number of samples processed before updating the model parameters.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="advanced-concepts">
+<h2><strong>7. Advanced Concepts</strong><a class="headerlink" href="#advanced-concepts" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Feature Importance</strong>: Determining which features contribute most to predictions (e.g., in Random Forest).</p></li>
+<li><p><strong>Hyperparameter Tuning</strong>: Optimizing hyperparameters using methods like GridSearchCV or RandomSearchCV.</p></li>
+<li><p><strong>Dropout</strong>: A regularization technique in neural networks where random neurons are ignored during training to prevent overfitting.</p></li>
+<li><p><strong>Batch Normalization</strong>: Normalizing the inputs to each layer in a neural network to improve training speed and stability.</p></li>
+<li><p><strong>Transfer Learning</strong>: Using a pre-trained model (e.g., on ImageNet) and fine-tuning it for a new task.</p></li>
+<li><p><strong>Data Augmentation</strong>: Creating new training samples by transforming existing ones (e.g., rotating images).</p></li>
+<li><p><strong>Imbalanced Data</strong>: When classes in a dataset are unevenly distributed, requiring techniques like oversampling or undersampling.</p></li>
+<li><p><strong>SMOTE (Synthetic Minority Oversampling Technique)</strong>: A method to generate synthetic samples for minority classes.</p></li>
+<li><p><strong>Exploratory Data Analysis (EDA)</strong>: Analyzing data to understand its structure, patterns, and issues before modeling.</p></li>
+<li><p><strong>Pipeline</strong>: A sequence of data processing and modeling steps to streamline workflows (e.g., in Scikit-learn).</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="deployment-and-practical-concepts">
+<h2><strong>8. Deployment and Practical Concepts</strong><a class="headerlink" href="#deployment-and-practical-concepts" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Model Deployment</strong>: Making a trained model available for real-world use (e.g., via APIs, web apps).</p></li>
+<li><p><strong>Model Drift</strong>: When a model’s performance degrades over time due to changes in data distribution.</p></li>
+<li><p><strong>A/B Testing</strong>: Comparing two models or strategies to determine which performs better in production.</p></li>
+<li><p><strong>Scalability</strong>: Ensuring a model can handle large datasets or high prediction volumes.</p></li>
+<li><p><strong>Inference</strong>: The process of making predictions with a trained model.</p></li>
+<li><p><strong>Latency</strong>: The time it takes for a model to make a prediction.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="reinforcement-learning-terms">
+<h2><strong>9. Reinforcement Learning Terms</strong><a class="headerlink" href="#reinforcement-learning-terms" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Agent</strong>: The entity that learns and makes decisions (e.g., a robot).</p></li>
+<li><p><strong>Environment</strong>: The world the agent interacts with.</p></li>
+<li><p><strong>State</strong>: The current situation of the agent in the environment.</p></li>
+<li><p><strong>Action</strong>: A decision made by the agent.</p></li>
+<li><p><strong>Reward</strong>: Feedback from the environment based on the agent’s action.</p></li>
+<li><p><strong>Policy</strong>: The strategy the agent uses to choose actions.</p></li>
+<li><p><strong>Q-Learning</strong>: A reinforcement learning algorithm that learns the value of actions in states.</p></li>
+<li><p><strong>Deep Q-Network (DQN)</strong>: A neural network-based approach to Q-learning.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="miscellaneous">
+<h2><strong>10. Miscellaneous</strong><a class="headerlink" href="#miscellaneous" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Dimensionality Reduction</strong>: Reducing the number of features while preserving important information (e.g., PCA, t-SNE).</p></li>
+<li><p><strong>Activation Function</strong>: A function in neural networks that introduces non-linearity (e.g., ReLU, Sigmoid, Tanh).</p></li>
+<li><p><strong>Softmax</strong>: Converts raw scores into probabilities for multi-class classification.</p></li>
+<li><p><strong>Embedding</strong>: A dense vector representation of high-dimensional data (e.g., word embeddings in NLP).</p></li>
+<li><p><strong>Tokenization</strong>: Breaking text into smaller units (e.g., words, subwords) for NLP tasks.</p></li>
+<li><p><strong>Overfitting Detection</strong>: Using validation loss to monitor if the model is memorizing the training data.</p></li>
+<li><p><strong>Early Stopping</strong>: Halting training when validation performance stops improving.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="deep-learning-and-neural-networks">
+<h2><strong>1. Deep Learning and Neural Networks</strong><a class="headerlink" href="#deep-learning-and-neural-networks" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Deep Learning</strong>: A subset of ML that uses neural networks with many layers to model complex patterns.</p></li>
+<li><p><strong>Fully Connected Layer</strong>: A neural network layer where every neuron is connected to every neuron in the next layer.</p></li>
+<li><p><strong>Convolution</strong>: A mathematical operation used in CNNs to extract features (e.g., edges) from images.</p></li>
+<li><p><strong>Pooling Layer</strong>: A layer in CNNs that reduces spatial dimensions (e.g., max pooling, average pooling) to decrease computation and control overfitting.</p></li>
+<li><p><strong>LSTM (Long Short-Term Memory)</strong>: A type of RNN designed to model long-term dependencies in sequential data.</p></li>
+<li><p><strong>GRU (Gated Recurrent Unit)</strong>: A simplified version of LSTM with fewer gates, balancing performance and complexity.</p></li>
+<li><p><strong>Attention Mechanism</strong>: A technique in neural networks (especially in NLP) that focuses on important parts of the input (e.g., in Transformers).</p></li>
+<li><p><strong>Transformer</strong>: A deep learning architecture based on self-attention, widely used in NLP (e.g., BERT, GPT).</p></li>
+<li><p><strong>Self-Attention</strong>: A mechanism in Transformers where each input token attends to all other tokens to capture context.</p></li>
+<li><p><strong>Residual Connections</strong>: Connections in neural networks that add the input directly to the output of a layer, helping with gradient flow (e.g., in ResNet).</p></li>
+<li><p><strong>Vanishing Gradient Problem</strong>: When gradients in deep networks become too small to update weights effectively during backpropagation.</p></li>
+<li><p><strong>Exploding Gradient Problem</strong>: When gradients become too large, causing unstable training.</p></li>
+<li><p><strong>Weight Initialization</strong>: Setting initial values for neural network weights to improve training (e.g., Xavier/Glorot initialization).</p></li>
+<li><p><strong>Optimizer</strong>: An algorithm to update model weights (e.g., Adam, RMSprop, SGD with momentum).</p></li>
+<li><p><strong>Adam Optimizer</strong>: Adaptive Moment Estimation, an optimizer that combines momentum and RMSprop for faster convergence.</p></li>
+<li><p><strong>Learning Rate Decay</strong>: Gradually reducing the learning rate during training to improve convergence.</p></li>
+<li><p><strong>Fine-Tuning</strong>: Adjusting a pre-trained model on a new task with a small learning rate.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="natural-language-processing-nlp">
+<h2><strong>2. Natural Language Processing (NLP)</strong><a class="headerlink" href="#natural-language-processing-nlp" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Word Embedding</strong>: A dense vector representation of words capturing semantic meaning (e.g., Word2Vec, GloVe).</p></li>
+<li><p><strong>BERT (Bidirectional Encoder Representations from Transformers)</strong>: A pre-trained model that understands context in both directions for NLP tasks.</p></li>
+<li><p><strong>GPT (Generative Pre-trained Transformer)</strong>: A model for generating human-like text, often used in chatbots or content generation.</p></li>
+<li><p><strong>Tokenization</strong>: Breaking text into tokens (e.g., words, subwords) for processing.</p></li>
+<li><p><strong>Stop Words</strong>: Common words (e.g., “the,” “is”) often removed in NLP to focus on meaningful terms.</p></li>
+<li><p><strong>Stemming</strong>: Reducing words to their root form (e.g., “running” to “run”).</p></li>
+<li><p><strong>Lemmatization</strong>: A more advanced form of stemming that considers the word’s meaning (e.g., “better” to “good”).</p></li>
+<li><p><strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong>: A weighting method to evaluate the importance of words in documents.</p></li>
+<li><p><strong>Named Entity Recognition (NER)</strong>: Identifying entities like names, dates, or locations in text.</p></li>
+<li><p><strong>Sequence-to-Sequence (Seq2Seq)</strong>: A model architecture for tasks like translation, where an input sequence is mapped to an output sequence.</p></li>
+<li><p><strong>Beam Search</strong>: A decoding algorithm in NLP to find the most likely sequence of words (e.g., in machine translation).</p></li>
+<li><p><strong>Perplexity</strong>: A metric to evaluate language models, measuring how well they predict a sample.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="computer-vision">
+<h2><strong>3. Computer Vision</strong><a class="headerlink" href="#computer-vision" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Image Augmentation</strong>: Techniques like rotation, flipping, or scaling to artificially increase the size of an image dataset.</p></li>
+<li><p><strong>Object Detection</strong>: Identifying and locating objects in images (e.g., using YOLO, Faster R-CNN).</p></li>
+<li><p><strong>Semantic Segmentation</strong>: Classifying each pixel in an image into a category (e.g., separating foreground and background).</p></li>
+<li><p><strong>Instance Segmentation</strong>: Identifying and separating individual objects in an image (e.g., Mask R-CNN).</p></li>
+<li><p><strong>Feature Maps</strong>: Intermediate representations in CNNs that capture learned features like edges or textures.</p></li>
+<li><p><strong>Transfer Learning in Vision</strong>: Using pre-trained models (e.g., VGG, ResNet) for tasks like image classification.</p></li>
+<li><p><strong>Optical Character Recognition (OCR)</strong>: Extracting text from images or scanned documents.</p></li>
+<li><p><strong>Bounding Box</strong>: A rectangular box around an object in object detection tasks.</p></li>
+<li><p><strong>IoU (Intersection over Union)</strong>: A metric to evaluate object detection by measuring the overlap between predicted and actual bounding boxes.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="probabilistic-and-statistical-concepts">
+<h2><strong>4. Probabilistic and Statistical Concepts</strong><a class="headerlink" href="#probabilistic-and-statistical-concepts" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Bayesian Inference</strong>: Updating the probability of a hypothesis based on new data using Bayes’ theorem.</p></li>
+<li><p><strong>Prior Probability</strong>: The initial probability of an event before new data is considered.</p></li>
+<li><p><strong>Posterior Probability</strong>: The updated probability after incorporating new data.</p></li>
+<li><p><strong>Likelihood</strong>: The probability of observing the data given a model.</p></li>
+<li><p><strong>Markov Chain</strong>: A stochastic process where the next state depends only on the current state.</p></li>
+<li><p><strong>Hidden Markov Model (HMM)</strong>: A model for sequential data where states are hidden but influence observable outputs.</p></li>
+<li><p><strong>Monte Carlo Methods</strong>: Using random sampling to approximate solutions (e.g., in reinforcement learning).</p></li>
+<li><p><strong>Expectation-Maximization (EM)</strong>: An algorithm to find maximum likelihood estimates in models with latent variables (e.g., Gaussian Mixture Models).</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="emerging-trends-and-techniques">
+<h2><strong>5. Emerging Trends and Techniques</strong><a class="headerlink" href="#emerging-trends-and-techniques" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>AutoML (Automated Machine Learning)</strong>: Automating the process of model selection, hyperparameter tuning, and feature engineering.</p></li>
+<li><p><strong>Federated Learning</strong>: Training models across decentralized devices while keeping data private (e.g., on smartphones).</p></li>
+<li><p><strong>Generative Adversarial Networks (GANs)</strong>: Two neural networks (generator and discriminator) trained together to generate realistic data (e.g., fake images).</p></li>
+<li><p><strong>Variational Autoencoder (VAE)</strong>: A generative model that learns latent representations of data for tasks like image generation.</p></li>
+<li><p><strong>Diffusion Models</strong>: A type of generative model that creates data by reversing a noise-adding process (used in image generation, e.g., DALL-E).</p></li>
+<li><p><strong>Few-Shot Learning</strong>: Training models to learn from very few examples.</p></li>
+<li><p><strong>Zero-Shot Learning</strong>: Making predictions for classes the model hasn’t seen during training (e.g., using semantic descriptions).</p></li>
+<li><p><strong>Meta-Learning</strong>: Teaching models to “learn how to learn” for faster adaptation to new tasks.</p></li>
+<li><p><strong>Knowledge Distillation</strong>: Transferring knowledge from a large model (teacher) to a smaller model (student) for efficiency.</p></li>
+<li><p><strong>Neural Architecture Search (NAS)</strong>: Automatically designing neural network architectures.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="ethics-and-fairness-in-ml">
+<h2><strong>6. Ethics and Fairness in ML</strong><a class="headerlink" href="#ethics-and-fairness-in-ml" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Bias in ML</strong>: Unfair or skewed outcomes due to biased training data (e.g., racial bias in facial recognition).</p></li>
+<li><p><strong>Fairness</strong>: Ensuring models treat different groups equitably (e.g., equal error rates across demographics).</p></li>
+<li><p><strong>Explainability/Interpretability</strong>: Understanding and explaining model decisions (e.g., using SHAP, LIME).</p></li>
+<li><p><strong>SHAP (SHapley Additive exPlanations)</strong>: A method to explain individual predictions based on feature contributions.</p></li>
+<li><p><strong>LIME (Local Interpretable Model-agnostic Explanations)</strong>: Explains predictions by approximating the model locally with a simpler model.</p></li>
+<li><p><strong>Data Privacy</strong>: Protecting sensitive data during training (e.g., using differential privacy).</p></li>
+<li><p><strong>Differential Privacy</strong>: Adding noise to data to protect individual privacy while allowing aggregate analysis.</p></li>
+<li><p><strong>Adversarial Attacks</strong>: Inputs designed to fool ML models (e.g., slightly altered images that mislead a classifier).</p></li>
+<li><p><strong>Robustness</strong>: A model’s ability to perform well under adversarial conditions or noise.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="time-series-and-sequential-data">
+<h2><strong>7. Time Series and Sequential Data</strong><a class="headerlink" href="#time-series-and-sequential-data" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Time Series Forecasting</strong>: Predicting future values based on historical data (e.g., stock prices).</p></li>
+<li><p><strong>Autoregressive Models (AR)</strong>: Models that predict future values based on past values.</p></li>
+<li><p><strong>Moving Average (MA)</strong>: A model that uses past errors to predict future values.</p></li>
+<li><p><strong>ARIMA (AutoRegressive Integrated Moving Average)</strong>: A popular model for time series forecasting.</p></li>
+<li><p><strong>Stationarity</strong>: A property of time series where statistical properties (mean, variance) are constant over time.</p></li>
+<li><p><strong>Lag Features</strong>: Using past values as features in time series prediction.</p></li>
+<li><p><strong>Seasonality</strong>: Repeating patterns in time series data (e.g., monthly sales spikes).</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="miscellaneous-concepts">
+<h2><strong>8. Miscellaneous Concepts</strong><a class="headerlink" href="#miscellaneous-concepts" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Anomaly Detection</strong>: Identifying rare or unusual data points (e.g., fraud detection).</p></li>
+<li><p><strong>Active Learning</strong>: A semi-supervised approach where the model queries the user to label the most informative data points.</p></li>
+<li><p><strong>Curriculum Learning</strong>: Training a model by gradually increasing the difficulty of tasks.</p></li>
+<li><p><strong>Domain Adaptation</strong>: Adjusting a model to perform well on a new domain with different data distribution.</p></li>
+<li><p><strong>Multi-Task Learning</strong>: Training a model on multiple related tasks simultaneously to improve performance.</p></li>
+<li><p><strong>Graph Neural Networks (GNNs)</strong>: Neural networks designed for graph-structured data (e.g., social networks).</p></li>
+<li><p><strong>Hyperparameter Optimization</strong>: Techniques like Bayesian optimization or genetic algorithms to tune hyperparameters.</p></li>
+<li><p><strong>Pruning</strong>: Reducing the size of a neural network by removing unimportant weights or neurons.</p></li>
+<li><p><strong>Quantization</strong>: Reducing the precision of weights (e.g., from 32-bit to 8-bit) to make models faster and smaller.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="tools-and-frameworks">
+<h2><strong>9. Tools and Frameworks</strong><a class="headerlink" href="#tools-and-frameworks" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>TensorBoard</strong>: A visualization tool for monitoring neural network training (e.g., loss curves, weights).</p></li>
+<li><p><strong>ONNX (Open Neural Network Exchange)</strong>: A format for sharing models between different frameworks.</p></li>
+<li><p><strong>MLflow</strong>: A platform for managing the ML lifecycle (e.g., tracking experiments, deploying models).</p></li>
+<li><p><strong>Kubeflow</strong>: A toolkit for deploying ML workflows on Kubernetes.</p></li>
+<li><p><strong>Ray</strong>: A library for distributed ML training and hyperparameter tuning.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="metrics-and-evaluation-additional">
+<h2><strong>10. Metrics and Evaluation (Additional)</strong><a class="headerlink" href="#metrics-and-evaluation-additional" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Mean Absolute Percentage Error (MAPE)</strong>: A regression metric that measures error as a percentage of actual values.</p></li>
+<li><p><strong>Hamming Loss</strong>: A metric for multi-label classification, measuring the fraction of incorrect labels.</p></li>
+<li><p><strong>Silhouette Score</strong>: A metric for clustering, measuring how similar points are within clusters vs. between clusters.</p></li>
+<li><p><strong>Davies-Bouldin Index</strong>: A clustering metric that evaluates the average similarity between clusters.</p></li>
+<li><p><strong>Adjusted Rand Index (ARI)</strong>: A clustering metric that measures the similarity between true and predicted clusters, adjusted for chance.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="teaching-machine-learning-ml">
+<h1>Teaching machine learning (ML)<a class="headerlink" href="#teaching-machine-learning-ml" title="Link to this heading">#</a></h1>
+<section id="step-1-understand-the-basics-of-machine-learning">
+<h2><strong>Step 1: Understand the Basics of Machine Learning</strong><a class="headerlink" href="#step-1-understand-the-basics-of-machine-learning" title="Link to this heading">#</a></h2>
+<section id="what-is-machine-learning">
+<h3>What is Machine Learning?<a class="headerlink" href="#what-is-machine-learning" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Machine learning is a subset of artificial intelligence (AI) where computers learn from data to make predictions or decisions without being explicitly programmed.</p></li>
+<li><p>It involves training models on data and using them to generalize to new, unseen data.</p></li>
+</ul>
+</section>
+<section id="types-of-machine-learning">
+<h3>Types of Machine Learning<a class="headerlink" href="#types-of-machine-learning" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Supervised Learning</strong>: The model is trained on labeled data (input-output pairs).</p>
+<ul class="simple">
+<li><p>Examples: Regression (predicting continuous values), Classification (predicting categories).</p></li>
+</ul>
+</li>
+<li><p><strong>Unsupervised Learning</strong>: The model works with unlabeled data to find patterns or structures.</p>
+<ul class="simple">
+<li><p>Examples: Clustering, Dimensionality Reduction.</p></li>
+</ul>
+</li>
+<li><p><strong>Reinforcement Learning</strong>: The model learns by interacting with an environment, receiving rewards or penalties.</p>
+<ul class="simple">
+<li><p>Example: Training a robot to navigate a maze.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="key-terms">
+<h3>Key Terms<a class="headerlink" href="#key-terms" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Features</strong>: Input variables (e.g., height, weight).</p></li>
+<li><p><strong>Labels</strong>: Output variables (e.g., price, category).</p></li>
+<li><p><strong>Training Data</strong>: The dataset used to train the model.</p></li>
+<li><p><strong>Test Data</strong>: The dataset used to evaluate the model.</p></li>
+<li><p><strong>Overfitting</strong>: When a model learns the training data too well, including noise, and performs poorly on new data.</p></li>
+<li><p><strong>Underfitting</strong>: When a model is too simple and fails to capture the underlying patterns.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="step-2-set-up-your-environment">
+<h2><strong>Step 2: Set Up Your Environment</strong><a class="headerlink" href="#step-2-set-up-your-environment" title="Link to this heading">#</a></h2>
+<p>To start practicing ML, you need the right tools.</p>
+<ol class="arabic">
+<li><p><strong>Programming Language</strong>: Python is the most popular due to its rich ecosystem of ML libraries.</p></li>
+<li><p><strong>Libraries</strong>:</p>
+<ul class="simple">
+<li><p><strong>NumPy</strong>: For numerical computations.</p></li>
+<li><p><strong>Pandas</strong>: For data manipulation.</p></li>
+<li><p><strong>Matplotlib/Seaborn</strong>: For data visualization.</p></li>
+<li><p><strong>Scikit-learn</strong>: For basic ML algorithms.</p></li>
+<li><p><strong>TensorFlow/PyTorch</strong>: For deep learning (optional for now).</p></li>
+</ul>
+</li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Install Python from <a class="reference external" href="https://www.python.org/">python.org</a>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install libraries:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>numpy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>seaborn<span class="w"> </span>scikit-learn
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>IDE</strong>: Use Jupyter Notebook, VS Code, or PyCharm for coding.</p></li>
+</ol>
+<hr class="docutils" />
+</section>
+<section id="step-3-learn-the-machine-learning-workflow">
+<h2><strong>Step 3: Learn the Machine Learning Workflow</strong><a class="headerlink" href="#step-3-learn-the-machine-learning-workflow" title="Link to this heading">#</a></h2>
+<p>The ML process follows these steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Define the Problem</strong>:</p>
+<ul class="simple">
+<li><p>Identify what you want to predict (e.g., house prices, spam emails).</p></li>
+<li><p>Decide if it’s a supervised, unsupervised, or reinforcement learning problem.</p></li>
+</ul>
+</li>
+<li><p><strong>Collect and Prepare Data</strong>:</p>
+<ul class="simple">
+<li><p>Gather data from sources like CSV files, APIs, or databases.</p></li>
+<li><p>Clean the data (handle missing values, outliers).</p></li>
+<li><p>Split data into training (70-80%) and testing (20-30%) sets.</p></li>
+</ul>
+</li>
+<li><p><strong>Choose a Model</strong>:</p>
+<ul class="simple">
+<li><p>Start with simple models (e.g., Linear Regression, Decision Trees) and progress to complex ones (e.g., Neural Networks).</p></li>
+</ul>
+</li>
+<li><p><strong>Train the Model</strong>:</p>
+<ul class="simple">
+<li><p>Feed the training data into the model to adjust its parameters.</p></li>
+</ul>
+</li>
+<li><p><strong>Evaluate the Model</strong>:</p>
+<ul class="simple">
+<li><p>Use metrics like accuracy, mean squared error (MSE), or precision/recall to assess performance on the test set.</p></li>
+</ul>
+</li>
+<li><p><strong>Tune and Improve</strong>:</p>
+<ul class="simple">
+<li><p>Adjust hyperparameters or use techniques like cross-validation.</p></li>
+<li><p>Address overfitting/underfitting.</p></li>
+</ul>
+</li>
+<li><p><strong>Deploy the Model</strong>:</p>
+<ul class="simple">
+<li><p>Integrate the model into an application or system for real-world use.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+</section>
+<section id="step-4-dive-into-supervised-learning">
+<h2><strong>Step 4: Dive into Supervised Learning</strong><a class="headerlink" href="#step-4-dive-into-supervised-learning" title="Link to this heading">#</a></h2>
+<p>Let’s focus on supervised learning as a starting point, with a practical example.</p>
+<section id="example-predicting-house-prices-regression">
+<h3>Example: Predicting House Prices (Regression)<a class="headerlink" href="#example-predicting-house-prices-regression" title="Link to this heading">#</a></h3>
+<section id="data-preparation">
+<h4>Data Preparation<a class="headerlink" href="#data-preparation" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Use the <a class="reference external" href="https://scikit-learn.org/stable/datasets/index.html#boston-house-prices-dataset">Boston Housing Dataset</a> (available in Scikit-learn).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.datasets import load_boston
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Load data
+boston = load_boston()
+X = boston.data  # Features (e.g., number of rooms, distance to employment centers)
+y = boston.target  # Target (house prices)
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="train-a-model">
+<h4>Train a Model<a class="headerlink" href="#train-a-model" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Use Linear Regression, a simple algorithm that fits a line to the data.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Create and train the model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="evaluate-the-model">
+<h4>Evaluate the Model<a class="headerlink" href="#evaluate-the-model" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Measure performance with Mean Squared Error (MSE).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.metrics import mean_squared_error
+
+mse = mean_squared_error(y_test, y_pred)
+print(f&quot;Mean Squared Error: {mse}&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="example-email-spam-classification-classification">
+<h3>Example: Email Spam Classification (Classification)<a class="headerlink" href="#example-email-spam-classification-classification" title="Link to this heading">#</a></h3>
+<section id="id1">
+<h4>Data Preparation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Use a dataset like the <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection">SMS Spam Collection</a>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+import pandas as pd
+
+# Sample data (replace with actual dataset)
+data = {&#39;text&#39;: [&#39;Free money!&#39;, &#39;Meeting at 3 PM&#39;, &#39;Win a prize now!&#39;], &#39;label&#39;: [1, 0, 1]}  # 1 = spam, 0 = ham
+df = pd.DataFrame(data)
+
+X = df[&#39;text&#39;]
+y = df[&#39;label&#39;]
+
+# Convert text to numerical features
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(X)
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h4>Train a Model<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Use Naive Bayes, a popular classification algorithm.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Create and train the model
+model = MultinomialNB()
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h4>Evaluate the Model<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Use accuracy as a metric.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.metrics import accuracy_score
+
+accuracy = accuracy_score(y_test, y_pred)
+print(f&quot;Accuracy: {accuracy}&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+<section id="step-5-explore-unsupervised-learning">
+<h2><strong>Step 5: Explore Unsupervised Learning</strong><a class="headerlink" href="#step-5-explore-unsupervised-learning" title="Link to this heading">#</a></h2>
+<section id="example-customer-segmentation-clustering">
+<h3>Example: Customer Segmentation (Clustering)<a class="headerlink" href="#example-customer-segmentation-clustering" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Use the <a class="reference external" href="https://scikit-learn.org/stable/datasets/index.html#iris-plants-dataset">Iris Dataset</a> for clustering.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.datasets import load_iris
+from sklearn.cluster import KMeans
+
+# Load data
+iris = load_iris()
+X = iris.data
+
+# Apply K-Means clustering
+kmeans = KMeans(n_clusters=3, random_state=42)
+clusters = kmeans.fit_predict(X)
+
+print(&quot;Cluster assignments:&quot;, clusters)
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<section id="step-6-improve-your-models">
+<h2><strong>Step 6: Improve Your Models</strong><a class="headerlink" href="#step-6-improve-your-models" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Feature Engineering</strong>: Create new features (e.g., combining height and weight into BMI).</p></li>
+<li><p><strong>Hyperparameter Tuning</strong>: Use GridSearchCV or RandomSearchCV to find optimal parameters.</p></li>
+<li><p><strong>Regularization</strong>: Add penalties (e.g., L1, L2) to prevent overfitting.</p></li>
+<li><p><strong>Cross-Validation</strong>: Split data into k folds to ensure robust evaluation.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.model_selection import GridSearchCV
+
+param_grid = {&#39;alpha&#39;: [0.1, 1.0, 10.0]}
+model = LinearRegression()  # Replace with your model
+grid_search = GridSearchCV(model, param_grid, cv=5)
+grid_search.fit(X_train, y_train)
+print(&quot;Best parameters:&quot;, grid_search.best_params_)
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="step-7-learn-advanced-topics">
+<h2><strong>Step 7: Learn Advanced Topics</strong><a class="headerlink" href="#step-7-learn-advanced-topics" title="Link to this heading">#</a></h2>
+<p>Once comfortable with the basics:</p>
+<ul class="simple">
+<li><p><strong>Deep Learning</strong>: Use neural networks with TensorFlow or PyTorch for image recognition, NLP, etc.</p></li>
+<li><p><strong>Reinforcement Learning</strong>: Explore Q-learning or Deep Q-Networks (DQNs).</p></li>
+<li><p><strong>Ensemble Methods</strong>: Combine models (e.g., Random Forest, Gradient Boosting) for better performance.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="step-8-practice-and-projects">
+<h2><strong>Step 8: Practice and Projects</strong><a class="headerlink" href="#step-8-practice-and-projects" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Datasets</strong>: Use Kaggle (e.g., Titanic, MNIST) or UCI Machine Learning Repository.</p></li>
+<li><p><strong>Projects</strong>: Build a spam detector, predict stock prices, or classify images.</p></li>
+<li><p><strong>Resources</strong>:</p>
+<ul>
+<li><p>Books: “Hands-On Machine Learning” by Aurélien Géron.</p></li>
+<li><p>Courses: Coursera (Andrew Ng’s ML course), Fast.ai.</p></li>
+<li><p>Tutorials: Scikit-learn documentation, YouTube.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="step-9-deploy-your-model">
+<h2><strong>Step 9: Deploy Your Model</strong><a class="headerlink" href="#step-9-deploy-your-model" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Use Flask or FastAPI to create a web app.</p></li>
+<li><p>Deploy on platforms like Heroku or AWS.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="mathematical-and-statistical">
+<h1>Mathematical and Statistical<a class="headerlink" href="#mathematical-and-statistical" title="Link to this heading">#</a></h1>
+<section id="linear-algebra">
+<h2><strong>1. Linear Algebra</strong><a class="headerlink" href="#linear-algebra" title="Link to this heading">#</a></h2>
+<p>Linear algebra provides the foundation for handling data and model parameters in ML, especially in neural networks and dimensionality reduction.</p>
+<ul class="simple">
+<li><p><strong>Vectors</strong>: Ordered lists of numbers representing data points or features (e.g., a feature vector <code class="docutils literal notranslate"><span class="pre">[age,</span> <span class="pre">height,</span> <span class="pre">weight]</span></code>).</p>
+<ul>
+<li><p>Role: Used to represent inputs, weights, and outputs in models.</p></li>
+</ul>
+</li>
+<li><p><strong>Matrices</strong>: 2D arrays of numbers (e.g., a dataset with rows as samples and columns as features).</p>
+<ul>
+<li><p>Role: Represent datasets, transformations, and weight matrices in neural networks.</p></li>
+</ul>
+</li>
+<li><p><strong>Matrix Multiplication</strong>: Combining matrices to perform operations like transforming data or computing predictions.</p>
+<ul>
+<li><p>Role: In neural networks, weights are multiplied with input features.</p></li>
+</ul>
+</li>
+<li><p><strong>Dot Product</strong>: A measure of similarity between two vectors (e.g., <code class="docutils literal notranslate"><span class="pre">v1</span> <span class="pre">·</span> <span class="pre">v2</span> <span class="pre">=</span> <span class="pre">Σ(v1[i]</span> <span class="pre">*</span> <span class="pre">v2[i])</span></code>).</p>
+<ul>
+<li><p>Role: Used in attention mechanisms and calculating similarity in recommendation systems.</p></li>
+</ul>
+</li>
+<li><p><strong>Eigenvalues and Eigenvectors</strong>: Values and vectors that describe the behavior of a linear transformation.</p>
+<ul>
+<li><p>Role: Used in Principal Component Analysis (PCA) for dimensionality reduction.</p></li>
+</ul>
+</li>
+<li><p><strong>Singular Value Decomposition (SVD)</strong>: Decomposing a matrix into three simpler matrices (U, Σ, V).</p>
+<ul>
+<li><p>Role: Used in PCA, latent semantic analysis (LSA) in NLP, and matrix factorization for recommendation systems.</p></li>
+</ul>
+</li>
+<li><p><strong>Transpose</strong>: Flipping a matrix over its diagonal (e.g., rows become columns).</p>
+<ul>
+<li><p>Role: Common in optimization and neural network computations.</p></li>
+</ul>
+</li>
+<li><p><strong>Inverse Matrix</strong>: A matrix that, when multiplied by the original matrix, yields the identity matrix.</p>
+<ul>
+<li><p>Role: Used in solving linear equations (e.g., in linear regression).</p></li>
+</ul>
+</li>
+<li><p><strong>Determinant</strong>: A scalar value that describes properties of a matrix (e.g., whether it’s invertible).</p>
+<ul>
+<li><p>Role: Used in understanding transformations and solving systems of equations.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="calculus">
+<h2><strong>2. Calculus</strong><a class="headerlink" href="#calculus" title="Link to this heading">#</a></h2>
+<p>Calculus is essential for optimization in ML, particularly for training models by minimizing loss functions.</p>
+<ul class="simple">
+<li><p><strong>Derivatives</strong>: Measure how a function changes with respect to its input.</p>
+<ul>
+<li><p>Role: Used to compute gradients for optimization (e.g., in gradient descent).</p></li>
+</ul>
+</li>
+<li><p><strong>Partial Derivatives</strong>: Derivatives of a function with respect to one variable while holding others constant.</p>
+<ul>
+<li><p>Role: Used in multivariable optimization, such as in neural networks with multiple weights.</p></li>
+</ul>
+</li>
+<li><p><strong>Gradient</strong>: A vector of partial derivatives, showing the direction of steepest increase.</p>
+<ul>
+<li><p>Role: Used in gradient descent to update model parameters.</p></li>
+</ul>
+</li>
+<li><p><strong>Gradient Descent</strong>: An optimization algorithm that iteratively moves toward the minimum of a loss function by following the negative gradient.</p>
+<ul>
+<li><p>Role: Core method for training models like linear regression and neural networks.</p></li>
+</ul>
+</li>
+<li><p><strong>Chain Rule</strong>: A rule for computing the derivative of composite functions (e.g., <code class="docutils literal notranslate"><span class="pre">d(f(g(x)))/dx</span> <span class="pre">=</span> <span class="pre">f'(g(x))</span> <span class="pre">*</span> <span class="pre">g'(x)</span></code>).</p>
+<ul>
+<li><p>Role: Used in backpropagation to compute gradients in neural networks.</p></li>
+</ul>
+</li>
+<li><p><strong>Hessian Matrix</strong>: A matrix of second-order partial derivatives, describing the curvature of a function.</p>
+<ul>
+<li><p>Role: Used in advanced optimization techniques (e.g., Newton’s method).</p></li>
+</ul>
+</li>
+<li><p><strong>Optimization</strong>: Finding the minimum (or maximum) of a function (e.g., minimizing a loss function).</p>
+<ul>
+<li><p>Role: Central to training ML models by adjusting parameters.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="probability">
+<h2><strong>3. Probability</strong><a class="headerlink" href="#probability" title="Link to this heading">#</a></h2>
+<p>Probability provides the framework for handling uncertainty and making predictions in ML.</p>
+<ul class="simple">
+<li><p><strong>Probability</strong>: A measure of the likelihood of an event (e.g., P(A) ∈ [0,1]).</p>
+<ul>
+<li><p>Role: Used in classification (e.g., predicting probabilities of classes).</p></li>
+</ul>
+</li>
+<li><p><strong>Conditional Probability</strong>: The probability of an event given another event (e.g., P(A|B) = P(A ∩ B)/P(B)).</p>
+<ul>
+<li><p>Role: Used in models like Naive Bayes.</p></li>
+</ul>
+</li>
+<li><p><strong>Bayes’ Theorem</strong>: Relates conditional probabilities: <code class="docutils literal notranslate"><span class="pre">P(A|B)</span> <span class="pre">=</span> <span class="pre">P(B|A)</span> <span class="pre">*</span> <span class="pre">P(A)</span> <span class="pre">/</span> <span class="pre">P(B)</span></code>.</p>
+<ul>
+<li><p>Role: Used in probabilistic models (e.g., Naive Bayes, Bayesian inference).</p></li>
+</ul>
+</li>
+<li><p><strong>Random Variable</strong>: A variable that represents outcomes of a random process (e.g., rolling a die).</p>
+<ul>
+<li><p>Role: Models features or labels in probabilistic frameworks.</p></li>
+</ul>
+</li>
+<li><p><strong>Probability Distribution</strong>: Describes how probabilities are distributed over values of a random variable.</p>
+<ul>
+<li><p>Role: Used to model data (e.g., Gaussian distribution in clustering).</p></li>
+</ul>
+</li>
+<li><p><strong>Bernoulli Distribution</strong>: A distribution for binary outcomes (e.g., 0 or 1).</p>
+<ul>
+<li><p>Role: Used in binary classification.</p></li>
+</ul>
+</li>
+<li><p><strong>Gaussian (Normal) Distribution</strong>: A bell-shaped distribution common in natural data.</p>
+<ul>
+<li><p>Role: Assumed in many models (e.g., Gaussian Naive Bayes, anomaly detection).</p></li>
+</ul>
+</li>
+<li><p><strong>Expectation (Expected Value)</strong>: The average value of a random variable (e.g., E[X] = Σ(x * P(x))).</p>
+<ul>
+<li><p>Role: Used in cost functions and decision-making.</p></li>
+</ul>
+</li>
+<li><p><strong>Variance</strong>: Measures the spread of a random variable (e.g., Var(X) = E[(X - E[X])²]).</p>
+<ul>
+<li><p>Role: Used to quantify uncertainty in predictions.</p></li>
+</ul>
+</li>
+<li><p><strong>Covariance</strong>: Measures how two random variables change together.</p>
+<ul>
+<li><p>Role: Used in feature correlation and PCA.</p></li>
+</ul>
+</li>
+<li><p><strong>Law of Large Numbers</strong>: States that as sample size increases, the sample mean approaches the population mean.</p>
+<ul>
+<li><p>Role: Underpins the reliability of training on large datasets.</p></li>
+</ul>
+</li>
+<li><p><strong>Central Limit Theorem</strong>: States that the sum of many independent random variables tends toward a normal distribution.</p>
+<ul>
+<li><p>Role: Explains why many ML models assume normality in data.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="statistics">
+<h2><strong>4. Statistics</strong><a class="headerlink" href="#statistics" title="Link to this heading">#</a></h2>
+<p>Statistics provides tools to analyze data, evaluate models, and make inferences.</p>
+<ul class="simple">
+<li><p><strong>Mean</strong>: The average of a dataset (e.g., Σx / n).</p>
+<ul>
+<li><p>Role: Used in data summarization and normalization.</p></li>
+</ul>
+</li>
+<li><p><strong>Median</strong>: The middle value of a dataset when sorted.</p>
+<ul>
+<li><p>Role: Robust measure of central tendency for skewed data.</p></li>
+</ul>
+</li>
+<li><p><strong>Mode</strong>: The most frequent value in a dataset.</p>
+<ul>
+<li><p>Role: Useful in clustering and understanding data distributions.</p></li>
+</ul>
+</li>
+<li><p><strong>Standard Deviation</strong>: The square root of variance, measuring data spread.</p>
+<ul>
+<li><p>Role: Used in standardization and anomaly detection.</p></li>
+</ul>
+</li>
+<li><p><strong>Skewness</strong>: Measures the asymmetry of a distribution.</p>
+<ul>
+<li><p>Role: Helps understand data distribution for preprocessing.</p></li>
+</ul>
+</li>
+<li><p><strong>Kurtosis</strong>: Measures the “tailedness” of a distribution.</p>
+<ul>
+<li><p>Role: Used to analyze the shape of data distributions.</p></li>
+</ul>
+</li>
+<li><p><strong>Correlation</strong>: Measures the linear relationship between two variables (e.g., Pearson correlation coefficient).</p>
+<ul>
+<li><p>Role: Used in feature selection to identify redundant features.</p></li>
+</ul>
+</li>
+<li><p><strong>Hypothesis Testing</strong>: A method to test assumptions about data (e.g., t-test, chi-square test).</p>
+<ul>
+<li><p>Role: Used to validate model significance or feature importance.</p></li>
+</ul>
+</li>
+<li><p><strong>P-Value</strong>: The probability of observing results as extreme as the test statistic under the null hypothesis.</p>
+<ul>
+<li><p>Role: Used in hypothesis testing to determine statistical significance.</p></li>
+</ul>
+</li>
+<li><p><strong>Confidence Interval</strong>: A range of values likely to contain the true parameter value.</p>
+<ul>
+<li><p>Role: Used to quantify uncertainty in predictions or model parameters.</p></li>
+</ul>
+</li>
+<li><p><strong>Z-Score</strong>: Measures how many standard deviations a data point is from the mean.</p>
+<ul>
+<li><p>Role: Used in standardization and outlier detection.</p></li>
+</ul>
+</li>
+<li><p><strong>Chi-Square Test</strong>: Tests independence between categorical variables.</p>
+<ul>
+<li><p>Role: Used in feature selection for classification tasks.</p></li>
+</ul>
+</li>
+<li><p><strong>ANOVA (Analysis of Variance)</strong>: Tests differences between means of multiple groups.</p>
+<ul>
+<li><p>Role: Used to compare model performance across groups.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="information-theory">
+<h2><strong>5. Information Theory</strong><a class="headerlink" href="#information-theory" title="Link to this heading">#</a></h2>
+<p>Information theory concepts are used in ML for feature selection, decision trees, and model evaluation.</p>
+<ul class="simple">
+<li><p><strong>Entropy</strong>: A measure of uncertainty or randomness in a random variable (e.g., H(X) = -ΣP(x)log(P(x))).</p>
+<ul>
+<li><p>Role: Used in decision trees to measure impurity (e.g., ID3 algorithm).</p></li>
+</ul>
+</li>
+<li><p><strong>Cross-Entropy</strong>: Measures the difference between two probability distributions.</p>
+<ul>
+<li><p>Role: Used as a loss function in classification (e.g., in logistic regression, neural networks).</p></li>
+</ul>
+</li>
+<li><p><strong>KL Divergence (Kullback-Leibler Divergence)</strong>: Measures how much one probability distribution differs from another.</p>
+<ul>
+<li><p>Role: Used in variational autoencoders (VAEs) and model evaluation.</p></li>
+</ul>
+</li>
+<li><p><strong>Mutual Information</strong>: Measures the amount of information shared between two variables.</p>
+<ul>
+<li><p>Role: Used in feature selection to identify informative features.</p></li>
+</ul>
+</li>
+<li><p><strong>Information Gain</strong>: The reduction in entropy after splitting a dataset on a feature.</p>
+<ul>
+<li><p>Role: Used in decision trees to choose the best feature to split on.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="optimization-and-numerical-methods">
+<h2><strong>6. Optimization and Numerical Methods</strong><a class="headerlink" href="#optimization-and-numerical-methods" title="Link to this heading">#</a></h2>
+<p>Optimization techniques are critical for training ML models by minimizing loss functions.</p>
+<ul class="simple">
+<li><p><strong>Loss Function</strong>: A function measuring the error between predictions and true values (e.g., MSE, cross-entropy).</p>
+<ul>
+<li><p>Role: Guides the optimization process.</p></li>
+</ul>
+</li>
+<li><p><strong>Cost Function</strong>: The average loss over the entire dataset.</p>
+<ul>
+<li><p>Role: Used in optimization to evaluate overall model performance.</p></li>
+</ul>
+</li>
+<li><p><strong>Stochastic Gradient Descent (SGD)</strong>: Gradient descent using one sample (or a small batch) per iteration.</p>
+<ul>
+<li><p>Role: Speeds up training for large datasets.</p></li>
+</ul>
+</li>
+<li><p><strong>Momentum</strong>: Adds a fraction of the previous update to the current gradient update to accelerate convergence.</p>
+<ul>
+<li><p>Role: Used in optimizers like SGD with momentum.</p></li>
+</ul>
+</li>
+<li><p><strong>RMSprop</strong>: An optimizer that adapts the learning rate based on the moving average of squared gradients.</p>
+<ul>
+<li><p>Role: Improves convergence in deep learning.</p></li>
+</ul>
+</li>
+<li><p><strong>Adam (Adaptive Moment Estimation)</strong>: Combines momentum and RMSprop for adaptive learning rates.</p>
+<ul>
+<li><p>Role: Popular optimizer for deep learning models.</p></li>
+</ul>
+</li>
+<li><p><strong>Lagrange Multipliers</strong>: A method for constrained optimization.</p>
+<ul>
+<li><p>Role: Used in SVMs to maximize the margin.</p></li>
+</ul>
+</li>
+<li><p><strong>Convex Optimization</strong>: Optimization where the loss function is convex (has a single global minimum).</p>
+<ul>
+<li><p>Role: Ensures guaranteed convergence in models like linear regression.</p></li>
+</ul>
+</li>
+<li><p><strong>Learning Rate</strong>: The step size in gradient descent.</p>
+<ul>
+<li><p>Role: Controls how quickly or slowly a model learns.</p></li>
+</ul>
+</li>
+<li><p><strong>Learning Rate Scheduling</strong>: Adjusting the learning rate during training (e.g., decay, step decay).</p>
+<ul>
+<li><p>Role: Improves convergence and prevents overshooting.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="miscellaneous-mathematical-concepts">
+<h2><strong>7. Miscellaneous Mathematical Concepts</strong><a class="headerlink" href="#miscellaneous-mathematical-concepts" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Fourier Transform</strong>: Decomposes a function into its frequency components.</p>
+<ul>
+<li><p>Role: Used in signal processing and some CNN architectures for image data.</p></li>
+</ul>
+</li>
+<li><p><strong>Markov Chains</strong>: Models where the next state depends only on the current state.</p>
+<ul>
+<li><p>Role: Used in reinforcement learning and HMMs.</p></li>
+</ul>
+</li>
+<li><p><strong>Graph Theory</strong>: The study of graphs (nodes and edges).</p>
+<ul>
+<li><p>Role: Used in graph neural networks (GNNs) for tasks like social network analysis.</p></li>
+</ul>
+</li>
+<li><p><strong>Manifold Learning</strong>: Techniques to learn low-dimensional structures in high-dimensional data.</p>
+<ul>
+<li><p>Role: Used in dimensionality reduction (e.g., t-SNE, UMAP).</p></li>
+</ul>
+</li>
+<li><p><strong>Differential Equations</strong>: Equations involving derivatives.</p>
+<ul>
+<li><p>Role: Used in modeling dynamics in reinforcement learning or time series.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="summary">
+<h2><strong>Summary</strong><a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>These mathematical and statistical concepts form the backbone of machine learning, enabling data representation (linear algebra), model training (calculus, optimization), uncertainty handling (probability), and performance evaluation (statistics). Understanding these concepts allows you to better design, analyze, and improve ML models.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="pandas-numpy-and-feature-engineering">
+<h1><strong>Pandas</strong>, <strong>NumPy</strong>, and <strong>Feature Engineering</strong>,<a class="headerlink" href="#pandas-numpy-and-feature-engineering" title="Link to this heading">#</a></h1>
+<section id="pandas-terminologies-and-concepts">
+<h2><strong>1. Pandas Terminologies and Concepts</strong><a class="headerlink" href="#pandas-terminologies-and-concepts" title="Link to this heading">#</a></h2>
+<p>Pandas is a Python library for data manipulation and analysis, widely used for handling structured data.</p>
+<section id="core-data-structures">
+<h3><strong>Core Data Structures</strong><a class="headerlink" href="#core-data-structures" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Series</strong>: A 1D labeled array capable of holding any data type (e.g., integers, strings).</p>
+<ul>
+<li><p>Role: Represents a single column of data with an index.</p></li>
+</ul>
+</li>
+<li><p><strong>DataFrame</strong>: A 2D labeled data structure with columns of potentially different types (like a spreadsheet or SQL table).</p>
+<ul>
+<li><p>Role: The primary structure for data analysis, holding multiple columns and rows.</p></li>
+</ul>
+</li>
+<li><p><strong>Index</strong>: The row labels of a Series or DataFrame.</p>
+<ul>
+<li><p>Role: Used for accessing and aligning data (e.g., <code class="docutils literal notranslate"><span class="pre">df.loc['row_label']</span></code>).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="data-import-export">
+<h3><strong>Data Import/Export</strong><a class="headerlink" href="#data-import-export" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>read_csv()</strong>: Reads a CSV file into a DataFrame.</p>
+<ul>
+<li><p>Role: Common method to load datasets (e.g., <code class="docutils literal notranslate"><span class="pre">pd.read_csv('data.csv')</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>to_csv()</strong>: Writes a DataFrame to a CSV file.</p>
+<ul>
+<li><p>Role: Saves data for later use (e.g., <code class="docutils literal notranslate"><span class="pre">df.to_csv('output.csv')</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>read_excel() / to_excel()</strong>: Reads/writes Excel files.</p></li>
+<li><p><strong>read_sql() / to_sql()</strong>: Reads/writes data from/to a SQL database.</p></li>
+</ul>
+</section>
+<section id="data-inspection">
+<h3><strong>Data Inspection</strong><a class="headerlink" href="#data-inspection" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>head() / tail()</strong>: Displays the first/last n rows of a DataFrame (default n=5).</p>
+<ul>
+<li><p>Role: Quick way to inspect data.</p></li>
+</ul>
+</li>
+<li><p><strong>info()</strong>: Shows a summary of the DataFrame, including column names, data types, and non-null counts.</p></li>
+<li><p><strong>describe()</strong>: Provides descriptive statistics (e.g., mean, min, max) for numerical columns.</p></li>
+<li><p><strong>shape</strong>: Returns the dimensions of a DataFrame (rows, columns).</p>
+<ul>
+<li><p>Role: Check the size of your data (e.g., <code class="docutils literal notranslate"><span class="pre">df.shape</span></code> → <code class="docutils literal notranslate"><span class="pre">(100,</span> <span class="pre">5)</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>dtypes</strong>: Shows the data type of each column.</p>
+<ul>
+<li><p>Role: Identify types for conversion or cleaning.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="data-selection-and-filtering">
+<h3><strong>Data Selection and Filtering</strong><a class="headerlink" href="#data-selection-and-filtering" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>loc[]</strong>: Accesses rows/columns by labels (e.g., <code class="docutils literal notranslate"><span class="pre">df.loc['row_label',</span> <span class="pre">'column_name']</span></code>).</p></li>
+<li><p><strong>iloc[]</strong>: Accesses rows/columns by integer positions (e.g., <code class="docutils literal notranslate"><span class="pre">df.iloc[0,</span> <span class="pre">1]</span></code>).</p></li>
+<li><p><strong>at[] / iat[]</strong>: Fast scalar access by label/position (e.g., <code class="docutils literal notranslate"><span class="pre">df.at['row_label',</span> <span class="pre">'column']</span></code>).</p></li>
+<li><p><strong>Boolean Indexing</strong>: Filters rows based on conditions (e.g., <code class="docutils literal notranslate"><span class="pre">df[df['age']</span> <span class="pre">&gt;</span> <span class="pre">30]</span></code>).</p></li>
+<li><p><strong>query()</strong>: Filters rows using a string expression (e.g., <code class="docutils literal notranslate"><span class="pre">df.query('age</span> <span class="pre">&gt;</span> <span class="pre">30')</span></code>).</p></li>
+</ul>
+</section>
+<section id="data-cleaning">
+<h3><strong>Data Cleaning</strong><a class="headerlink" href="#data-cleaning" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>dropna()</strong>: Removes rows/columns with missing values (e.g., <code class="docutils literal notranslate"><span class="pre">df.dropna()</span></code>).</p></li>
+<li><p><strong>fillna()</strong>: Fills missing values with a specified value (e.g., <code class="docutils literal notranslate"><span class="pre">df.fillna(0)</span></code>).</p></li>
+<li><p><strong>replace()</strong>: Replaces specific values (e.g., <code class="docutils literal notranslate"><span class="pre">df.replace('old',</span> <span class="pre">'new')</span></code>).</p></li>
+<li><p><strong>drop_duplicates()</strong>: Removes duplicate rows (e.g., <code class="docutils literal notranslate"><span class="pre">df.drop_duplicates()</span></code>).</p></li>
+<li><p><strong>isna() / isnull()</strong>: Checks for missing values (returns a boolean DataFrame).</p></li>
+<li><p><strong>notna() / notnull()</strong>: Checks for non-missing values.</p></li>
+</ul>
+</section>
+<section id="data-transformation">
+<h3><strong>Data Transformation</strong><a class="headerlink" href="#data-transformation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>apply()</strong>: Applies a function along an axis (e.g., <code class="docutils literal notranslate"><span class="pre">df['column'].apply(lambda</span> <span class="pre">x:</span> <span class="pre">x*2)</span></code>).</p></li>
+<li><p><strong>map()</strong>: Applies a function to each element in a Series (e.g., <code class="docutils literal notranslate"><span class="pre">series.map({'A':</span> <span class="pre">1,</span> <span class="pre">'B':</span> <span class="pre">2})</span></code>).</p></li>
+<li><p><strong>applymap()</strong>: Applies a function to every element in a DataFrame.</p></li>
+<li><p><strong>groupby()</strong>: Groups data by one or more columns for aggregation (e.g., <code class="docutils literal notranslate"><span class="pre">df.groupby('category').mean()</span></code>).</p></li>
+<li><p><strong>pivot() / pivot_table()</strong>: Reshapes data into a pivot table (e.g., <code class="docutils literal notranslate"><span class="pre">df.pivot_table(values='sales',</span> <span class="pre">index='region',</span> <span class="pre">columns='month')</span></code>).</p></li>
+<li><p><strong>melt()</strong>: Unpivots a DataFrame from wide to long format.</p></li>
+<li><p><strong>merge() / join()</strong>: Combines DataFrames based on keys (e.g., <code class="docutils literal notranslate"><span class="pre">df1.merge(df2,</span> <span class="pre">on='key')</span></code>).</p></li>
+<li><p><strong>concat()</strong>: Concatenates DataFrames along an axis (e.g., <code class="docutils literal notranslate"><span class="pre">pd.concat([df1,</span> <span class="pre">df2])</span></code>).</p></li>
+<li><p><strong>sort_values()</strong>: Sorts data by one or more columns (e.g., <code class="docutils literal notranslate"><span class="pre">df.sort_values('age')</span></code>).</p></li>
+<li><p><strong>sort_index()</strong>: Sorts data by the index.</p></li>
+</ul>
+</section>
+<section id="aggregation-and-statistics">
+<h3><strong>Aggregation and Statistics</strong><a class="headerlink" href="#aggregation-and-statistics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>mean() / median() / sum() / min() / max()</strong>: Computes statistical measures for columns or rows.</p></li>
+<li><p><strong>std() / var()</strong>: Computes standard deviation and variance.</p></li>
+<li><p><strong>value_counts()</strong>: Counts unique values in a Series (e.g., <code class="docutils literal notranslate"><span class="pre">df['column'].value_counts()</span></code>).</p></li>
+<li><p><strong>corr()</strong>: Computes the correlation matrix for numerical columns.</p></li>
+</ul>
+</section>
+<section id="time-series">
+<h3><strong>Time Series</strong><a class="headerlink" href="#time-series" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>to_datetime()</strong>: Converts a column to datetime format (e.g., <code class="docutils literal notranslate"><span class="pre">pd.to_datetime(df['date'])</span></code>).</p></li>
+<li><p><strong>dt accessor</strong>: Accesses datetime properties (e.g., <code class="docutils literal notranslate"><span class="pre">df['date'].dt.year</span></code>).</p></li>
+<li><p><strong>resample()</strong>: Aggregates time series data (e.g., <code class="docutils literal notranslate"><span class="pre">df.resample('M').mean()</span></code> for monthly means).</p></li>
+<li><p><strong>rolling()</strong>: Computes rolling window calculations (e.g., <code class="docutils literal notranslate"><span class="pre">df['column'].rolling(window=3).mean()</span></code>).</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="numpy-terminologies-and-concepts">
+<h2><strong>2. NumPy Terminologies and Concepts</strong><a class="headerlink" href="#numpy-terminologies-and-concepts" title="Link to this heading">#</a></h2>
+<p>NumPy is a Python library for numerical computations, providing support for arrays and mathematical operations.</p>
+<section id="core-data-structure">
+<h3><strong>Core Data Structure</strong><a class="headerlink" href="#core-data-structure" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>ndarray</strong>: An n-dimensional array, NumPy’s primary data structure.</p>
+<ul>
+<li><p>Role: Efficiently stores and manipulates numerical data (e.g., <code class="docutils literal notranslate"><span class="pre">np.array([1,</span> <span class="pre">2,</span> <span class="pre">3])</span></code>).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="array-creation">
+<h3><strong>Array Creation</strong><a class="headerlink" href="#array-creation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>array()</strong>: Creates an array from a list (e.g., <code class="docutils literal notranslate"><span class="pre">np.array([[1,</span> <span class="pre">2],</span> <span class="pre">[3,</span> <span class="pre">4]])</span></code>).</p></li>
+<li><p><strong>zeros() / ones()</strong>: Creates arrays filled with zeros/ones (e.g., <code class="docutils literal notranslate"><span class="pre">np.zeros((3,</span> <span class="pre">3))</span></code>).</p></li>
+<li><p><strong>arange()</strong>: Creates an array with a range of values (e.g., <code class="docutils literal notranslate"><span class="pre">np.arange(0,</span> <span class="pre">10,</span> <span class="pre">2)</span></code> → <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">2,</span> <span class="pre">4,</span> <span class="pre">6,</span> <span class="pre">8]</span></code>).</p></li>
+<li><p><strong>linspace()</strong>: Creates an array with evenly spaced values (e.g., <code class="docutils literal notranslate"><span class="pre">np.linspace(0,</span> <span class="pre">1,</span> <span class="pre">5)</span></code> → <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0.25,</span> <span class="pre">0.5,</span> <span class="pre">0.75,</span> <span class="pre">1]</span></code>).</p></li>
+<li><p><strong>random.rand() / random.randn()</strong>: Generates random arrays (uniform/normal distribution).</p></li>
+</ul>
+</section>
+<section id="array-properties">
+<h3><strong>Array Properties</strong><a class="headerlink" href="#array-properties" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>shape</strong>: Returns the dimensions of an array (e.g., <code class="docutils literal notranslate"><span class="pre">arr.shape</span></code> → <code class="docutils literal notranslate"><span class="pre">(2,</span> <span class="pre">3)</span></code>).</p></li>
+<li><p><strong>dtype</strong>: The data type of array elements (e.g., <code class="docutils literal notranslate"><span class="pre">arr.dtype</span></code> → <code class="docutils literal notranslate"><span class="pre">int32</span></code>).</p></li>
+<li><p><strong>ndim</strong>: The number of dimensions (e.g., <code class="docutils literal notranslate"><span class="pre">arr.ndim</span></code> → <code class="docutils literal notranslate"><span class="pre">2</span></code> for a 2D array).</p></li>
+<li><p><strong>size</strong>: The total number of elements (e.g., <code class="docutils literal notranslate"><span class="pre">arr.size</span></code> → <code class="docutils literal notranslate"><span class="pre">6</span></code> for a 2x3 array).</p></li>
+</ul>
+</section>
+<section id="array-indexing-and-slicing">
+<h3><strong>Array Indexing and Slicing</strong><a class="headerlink" href="#array-indexing-and-slicing" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Indexing</strong>: Accesses elements (e.g., <code class="docutils literal notranslate"><span class="pre">arr[0,</span> <span class="pre">1]</span></code> for a 2D array).</p></li>
+<li><p><strong>Slicing</strong>: Extracts a subset (e.g., <code class="docutils literal notranslate"><span class="pre">arr[0:2,</span> <span class="pre">1:3]</span></code>).</p></li>
+<li><p><strong>Boolean Indexing</strong>: Filters elements based on conditions (e.g., <code class="docutils literal notranslate"><span class="pre">arr[arr</span> <span class="pre">&gt;</span> <span class="pre">0]</span></code>).</p></li>
+<li><p><strong>Fancy Indexing</strong>: Uses arrays of indices to access elements (e.g., <code class="docutils literal notranslate"><span class="pre">arr[[0,</span> <span class="pre">1],</span> <span class="pre">[1,</span> <span class="pre">2]]</span></code>).</p></li>
+</ul>
+</section>
+<section id="array-operations">
+<h3><strong>Array Operations</strong><a class="headerlink" href="#array-operations" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Element-wise Operations</strong>: Operations applied to each element (e.g., <code class="docutils literal notranslate"><span class="pre">arr</span> <span class="pre">+</span> <span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">arr</span> <span class="pre">*</span> <span class="pre">2</span></code>).</p></li>
+<li><p><strong>Broadcasting</strong>: Automatically expands smaller arrays to match larger ones during operations.</p>
+<ul>
+<li><p>Role: Enables operations like adding a scalar to an array (e.g., <code class="docutils literal notranslate"><span class="pre">arr</span> <span class="pre">+</span> <span class="pre">5</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>dot()</strong>: Matrix multiplication (e.g., <code class="docutils literal notranslate"><span class="pre">np.dot(arr1,</span> <span class="pre">arr2)</span></code>).</p></li>
+<li><p><strong>T (Transpose)</strong>: Transposes an array (e.g., <code class="docutils literal notranslate"><span class="pre">arr.T</span></code>).</p></li>
+<li><p><strong>reshape()</strong>: Changes the shape of an array (e.g., <code class="docutils literal notranslate"><span class="pre">arr.reshape(2,</span> <span class="pre">3)</span></code>).</p></li>
+<li><p><strong>flatten() / ravel()</strong>: Converts a multi-dimensional array to 1D.</p></li>
+<li><p><strong>concatenate() / stack()</strong>: Combines arrays along an axis (e.g., <code class="docutils literal notranslate"><span class="pre">np.concatenate([arr1,</span> <span class="pre">arr2])</span></code>).</p></li>
+</ul>
+</section>
+<section id="mathematical-functions">
+<h3><strong>Mathematical Functions</strong><a class="headerlink" href="#mathematical-functions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>sum() / mean() / std() / var()</strong>: Computes statistical measures.</p></li>
+<li><p><strong>min() / max() / argmin() / argmax()</strong>: Finds minimum/maximum values or their indices.</p></li>
+<li><p><strong>exp() / log() / sqrt()</strong>: Applies exponential, logarithmic, or square root functions.</p></li>
+<li><p><strong>sin() / cos()</strong>: Trigonometric functions.</p></li>
+<li><p><strong>cumsum() / cumprod()</strong>: Computes cumulative sum/product.</p></li>
+</ul>
+</section>
+<section id="random-number-generation">
+<h3><strong>Random Number Generation</strong><a class="headerlink" href="#random-number-generation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>random.seed()</strong>: Sets a seed for reproducibility (e.g., <code class="docutils literal notranslate"><span class="pre">np.random.seed(42)</span></code>).</p></li>
+<li><p><strong>random.choice()</strong>: Samples random elements (e.g., <code class="docutils literal notranslate"><span class="pre">np.random.choice(arr,</span> <span class="pre">size=3)</span></code>).</p></li>
+<li><p><strong>random.shuffle()</strong>: Randomly shuffles an array in place.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3><strong>Linear Algebra</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>linalg.inv()</strong>: Computes the inverse of a matrix.</p></li>
+<li><p><strong>linalg.det()</strong>: Computes the determinant of a matrix.</p></li>
+<li><p><strong>linalg.eig()</strong>: Computes eigenvalues and eigenvectors.</p></li>
+<li><p><strong>linalg.svd()</strong>: Performs singular value decomposition.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="feature-engineering-terminologies-and-concepts">
+<h2><strong>3. Feature Engineering Terminologies and Concepts</strong><a class="headerlink" href="#feature-engineering-terminologies-and-concepts" title="Link to this heading">#</a></h2>
+<p>Feature engineering is the process of creating, selecting, and transforming features to improve model performance.</p>
+<section id="feature-creation">
+<h3><strong>Feature Creation</strong><a class="headerlink" href="#feature-creation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Feature Extraction</strong>: Deriving new features from raw data (e.g., extracting edges from images using CNNs).</p></li>
+<li><p><strong>Polynomial Features</strong>: Creating higher-order features (e.g., <code class="docutils literal notranslate"><span class="pre">x²</span></code>, <code class="docutils literal notranslate"><span class="pre">x*y</span></code>) to capture non-linear relationships.</p>
+<ul>
+<li><p>Role: Used in regression models (e.g., <code class="docutils literal notranslate"><span class="pre">sklearn.preprocessing.PolynomialFeatures</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>Interaction Features</strong>: Combining features to capture relationships (e.g., <code class="docutils literal notranslate"><span class="pre">age</span> <span class="pre">*</span> <span class="pre">income</span></code>).</p></li>
+<li><p><strong>Binning</strong>: Converting continuous features into discrete bins (e.g., ages into <code class="docutils literal notranslate"><span class="pre">[0-18,</span> <span class="pre">19-30,</span> <span class="pre">31+]</span></code>).</p></li>
+<li><p><strong>Text Features</strong>: Extracting features from text (e.g., word counts, TF-IDF scores).</p></li>
+<li><p><strong>Datetime Features</strong>: Extracting features from dates (e.g., day of week, month, hour).</p></li>
+<li><p><strong>Domain-Specific Features</strong>: Creating features based on domain knowledge (e.g., BMI from height and weight).</p></li>
+</ul>
+</section>
+<section id="feature-transformation">
+<h3><strong>Feature Transformation</strong><a class="headerlink" href="#feature-transformation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Normalization</strong>: Scaling features to a range (e.g., [0, 1]) using Min-Max scaling.</p>
+<ul>
+<li><p>Role: Ensures features have the same scale (e.g., <code class="docutils literal notranslate"><span class="pre">sklearn.preprocessing.MinMaxScaler</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>Standardization</strong>: Scaling features to have mean 0 and variance 1 (e.g., z-score).</p>
+<ul>
+<li><p>Role: Used in models sensitive to scale (e.g., <code class="docutils literal notranslate"><span class="pre">sklearn.preprocessing.StandardScaler</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>Log Transformation</strong>: Applying a logarithm to reduce skewness (e.g., <code class="docutils literal notranslate"><span class="pre">np.log1p(feature)</span></code>).</p></li>
+<li><p><strong>Power Transformation</strong>: Applying a power function (e.g., Box-Cox, Yeo-Johnson) to make data more normal-like.</p></li>
+<li><p><strong>One-Hot Encoding</strong>: Converting categorical variables into binary columns (e.g., colors: <code class="docutils literal notranslate"><span class="pre">red</span> <span class="pre">→</span> <span class="pre">[1,0,0],</span> <span class="pre">blue</span> <span class="pre">→</span> <span class="pre">[0,1,0]</span></code>).</p></li>
+<li><p><strong>Label Encoding</strong>: Converting categories to integers (e.g., <code class="docutils literal notranslate"><span class="pre">red</span> <span class="pre">→</span> <span class="pre">0,</span> <span class="pre">blue</span> <span class="pre">→</span> <span class="pre">1</span></code>).</p>
+<ul>
+<li><p>Role: Used for ordinal data or tree-based models.</p></li>
+</ul>
+</li>
+<li><p><strong>Target Encoding</strong>: Replacing categories with the mean of the target variable for that category.</p>
+<ul>
+<li><p>Role: Useful in high-cardinality categorical data.</p></li>
+</ul>
+</li>
+<li><p><strong>Embedding</strong>: Representing categorical data as dense vectors (e.g., word embeddings in NLP).</p></li>
+</ul>
+</section>
+<section id="handling-missing-data">
+<h3><strong>Handling Missing Data</strong><a class="headerlink" href="#handling-missing-data" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Imputation</strong>: Filling missing values (e.g., with mean, median, or a constant).</p>
+<ul>
+<li><p>Role: <code class="docutils literal notranslate"><span class="pre">sklearn.impute.SimpleImputer</span></code> or <code class="docutils literal notranslate"><span class="pre">df.fillna()</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>KNN Imputation</strong>: Filling missing values using the k-nearest neighbors’ values.</p></li>
+<li><p><strong>Indicator Variables</strong>: Creating a binary column to indicate missingness (e.g., <code class="docutils literal notranslate"><span class="pre">is_missing</span></code>).</p></li>
+<li><p><strong>Dropping Missing Data</strong>: Removing rows/columns with missing values (e.g., <code class="docutils literal notranslate"><span class="pre">df.dropna()</span></code>).</p></li>
+</ul>
+</section>
+<section id="feature-selection">
+<h3><strong>Feature Selection</strong><a class="headerlink" href="#feature-selection" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Variance Threshold</strong>: Removing features with low variance (e.g., <code class="docutils literal notranslate"><span class="pre">sklearn.feature_selection.VarianceThreshold</span></code>).</p></li>
+<li><p><strong>Correlation Analysis</strong>: Removing highly correlated features to reduce redundancy.</p></li>
+<li><p><strong>Univariate Selection</strong>: Selecting features based on statistical tests (e.g., <code class="docutils literal notranslate"><span class="pre">sklearn.feature_selection.SelectKBest</span></code>).</p></li>
+<li><p><strong>Recursive Feature Elimination (RFE)</strong>: Recursively removing the least important features based on a model.</p></li>
+<li><p><strong>Feature Importance</strong>: Using model-based importance (e.g., Random Forest’s feature importance).</p></li>
+<li><p><strong>Mutual Information</strong>: Selecting features based on the information shared with the target.</p></li>
+</ul>
+</section>
+<section id="dimensionality-reduction">
+<h3><strong>Dimensionality Reduction</strong><a class="headerlink" href="#dimensionality-reduction" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Principal Component Analysis (PCA)</strong>: Reducing dimensions by projecting data onto principal components.</p>
+<ul>
+<li><p>Role: Reduces computational cost while preserving variance.</p></li>
+</ul>
+</li>
+<li><p><strong>t-SNE / UMAP</strong>: Non-linear dimensionality reduction for visualization.</p></li>
+<li><p><strong>Truncated SVD</strong>: A variant of SVD for sparse data (e.g., text data).</p></li>
+</ul>
+</section>
+<section id="handling-categorical-data">
+<h3><strong>Handling Categorical Data</strong><a class="headerlink" href="#handling-categorical-data" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Ordinal Encoding</strong>: Assigning integers to ordered categories (e.g., <code class="docutils literal notranslate"><span class="pre">low</span> <span class="pre">→</span> <span class="pre">1,</span> <span class="pre">medium</span> <span class="pre">→</span> <span class="pre">2,</span> <span class="pre">high</span> <span class="pre">→</span> <span class="pre">3</span></code>).</p></li>
+<li><p><strong>Frequency Encoding</strong>: Replacing categories with their frequency in the dataset.</p></li>
+<li><p><strong>Rare Category Handling</strong>: Grouping rare categories into an “other” category.</p></li>
+</ul>
+</section>
+<section id="outlier-handling">
+<h3><strong>Outlier Handling</strong><a class="headerlink" href="#outlier-handling" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Z-Score Method</strong>: Identifying outliers based on standard deviations from the mean.</p></li>
+<li><p><strong>IQR (Interquartile Range) Method</strong>: Identifying outliers using the range between the 25th and 75th percentiles.</p></li>
+<li><p><strong>Clipping</strong>: Capping extreme values at a threshold (e.g., replacing values above 99th percentile).</p></li>
+<li><p><strong>Winsorizing</strong>: Replacing extreme values with the nearest non-extreme value.</p></li>
+</ul>
+</section>
+<section id="feature-scaling">
+<h3><strong>Feature Scaling</strong><a class="headerlink" href="#feature-scaling" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Robust Scaler</strong>: Scales features using the median and IQR, robust to outliers.</p></li>
+<li><p><strong>MaxAbs Scaler</strong>: Scales features by dividing by the maximum absolute value.</p></li>
+<li><p><strong>Quantile Transformer</strong>: Transforms features to follow a uniform or normal distribution.</p></li>
+</ul>
+</section>
+<section id="data-augmentation-for-ml">
+<h3><strong>Data Augmentation (for ML)</strong><a class="headerlink" href="#data-augmentation-for-ml" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Synthetic Data Generation</strong>: Creating new samples (e.g., SMOTE for imbalanced datasets).</p></li>
+<li><p><strong>Feature Perturbation</strong>: Adding noise to features to increase robustness.</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3><strong>Miscellaneous</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Feature Crosses</strong>: Combining features to create new ones (e.g., <code class="docutils literal notranslate"><span class="pre">latitude</span> <span class="pre">*</span> <span class="pre">longitude</span></code> for geographic data).</p></li>
+<li><p><strong>Lag Features</strong>: Creating features based on previous time steps in time series data.</p></li>
+<li><p><strong>Rolling Statistics</strong>: Computing rolling means, sums, etc., for time series features.</p></li>
+<li><p><strong>Feature Discretization</strong>: Converting continuous features into discrete intervals (e.g., age into age groups).</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ML Concepts</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-concepts"><strong>1. Core Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-related-terms"><strong>2. Data-Related Terms</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-related-terms"><strong>3. Model-Related Terms</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithms-and-techniques"><strong>4. Algorithms and Techniques</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-metrics"><strong>5. Evaluation Metrics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-and-loss"><strong>6. Optimization and Loss</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-concepts"><strong>7. Advanced Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment-and-practical-concepts"><strong>8. Deployment and Practical Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reinforcement-learning-terms"><strong>9. Reinforcement Learning Terms</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous"><strong>10. Miscellaneous</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning-and-neural-networks"><strong>1. Deep Learning and Neural Networks</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-language-processing-nlp"><strong>2. Natural Language Processing (NLP)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-vision"><strong>3. Computer Vision</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilistic-and-statistical-concepts"><strong>4. Probabilistic and Statistical Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emerging-trends-and-techniques"><strong>5. Emerging Trends and Techniques</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics-and-fairness-in-ml"><strong>6. Ethics and Fairness in ML</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-and-sequential-data"><strong>7. Time Series and Sequential Data</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-concepts"><strong>8. Miscellaneous Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-frameworks"><strong>9. Tools and Frameworks</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrics-and-evaluation-additional"><strong>10. Metrics and Evaluation (Additional)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#teaching-machine-learning-ml">Teaching machine learning (ML)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-understand-the-basics-of-machine-learning"><strong>Step 1: Understand the Basics of Machine Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-machine-learning">What is Machine Learning?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-machine-learning">Types of Machine Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-terms">Key Terms</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-up-your-environment"><strong>Step 2: Set Up Your Environment</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-learn-the-machine-learning-workflow"><strong>Step 3: Learn the Machine Learning Workflow</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-dive-into-supervised-learning"><strong>Step 4: Dive into Supervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-predicting-house-prices-regression">Example: Predicting House Prices (Regression)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">Data Preparation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-model">Train a Model</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluate-the-model">Evaluate the Model</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-email-spam-classification-classification">Example: Email Spam Classification (Classification)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Data Preparation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Train a Model</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Evaluate the Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-explore-unsupervised-learning"><strong>Step 5: Explore Unsupervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-customer-segmentation-clustering">Example: Customer Segmentation (Clustering)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-improve-your-models"><strong>Step 6: Improve Your Models</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-learn-advanced-topics"><strong>Step 7: Learn Advanced Topics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-practice-and-projects"><strong>Step 8: Practice and Projects</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-deploy-your-model"><strong>Step 9: Deploy Your Model</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-and-statistical">Mathematical and Statistical</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra"><strong>1. Linear Algebra</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculus"><strong>2. Calculus</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability"><strong>3. Probability</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics"><strong>4. Statistics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-theory"><strong>5. Information Theory</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-and-numerical-methods"><strong>6. Optimization and Numerical Methods</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-mathematical-concepts"><strong>7. Miscellaneous Mathematical Concepts</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary"><strong>Summary</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-numpy-and-feature-engineering"><strong>Pandas</strong>, <strong>NumPy</strong>, and <strong>Feature Engineering</strong>,</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-terminologies-and-concepts"><strong>1. Pandas Terminologies and Concepts</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-data-structures"><strong>Core Data Structures</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-import-export"><strong>Data Import/Export</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-inspection"><strong>Data Inspection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-selection-and-filtering"><strong>Data Selection and Filtering</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning"><strong>Data Cleaning</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transformation"><strong>Data Transformation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation-and-statistics"><strong>Aggregation and Statistics</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series"><strong>Time Series</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-terminologies-and-concepts"><strong>2. NumPy Terminologies and Concepts</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-data-structure"><strong>Core Data Structure</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-creation"><strong>Array Creation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-properties"><strong>Array Properties</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-indexing-and-slicing"><strong>Array Indexing and Slicing</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-operations"><strong>Array Operations</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-functions"><strong>Mathematical Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-number-generation"><strong>Random Number Generation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Linear Algebra</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-engineering-terminologies-and-concepts"><strong>3. Feature Engineering Terminologies and Concepts</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-creation"><strong>Feature Creation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-transformation"><strong>Feature Transformation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-missing-data"><strong>Handling Missing Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-selection"><strong>Feature Selection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionality-reduction"><strong>Dimensionality Reduction</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-categorical-data"><strong>Handling Categorical Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outlier-handling"><strong>Outlier Handling</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-scaling"><strong>Feature Scaling</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-augmentation-for-ml"><strong>Data Augmentation (for ML)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Miscellaneous</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
