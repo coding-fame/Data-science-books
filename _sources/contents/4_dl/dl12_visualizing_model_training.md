@@ -1,4 +1,6 @@
 
+---
+
 # **Visualizing Model Training History in Deep Learning**  
 
 ## **1. Why Visualize Training History?**  
@@ -136,3 +138,4 @@ plt.show()
 
 💡 **With these visualizations, you can track model performance and ensure optimal training!** 🚀
 
+---

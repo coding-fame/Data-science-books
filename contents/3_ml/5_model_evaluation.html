@@ -64,8 +64,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/3_ml/5_model_evaluation';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ML: Life Cycle" href="6_ml_lifecycle.html" />
-    <link rel="prev" title="K-Means Clustering" href="21_clustering.html" />
+    <link rel="next" title="Supervised Learning" href="11_supervised_learning.html" />
+    <link rel="prev" title="Train &amp; Test Datasets in Python" href="2_train_test_split.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,10 +177,18 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_statistics_fundamentals.html">Statistics Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
 
 
@@ -190,16 +198,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
-
-
-
-
 
 
 
@@ -214,9 +213,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
 
 
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Programming</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1_python/1_basics.html">Python Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_python/2_advanced.html">Advanced Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_python/3_data_structures.html">Data Structures</a></li>
@@ -235,9 +231,6 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../1_python/8_exceptions.html">Exception Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_python/9_regex.html">Regular Expressions</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Wrangling</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
 
 
@@ -263,18 +256,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html"><strong>What is Exploratory Data Analysis (EDA)?</strong></a></li>
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html">Exploratory Data Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
 
 
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_foundations.html">ML Foundational</a></li>
 
@@ -288,8 +275,12 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="2_train_test_split.html">Train-Test Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_core_algo.html">Core Algo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4️⃣ Model Evaluation</a></li>
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
 
 
@@ -304,6 +295,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="13_classification.html">Classification Algorithms</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="10_core_algo.html">Core ML Algorithms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="14_decision_trees.html">Decision Trees</a></li>
 <li class="toctree-l1"><a class="reference internal" href="15_ensemble_methods.html">Ensemble Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
@@ -311,19 +303,11 @@
 
 <li class="toctree-l1"><a class="reference internal" href="17_knn.html">k-Nearest Neighbors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="21_clustering.html">Clustering Techniques</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4️⃣ Model Evaluation</a></li>
-
-
-
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="6_training.html">Model Training</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6_evaluation.html">Evaluation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6_deployment.html">Model Deployment</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
@@ -334,33 +318,69 @@
 
 
 
+<li class="toctree-l1 has-children"><a class="reference internal" href="6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_deployment.html">Deployment</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron (MLP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network with Keras</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Evaluating Model Performance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification of IRIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Multiclass Classification Handwritten Digits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving and Loading a Deep Learning Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Checkpointing in Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions, Activation Functions, and Optimizers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Natural Language Processing</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Wrangling and Cleaning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Replacing and Correcting Words</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">Components in NLP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF, and IDF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Twitter Sentiment Analysis using TextBlob</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self%20introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
 </ul>
 
     </div>
@@ -407,6 +427,70 @@
 
 
 
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/edit/main/contents/3_ml/5_model_evaluation.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/issues/new?title=Issue%20on%20page%20%2Fcontents/3_ml/5_model_evaluation.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -415,7 +499,7 @@
       
       
       
-      <li><a href="../../_sources/contents/3_ml/5_model_evaluation.md" target="_blank"
+      <li><a href="../../_sources/contents/3_ml/5_model_evaluation.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -425,7 +509,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -512,16 +596,13 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4️⃣ Model Evaluation</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-metrics"><strong>Regression Metrics</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-based-error-explained">Distance-Based Error Explained</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-squared-error-mse">1. Mean Squared Error (MSE)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-squared-error-mse">1. Mean Squared Error (MSE)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-absolute-error-mae">2. Mean Absolute Error (MAE)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation">Python Implementation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-absolute-error-mae">2. Mean Absolute Error (MAE)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Python Implementation</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#root-mean-squared-error-rmse">3. Root Mean Squared Error (RMSE)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Python Implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Python Implementation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-methods">Tools and Methods</a></li>
@@ -538,14 +619,14 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sparse-categorical-cross-entropy">3. Sparse Categorical Cross-Entropy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hinge-loss">4. Hinge Loss</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Tools and Methods</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">One-Stop Solution: Python Code Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Tools and Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">One-Stop Solution: Python Code Example</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-explanation">Code Explanation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-output-approximate">Sample Output (Approximate)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Conclusion</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering-metrics"><strong>Clustering Metrics</strong></a></li>
@@ -563,8 +644,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificity"><strong>5. Specificity</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">One-Stop Solution: Python Code Example</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Code Explanation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">One-Stop Solution: Python Code Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Code Explanation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-output">Sample Output</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-plot">Confusion Matrix Plot</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-report">Classification Report</a></li>
@@ -629,8 +710,12 @@ In regression tasks, models predict continuous numerical values (e.g., house pri
 <li><p>Squaring the errors amplifies larger discrepancies, making MSE sensitive to outliers.</p></li>
 </ul>
 <p><strong>Formula</strong>:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>MSE = (1/n) * Σ (yi - yi&#39;)²
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>MSE = (1/n) * Σ (yi - yi&#39;)²
 </pre></div>
+</div>
+</div>
 </div>
 <p>Where:</p>
 <ul class="simple">
@@ -645,23 +730,26 @@ In regression tasks, models predict continuous numerical values (e.g., house pri
 </ul>
 <p><strong>Example</strong>:<br />
 Suppose we’re predicting house prices. If a model predicts $300,000 for a house that actually costs $350,000, the squared error is:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>(350,000 - 300,000)² = 2,500,000,000
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(350,000 - 300,000)² = 2,500,000,000
+``` 
+Averaging such errors across all predictions yields the MSE.
+
+### Python Implementation  
+```python
+from sklearn.metrics import mean_squared_error
+
+# Sample data: Actual vs. Predicted values
+expected = [1.0] * 11
+predicted = [1.0, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.0]
+
+mse = mean_squared_error(expected, predicted)
+print(f&quot;MSE: {mse:.2f}&quot;)  # Output: MSE: 0.35
 </pre></div>
 </div>
-<p>Averaging such errors across all predictions yields the MSE.</p>
-<section id="python-implementation">
-<h3>Python Implementation<a class="headerlink" href="#python-implementation" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span>
-
-<span class="c1"># Sample data: Actual vs. Predicted values</span>
-<span class="n">expected</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">11</span>
-<span class="n">predicted</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
-
-<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">expected</span><span class="p">,</span> <span class="n">predicted</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MSE: </span><span class="si">{</span><span class="n">mse</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: MSE: 0.35</span>
-</pre></div>
 </div>
-</section>
+</div>
 </section>
 <hr class="docutils" />
 <section id="mean-absolute-error-mae">
@@ -671,8 +759,12 @@ Suppose we’re predicting house prices. If a model predicts $300,000 for a hous
 <li><p>Unlike MSE, it doesn’t square errors, making it less sensitive to outliers.</p></li>
 </ul>
 <p><strong>Formula</strong>:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>MAE = (1/n) * Σ |yi - yi&#39;|
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>MAE = (1/n) * Σ |yi - yi&#39;|
 </pre></div>
+</div>
+</div>
 </div>
 <p><strong>When to Use</strong>:</p>
 <ul class="simple">
@@ -681,17 +773,25 @@ Suppose we’re predicting house prices. If a model predicts $300,000 for a hous
 </ul>
 <p><strong>Example</strong>:<br />
 Using the same house price scenario:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>|350,000 - 300,000| = 50,000
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>|350,000 - 300,000| = 50,000
 </pre></div>
 </div>
+</div>
+</div>
 <p>MAE averages these absolute differences, providing a simple measure of average error magnitude.</p>
-<section id="id1">
-<h3>Python Implementation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_absolute_error</span>
+<section id="python-implementation">
+<h3>Python Implementation<a class="headerlink" href="#python-implementation" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.metrics import mean_absolute_error
 
-<span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">expected</span><span class="p">,</span> <span class="n">predicted</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAE: </span><span class="si">{</span><span class="n">mae</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: MAE: 0.50</span>
+mae = mean_absolute_error(expected, predicted)
+print(f&quot;MAE: {mae:.2f}&quot;)  # Output: MAE: 0.50
 </pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -703,8 +803,12 @@ Using the same house price scenario:</p>
 <li><p>It retains MSE’s sensitivity to larger errors but is more interpretable.</p></li>
 </ul>
 <p><strong>Formula</strong>:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>RMSE = sqrt(MSE)
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RMSE = sqrt(MSE)
 </pre></div>
+</div>
+</div>
 </div>
 <p><strong>When to Use</strong>:</p>
 <ul class="simple">
@@ -713,15 +817,23 @@ Using the same house price scenario:</p>
 </ul>
 <p><strong>Example</strong>:<br />
 If MSE is 2,500,000,000 (from the earlier example), then:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>RMSE = sqrt(2,500,000,000) = 50,000
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RMSE = sqrt(2,500,000,000) = 50,000
 </pre></div>
 </div>
+</div>
+</div>
 <p>This indicates an average error of $50,000 in house price predictions.</p>
-<section id="id2">
-<h3>Python Implementation<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rmse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">expected</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: RMSE: 0.59</span>
+<section id="id1">
+<h3>Python Implementation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>rmse = mean_squared_error(expected, predicted, squared=False)
+print(f&quot;RMSE: {rmse:.2f}&quot;)  # Output: RMSE: 0.59
 </pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -739,44 +851,48 @@ If MSE is 2,500,000,000 (from the earlier example), then:</p>
 <section id="one-stop-solution-python-code-example">
 <h2>One-Stop Solution: Python Code Example<a class="headerlink" href="#one-stop-solution-python-code-example" title="Link to this heading">#</a></h2>
 <p>This script uses the <strong>California Housing dataset</strong> to train a linear regression model and compute MSE, MAE, RMSE, Huber Loss, and Log-Cosh Loss.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">mean_absolute_error</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_california_housing</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+import tensorflow as tf
+from sklearn.metrics import mean_squared_error, mean_absolute_error
+from sklearn.datasets import fetch_california_housing
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
 
-<span class="c1"># Load the California Housing dataset</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">fetch_california_housing</span><span class="p">()</span>
-<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">target</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+# Load the California Housing dataset
+data = fetch_california_housing()
+X, y = data.data, data.target
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-<span class="c1"># Train a linear regression model</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+# Train a linear regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
 
-<span class="c1"># 1. Mean Squared Error (MSE)</span>
-<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean Squared Error (MSE): </span><span class="si">{</span><span class="n">mse</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# 1. Mean Squared Error (MSE)
+mse = mean_squared_error(y_test, y_pred)
+print(f&quot;Mean Squared Error (MSE): {mse:.4f}&quot;)
 
-<span class="c1"># 2. Mean Absolute Error (MAE)</span>
-<span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean Absolute Error (MAE): </span><span class="si">{</span><span class="n">mae</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# 2. Mean Absolute Error (MAE)
+mae = mean_absolute_error(y_test, y_pred)
+print(f&quot;Mean Absolute Error (MAE): {mae:.4f}&quot;)
 
-<span class="c1"># 3. Root Mean Squared Error (RMSE)</span>
-<span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Root Mean Squared Error (RMSE): </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# 3. Root Mean Squared Error (RMSE)
+rmse = np.sqrt(mse)
+print(f&quot;Root Mean Squared Error (RMSE): {rmse:.4f}&quot;)
 
-<span class="c1"># 4. Huber Loss (using TensorFlow)</span>
-<span class="n">huber</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">Huber</span><span class="p">(</span><span class="n">delta</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="n">huber_loss</span> <span class="o">=</span> <span class="n">huber</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Huber Loss (delta=1.0): </span><span class="si">{</span><span class="n">huber_loss</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# 4. Huber Loss (using TensorFlow)
+huber = tf.keras.losses.Huber(delta=1.0)
+huber_loss = huber(y_test, y_pred).numpy()
+print(f&quot;Huber Loss (delta=1.0): {huber_loss:.4f}&quot;)
 
-<span class="c1"># 5. Log-Cosh Loss (manual implementation)</span>
-<span class="n">log_cosh_loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cosh</span><span class="p">(</span><span class="n">y_test</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Log-Cosh Loss: </span><span class="si">{</span><span class="n">log_cosh_loss</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# 5. Log-Cosh Loss (manual implementation)
+log_cosh_loss = np.mean(np.log(np.cosh(y_test - y_pred)))
+print(f&quot;Log-Cosh Loss: {log_cosh_loss:.4f}&quot;)
 </pre></div>
+</div>
+</div>
 </div>
 </section>
 <hr class="docutils" />
@@ -923,8 +1039,8 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 </ol>
 </section>
 <hr class="docutils" />
-<section id="id3">
-<h2>Tools and Methods<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h2>Tools and Methods<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Python libraries provide built-in implementations of these cost functions:</p>
 <ul class="simple">
 <li><p><strong>Scikit-learn</strong>: <code class="docutils literal notranslate"><span class="pre">log_loss</span></code> (cross-entropy), <code class="docutils literal notranslate"><span class="pre">hinge_loss</span></code>.</p></li>
@@ -934,67 +1050,71 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id4">
-<h2>One-Stop Solution: Python Code Example<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2>One-Stop Solution: Python Code Example<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>This script uses the <strong>Iris dataset</strong> for multi-class classification and a synthetic dataset for binary classification, computing the cost functions discussed.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">log_loss</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span><span class="p">,</span> <span class="n">make_classification</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogisticRegression</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVC</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+import tensorflow as tf
+from sklearn.metrics import log_loss
+from sklearn.datasets import load_iris, make_classification
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
 
-<span class="c1"># --- Binary Classification ---</span>
-<span class="c1"># Generate synthetic binary data</span>
-<span class="n">X_bin</span><span class="p">,</span> <span class="n">y_bin</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">X_train_bin</span><span class="p">,</span> <span class="n">X_test_bin</span><span class="p">,</span> <span class="n">y_train_bin</span><span class="p">,</span> <span class="n">y_test_bin</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_bin</span><span class="p">,</span> <span class="n">y_bin</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+# --- Binary Classification ---
+# Generate synthetic binary data
+X_bin, y_bin = make_classification(n_samples=100, n_features=2, n_classes=2, random_state=42)
+X_train_bin, X_test_bin, y_train_bin, y_test_bin = train_test_split(X_bin, y_bin, test_size=0.2, random_state=42)
 
-<span class="c1"># Train logistic regression</span>
-<span class="n">model_bin</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
-<span class="n">model_bin</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_bin</span><span class="p">,</span> <span class="n">y_train_bin</span><span class="p">)</span>
-<span class="n">y_pred_prob_bin</span> <span class="o">=</span> <span class="n">model_bin</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test_bin</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># Probability of class 1</span>
+# Train logistic regression
+model_bin = LogisticRegression()
+model_bin.fit(X_train_bin, y_train_bin)
+y_pred_prob_bin = model_bin.predict_proba(X_test_bin)[:, 1]  # Probability of class 1
 
-<span class="c1"># 1. Binary Cross-Entropy</span>
-<span class="n">bce</span> <span class="o">=</span> <span class="n">log_loss</span><span class="p">(</span><span class="n">y_test_bin</span><span class="p">,</span> <span class="n">y_pred_prob_bin</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Binary Cross-Entropy (Log Loss): </span><span class="si">{</span><span class="n">bce</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# 1. Binary Cross-Entropy
+bce = log_loss(y_test_bin, y_pred_prob_bin)
+print(f&quot;Binary Cross-Entropy (Log Loss): {bce:.4f}&quot;)
 
-<span class="c1"># 2. Hinge Loss (using SVM)</span>
-<span class="n">model_svm</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
-<span class="n">model_svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_bin</span><span class="p">,</span> <span class="n">y_train_bin</span><span class="p">)</span>
-<span class="n">y_pred_decision</span> <span class="o">=</span> <span class="n">model_svm</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test_bin</span><span class="p">)</span>  <span class="c1"># Decision scores</span>
-<span class="n">y_test_bin_svm</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">y_test_bin</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># Convert 0/1 to -1/1</span>
-<span class="n">hinge_loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">y_test_bin_svm</span> <span class="o">*</span> <span class="n">y_pred_decision</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hinge Loss: </span><span class="si">{</span><span class="n">hinge_loss</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# 2. Hinge Loss (using SVM)
+model_svm = SVC(kernel=&#39;linear&#39;)
+model_svm.fit(X_train_bin, y_train_bin)
+y_pred_decision = model_svm.decision_function(X_test_bin)  # Decision scores
+y_test_bin_svm = 2 * y_test_bin - 1  # Convert 0/1 to -1/1
+hinge_loss = np.mean(np.maximum(0, 1 - y_test_bin_svm * y_pred_decision))
+print(f&quot;Hinge Loss: {hinge_loss:.4f}&quot;)
 
-<span class="c1"># --- Multi-Class Classification ---</span>
-<span class="c1"># Load Iris dataset</span>
-<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
-<span class="n">X_iris</span><span class="p">,</span> <span class="n">y_iris</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
-<span class="n">X_train_iris</span><span class="p">,</span> <span class="n">X_test_iris</span><span class="p">,</span> <span class="n">y_train_iris</span><span class="p">,</span> <span class="n">y_test_iris</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_iris</span><span class="p">,</span> <span class="n">y_iris</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+# --- Multi-Class Classification ---
+# Load Iris dataset
+iris = load_iris()
+X_iris, y_iris = iris.data, iris.target
+X_train_iris, X_test_iris, y_train_iris, y_test_iris = train_test_split(X_iris, y_iris, test_size=0.2, random_state=42)
 
-<span class="c1"># Train logistic regression</span>
-<span class="n">model_multi</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">multi_class</span><span class="o">=</span><span class="s1">&#39;ovr&#39;</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">model_multi</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_iris</span><span class="p">,</span> <span class="n">y_train_iris</span><span class="p">)</span>
-<span class="n">y_pred_prob_multi</span> <span class="o">=</span> <span class="n">model_multi</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test_iris</span><span class="p">)</span>
+# Train logistic regression
+model_multi = LogisticRegression(multi_class=&#39;ovr&#39;, max_iter=200)
+model_multi.fit(X_train_iris, y_train_iris)
+y_pred_prob_multi = model_multi.predict_proba(X_test_iris)
 
-<span class="c1"># 3. Categorical Cross-Entropy</span>
-<span class="n">cce</span> <span class="o">=</span> <span class="n">log_loss</span><span class="p">(</span><span class="n">y_test_iris</span><span class="p">,</span> <span class="n">y_pred_prob_multi</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Categorical Cross-Entropy: </span><span class="si">{</span><span class="n">cce</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# 3. Categorical Cross-Entropy
+cce = log_loss(y_test_iris, y_pred_prob_multi)
+print(f&quot;Categorical Cross-Entropy: {cce:.4f}&quot;)
 
-<span class="c1"># 4. Sparse Categorical Cross-Entropy (TensorFlow)</span>
-<span class="n">sparse_cce</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">SparseCategoricalCrossentropy</span><span class="p">()</span>
-<span class="n">sparse_cce_loss</span> <span class="o">=</span> <span class="n">sparse_cce</span><span class="p">(</span><span class="n">y_test_iris</span><span class="p">,</span> <span class="n">y_pred_prob_multi</span><span class="p">)</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sparse Categorical Cross-Entropy: </span><span class="si">{</span><span class="n">sparse_cce_loss</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+# 4. Sparse Categorical Cross-Entropy (TensorFlow)
+sparse_cce = tf.keras.losses.SparseCategoricalCrossentropy()
+sparse_cce_loss = sparse_cce(y_test_iris, y_pred_prob_multi).numpy()
+print(f&quot;Sparse Categorical Cross-Entropy: {sparse_cce_loss:.4f}&quot;)
 
-<span class="c1"># 5. Focal Loss (manual implementation for binary)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">focal_loss</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">):</span>
-    <span class="n">pt</span> <span class="o">=</span> <span class="n">y_pred</span> <span class="o">*</span> <span class="n">y_true</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y_true</span><span class="p">)</span>
-    <span class="k">return</span> <span class="o">-</span><span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">pt</span><span class="p">)</span> <span class="o">**</span> <span class="n">gamma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pt</span> <span class="o">+</span> <span class="mf">1e-10</span><span class="p">)</span>  <span class="c1"># Add small constant to avoid log(0)</span>
+# 5. Focal Loss (manual implementation for binary)
+def focal_loss(y_true, y_pred, gamma=2.0, alpha=0.25):
+    pt = y_pred * y_true + (1 - y_pred) * (1 - y_true)
+    return -alpha * (1 - pt) ** gamma * np.log(pt + 1e-10)  # Add small constant to avoid log(0)
 
-<span class="n">focal_loss_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">focal_loss</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">y_test_bin</span><span class="p">,</span> <span class="n">y_pred_prob_bin</span><span class="p">)])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Focal Loss (gamma=2, alpha=0.25): </span><span class="si">{</span><span class="n">focal_loss_value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+focal_loss_value = np.mean([focal_loss(y, p) for y, p in zip(y_test_bin, y_pred_prob_bin)])
+print(f&quot;Focal Loss (gamma=2, alpha=0.25): {focal_loss_value:.4f}&quot;)
 </pre></div>
+</div>
+</div>
 </div>
 <section id="code-explanation">
 <h3>Code Explanation<a class="headerlink" href="#code-explanation" title="Link to this heading">#</a></h3>
@@ -1022,12 +1142,16 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 </section>
 <section id="sample-output-approximate">
 <h3>Sample Output (Approximate)<a class="headerlink" href="#sample-output-approximate" title="Link to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Binary</span> <span class="n">Cross</span><span class="o">-</span><span class="n">Entropy</span> <span class="p">(</span><span class="n">Log</span> <span class="n">Loss</span><span class="p">):</span> <span class="mf">0.2456</span>
-<span class="n">Hinge</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.1234</span>
-<span class="n">Categorical</span> <span class="n">Cross</span><span class="o">-</span><span class="n">Entropy</span><span class="p">:</span> <span class="mf">0.1234</span>
-<span class="n">Sparse</span> <span class="n">Categorical</span> <span class="n">Cross</span><span class="o">-</span><span class="n">Entropy</span><span class="p">:</span> <span class="mf">0.1234</span>
-<span class="n">Focal</span> <span class="n">Loss</span> <span class="p">(</span><span class="n">gamma</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">):</span> <span class="mf">0.0567</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Binary Cross-Entropy (Log Loss): 0.2456
+Hinge Loss: 0.1234
+Categorical Cross-Entropy: 0.1234
+Sparse Categorical Cross-Entropy: 0.1234
+Focal Loss (gamma=2, alpha=0.25): 0.0567
 </pre></div>
+</div>
+</div>
 </div>
 <p><em>(Actual values vary based on data splits and model performance.)</em></p>
 </section>
@@ -1044,8 +1168,8 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id5">
-<h2>Conclusion<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id4">
+<h2>Conclusion<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>Cost functions are indispensable in machine learning, serving as the foundation for evaluating and optimizing models.</p>
 </section>
 </section>
@@ -1238,45 +1362,49 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 </section>
 </section>
 <hr class="docutils" />
-<section id="id6">
-<h2>One-Stop Solution: Python Code Example<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h2>One-Stop Solution: Python Code Example<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>This example uses the <strong>Iris dataset</strong> (a multi-class classification problem with three classes: setosa, versicolor, virginica) to train a model, compute the confusion matrix, visualize it, and calculate metrics.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import necessary libraries
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix, classification_report, ConfusionMatrixDisplay
 
-<span class="c1"># Load the Iris dataset</span>
-<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
-<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>  <span class="c1"># Features and target labels</span>
+# Load the Iris dataset
+iris = load_iris()
+X, y = iris.data, iris.target  # Features and target labels
 
-<span class="c1"># Split the data into training and testing sets</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-<span class="c1"># Train a Random Forest classifier</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>  <span class="c1"># Make predictions on the test set</span>
+# Train a Random Forest classifier
+model = RandomForestClassifier(random_state=42)
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)  # Make predictions on the test set
 
-<span class="c1"># Compute the confusion matrix</span>
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+# Compute the confusion matrix
+cm = confusion_matrix(y_test, y_pred)
 
-<span class="c1"># Visualize the confusion matrix</span>
-<span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm</span><span class="p">,</span> <span class="n">display_labels</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
-<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Confusion Matrix - Iris Dataset&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+# Visualize the confusion matrix
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=iris.target_names)
+disp.plot(cmap=&#39;Blues&#39;)
+plt.title(&quot;Confusion Matrix - Iris Dataset&quot;)
+plt.show()
 
-<span class="c1"># Print a detailed classification report</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classification Report:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">))</span>
+# Print a detailed classification report
+print(&quot;Classification Report:&quot;)
+print(classification_report(y_test, y_pred, target_names=iris.target_names))
 </pre></div>
 </div>
-<section id="id7">
-<h3>Code Explanation<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+</div>
+</div>
+<section id="id6">
+<h3>Code Explanation<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>Data Loading and Splitting</strong>:</p>
 <ul class="simple">
@@ -1307,13 +1435,17 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 <section id="confusion-matrix-plot">
 <h4>Confusion Matrix Plot<a class="headerlink" href="#confusion-matrix-plot" title="Link to this heading">#</a></h4>
 <p>A 3x3 heatmap might look like this (values depend on the random split):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>           <span class="n">Predicted</span>
-           <span class="o">|</span> <span class="n">Setosa</span> <span class="o">|</span> <span class="n">Versicolor</span> <span class="o">|</span> <span class="n">Virginica</span> <span class="o">|</span>
-<span class="n">Actual</span>     <span class="o">|--------|------------|-----------|</span>
-<span class="n">Setosa</span>     <span class="o">|</span>   <span class="mi">10</span>   <span class="o">|</span>     <span class="mi">0</span>      <span class="o">|</span>     <span class="mi">0</span>     <span class="o">|</span>
-<span class="n">Versicolor</span> <span class="o">|</span>    <span class="mi">0</span>   <span class="o">|</span>     <span class="mi">9</span>      <span class="o">|</span>     <span class="mi">1</span>     <span class="o">|</span>
-<span class="n">Virginica</span>  <span class="o">|</span>    <span class="mi">0</span>   <span class="o">|</span>     <span class="mi">1</span>      <span class="o">|</span>     <span class="mi">9</span>     <span class="o">|</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>           Predicted
+           | Setosa | Versicolor | Virginica |
+Actual     |--------|------------|-----------|
+Setosa     |   10   |     0      |     0     |
+Versicolor |    0   |     9      |     1     |
+Virginica  |    0   |     1      |     9     |
 </pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>Diagonal values (10, 9, 9) are TPs for each class.</p></li>
@@ -1322,15 +1454,19 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 </section>
 <section id="classification-report">
 <h4>Classification Report<a class="headerlink" href="#classification-report" title="Link to this heading">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Classification</span> <span class="n">Report</span><span class="p">:</span>
-              <span class="n">precision</span>    <span class="n">recall</span>  <span class="n">f1</span><span class="o">-</span><span class="n">score</span>   <span class="n">support</span>
-      <span class="n">setosa</span>       <span class="mf">1.00</span>      <span class="mf">1.00</span>      <span class="mf">1.00</span>        <span class="mi">10</span>
-  <span class="n">versicolor</span>       <span class="mf">0.90</span>      <span class="mf">0.90</span>      <span class="mf">0.90</span>        <span class="mi">10</span>
-   <span class="n">virginica</span>       <span class="mf">0.90</span>      <span class="mf">0.90</span>      <span class="mf">0.90</span>        <span class="mi">10</span>
-    <span class="n">accuracy</span>                           <span class="mf">0.93</span>        <span class="mi">30</span>
-   <span class="n">macro</span> <span class="n">avg</span>       <span class="mf">0.93</span>      <span class="mf">0.93</span>      <span class="mf">0.93</span>        <span class="mi">30</span>
-<span class="n">weighted</span> <span class="n">avg</span>       <span class="mf">0.93</span>      <span class="mf">0.93</span>      <span class="mf">0.93</span>        <span class="mi">30</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Classification Report:
+              precision    recall  f1-score   support
+      setosa       1.00      1.00      1.00        10
+  versicolor       0.90      0.90      0.90        10
+   virginica       0.90      0.90      0.90        10
+    accuracy                           0.93        30
+   macro avg       0.93      0.93      0.93        30
+weighted avg       0.93      0.93      0.93        30
 </pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p><strong>Setosa</strong>: Perfectly classified (precision, recall, F1 = 1.00).</p></li>
@@ -1352,23 +1488,27 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 </ul>
 <section id="code-example">
 <h3><strong>Code Example</strong><a class="headerlink" href="#code-example" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">roc_curve</span><span class="p">,</span> <span class="n">auc</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.metrics import roc_curve, auc
 
-<span class="c1"># Get prediction probabilities</span>
-<span class="n">y_scores</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+# Get prediction probabilities
+y_scores = model.predict_proba(X_test)[:, 1]
 
-<span class="c1"># Calculate ROC curve</span>
-<span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_scores</span><span class="p">)</span>
-<span class="n">roc_auc</span> <span class="o">=</span> <span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">)</span>
+# Calculate ROC curve
+fpr, tpr, _ = roc_curve(y_test, y_scores)
+roc_auc = auc(fpr, tpr)
 
-<span class="c1"># Plot it</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;AUC = </span><span class="si">{</span><span class="n">roc_auc</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;False Positive Rate&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Positive Rate&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ROC Curve: Titanic Survival&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+# Plot it
+plt.plot(fpr, tpr, label=f&#39;AUC = {roc_auc:.2f}&#39;)
+plt.xlabel(&#39;False Positive Rate&#39;)
+plt.ylabel(&#39;True Positive Rate&#39;)
+plt.title(&#39;ROC Curve: Titanic Survival&#39;)
+plt.legend()
+plt.show()
 </pre></div>
+</div>
+</div>
 </div>
 <p>A higher AUC means better performance.</p>
 </section>
@@ -1381,14 +1521,19 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sklearn.metrics.classification_report</span></code>: Provides a detailed report with precision, recall, F1-score, and support.</p></li>
 <li><p><strong>Visualization</strong>: <code class="docutils literal notranslate"><span class="pre">seaborn.heatmap()</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> for custom plots.</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Custom metrics</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">TN</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">TN</span> <span class="o">+</span> <span class="n">FP</span> <span class="o">+</span> <span class="n">FN</span><span class="p">)</span>
-<span class="n">precision</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FP</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FP</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
-<span class="n">recall</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FN</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FN</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
-<span class="n">f1</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">precision</span> <span class="o">*</span> <span class="n">recall</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">precision</span> <span class="o">+</span> <span class="n">recall</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">precision</span> <span class="o">+</span> <span class="n">recall</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, Precision: </span><span class="si">{</span><span class="n">precision</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, Recall: </span><span class="si">{</span><span class="n">recall</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, F1: </span><span class="si">{</span><span class="n">f1</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Custom metrics
+accuracy = (TP + TN) / (TP + TN + FP + FN)
+precision = TP / (TP + FP) if (TP + FP) &gt; 0 else 0
+recall = TP / (TP + FN) if (TP + FN) &gt; 0 else 0
+f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) &gt; 0 else 0
+print(f&quot;Accuracy: {accuracy:.2f}, Precision: {precision:.2f}, Recall: {recall:.2f}, F1: {f1:.2f}&quot;)
 </pre></div>
 </div>
+</div>
+</div>
+<hr class="docutils" />
 </section>
 </section>
 
@@ -1423,20 +1568,20 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="21_clustering.html"
+       href="2_train_test_split.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">K-Means Clustering</p>
+        <p class="prev-next-title">Train &amp; Test Datasets in Python</p>
       </div>
     </a>
     <a class="right-next"
-       href="6_ml_lifecycle.html"
+       href="11_supervised_learning.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ML: Life Cycle</p>
+        <p class="prev-next-title"><strong>Supervised Learning</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1459,16 +1604,13 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4️⃣ Model Evaluation</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-metrics"><strong>Regression Metrics</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-based-error-explained">Distance-Based Error Explained</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-squared-error-mse">1. Mean Squared Error (MSE)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-squared-error-mse">1. Mean Squared Error (MSE)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-absolute-error-mae">2. Mean Absolute Error (MAE)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation">Python Implementation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-absolute-error-mae">2. Mean Absolute Error (MAE)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Python Implementation</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#root-mean-squared-error-rmse">3. Root Mean Squared Error (RMSE)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Python Implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Python Implementation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-methods">Tools and Methods</a></li>
@@ -1485,14 +1627,14 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sparse-categorical-cross-entropy">3. Sparse Categorical Cross-Entropy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hinge-loss">4. Hinge Loss</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Tools and Methods</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">One-Stop Solution: Python Code Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Tools and Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">One-Stop Solution: Python Code Example</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-explanation">Code Explanation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-output-approximate">Sample Output (Approximate)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Conclusion</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering-metrics"><strong>Clustering Metrics</strong></a></li>
@@ -1510,8 +1652,8 @@ Hinge = max(0, 1 - (1 * -0.5)) = max(0, 1.5) = <strong>1.5</strong></p></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificity"><strong>5. Specificity</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">One-Stop Solution: Python Code Example</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Code Explanation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">One-Stop Solution: Python Code Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Code Explanation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-output">Sample Output</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-plot">Confusion Matrix Plot</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-report">Classification Report</a></li>

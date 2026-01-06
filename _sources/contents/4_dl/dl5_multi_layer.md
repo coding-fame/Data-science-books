@@ -190,3 +190,4 @@ plot_model(model, to_file="model.png", show_shapes=True, show_dtype=True,
 ✅ **Step 5**: Make predictions (**evaluate() & predict()**).  
 ✅ **Step 6**: Summarize the model (**summary() & get_config()**).  
 
+---

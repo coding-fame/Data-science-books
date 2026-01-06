@@ -153,5 +153,5 @@ with open("output.yaml", "w") as file:
 ✔️ **Use Comments Sparingly** – Comments help but shouldn’t clutter the file  
 ✔️ **Validate YAML Files** – Use linters like [`yamllint`](https://www.yamllint.com/)  
 
-
+---
 

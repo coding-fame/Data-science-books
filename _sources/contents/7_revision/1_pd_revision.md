@@ -1198,5 +1198,5 @@ df = pd.read_csv("year.csv", parse_dates=["Date"])
 
 By following these steps, you can easily concatenate multiple CSV files into one large DataFrame for analysis.
 
-
+---
 

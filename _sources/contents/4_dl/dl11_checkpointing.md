@@ -1,4 +1,6 @@
 
+---
+
 # **Checkpointing in Deep Learning: Save the Best Model**  
 
 ## **1. Why Use Checkpointing?**  
@@ -111,3 +113,4 @@ model.fit(X, y, validation_split=0.33, epochs=150, batch_size=10,
 
 💡 **With checkpointing, you ensure no training progress is lost and always keep the best-performing model!** 🚀
 
+---

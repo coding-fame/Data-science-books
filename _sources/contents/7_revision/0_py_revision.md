@@ -2738,4 +2738,4 @@ shopping(a="iPhone 14 Plus")  # TypeError: unexpected keyword argument 'a'
 ```
 *Explanation*: In the second example, the keyword argument `a` does not match the function parameter `prod`, resulting in a TypeError.
 
-
+---

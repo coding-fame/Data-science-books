@@ -156,4 +156,4 @@ An **optimizer** adjusts the neural network’s weights and learning rate to min
 
 By understanding these components, you can choose the most suitable options for your neural network model depending on the type of problem you're solving (regression, binary classification, multi-class classification).
 
-
+---

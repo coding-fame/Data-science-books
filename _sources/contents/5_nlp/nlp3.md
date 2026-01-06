@@ -174,3 +174,4 @@ print("Synset example:", syn.examples())
 
 Text preprocessing in NLP involves a variety of tasks, including converting case, removing numbers and punctuation, stripping whitespace, and tagging parts of speech. Using tools like **TextBlob**, **NLTK**, and **WordNet**, we can extract valuable insights and prepare text for further analysis. Collocations, bigrams, and trigrams are particularly useful for tasks like sentiment analysis and information extraction.
 
+---

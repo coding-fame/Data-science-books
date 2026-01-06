@@ -1,4 +1,6 @@
 
+---
+
 # **DL: Evaluating Model Performance**  
 
 ## **1. Overview**  
@@ -179,3 +181,5 @@ print(f"Mean Accuracy: {np.mean(cvscores):.2f}% (+/- {np.std(cvscores):.2f}%)")
 - Always **evaluate** your deep learning models to ensure they generalize well to unseen data.  
 - If **data is limited**, prefer **k-Fold Cross-Validation** over a single **train-test split**.  
 - If working with **large datasets**, **automatic verification (`validation_split`)** is a good choice.  
+
+---

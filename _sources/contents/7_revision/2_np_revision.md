@@ -428,5 +428,5 @@ print(matrix_a - matrix_b)  # Output: Element-wise subtraction using '-'
 - **`count_nonzero()`**: Counts the number of non-zero elements in the array.
 - **Array Operations**: You can add, subtract, and manipulate arrays using simple operators and predefined functions like `np.add()` and `np.subtract()`.
 
-
+---
 

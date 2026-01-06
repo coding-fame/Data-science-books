@@ -389,4 +389,4 @@ The **LeNet** architecture consists of **seven layers**:
 | Neural Network | No | Yes |
 | Applications  | Data compression, visualization | Anomaly detection, denoising, feature extraction |
 
-
+---

@@ -168,4 +168,5 @@ Understanding fundamental theories in machine learning helps in making informed 
 - High-dimensional data can degrade model performance due to increased complexity and computation.
 - **Solution:** Use **Dimensionality Reduction** techniques like **PCA (Principal Component Analysis)** or **t-SNE**.
 
+---
 
