@@ -154,7 +154,7 @@ parts:
   - caption: "Part VI — Career & MLOps"
     numbered: false
     chapters:
-      - file: contents/6_interview/self introduction.md
+      - file: contents/6_interview/self_introduction.md
         title: Self Introduction
       - file: contents/6_interview/py.md
         title: Python Interview
