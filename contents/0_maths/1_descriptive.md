@@ -1436,5 +1436,5 @@ model.add(LayerNormalization())
 - **Deep Learning**: Batch and Layer Normalization stabilize training.
 - **When to Skip**: Scaling isn’t needed for tree-based models.
 
----
+
 

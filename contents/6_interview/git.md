@@ -228,5 +228,3 @@ git checkout master
 git merge feature-branch
 git log
 ```
-
----

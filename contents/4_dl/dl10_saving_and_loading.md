@@ -157,4 +157,3 @@ print(f"Loaded Model Accuracy: {score[1]*100:.2f}%")
 - HDF5 format is **efficient** for storing large model weights.  
 - **Next Steps**: Explore **saving and loading entire models (`model.save()`)**, including optimizer states!  
 
----

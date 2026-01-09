@@ -687,5 +687,5 @@ f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0
 print(f"Accuracy: {accuracy:.2f}, Precision: {precision:.2f}, Recall: {recall:.2f}, F1: {f1:.2f}")
 ```
 
----
+
 

@@ -1,6 +1,4 @@
 
----
-
 # Job Interview Conversation: 
 
 ## Characters
@@ -219,5 +217,5 @@ Alternatively:
 **Gajaanana:**  
 *I’m a bit busy with office work right now, but I’ll reply in some time. Thanks!*
 
----
+
 

@@ -548,4 +548,4 @@ print("Cross-Validation Splits:", kf.get_n_splits(X_train_resampled))
 - **K=5**: Splits the training data into 5 folds, training on 4 and validating on 1 each time.
 - **Benefit**: Provides a more reliable performance estimate than a single train-test split.
 
----
+

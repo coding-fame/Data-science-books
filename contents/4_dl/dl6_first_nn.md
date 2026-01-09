@@ -207,4 +207,4 @@ plot_model(model, to_file='model.png', show_shapes=True, show_dtype=True,
 ✅ **Step 7**: Make predictions (`predict()`)  
 ✅ **Step 8**: Summarize & visualize the model (`summary()` & `plot_model()`)  
 
----
+

@@ -438,5 +438,5 @@ Classification is a supervised learning task where models predict categorical la
 ## Summary
 Each classification algorithm has its strengths and trade-offs. Logistic Regression and SVM suit linear problems, while tree-based methods and Neural Networks excel in non-linear contexts. Ensemble methods (Random Forest, GBM) boost accuracy, whereas Naive Bayes and k-NN offer simplicity. The choice depends on data characteristics, interpretability needs, and computational constraints.
 
----
+
 

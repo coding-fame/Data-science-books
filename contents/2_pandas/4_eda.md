@@ -820,7 +820,5 @@ X_balanced, y_balanced = smote.fit_resample(X_train, y_train)
 | Random Split        | General split            | Simple and fair             |
 | K-Fold              | Model evaluation         | Reduces overfitting         |
 | Stratified Split    | Imbalanced data          | Keeps class balance         |
-| SMOTE               | Rare classes             | Balances data synthetically |
-
----
+| SMOTE               | Rare classes             | Balances data synthetically |---
 

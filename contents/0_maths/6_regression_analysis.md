@@ -1,5 +1,5 @@
 
----
+
 
 # Explanatory and Response Variables
 
@@ -500,5 +500,5 @@ A curved residual pattern might mean the model assumes a straight line when the 
 
 Residuals are more than errors—they reveal how well your model understands the data, guiding you to make it better for ML tasks.
 
----
+
 

@@ -767,4 +767,3 @@ plt.show()
 - **Overfitting:** Too complex (e.g., high-degree polynomial). Fix by reducing complexity, adding regularization, or collecting more data.
 - **Tools:** MSE, cross-validation, regularization, learning curves, and model selection help diagnose and resolve these issues.
 
----

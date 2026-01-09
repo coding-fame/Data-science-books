@@ -686,4 +686,4 @@ poly.fit_transform(X)
 - **Regularization**: `penalty` in `sklearn` models.
 - **Stats**: `scipy.stats`, `numpy.random`.
 
----
+

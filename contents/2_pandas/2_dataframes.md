@@ -1225,4 +1225,4 @@ print(df['PurDate'].dt.weekday)
   print(pd.crosstab(df["Department"], df["Salary"]))
   ```
 
----
+

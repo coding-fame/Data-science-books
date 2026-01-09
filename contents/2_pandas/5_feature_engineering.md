@@ -580,4 +580,4 @@ pipeline = Pipeline(steps=[
 3. **Q:** "How to handle high-cardinality categorical data?"  
    **A:** Use **Target Encoding** or group rare categories into "Other."
 
----
+

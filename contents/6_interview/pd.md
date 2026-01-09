@@ -478,5 +478,3 @@ df = pd.concat(result, ignore_index=True)
 print(df)
 df.to_csv("year.csv", index=False)
 ```
-
----

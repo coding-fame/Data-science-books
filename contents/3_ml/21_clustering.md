@@ -260,4 +260,4 @@ plt.show()
 
 - **Result**: Clear separation of four clusters, demonstrating K-Means’ effectiveness on well-separated data.
 
----
+

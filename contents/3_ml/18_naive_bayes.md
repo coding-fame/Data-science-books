@@ -247,4 +247,3 @@ The spam score (**0.222**) is higher than the not-spam score (**0.056**), so the
 ### **Why It’s Called "Naïve"**:  
 It assumes "free" and "offer" don’t affect each other (even though in real life, they might). This simplification helps make quick guesses, even if it’s not 100% realistic.
 
----

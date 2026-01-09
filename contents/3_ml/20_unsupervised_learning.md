@@ -208,5 +208,5 @@ silhouette = silhouette_score(X, kmeans.labels_)
 print("Silhouette Score for K-Means:", silhouette)
 ```
 
----
+
 

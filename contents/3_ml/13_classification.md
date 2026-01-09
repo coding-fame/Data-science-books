@@ -474,4 +474,3 @@ Mean accuracy: 0.9600
 ## **Conclusion**
 Logistic regression is a versatile, interpretable algorithm for classification, bridging linear models and probabilistic outputs via the sigmoid function.
 
----

@@ -1,5 +1,5 @@
 
----
+
 
 # Calculus 
 
@@ -410,4 +410,4 @@ plt.title("Prior Distribution")
 plt.show()
 ```
 
----
+

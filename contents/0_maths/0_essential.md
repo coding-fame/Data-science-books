@@ -1,6 +1,4 @@
 
----
-
 # Essential Maths
 
 ---
@@ -261,4 +259,4 @@ print(result)  # Output: 4/3 (≈1.333333)
 
 **Tip**: Use SymPy for symbolic math and Matplotlib for plots to boost your ML workflow!
 
----
+

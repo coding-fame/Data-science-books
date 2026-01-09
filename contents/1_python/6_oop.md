@@ -524,4 +524,3 @@ student = Student("Bob", 1)
 print(student)  # Output: Student(name='Bob', id=1, grade=0.0)
 ```
 
----

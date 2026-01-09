@@ -1307,5 +1307,4 @@ Imagine a bowl-shaped curve where we start at a random point on the slope.
 - If **the learning rate is too large**, we might jump over the minimum and never converge.  
 - If **the learning rate is too small**, the algorithm will take too long to reach the minimum.  
 
----
 

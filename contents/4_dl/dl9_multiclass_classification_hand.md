@@ -177,4 +177,3 @@ print(f"Predicted Label: {predicted_label}")
 - **Try experimenting** with more layers, different activation functions, and optimizers for better performance.  
 - **Next Steps**: Implement **Convolutional Neural Networks (CNNs)** for even better results in handwritten digit classification!  
 
----

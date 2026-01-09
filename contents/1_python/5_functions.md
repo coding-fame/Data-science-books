@@ -526,4 +526,4 @@ print(calculator("multiply", 2, 3, 4))         # Output: Operation 'multiply' re
 print(calculator("power", base=2, exponent=3))  # Output: Operation 'power' result: 8
 ```
 
----
+

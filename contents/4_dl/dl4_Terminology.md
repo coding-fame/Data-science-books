@@ -132,4 +132,4 @@
 - **One complete cycle of training** on the entire dataset.  
 - More epochs = better learning (but too many may cause overfitting).  
 
----
+

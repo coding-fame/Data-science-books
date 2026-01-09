@@ -152,4 +152,3 @@ print(f"Accuracy: {results.mean()*100:.2f}% (+/- {results.std()*100:.2f}%)")
 - The **k-Fold Cross-Validation** technique helps in achieving a **more generalized** model performance.  
 - You can **tweak** the number of neurons, activation functions, or optimizer to experiment with better accuracy.  
 
----

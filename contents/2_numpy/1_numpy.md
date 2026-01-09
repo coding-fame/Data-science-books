@@ -423,4 +423,3 @@ print(np.argsort(arr))  # Output: [1 3 0 2] (indices of sorted order)
 - **Linear Algebra**: `np.linalg.inv()`, `np.linalg.det()`, `np.linalg.eig()`.
 - **Statistics**: `np.median()`, `np.var()`, `np.corrcoef()`.
 
----

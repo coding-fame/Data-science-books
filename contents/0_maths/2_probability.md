@@ -329,4 +329,3 @@ plt.show()
 7. **CDF**: Gives cumulative probabilities for both types.
 8. **Applications** in ML include classification, density estimation, and anomaly detection.
 
----
