@@ -1,0 +1,2581 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Data Structures &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/1_python/3_data_structures';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Modules and Packages" href="4_modules_packages.html" />
+    <link rel="prev" title="Input/Output and Flow Control" href="2_advanced.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_regex.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html"><strong>What is Exploratory Data Analysis (EDA)?</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core ML Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Deployment</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self_introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/edit/main/contents/1_python/3_data_structures.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/issues/new?title=Issue%20on%20page%20%2Fcontents/1_python/3_data_structures.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/1_python/3_data_structures.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Structures</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Data Structures</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-learn-data-structures-for-ml">Why Learn Data Structures for ML?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-sequence">What is a Sequence?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-strings-in-python">Working with Strings in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-string">What is a String?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-strings">Creating Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing-strings">Indexing and Slicing Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing">Indexing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-through-strings">Looping Through Strings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mutability-and-immutability">Mutability and Immutability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-operations-on-strings">Mathematical Operations on Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation">1. Concatenation (<code class="docutils literal notranslate"><span class="pre">+</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repetition">2. Repetition (<code class="docutils literal notranslate"><span class="pre">*</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-length">String Length</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators-in-not-in">Membership Operators (<code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in"><code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-in"><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-string-methods-for-ml">Key String Methods for ML</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-text-preprocessing">Example: Text Preprocessing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#immutability-and-string-methods">Immutability and String Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-strings">Splitting Strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#python-lists-for-machine-learning">Python Lists for Machine Learning</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-list">What is a List?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-lists">Creating Lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists-are-mutable">Lists Are Mutable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-list-items">Accessing List Items</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-length-of-a-list">Finding the Length of a List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-methods">List Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-operators">List Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension">List Comprehension</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-data-structure-in-python">Tuple Data Structure in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features-of-tuples">Key Features of Tuples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-tuples">When to Use Tuples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-tuples">Creating Tuples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-parentheses">1. Using Parentheses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-tuple-function">2. Using the <code class="docutils literal notranslate"><span class="pre">tuple()</span></code> Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-element-tuple">3. Single-Element Tuple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#without-parentheses">4. Without Parentheses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-tuple-elements">Accessing Tuple Elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1. Indexing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2. Slicing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-packing-and-unpacking">Tuple Packing and Unpacking</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#packing">Packing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unpacking">Unpacking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-immutability">Tuple Immutability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-operations-on-tuples">Mathematical Operations on Tuples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1. Concatenation (<code class="docutils literal notranslate"><span class="pre">+</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2. Repetition (<code class="docutils literal notranslate"><span class="pre">*</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-tuple-len">3. Length of Tuple (<code class="docutils literal notranslate"><span class="pre">len()</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-in-not-in">4. Membership (<code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-methods">Tuple Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-lists-and-tuples">Differences Between Lists and Tuples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-mutable-objects-in-a-tuple">Modifying Mutable Objects in a Tuple</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#set-data-structure-in-python">14. Set Data Structure in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-set">What is a Set?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-set">Creating a Set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-characteristics-of-sets">Key Characteristics of Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-sets-in-ml-dl">Why Use Sets in ML/DL?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Creating a Set</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-curly-braces">1. Using Curly Braces <code class="docutils literal notranslate"><span class="pre">{}</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-set-function">2. Using the <code class="docutils literal notranslate"><span class="pre">set()</span></code> Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-empty-set">3. Creating an Empty Set</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features-of-sets">Key Features of Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-ml-context">Example in ML Context</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-methods">Set Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-items">Adding Items</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-items">Removing Items</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing-all-items">Clearing All Items</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-operations">Set Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#union">1. Union (<code class="docutils literal notranslate"><span class="pre">|</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection">2. Intersection (<code class="docutils literal notranslate"><span class="pre">&amp;</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference">3. Difference (<code class="docutils literal notranslate"><span class="pre">-</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-difference">4. Symmetric Difference (<code class="docutils literal notranslate"><span class="pre">^</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-membership">Checking Membership</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-comprehensions">Set Comprehensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-duplicates-from-a-list">Removing Duplicates from a List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frozen-sets">Frozen Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-sets-in-ml-dl">When to Use Sets in ML/DL?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-data-structure-in-python">15. Dictionary Data Structure in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dictionary">Creating a Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Creating a Dictionary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">1. Using Curly Braces <code class="docutils literal notranslate"><span class="pre">{}</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dict">2. Using <code class="docutils literal notranslate"><span class="pre">dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-empty">3. Starting Empty</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-properties-of-a-dictionary">Key Properties of a Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-a-dictionary">When to Use a Dictionary?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-values-in-a-dictionary">Accessing Values in a Dictionary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-access">Basic Access</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#safe-access-with-get">Safe Access with <code class="docutils literal notranslate"><span class="pre">get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-through-a-dictionary">Looping Through a Dictionary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-a-dictionary">Updating a Dictionary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-pair">Adding a New Pair</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-a-value">Changing a Value</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-elements-from-a-dictionary">Removing Elements from a Dictionary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-del-keyword">1. Using <code class="docutils literal notranslate"><span class="pre">del</span></code> Keyword</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pop">2. Using <code class="docutils literal notranslate"><span class="pre">pop()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-clear">3. Using <code class="docutils literal notranslate"><span class="pre">clear()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-the-entire-dictionary">4. Deleting the Entire Dictionary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-length-of-a-dictionary">Finding the Length of a Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-dictionary-methods">Important Dictionary Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-comprehension">Dictionary Comprehension</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-mapping-features-to-indices">Example: Mapping Features to Indices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-dictionary-features">Summary of Dictionary Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-in-machine-learning-ml-and-deep-learning-dl">Applications in Machine Learning (ML) and Deep Learning (DL)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-hyperparameters-in-ml">Example: Hyperparameters in ML</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-methods"><strong>Tools and Methods</strong></a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <hr class="docutils" />
+<section id="data-structures">
+<h1>Data Structures<a class="headerlink" href="#data-structures" title="Link to this heading">#</a></h1>
+<p>If you wanted to store a group of individual objects in a single entity, then you should go for data structures.</p>
+<p>Data structures are essential tools in Python, especially for Machine Learning (ML) and Deep Learning (DL). They help organize, store, and process large datasets efficiently.</p>
+<hr class="docutils" />
+<section id="why-learn-data-structures-for-ml">
+<h2>Why Learn Data Structures for ML?<a class="headerlink" href="#why-learn-data-structures-for-ml" title="Link to this heading">#</a></h2>
+<p>Data structures are critical in ML and DL for tasks like:</p>
+<ul class="simple">
+<li><p><strong>Storing</strong> and <strong>retrieving</strong> large datasets (e.g., training data).</p></li>
+<li><p><strong>Processing</strong> data efficiently (e.g., feature extraction in NLP).</p></li>
+<li><p><strong>Handling duplicates</strong> (e.g., removing redundant labels).</p></li>
+<li><p><strong>Maintaining order</strong> (e.g., ordered predictions or sorted features).</p></li>
+<li><p><strong>Sorting</strong> and <strong>accessing data quickly</strong> (e.g., sorted model outputs).</p></li>
+<li><p><strong>Managing key-value pairs</strong> (e.g., storing model parameters).</p></li>
+</ul>
+<p>Python’s built-in data structures, such as <strong>strings</strong>, <strong>lists</strong>, <strong>tuples</strong>, <strong>sets</strong>, and <strong>dictionaries</strong>, are versatile and widely used in ML workflows.</p>
+<hr class="docutils" />
+<p>Python provides:</p>
+<ul class="simple">
+<li><p><strong>Built-in Data Structures</strong>: Lists, Tuples, Dictionaries, Sets</p></li>
+<li><p><strong>Advanced Data Structures</strong>: Available via modules like <code class="docutils literal notranslate"><span class="pre">collections</span></code>, <code class="docutils literal notranslate"><span class="pre">heapq</span></code>, <code class="docutils literal notranslate"><span class="pre">array</span></code>, etc.</p></li>
+</ul>
+</section>
+<section id="what-is-a-sequence">
+<h2>What is a Sequence?<a class="headerlink" href="#what-is-a-sequence" title="Link to this heading">#</a></h2>
+<p>A <strong>sequence</strong> is a data structure that holds a group of elements in a specific order. In Python, common sequences include:</p>
+<ul class="simple">
+<li><p><strong>Strings</strong>: Text data (e.g., class labels in classification tasks).</p></li>
+<li><p><strong>Lists</strong>: Mutable collections (e.g., feature vectors for ML models).</p></li>
+<li><p><strong>Tuples</strong>: Immutable collections (e.g., fixed hyperparameters).</p></li>
+<li><p><strong>Sets</strong>: Unique elements (e.g., unique categories in a dataset).</p></li>
+<li><p><strong>Dictionaries</strong>: Key-value pairs (e.g., model configurations).</p></li>
+</ul>
+<p>Sequences are essential in ML for organizing data, labels, and outputs efficiently.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="working-with-strings-in-python">
+<h1>Working with Strings in Python<a class="headerlink" href="#working-with-strings-in-python" title="Link to this heading">#</a></h1>
+<section id="what-is-a-string">
+<h2>What is a String?<a class="headerlink" href="#what-is-a-string" title="Link to this heading">#</a></h2>
+<section id="definitions">
+<h3>Definitions:<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>A string is a <strong>group of characters</strong> enclosed within single, double, or triple quotes.</p></li>
+<li><p>A string is a <strong>sequential collection of characters</strong>.</p></li>
+</ol>
+<p>A <strong>string</strong> is a sequence of characters enclosed in quotes. In ML, strings are used for text data, such as:</p>
+<ul class="simple">
+<li><p>Class labels (e.g., “cat”, “dog” in image classification).</p></li>
+<li><p>Text features (e.g., customer reviews for sentiment analysis).</p></li>
+<li><p>File paths (e.g., locations of datasets or models).</p></li>
+</ul>
+</section>
+<section id="example">
+<h3>Example:<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span>  <span class="c1"># String for a class label in ML</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="creating-strings">
+<h2>Creating Strings<a class="headerlink" href="#creating-strings" title="Link to this heading">#</a></h2>
+<p>You can create strings using different types of quotes:</p>
+<ul class="simple">
+<li><p>Single quotes: <code class="docutils literal notranslate"><span class="pre">'Hello'</span></code></p></li>
+<li><p>Double quotes: <code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code> (most common).</p></li>
+<li><p>Triple quotes: <code class="docutils literal notranslate"><span class="pre">'''Hello'''</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;Hello&quot;&quot;&quot;</span></code> (for multiline strings).</p></li>
+</ul>
+<p><strong>ML Tip:</strong> Use triple quotes for multiline text data, such as reading large text files for Natural Language Processing (NLP).</p>
+<section id="examples">
+<h3>Examples:<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Single-line string</span>
+<span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;dog&quot;</span>
+
+<span class="c1"># Multiline string for NLP tasks</span>
+<span class="n">text_data</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;This is a sample review.</span>
+<span class="s2">It spans multiple lines.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="indexing-and-slicing-strings">
+<h2>Indexing and Slicing Strings<a class="headerlink" href="#indexing-and-slicing-strings" title="Link to this heading">#</a></h2>
+<section id="indexing">
+<h3>Indexing<a class="headerlink" href="#indexing" title="Link to this heading">#</a></h3>
+<p>Each character in a string has an index, starting from 0. Indexing is useful for accessing specific parts of text data.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Machine Learning&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: M</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span>  <span class="c1"># Output: L</span>
+</pre></div>
+</div>
+</section>
+<section id="slicing">
+<h3>Slicing<a class="headerlink" href="#slicing" title="Link to this heading">#</a></h3>
+<p>Slicing extracts a substring using a range of indices. In ML, this can help extract features from text.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Machine Learning&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">])</span>  <span class="c1"># Output: Machine</span>
+</pre></div>
+</div>
+</section>
+<section id="looping-through-strings">
+<h3>Looping Through Strings<a class="headerlink" href="#looping-through-strings" title="Link to this heading">#</a></h3>
+<p>Use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to process each character. This is helpful for text preprocessing in NLP.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="s2">&quot;ML&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+<span class="c1"># Output:</span>
+<span class="c1"># M</span>
+<span class="c1"># L</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="mutability-and-immutability">
+<h2>Mutability and Immutability<a class="headerlink" href="#mutability-and-immutability" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Mutable</strong>: Can be changed after creation (e.g., lists).</p></li>
+<li><p><strong>Immutable</strong>: Cannot be changed after creation (e.g., strings).</p></li>
+</ul>
+<p>Strings are <strong>immutable</strong>, meaning you cannot modify them directly. In ML, this ensures data integrity for text inputs.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;ML&quot;</span>
+<span class="c1"># text[0] = &quot;D&quot;  # Error: &#39;str&#39; object does not support item assignment</span>
+</pre></div>
+</div>
+<p><strong>ML Tip:</strong> Since strings are immutable, use methods like <code class="docutils literal notranslate"><span class="pre">replace()</span></code> to create modified versions without altering the original.</p>
+</section>
+<hr class="docutils" />
+<section id="mathematical-operations-on-strings">
+<h2>Mathematical Operations on Strings<a class="headerlink" href="#mathematical-operations-on-strings" title="Link to this heading">#</a></h2>
+<section id="concatenation">
+<h3>1. Concatenation (<code class="docutils literal notranslate"><span class="pre">+</span></code>)<a class="headerlink" href="#concatenation" title="Link to this heading">#</a></h3>
+<p>Joins two or more strings. Useful for combining text features or labels.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="s2">&quot;Logistic&quot;</span> <span class="o">+</span> <span class="s2">&quot;Regression&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>  <span class="c1"># Output: LogisticRegression</span>
+</pre></div>
+</div>
+</section>
+<section id="repetition">
+<h3>2. Repetition (<code class="docutils literal notranslate"><span class="pre">*</span></code>)<a class="headerlink" href="#repetition" title="Link to this heading">#</a></h3>
+<p>Repeats a string multiple times. Can be used to create repeated labels or dummy data.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;spam&quot;</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>  <span class="c1"># Output: spamspamspam</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="string-length">
+<h2>String Length<a class="headerlink" href="#string-length" title="Link to this heading">#</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">len()</span></code> to find the number of characters in a string. In ML, this helps measure text lengths for padding or truncation in NLP.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Deep Learning&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>  <span class="c1"># Output: 13</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="membership-operators-in-not-in">
+<h2>Membership Operators (<code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code>)<a class="headerlink" href="#membership-operators-in-not-in" title="Link to this heading">#</a></h2>
+<section id="in">
+<h3><code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#in" title="Link to this heading">#</a></h3>
+<p>Checks if a substring exists within a string. Useful for filtering text data.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ma&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Machine Learning&#39;</span><span class="p">)</span>  <span class="c1"># Output: True</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;AI&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Machine Learning&#39;</span><span class="p">)</span>   <span class="c1"># Output: False</span>
+</pre></div>
+</div>
+</section>
+<section id="not-in">
+<h3><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code><a class="headerlink" href="#not-in" title="Link to this heading">#</a></h3>
+<p>Checks if a substring does <strong>not</strong> exist. Helps exclude certain patterns.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;DL&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;Machine Learning&#39;</span><span class="p">)</span>  <span class="c1"># Output: True</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-string-methods-for-ml">
+<h2>Key String Methods for ML<a class="headerlink" href="#key-string-methods-for-ml" title="Link to this heading">#</a></h2>
+<p>Strings come with many built-in methods. Here are essential ones for ML tasks:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Method</strong></p></th>
+<th class="head"><p><strong>Purpose</strong></p></th>
+<th class="head"><p><strong>Example</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">upper()</span></code></p></td>
+<td><p>Converts to uppercase</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;ml&quot;.upper()</span> <span class="pre">→</span> <span class="pre">&quot;ML&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lower()</span></code></p></td>
+<td><p>Converts to lowercase</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;ML&quot;.lower()</span> <span class="pre">→</span> <span class="pre">&quot;ml&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">strip()</span></code></p></td>
+<td><p>Removes leading/trailing spaces</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;</span>&#160; <span class="pre">ML</span>&#160; <span class="pre">&quot;.strip()</span> <span class="pre">→</span> <span class="pre">&quot;ML&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">count(p)</span></code></p></td>
+<td><p>Counts occurrences of <code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;ML</span> <span class="pre">ML&quot;.count(&quot;ML&quot;)</span> <span class="pre">→</span> <span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">replace(p1,</span> <span class="pre">p2)</span></code></p></td>
+<td><p>Replaces <code class="docutils literal notranslate"><span class="pre">p1</span></code> with <code class="docutils literal notranslate"><span class="pre">p2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;ML&quot;.replace(&quot;M&quot;,</span> <span class="pre">&quot;D&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;DL&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">split(p)</span></code></p></td>
+<td><p>Splits string at separator <code class="docutils literal notranslate"><span class="pre">p</span></code> into a list</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;ML,DL&quot;.split(&quot;,&quot;)</span> <span class="pre">→</span> <span class="pre">[&quot;ML&quot;,</span> <span class="pre">&quot;DL&quot;]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>ML Use Cases:</strong></p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">lower()</span></code></strong>: Standardize text data for case-insensitive processing.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">strip()</span></code></strong>: Clean extra spaces from user inputs or datasets.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">split()</span></code></strong>: Tokenize text into words for NLP models.</p></li>
+</ul>
+<section id="example-text-preprocessing">
+<h3>Example: Text Preprocessing<a class="headerlink" href="#example-text-preprocessing" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clean and tokenize text for NLP</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;  Machine Learning is fun!  &quot;</span>
+<span class="n">cleaned</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>  <span class="c1"># Output: [&#39;machine&#39;, &#39;learning&#39;, &#39;is&#39;, &#39;fun!&#39;]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="immutability-and-string-methods">
+<h2>Immutability and String Methods<a class="headerlink" href="#immutability-and-string-methods" title="Link to this heading">#</a></h2>
+<p>Though strings are immutable, methods like <code class="docutils literal notranslate"><span class="pre">replace()</span></code> return a <strong>new string</strong> with changes. This is useful for creating modified copies without altering the original data.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">original</span> <span class="o">=</span> <span class="s2">&quot;Neural Network&quot;</span>
+<span class="n">modified</span> <span class="o">=</span> <span class="n">original</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Neural&quot;</span><span class="p">,</span> <span class="s2">&quot;Convolutional&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">modified</span><span class="p">)</span>  <span class="c1"># Output: Convolutional Network</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">original</span><span class="p">)</span>  <span class="c1"># Output: Neural Network (unchanged)</span>
+</pre></div>
+</div>
+<p><strong>ML Tip:</strong> Use this to preprocess text while keeping the original intact for reference.</p>
+</section>
+<hr class="docutils" />
+<section id="splitting-strings">
+<h2>Splitting Strings<a class="headerlink" href="#splitting-strings" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">split()</span></code> method divides a string into a list, which is crucial for tokenizing text in NLP.</p>
+<ul class="simple">
+<li><p><strong>Default (no separator)</strong>: Splits at spaces.</p></li>
+<li><p><strong>With separator</strong>: Splits at the specified character.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tokenize text for ML</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Machine Learning, Deep Learning&quot;</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>  <span class="c1"># Output: [&#39;Machine Learning&#39;, &#39;Deep Learning&#39;]</span>
+</pre></div>
+</div>
+<p><strong>ML Tip:</strong> Use <code class="docutils literal notranslate"><span class="pre">split()</span></code> to break down sentences into words or phrases for feature extraction.</p>
+</section>
+<hr class="docutils" />
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Strings</strong> are immutable sequences of characters, ideal for handling text data in ML.</p></li>
+<li><p>Use <strong>indexing</strong>, <strong>slicing</strong>, and <strong>looping</strong> to access and process parts of strings.</p></li>
+<li><p><strong>String methods</strong> like <code class="docutils literal notranslate"><span class="pre">lower()</span></code>, <code class="docutils literal notranslate"><span class="pre">strip()</span></code>, and <code class="docutils literal notranslate"><span class="pre">split()</span></code> are essential for preprocessing text data.</p></li>
+<li><p><strong>Membership operators</strong> (<code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code>) help filter and validate text inputs.</p></li>
+<li><p>Understanding strings is key for tasks like NLP, where text data is common.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="python-lists-for-machine-learning">
+<h1>Python Lists for Machine Learning<a class="headerlink" href="#python-lists-for-machine-learning" title="Link to this heading">#</a></h1>
+<p>A <strong>list</strong> is a mutable, ordered sequence of elements, enclosed in square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
+<hr class="docutils" />
+<section id="what-is-a-list">
+<h2>What is a List?<a class="headerlink" href="#what-is-a-list" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>How to Create a List:</strong></p>
+<ul>
+<li><p>Use square brackets: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">list()</span></code> function</p></li>
+</ul>
+</li>
+<li><p><strong>Key Features:</strong></p>
+<ul>
+<li><p><strong>Same or Different Types:</strong> Lists can hold similar items (e.g., all numbers) or mixed items (e.g., numbers and text).</p></li>
+<li><p><strong>Dynamic Size:</strong> You can add or remove items anytime.</p></li>
+<li><p><strong>Order Matters:</strong> Items stay in the order you add them.</p></li>
+<li><p><strong>Duplicates Allowed:</strong> The same value can appear multiple times.</p></li>
+<li><p><strong>Mutable:</strong> You can update items after creating the list.</p></li>
+<li><p><strong>Indexed:</strong> Each item has a position (index) starting from 0.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>In ML:</strong> Lists are great for storing datasets, model predictions, or hyperparameters.</p>
+<p>Note:</p>
+<ul class="simple">
+<li><p>A list is a predefined class in Python.</p></li>
+<li><p>Once we create a list object, an internal object is created for the list class.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="creating-lists">
+<h2>Creating Lists<a class="headerlink" href="#creating-lists" title="Link to this heading">#</a></h2>
+<p>Here’s how to make lists with simple examples:</p>
+<ol class="arabic">
+<li><p><strong>Empty List</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># An empty list to store ML results later</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>List with Items</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">]</span>  <span class="c1"># Mixed types: text, integer, float</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>  <span class="c1"># Output: [&quot;age&quot;, 25, 0.85]</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Using <code class="docutils literal notranslate"><span class="pre">list()</span></code> Function</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list(p)</span></code> is a predefined function in Python.</p></li>
+<li><p>This function takes only one parameter.</p></li>
+<li><p>Converts a sequence (like a range) into a list.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">epochs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># Creates [1, 2, 3, 4, 5]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>ML Example:</strong> You might use <code class="docutils literal notranslate"><span class="pre">list(range(10))</span></code> to create a list of training epochs.</p>
+</section>
+<hr class="docutils" />
+<section id="lists-are-mutable">
+<h2>Lists Are Mutable<a class="headerlink" href="#lists-are-mutable" title="Link to this heading">#</a></h2>
+<p>“Mutable” means you can change a list after creating it. This is handy in ML when updating values like weights.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>  <span class="c1"># Output: [0.1, 0.2, 0.3]</span>
+<span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># Update first item</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>  <span class="c1"># Output: [0.5, 0.2, 0.3]</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="accessing-list-items">
+<h2>Accessing List Items<a class="headerlink" href="#accessing-list-items" title="Link to this heading">#</a></h2>
+<p>You can grab items from a list in different ways:</p>
+<ol class="arabic">
+<li><p><strong>By Index</strong></p>
+<ul class="simple">
+<li><p>Indexes start at 0 (left to right).</p></li>
+<li><p>Negative indexes start from -1 (right to left).</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>   <span class="c1"># Output: 0.9 (first item)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: 0.95 (last item)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Warning:</strong> Using an index beyond the list size (e.g., <code class="docutils literal notranslate"><span class="pre">scores[5]</span></code>) causes an <code class="docutils literal notranslate"><span class="pre">IndexError</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Slicing</strong></p>
+<ul class="simple">
+<li><p>Extract a chunk of the list with <code class="docutils literal notranslate"><span class="pre">[start:stop:step]</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: Index where slice starts (default is 0)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code>: Index where slice ends (default is max index of list)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stepsize</span></code>: Increment value (default is 1)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>  <span class="c1"># Output: [20, 30, 40]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># Output: [10, 30, 50] (every second item)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Using a For Loop</strong></p>
+<ul class="simple">
+<li><p>Loop through items one by one.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">pred</span> <span class="ow">in</span> <span class="n">predictions</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>ML Tip:</strong> Slicing is useful for splitting data into training and testing sets.</p>
+</section>
+<hr class="docutils" />
+<section id="finding-the-length-of-a-list">
+<h2>Finding the Length of a List<a class="headerlink" href="#finding-the-length-of-a-list" title="Link to this heading">#</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">len()</span></code> to count items in a list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">))</span>  <span class="c1"># Output: 4</span>
+</pre></div>
+</div>
+<p><strong>In ML:</strong> Check the size of your dataset with <code class="docutils literal notranslate"><span class="pre">len(dataset)</span></code>.</p>
+</section>
+<hr class="docutils" />
+<section id="list-methods">
+<h2>List Methods<a class="headerlink" href="#list-methods" title="Link to this heading">#</a></h2>
+<p>Lists come with built-in methods to manage items. Here are some key ones:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">append(x)</span></code>: Add an item to the end.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extend(iterable)</span></code>: Append all items from an iterable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert(i,</span> <span class="pre">x)</span></code>: Insert at index <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remove(x)</span></code>: Remove first occurrence of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pop([i])</span></code>: Remove and return item at index <code class="docutils literal notranslate"><span class="pre">i</span></code> (default: last).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index(x)</span></code>: Return index of first <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count(x)</span></code>: Count occurrences of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sort()</span></code>: Sort in-place.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reverse()</span></code>: Reverse in-place.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mf">0.9</span><span class="p">))</span>  <span class="c1"># Output: 2</span>
+<span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>  <span class="c1"># Output: [0.9, 0.8, 0.9, 0.95]</span>
+<span class="n">scores</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>  <span class="c1"># Output: [0.8, 0.9, 0.9, 0.95]</span>
+</pre></div>
+</div>
+<p><strong>ML Use:</strong> Use <code class="docutils literal notranslate"><span class="pre">append()</span></code> to collect model accuracies during training.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a list</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
+
+<span class="c1"># Adding elements</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;grape&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>  <span class="c1"># Output: [&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;, &#39;orange&#39;, &#39;grape&#39;, &#39;kiwi&#39;]</span>
+
+<span class="c1"># Inserting and removing</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="p">)</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>  <span class="c1"># Output: kiwi</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>  <span class="c1"># Output: [&#39;apple&#39;, &#39;mango&#39;, &#39;cherry&#39;, &#39;orange&#39;, &#39;grape&#39;]</span>
+
+<span class="c1"># Sorting and reversing</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>  <span class="c1"># Output: [1, 1, 3, 4, 5]</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>  <span class="c1"># Output: [5, 4, 3, 1, 1]</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="list-operators">
+<h2>List Operators<a class="headerlink" href="#list-operators" title="Link to this heading">#</a></h2>
+<p>Operators let you combine or repeat lists.</p>
+<ol class="arabic">
+<li><p><strong>Concatenation (<code class="docutils literal notranslate"><span class="pre">+</span></code>)</strong></p>
+<ul class="simple">
+<li><p>Joins two lists into one.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">combined</span> <span class="o">=</span> <span class="n">list1</span> <span class="o">+</span> <span class="n">list2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">combined</span><span class="p">)</span>  <span class="c1"># Output: [1, 2, 3, 4]</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Repetition (<code class="docutils literal notranslate"><span class="pre">*</span></code>)</strong></p>
+<ul class="simple">
+<li><p>Repeats a list a set number of times.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># Output: [0, 0, 0]</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Membership (<code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code>)</strong></p>
+<ul class="simple">
+<li><p>Checks if an item is in the list.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">20</span> <span class="ow">in</span> <span class="n">values</span><span class="p">)</span>      <span class="c1"># Output: True</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">40</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">values</span><span class="p">)</span>  <span class="c1"># Output: True</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>ML Example:</strong> Use <code class="docutils literal notranslate"><span class="pre">+</span></code> to combine feature lists or <code class="docutils literal notranslate"><span class="pre">in</span></code> to check if a label exists.</p>
+</section>
+<hr class="docutils" />
+<section id="list-comprehension">
+<h2>List Comprehension<a class="headerlink" href="#list-comprehension" title="Link to this heading">#</a></h2>
+<p>List comprehension provides a concise way to create lists.</p>
+<p>List comprehension is a short, powerful way to create or modify lists. It’s like a one-line loop.</p>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Examples:</strong></p>
+<ol class="arabic">
+<li><p><strong>Add 1 to Each Item</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">losses</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">]</span>
+<span class="n">new_losses</span> <span class="o">=</span> <span class="p">[</span><span class="n">loss</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">loss</span> <span class="ow">in</span> <span class="n">losses</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_losses</span><span class="p">)</span>  <span class="c1"># Output: [1.5, 1.6, 1.7]</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Filter Values</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accuracies</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">]</span>
+<span class="n">high</span> <span class="o">=</span> <span class="p">[</span><span class="n">acc</span> <span class="k">for</span> <span class="n">acc</span> <span class="ow">in</span> <span class="n">accuracies</span> <span class="k">if</span> <span class="n">acc</span> <span class="o">&gt;=</span> <span class="mf">0.9</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">high</span><span class="p">)</span>  <span class="c1"># Output: [0.9, 0.95]</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Squares of Numbers</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>  <span class="c1"># Output: [1, 4, 9, 16]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>ML Use:</strong> Quickly process data or calculate metrics like squared errors.</p>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2>Summary<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Lists</strong> are flexible containers for storing data in Python.</p></li>
+<li><p>They’re <strong>mutable</strong>, so you can change them as needed.</p></li>
+<li><p>Use <strong>indexes</strong> or <strong>slicing</strong> to access items, and <strong>methods</strong> like <code class="docutils literal notranslate"><span class="pre">append()</span></code> or <code class="docutils literal notranslate"><span class="pre">sort()</span></code> to manage them.</p></li>
+<li><p><strong>Operators</strong> (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>) and <strong>comprehensions</strong> make lists even more powerful.</p></li>
+<li><p>In <strong>Machine Learning</strong>, lists help store datasets, predictions, or parameters.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tuple-data-structure-in-python">
+<h1>Tuple Data Structure in Python<a class="headerlink" href="#tuple-data-structure-in-python" title="Link to this heading">#</a></h1>
+<p>A <strong>tuple</strong> is an immutable, ordered sequence of elements, enclosed in parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>A <strong>tuple</strong> is a built-in data structure in Python used to store a collection of elements. Unlike lists, tuples are <strong>immutable</strong>, meaning their contents cannot be changed after creation. This makes tuples ideal for storing fixed data that should remain constant throughout the program.</p>
+</section>
+<hr class="docutils" />
+<section id="key-features-of-tuples">
+<h2>Key Features of Tuples<a class="headerlink" href="#key-features-of-tuples" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Order Preservation:</strong> Tuples maintain the order of elements as they are inserted.</p>
+<ul class="simple">
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">(10,</span> <span class="pre">20,</span> <span class="pre">30)</span></code> will always output as <code class="docutils literal notranslate"><span class="pre">(10,</span> <span class="pre">20,</span> <span class="pre">30)</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Duplicate Elements:</strong> Tuples allow duplicate values.</p>
+<ul class="simple">
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">(10,</span> <span class="pre">20,</span> <span class="pre">20)</span></code> is valid.</p></li>
+</ul>
+</li>
+<li><p><strong>Immutable:</strong> Once created, tuples cannot be modified.</p>
+<ul class="simple">
+<li><p>Example: You cannot add, remove, or change elements after creation.</p></li>
+</ul>
+</li>
+<li><p><strong>Indexed Access:</strong> Elements in a tuple can be accessed using indices.</p>
+<ul class="simple">
+<li><p>Positive indices start from the left (<code class="docutils literal notranslate"><span class="pre">t[0]</span></code>).</p></li>
+<li><p>Negative indices start from the right (<code class="docutils literal notranslate"><span class="pre">t[-1]</span></code>).</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="when-to-use-tuples">
+<h2>When to Use Tuples<a class="headerlink" href="#when-to-use-tuples" title="Link to this heading">#</a></h2>
+<p>Tuples are best suited for scenarios where data should remain constant, such as:</p>
+<ul class="simple">
+<li><p><strong>Days of the week</strong></p></li>
+<li><p><strong>Month names</strong></p></li>
+<li><p><strong>Configuration values</strong></p></li>
+<li><p><strong>Dictionary keys</strong> (since they are immutable and hashable)</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="creating-tuples">
+<h2>Creating Tuples<a class="headerlink" href="#creating-tuples" title="Link to this heading">#</a></h2>
+<p>Tuples can be created in several ways:</p>
+<section id="using-parentheses">
+<h3>1. Using Parentheses<a class="headerlink" href="#using-parentheses" title="Link to this heading">#</a></h3>
+<p>Parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> are commonly used, but they are optional.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">employee_ids</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">)</span>  <span class="c1"># Output: (10, 20, 30, 40, 50)</span>
+</pre></div>
+</div>
+</section>
+<section id="using-the-tuple-function">
+<h3>2. Using the <code class="docutils literal notranslate"><span class="pre">tuple()</span></code> Function<a class="headerlink" href="#using-the-tuple-function" title="Link to this heading">#</a></h3>
+<p>Convert other iterables (like lists) into tuples.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>  <span class="c1"># Output: (11, 22, 33)</span>
+</pre></div>
+</div>
+</section>
+<section id="single-element-tuple">
+<h3>3. Single-Element Tuple<a class="headerlink" href="#single-element-tuple" title="Link to this heading">#</a></h3>
+<p>A single-element tuple must include a trailing comma.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1"># Not a tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;int&#39;&gt;</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Daniel&quot;</span><span class="p">,)</span>  <span class="c1"># Single-element tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;tuple&#39;&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="without-parentheses">
+<h3>4. Without Parentheses<a class="headerlink" href="#without-parentheses" title="Link to this heading">#</a></h3>
+<p>Parentheses are optional when creating tuples.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">emp_ids</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">emp_ids</span><span class="p">)</span>  <span class="c1"># Output: (10, 20, 30, 40)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="accessing-tuple-elements">
+<h2>Accessing Tuple Elements<a class="headerlink" href="#accessing-tuple-elements" title="Link to this heading">#</a></h2>
+<p>Tuples support indexing and slicing for accessing elements.</p>
+<section id="id2">
+<h3>1. Indexing<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Access elements using their position.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: 60</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3>2. Slicing<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Extract a subset of elements using slicing.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>  <span class="c1"># Output: (30, 40, 50)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># Output: (10, 30, 50)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tuple-packing-and-unpacking">
+<h2>Tuple Packing and Unpacking<a class="headerlink" href="#tuple-packing-and-unpacking" title="Link to this heading">#</a></h2>
+<p>Tuples support two handy features:</p>
+<section id="packing">
+<h3>Packing<a class="headerlink" href="#packing" title="Link to this heading">#</a></h3>
+<p>Combine multiple values into a tuple without explicitly using parentheses:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="mf">3.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># Output: (1, &#39;apple&#39;, 3.5)</span>
+</pre></div>
+</div>
+</section>
+<section id="unpacking">
+<h3>Unpacking<a class="headerlink" href="#unpacking" title="Link to this heading">#</a></h3>
+<p>Split a tuple’s items into separate variables:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>  <span class="c1"># Output: 1 apple 3.5</span>
+</pre></div>
+</div>
+<p>This is often used in functions to return multiple values:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_range</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">get_range</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: (10, 40)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tuple-immutability">
+<h2>Tuple Immutability<a class="headerlink" href="#tuple-immutability" title="Link to this heading">#</a></h2>
+<p>Tuples are immutable, meaning their elements cannot be modified after creation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">70</span>  <span class="c1"># Raises TypeError: &#39;tuple&#39; object does not support item assignment</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="mathematical-operations-on-tuples">
+<h2>Mathematical Operations on Tuples<a class="headerlink" href="#mathematical-operations-on-tuples" title="Link to this heading">#</a></h2>
+<p>Tuples support operations like concatenation and repetition.</p>
+<section id="id4">
+<h3>1. Concatenation (<code class="docutils literal notranslate"><span class="pre">+</span></code>)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Combine two tuples into one.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">+</span> <span class="n">t2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t3</span><span class="p">)</span>  <span class="c1"># Output: (10, 20, 30, 40, 50, 60)</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>2. Repetition (<code class="docutils literal notranslate"><span class="pre">*</span></code>)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Repeat the elements of a tuple.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>  <span class="c1"># Output: (10, 20, 30, 10, 20, 30, 10, 20, 30)</span>
+</pre></div>
+</div>
+</section>
+<section id="length-of-tuple-len">
+<h3>3. Length of Tuple (<code class="docutils literal notranslate"><span class="pre">len()</span></code>)<a class="headerlink" href="#length-of-tuple-len" title="Link to this heading">#</a></h3>
+<p>Find the number of elements in a tuple.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>  <span class="c1"># Output: 4</span>
+</pre></div>
+</div>
+</section>
+<section id="membership-in-not-in">
+<h3>4. Membership (<code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code>)<a class="headerlink" href="#membership-in-not-in" title="Link to this heading">#</a></h3>
+<p>Check if an item exists:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">in</span> <span class="n">t</span><span class="p">)</span>      <span class="c1"># Output: True</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">t</span><span class="p">)</span>  <span class="c1"># Output: True</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tuple-methods">
+<h2>Tuple Methods<a class="headerlink" href="#tuple-methods" title="Link to this heading">#</a></h2>
+<p>Since tuples are immutable, they only have two main methods:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">count(value)</span></code></strong>: Counts how many times a value appears.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">index(value)</span></code></strong>: Returns the first position of a value. If the item is not found, it raises a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>  <span class="c1"># Output: 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># Output: 3</span>
+</pre></div>
+</div>
+<p>You can explore all tuple methods using the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="nb">tuple</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="differences-between-lists-and-tuples">
+<h2>Differences Between Lists and Tuples<a class="headerlink" href="#differences-between-lists-and-tuples" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>List</p></th>
+<th class="head"><p>Tuple</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Syntax</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">()</span></code> (optional)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Mutability</strong></p></td>
+<td><p>Mutable</p></td>
+<td><p>Immutable</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Element Modification</strong></p></td>
+<td><p>Can modify elements</p></td>
+<td><p>Cannot modify elements</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Use Case</strong></p></td>
+<td><p>Use when data changes</p></td>
+<td><p>Use when data doesn’t change</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="modifying-mutable-objects-in-a-tuple">
+<h2>Modifying Mutable Objects in a Tuple<a class="headerlink" href="#modifying-mutable-objects-in-a-tuple" title="Link to this heading">#</a></h2>
+<p>While tuples themselves are immutable, they can contain mutable objects like lists, which <em>can</em> be modified:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>  <span class="c1"># Output: (1, 2, [3, 4, 5])</span>
+</pre></div>
+</div>
+<p>The tuple still references the same list, but the list’s contents have changed.</p>
+</section>
+<hr class="docutils" />
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Tuples are a fast and efficient way to store ordered, unchanging collections of items in Python. Their immutability makes them perfect for fixed data, like constants or dictionary keys, and ensures data integrity. Features like packing and unpacking add flexibility, making tuples valuable in many scenarios, including machine learning tasks where fixed configurations or paired data are common.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="set-data-structure-in-python">
+<h1>14. Set Data Structure in Python<a class="headerlink" href="#set-data-structure-in-python" title="Link to this heading">#</a></h1>
+<p>A <strong>set</strong> is a mutable, unordered collection of unique elements, enclosed in curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code> or created with <code class="docutils literal notranslate"><span class="pre">set()</span></code>.</p>
+<hr class="docutils" />
+<section id="what-is-a-set">
+<h2>What is a Set?<a class="headerlink" href="#what-is-a-set" title="Link to this heading">#</a></h2>
+<p>A <strong>set</strong> is an unordered collection data structure in Python that holds unique elements. It can store both homogeneous (same type) and heterogeneous (different types) elements but does not preserve the order of insertion.</p>
+</section>
+<section id="creating-a-set">
+<h2>Creating a Set<a class="headerlink" href="#creating-a-set" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>A set can be created using:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code> symbols</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">set()</span></code> predefined function</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>A set can store a group of objects or elements:</p></li>
+</ol>
+<ul class="simple">
+<li><p>A set can store same (homogeneous) type of elements.</p></li>
+<li><p>A set can store different (heterogeneous) types of elements.</p></li>
+</ul>
+</section>
+<section id="key-characteristics-of-sets">
+<h2>Key Characteristics of Sets<a class="headerlink" href="#key-characteristics-of-sets" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Unordered</strong>: Elements in a set do not maintain a fixed order.</p></li>
+<li><p><strong>Unique Elements</strong>: Duplicates are automatically removed.</p></li>
+<li><p><strong>Mutable</strong>: You can modify a set after creation.</p></li>
+<li><p><strong>No Indexing</strong>: Sets do not support indexing or slicing.</p></li>
+<li><p><strong>Dynamic Size</strong>: The size of a set grows dynamically as elements are added.</p></li>
+</ul>
+<p>Sets are <strong>mutable</strong>, meaning you can add or remove items after creating them, but they don’t support indexing (e.g., <code class="docutils literal notranslate"><span class="pre">set[0]</span></code> won’t work).</p>
+<section id="why-use-sets-in-ml-dl">
+<h3>Why Use Sets in ML/DL?<a class="headerlink" href="#why-use-sets-in-ml-dl" title="Link to this heading">#</a></h3>
+<p>In ML and DL, sets are valuable for:</p>
+<ul class="simple">
+<li><p>Storing <strong>unique labels</strong> or classes in a dataset (e.g., <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">&quot;cat&quot;,</span> <span class="pre">&quot;dog&quot;</span> <span class="pre">}</span></code>).</p></li>
+<li><p>Removing <strong>duplicate samples</strong> or features from data (e.g., cleaning a list of tokens in NLP).</p></li>
+<li><p>Efficiently checking if a feature or token exists (e.g., vocabulary in text processing).</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Creating a Set<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>You can create a set in two simple ways:</p>
+<section id="using-curly-braces">
+<h3>1. Using Curly Braces <code class="docutils literal notranslate"><span class="pre">{}</span></code><a class="headerlink" href="#using-curly-braces" title="Link to this heading">#</a></h3>
+<p>List the items inside curly braces, separated by commas:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4}</span>
+</pre></div>
+</div>
+<p>Duplicates are automatically removed:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3}</span>
+</pre></div>
+</div>
+</section>
+<section id="using-the-set-function">
+<h3>2. Using the <code class="docutils literal notranslate"><span class="pre">set()</span></code> Function<a class="headerlink" href="#using-the-set-function" title="Link to this heading">#</a></h3>
+<p>Convert any iterable (like a list or tuple) into a set:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3}</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-an-empty-set">
+<h3>3. Creating an Empty Set<a class="headerlink" href="#creating-an-empty-set" title="Link to this heading">#</a></h3>
+<p>Using <code class="docutils literal notranslate"><span class="pre">{}</span></code> creates an empty <strong>dictionary</strong>, not a set. Use <code class="docutils literal notranslate"><span class="pre">set()</span></code> instead:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">empty_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">empty_set</span><span class="p">)</span>  <span class="c1"># Output: set()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-features-of-sets">
+<h2>Key Features of Sets<a class="headerlink" href="#key-features-of-sets" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Syntax</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{}</span></code> or <code class="docutils literal notranslate"><span class="pre">set()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Duplicates</strong></p></td>
+<td><p>Not allowed—automatically removed</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Order</strong></p></td>
+<td><p>Unordered (no fixed arrangement)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Mutability</strong></p></td>
+<td><p>Can add/remove items</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Indexing</strong></p></td>
+<td><p>Not supported (no <code class="docutils literal notranslate"><span class="pre">s[0]</span></code>)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="example-in-ml-context">
+<h3>Example in ML Context<a class="headerlink" href="#example-in-ml-context" title="Link to this heading">#</a></h3>
+<p>Imagine you have a list of predicted labels with duplicates: <code class="docutils literal notranslate"><span class="pre">[&quot;cat&quot;,</span> <span class="pre">&quot;dog&quot;,</span> <span class="pre">&quot;cat&quot;,</span> <span class="pre">&quot;bird&quot;]</span></code>. Converting it to a set gives you unique labels:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;bird&quot;</span><span class="p">]</span>
+<span class="n">unique_labels</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">)</span>  <span class="c1"># Output: {&#39;cat&#39;, &#39;dog&#39;, &#39;bird&#39;}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="set-methods">
+<h2>Set Methods<a class="headerlink" href="#set-methods" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set</span></code> is a predefined class containing multiple methods.</p></li>
+<li><p>You can view all available methods using the <code class="docutils literal notranslate"><span class="pre">dir(set)</span></code> function.</p></li>
+</ul>
+<p>Since sets are mutable, you can modify them easily.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">add(x)</span></code>: Add an element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remove(x)</span></code>: Remove an element (raises KeyError if not found).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discard(x)</span></code>: Remove if present (no error).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">union()</span></code>/<code class="docutils literal notranslate"><span class="pre">|</span></code> : Combine sets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intersection()</span></code>/<code class="docutils literal notranslate"><span class="pre">&amp;</span></code>: Common elements.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">difference()</span></code>/<code class="docutils literal notranslate"><span class="pre">-</span></code>: Elements in one but not the other.</p></li>
+</ul>
+<section id="adding-items">
+<h3>Adding Items<a class="headerlink" href="#adding-items" title="Link to this heading">#</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">add()</span></code> method to insert one item:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4}</span>
+</pre></div>
+</div>
+</section>
+<section id="removing-items">
+<h3>Removing Items<a class="headerlink" href="#removing-items" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">remove(item)</span></code></strong>: Deletes the item. Raises a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> if the item isn’t found.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">discard(item)</span></code></strong>: Deletes the item if it exists; no error if it doesn’t.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">s</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 3}</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># No error, even though 5 isn’t there</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {1, 3}</span>
+</pre></div>
+</div>
+</section>
+<section id="clearing-all-items">
+<h3>Clearing All Items<a class="headerlink" href="#clearing-all-items" title="Link to this heading">#</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">clear()</span></code> to empty the set:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: set()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="set-operations">
+<h2>Set Operations<a class="headerlink" href="#set-operations" title="Link to this heading">#</a></h2>
+<p>Sets support mathematical operations, which are handy for comparing collections in ML/DL tasks like feature analysis.</p>
+<section id="union">
+<h3>1. Union (<code class="docutils literal notranslate"><span class="pre">|</span></code>)<a class="headerlink" href="#union" title="Link to this heading">#</a></h3>
+<p>Combines all items from two sets:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">|</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4, 5}</span>
+</pre></div>
+</div>
+<p><strong>ML Use</strong>: Merge unique features from two datasets.</p>
+</section>
+<section id="intersection">
+<h3>2. Intersection (<code class="docutils literal notranslate"><span class="pre">&amp;</span></code>)<a class="headerlink" href="#intersection" title="Link to this heading">#</a></h3>
+<p>Finds items common to both sets:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: {3}</span>
+</pre></div>
+</div>
+<p><strong>ML Use</strong>: Identify shared vocabulary between two text corpora.</p>
+</section>
+<section id="difference">
+<h3>3. Difference (<code class="docutils literal notranslate"><span class="pre">-</span></code>)<a class="headerlink" href="#difference" title="Link to this heading">#</a></h3>
+<p>Items in the first set but not the second:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: {1, 2}</span>
+</pre></div>
+</div>
+<p><strong>ML Use</strong>: Find features unique to one dataset.</p>
+</section>
+<section id="symmetric-difference">
+<h3>4. Symmetric Difference (<code class="docutils literal notranslate"><span class="pre">^</span></code>)<a class="headerlink" href="#symmetric-difference" title="Link to this heading">#</a></h3>
+<p>Items in either set, but not both:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">^</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 4, 5}</span>
+</pre></div>
+</div>
+<p><strong>ML Use</strong>: Highlight differences between two sets of labels.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="checking-membership">
+<h2>Checking Membership<a class="headerlink" href="#checking-membership" title="Link to this heading">#</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">in</span></code> or <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> to test if an item exists in a set. This is <strong>fast</strong> (O(1) time complexity) due to sets using hash tables internally:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">in</span> <span class="n">s</span><span class="p">)</span>      <span class="c1"># Output: True</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">4</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: True</span>
+</pre></div>
+</div>
+<p><strong>ML Use</strong>: Quickly check if a token exists in a vocabulary set during text preprocessing.</p>
+</section>
+<hr class="docutils" />
+<section id="set-comprehensions">
+<h2>Set Comprehensions<a class="headerlink" href="#set-comprehensions" title="Link to this heading">#</a></h2>
+<p>Create sets concisely using set comprehensions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># Output: {0, 1, 4, 9, 16}</span>
+</pre></div>
+</div>
+<p><strong>ML Use</strong>: Generate a set of unique feature values (e.g., squared distances) for a model.</p>
+</section>
+<hr class="docutils" />
+<section id="removing-duplicates-from-a-list">
+<h2>Removing Duplicates from a List<a class="headerlink" href="#removing-duplicates-from-a-list" title="Link to this heading">#</a></h2>
+<p>A common ML task is cleaning data. Sets make it easy to remove duplicates:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">unique_data</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">unique_data</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4}</span>
+</pre></div>
+</div>
+<p><strong>Note</strong>: Order isn’t preserved. If order matters, use a list or dictionary instead.</p>
+</section>
+<hr class="docutils" />
+<section id="frozen-sets">
+<h2>Frozen Sets<a class="headerlink" href="#frozen-sets" title="Link to this heading">#</a></h2>
+<p>A <strong>frozenset</strong> is an <strong>immutable version</strong> of a set. Once created, it can’t be changed:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>  <span class="c1"># Output: frozenset({1, 2, 3})</span>
+</pre></div>
+</div>
+<p><strong>ML Use</strong>: Use frozensets as dictionary keys when mapping fixed sets of features to values.</p>
+</section>
+<hr class="docutils" />
+<section id="when-to-use-sets-in-ml-dl">
+<h2>When to Use Sets in ML/DL?<a class="headerlink" href="#when-to-use-sets-in-ml-dl" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Data Cleaning</strong>: Remove duplicate samples or features.</p></li>
+<li><p><strong>Feature Engineering</strong>: Store unique categories or tokens.</p></li>
+<li><p><strong>Efficiency</strong>: Perform fast membership checks or set operations (e.g., comparing datasets).</p></li>
+</ul>
+<p>For example, in NLP, you might use a set to store a vocabulary:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">]</span>
+<span class="n">vocab</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vocab</span><span class="p">)</span>  <span class="c1"># Output: {&#39;the&#39;, &#39;cat&#39;, &#39;dog&#39;}</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Summary<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Set</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Syntax</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{}</span></code> or <code class="docutils literal notranslate"><span class="pre">set()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Mutability</strong></p></td>
+<td><p>Mutable</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Duplicates</strong></p></td>
+<td><p>Not allowed</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Order</strong></p></td>
+<td><p>Unordered</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Indexing</strong></p></td>
+<td><p>Not supported</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id8">
+<h2>Conclusion<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Sets are a simple yet powerful tool in Python, perfect for handling unique collections efficiently. Their ability to eliminate duplicates, perform fast membership tests, and support set operations makes them a go-to choice in ML and DL workflows. By mastering sets, you can streamline data preprocessing and improve your code’s readability and performance.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="dictionary-data-structure-in-python">
+<h1>15. Dictionary Data Structure in Python<a class="headerlink" href="#dictionary-data-structure-in-python" title="Link to this heading">#</a></h1>
+<p>A <strong>dictionary</strong> is a mutable, unordered collection of key-value pairs, enclosed in curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
+<p>A <strong>dictionary</strong> in Python is a collection of <strong>key-value pairs</strong>. It is a <strong>mutable</strong> and <strong>unordered</strong> data structure that allows efficient storage and retrieval of data based on unique keys.</p>
+<p><strong>Key Features</strong></p>
+<ul class="simple">
+<li><p>Keys must be immutable (e.g., strings, numbers, tuples)</p></li>
+<li><p>Values can be any type</p></li>
+<li><p>Fast lookups via hashing</p></li>
+</ul>
+<hr class="docutils" />
+<section id="id9">
+<h2>Introduction<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Each key is unique and linked to a specific value, like how a word in a real-world dictionary connects to its meaning.</p>
+<p>In ML and DL, dictionaries are widely used for:</p>
+<ul class="simple">
+<li><p>Storing <strong>model settings</strong> (e.g., learning rate or batch size).</p></li>
+<li><p>Mapping <strong>features</strong> to their values in datasets.</p></li>
+<li><p>Holding <strong>word-to-number mappings</strong> in natural language processing (NLP).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="creating-a-dictionary">
+<h2>Creating a Dictionary<a class="headerlink" href="#creating-a-dictionary" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>A dictionary can be created using:</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code></strong></p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">dict()</span></code> predefined function</strong></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>Key-Value Pairs:</strong> Each item is a pair consisting of a key and its corresponding value.</p></li>
+<li><p><strong>No Duplicate Keys:</strong> Dictionary keys must be unique. Duplicate keys are not allowed, but duplicate values can be stored.</p></li>
+<li><p><strong>Order:</strong> Dictionaries are unordered, meaning the insertion order is not guaranteed (prior to Python 3.7).</p></li>
+<li><p><strong>Mutable:</strong> Dictionaries are mutable, meaning their contents can be changed after creation.</p></li>
+<li><p><strong>No Indexing:</strong> Elements are not stored in index order, and indexing or slicing doesn’t apply.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id10">
+<h2>Creating a Dictionary<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>You can create a dictionary in different ways depending on your needs.</p>
+<section id="id11">
+<h3>1. Using Curly Braces <code class="docutils literal notranslate"><span class="pre">{}</span></code><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Use curly braces to list key-value pairs:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Model settings in ML</span>
+<span class="n">settings</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;learning_rate&quot;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="mi">64</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="c1"># Output: {&#39;learning_rate&#39;: 0.01, &#39;batch_size&#39;: 64}</span>
+</pre></div>
+</div>
+</section>
+<section id="using-dict">
+<h3>2. Using <code class="docutils literal notranslate"><span class="pre">dict()</span></code><a class="headerlink" href="#using-dict" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">dict()</span></code> function creates a dictionary from pairs or keyword arguments:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using keyword arguments</span>
+<span class="n">model</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s2">&quot;cross_entropy&quot;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s2">&quot;sgd&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<span class="c1"># Output: {&#39;loss&#39;: &#39;cross_entropy&#39;, &#39;optimizer&#39;: &#39;sgd&#39;}</span>
+
+<span class="c1"># From a list of pairs</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;positive&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;negative&quot;</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+<span class="c1"># Output: {1: &#39;positive&#39;, 0: &#39;negative&#39;}</span>
+</pre></div>
+</div>
+</section>
+<section id="starting-empty">
+<h3>3. Starting Empty<a class="headerlink" href="#starting-empty" title="Link to this heading">#</a></h3>
+<p>Create an empty dictionary and add data later:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;feature1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;feature2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># Output: {&#39;feature1&#39;: 10, &#39;feature2&#39;: 20}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-properties-of-a-dictionary">
+<h2>Key Properties of a Dictionary<a class="headerlink" href="#key-properties-of-a-dictionary" title="Link to this heading">#</a></h2>
+<p>Here are the main features of a dictionary:</p>
+<ul class="simple">
+<li><p><strong>Key-Value Pairs</strong>: Data is stored as pairs (e.g., “name”: “Alice”).</p></li>
+<li><p><strong>Unique Keys</strong>: Keys must be unique; duplicate keys are not allowed.</p></li>
+<li><p><strong>Mutable</strong>: You can change, add, or remove items after creation.</p></li>
+<li><p><strong>Unordered</strong>: Items don’t have a fixed order (though Python 3.7+ keeps insertion order).</p></li>
+<li><p><strong>No Indexing</strong>: Use keys to access values, not numbers like in lists.</p></li>
+<li><p><strong>Flexible Size</strong>: Grows or shrinks as you add or remove items.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="when-to-use-a-dictionary">
+<h2>When to Use a Dictionary?<a class="headerlink" href="#when-to-use-a-dictionary" title="Link to this heading">#</a></h2>
+<p>Dictionaries shine when you need:</p>
+<ul class="simple">
+<li><p><strong>Fast Lookups</strong>: Quickly find values using keys.</p></li>
+<li><p><strong>Key-Value Data</strong>: Store related pairs, like settings or mappings.</p></li>
+<li><p><strong>ML/DL Examples</strong>:</p>
+<ul>
+<li><p>Mapping words to IDs in NLP (e.g., {“good”: 1, “bad”: 2}).</p></li>
+<li><p>Storing feature values in a dataset (e.g., {“age”: 30, “income”: 50000}).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="accessing-values-in-a-dictionary">
+<h2>Accessing Values in a Dictionary<a class="headerlink" href="#accessing-values-in-a-dictionary" title="Link to this heading">#</a></h2>
+<p>Use a key to get its value. If the key doesn’t exist, Python raises an error unless you use a safer method.</p>
+<section id="basic-access">
+<h3>Basic Access<a class="headerlink" href="#basic-access" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">settings</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;learning_rate&quot;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="mi">64</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="s2">&quot;batch_size&quot;</span><span class="p">])</span>
+<span class="c1"># Output: 64</span>
+</pre></div>
+</div>
+</section>
+<section id="safe-access-with-get">
+<h3>Safe Access with <code class="docutils literal notranslate"><span class="pre">get()</span></code><a class="headerlink" href="#safe-access-with-get" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">get()</span></code> method avoids errors by returning a default value if the key is missing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;optimizer&quot;</span><span class="p">,</span> <span class="s2">&quot;adam&quot;</span><span class="p">))</span>
+<span class="c1"># Output: adam (default since &quot;optimizer&quot; isn’t in the dictionary)</span>
+</pre></div>
+</div>
+</section>
+<section id="looping-through-a-dictionary">
+<h3>Looping Through a Dictionary<a class="headerlink" href="#looping-through-a-dictionary" title="Link to this heading">#</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">keys()</span></code>, <code class="docutils literal notranslate"><span class="pre">values()</span></code>, and <code class="docutils literal notranslate"><span class="pre">items()</span></code> methods:
+You can access keys, values, or both:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">settings</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+<span class="c1"># Output: learning_rate 0.01</span>
+<span class="c1">#         batch_size 64</span>
+
+<span class="c1"># Using items() for key-value pairs</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">settings</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="updating-a-dictionary">
+<h2>Updating a Dictionary<a class="headerlink" href="#updating-a-dictionary" title="Link to this heading">#</a></h2>
+<p>Since dictionaries are mutable, you can add new pairs or change existing ones.</p>
+<section id="adding-a-new-pair">
+<h3>Adding a New Pair<a class="headerlink" href="#adding-a-new-pair" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">settings</span><span class="p">[</span><span class="s2">&quot;epochs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="c1"># Output: {&#39;learning_rate&#39;: 0.01, &#39;batch_size&#39;: 64, &#39;epochs&#39;: 100}</span>
+</pre></div>
+</div>
+</section>
+<section id="changing-a-value">
+<h3>Changing a Value<a class="headerlink" href="#changing-a-value" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">settings</span><span class="p">[</span><span class="s2">&quot;learning_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.005</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="s2">&quot;learning_rate&quot;</span><span class="p">])</span>
+<span class="c1"># Output: 0.005</span>
+</pre></div>
+</div>
+<p>In ML, this is handy for tweaking model settings during experiments.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="removing-elements-from-a-dictionary">
+<h2>Removing Elements from a Dictionary<a class="headerlink" href="#removing-elements-from-a-dictionary" title="Link to this heading">#</a></h2>
+<p>You can delete specific pairs or clear the dictionary entirely.</p>
+<section id="using-del-keyword">
+<h3>1. Using <code class="docutils literal notranslate"><span class="pre">del</span></code> Keyword<a class="headerlink" href="#using-del-keyword" title="Link to this heading">#</a></h3>
+<p>Removes a specific key-value pair:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">settings</span><span class="p">[</span><span class="s2">&quot;batch_size&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="c1"># Output: {&#39;learning_rate&#39;: 0.005, &#39;epochs&#39;: 100}</span>
+</pre></div>
+</div>
+</section>
+<section id="using-pop">
+<h3>2. Using <code class="docutils literal notranslate"><span class="pre">pop()</span></code><a class="headerlink" href="#using-pop" title="Link to this heading">#</a></h3>
+<p>Removes a key and returns its value:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">epochs</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;epochs&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>  <span class="c1"># Output: 100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>  <span class="c1"># Output: {&#39;learning_rate&#39;: 0.005}</span>
+</pre></div>
+</div>
+</section>
+<section id="using-clear">
+<h3>3. Using <code class="docutils literal notranslate"><span class="pre">clear()</span></code><a class="headerlink" href="#using-clear" title="Link to this heading">#</a></h3>
+<p>Empties the dictionary:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">settings</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="c1"># Output: {}</span>
+</pre></div>
+</div>
+</section>
+<section id="deleting-the-entire-dictionary">
+<h3>4. Deleting the Entire Dictionary<a class="headerlink" href="#deleting-the-entire-dictionary" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Deleting the entire dictionary object</span>
+<span class="k">del</span> <span class="n">d</span>
+<span class="c1"># Now, d is no longer accessible.</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="finding-the-length-of-a-dictionary">
+<h2>Finding the Length of a Dictionary<a class="headerlink" href="#finding-the-length-of-a-dictionary" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">len()</span></code> function counts the number of pairs:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="c1"># Output: 2</span>
+</pre></div>
+</div>
+<p>In ML, this might show how many features are in a sample.</p>
+</section>
+<hr class="docutils" />
+<section id="important-dictionary-methods">
+<h2>Important Dictionary Methods<a class="headerlink" href="#important-dictionary-methods" title="Link to this heading">#</a></h2>
+<p>Dictionaries have useful methods for managing data. Here’s a table of key ones:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example Use in ML/DL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">clear()</span></code></p></td>
+<td><p>Removes all pairs</p></td>
+<td><p>Reset a feature map</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">get(key)</span></code></p></td>
+<td><p>Gets a value, with optional default</p></td>
+<td><p>Safely fetch a model parameter</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">keys()</span></code></p></td>
+<td><p>Returns all keys</p></td>
+<td><p>List feature names in a dataset</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">values()</span></code></p></td>
+<td><p>Returns all values</p></td>
+<td><p>Extract feature values</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">items()</span></code></p></td>
+<td><p>Returns all key-value pairs</p></td>
+<td><p>Loop through word-ID mappings in NLP</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pop(key)</span></code></p></td>
+<td><p>Removes a key and returns its value</p></td>
+<td><p>Drop a feature and use its value</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">update()</span></code></p></td>
+<td><p>Adds pairs from another dictionary</p></td>
+<td><p>Merge new settings into a model</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="id12">
+<h3>Example<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a dictionary</span>
+<span class="n">student</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;grades&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">88</span><span class="p">]}</span>
+
+<span class="c1"># Accessing and modifying</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>  <span class="c1"># Output: Alice</span>
+<span class="n">student</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;N/A&quot;</span><span class="p">))</span>  <span class="c1"># Output: N/A</span>
+
+<span class="c1"># Adding and removing</span>
+<span class="n">student</span><span class="p">[</span><span class="s2">&quot;major&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CS&quot;</span>
+<span class="k">del</span> <span class="n">student</span><span class="p">[</span><span class="s2">&quot;grades&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">))</span>  <span class="c1"># Output: 21</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>  <span class="c1"># Output: {&#39;name&#39;: &#39;Alice&#39;, &#39;major&#39;: &#39;CS&#39;}</span>
+
+<span class="c1"># Iterating</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">student</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Output:</span>
+<span class="c1"># name: Alice</span>
+<span class="c1"># major: CS</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="dictionary-comprehension">
+<h2>Dictionary Comprehension<a class="headerlink" href="#dictionary-comprehension" title="Link to this heading">#</a></h2>
+<p>Dictionary comprehension is a concise way to create a dictionary from an iterable object (list, set, tuple, etc.).</p>
+<p>This is a short way to create dictionaries from other data, useful in ML for preprocessing.</p>
+<section id="example-mapping-features-to-indices">
+<h3>Example: Mapping Features to Indices<a class="headerlink" href="#example-mapping-features-to-indices" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;income&quot;</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">]</span>
+<span class="n">feature_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">f</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">features</span><span class="p">)}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">feature_map</span><span class="p">)</span>
+<span class="c1"># Output: {&#39;age&#39;: 0, &#39;income&#39;: 1, &#39;score&#39;: 2}</span>
+</pre></div>
+</div>
+<p>This is common in ML to assign numbers to feature names.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="summary-of-dictionary-features">
+<h2>Summary of Dictionary Features<a class="headerlink" href="#summary-of-dictionary-features" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Syntax</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{key:</span> <span class="pre">value}</span></code> or <code class="docutils literal notranslate"><span class="pre">dict()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Mutability</strong></p></td>
+<td><p>Can change after creation</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Duplicates</strong></p></td>
+<td><p>Keys must be unique; values can repeat</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Order</strong></p></td>
+<td><p>Unordered (insertion order in 3.7+)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Indexing</strong></p></td>
+<td><p>Access by keys, not numbers</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Use Case</strong></p></td>
+<td><p>Fast lookups with key-value pairs</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="applications-in-machine-learning-ml-and-deep-learning-dl">
+<h2>Applications in Machine Learning (ML) and Deep Learning (DL)<a class="headerlink" href="#applications-in-machine-learning-ml-and-deep-learning-dl" title="Link to this heading">#</a></h2>
+<p>Dictionaries are widely used in ML/DL for:</p>
+<ul class="simple">
+<li><p><strong>Storing hyperparameters</strong> (e.g., learning rate, batch size).</p></li>
+<li><p><strong>Mapping class labels</strong> to their corresponding indices.</p></li>
+<li><p><strong>Representing word embeddings</strong> in natural language processing (NLP).</p></li>
+</ul>
+<section id="example-hyperparameters-in-ml">
+<h3>Example: Hyperparameters in ML<a class="headerlink" href="#example-hyperparameters-in-ml" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hyperparams</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;learning_rate&quot;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">,</span>
+    <span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+    <span class="s2">&quot;epochs&quot;</span><span class="p">:</span> <span class="mi">10</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hyperparams</span><span class="p">[</span><span class="s2">&quot;learning_rate&quot;</span><span class="p">])</span>  <span class="c1"># Output: 0.001</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id13">
+<h2>Conclusion<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>Dictionaries are a powerful tool in Python for storing and managing key-value data. In ML and DL, they help with tasks like organizing model settings, mapping features, and handling data efficiently. Understanding dictionaries makes your code cleaner and faster.</p>
+</section>
+<hr class="docutils" />
+<section id="tools-and-methods">
+<h2><strong>Tools and Methods</strong><a class="headerlink" href="#tools-and-methods" title="Link to this heading">#</a></h2>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">len(obj)</span></code></strong>: Returns the length of a data structure.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>  <span class="c1"># Output: 3</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">in</span></code> Operator</strong>: Checks membership.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">})</span>  <span class="c1"># Output: True</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">sorted(iterable)</span></code></strong>: Returns a sorted list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}))</span>  <span class="c1"># Output: [1, 2, 3]</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">copy()</span></code></strong>: Shallow copy for mutable structures.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+<span class="n">lst_copy</span> <span class="o">=</span> <span class="n">lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">lst_copy</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>  <span class="c1"># Output: [1, [4, 3]] (nested list is still linked)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">deepcopy()</span></code> from copy module`</strong>: Deep copy for nested structures.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">copy</span><span class="w"> </span><span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="n">lst_copy</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\1_python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2_advanced.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Input/Output and Flow Control</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="4_modules_packages.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modules and Packages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Data Structures</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-learn-data-structures-for-ml">Why Learn Data Structures for ML?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-sequence">What is a Sequence?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-strings-in-python">Working with Strings in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-string">What is a String?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-strings">Creating Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing-strings">Indexing and Slicing Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing">Indexing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-through-strings">Looping Through Strings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mutability-and-immutability">Mutability and Immutability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-operations-on-strings">Mathematical Operations on Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation">1. Concatenation (<code class="docutils literal notranslate"><span class="pre">+</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repetition">2. Repetition (<code class="docutils literal notranslate"><span class="pre">*</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-length">String Length</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators-in-not-in">Membership Operators (<code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in"><code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-in"><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-string-methods-for-ml">Key String Methods for ML</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-text-preprocessing">Example: Text Preprocessing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#immutability-and-string-methods">Immutability and String Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-strings">Splitting Strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#python-lists-for-machine-learning">Python Lists for Machine Learning</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-list">What is a List?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-lists">Creating Lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists-are-mutable">Lists Are Mutable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-list-items">Accessing List Items</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-length-of-a-list">Finding the Length of a List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-methods">List Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-operators">List Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension">List Comprehension</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-data-structure-in-python">Tuple Data Structure in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features-of-tuples">Key Features of Tuples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-tuples">When to Use Tuples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-tuples">Creating Tuples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-parentheses">1. Using Parentheses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-tuple-function">2. Using the <code class="docutils literal notranslate"><span class="pre">tuple()</span></code> Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-element-tuple">3. Single-Element Tuple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#without-parentheses">4. Without Parentheses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-tuple-elements">Accessing Tuple Elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1. Indexing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2. Slicing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-packing-and-unpacking">Tuple Packing and Unpacking</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#packing">Packing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unpacking">Unpacking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-immutability">Tuple Immutability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-operations-on-tuples">Mathematical Operations on Tuples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1. Concatenation (<code class="docutils literal notranslate"><span class="pre">+</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2. Repetition (<code class="docutils literal notranslate"><span class="pre">*</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-tuple-len">3. Length of Tuple (<code class="docutils literal notranslate"><span class="pre">len()</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-in-not-in">4. Membership (<code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-methods">Tuple Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-lists-and-tuples">Differences Between Lists and Tuples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-mutable-objects-in-a-tuple">Modifying Mutable Objects in a Tuple</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#set-data-structure-in-python">14. Set Data Structure in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-set">What is a Set?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-set">Creating a Set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-characteristics-of-sets">Key Characteristics of Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-sets-in-ml-dl">Why Use Sets in ML/DL?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Creating a Set</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-curly-braces">1. Using Curly Braces <code class="docutils literal notranslate"><span class="pre">{}</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-set-function">2. Using the <code class="docutils literal notranslate"><span class="pre">set()</span></code> Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-empty-set">3. Creating an Empty Set</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features-of-sets">Key Features of Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-ml-context">Example in ML Context</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-methods">Set Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-items">Adding Items</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-items">Removing Items</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing-all-items">Clearing All Items</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-operations">Set Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#union">1. Union (<code class="docutils literal notranslate"><span class="pre">|</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection">2. Intersection (<code class="docutils literal notranslate"><span class="pre">&amp;</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference">3. Difference (<code class="docutils literal notranslate"><span class="pre">-</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-difference">4. Symmetric Difference (<code class="docutils literal notranslate"><span class="pre">^</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-membership">Checking Membership</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-comprehensions">Set Comprehensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-duplicates-from-a-list">Removing Duplicates from a List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frozen-sets">Frozen Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-sets-in-ml-dl">When to Use Sets in ML/DL?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-data-structure-in-python">15. Dictionary Data Structure in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dictionary">Creating a Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Creating a Dictionary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">1. Using Curly Braces <code class="docutils literal notranslate"><span class="pre">{}</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dict">2. Using <code class="docutils literal notranslate"><span class="pre">dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-empty">3. Starting Empty</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-properties-of-a-dictionary">Key Properties of a Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-a-dictionary">When to Use a Dictionary?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-values-in-a-dictionary">Accessing Values in a Dictionary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-access">Basic Access</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#safe-access-with-get">Safe Access with <code class="docutils literal notranslate"><span class="pre">get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-through-a-dictionary">Looping Through a Dictionary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-a-dictionary">Updating a Dictionary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-pair">Adding a New Pair</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-a-value">Changing a Value</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-elements-from-a-dictionary">Removing Elements from a Dictionary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-del-keyword">1. Using <code class="docutils literal notranslate"><span class="pre">del</span></code> Keyword</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pop">2. Using <code class="docutils literal notranslate"><span class="pre">pop()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-clear">3. Using <code class="docutils literal notranslate"><span class="pre">clear()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-the-entire-dictionary">4. Deleting the Entire Dictionary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-length-of-a-dictionary">Finding the Length of a Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-dictionary-methods">Important Dictionary Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-comprehension">Dictionary Comprehension</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-mapping-features-to-indices">Example: Mapping Features to Indices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-dictionary-features">Summary of Dictionary Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-in-machine-learning-ml-and-deep-learning-dl">Applications in Machine Learning (ML) and Deep Learning (DL)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-hyperparameters-in-ml">Example: Hyperparameters in ML</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-methods"><strong>Tools and Methods</strong></a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

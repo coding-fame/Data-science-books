@@ -1,0 +1,3231 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Descriptive Statistics &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/0_maths/1_descriptive';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Inferential Statistics" href="3_inferential.html" />
+    <link rel="prev" title="Probability in ML" href="2_probability.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/1_basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/9_regex.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html"><strong>What is Exploratory Data Analysis (EDA)?</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core ML Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Deployment</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self_introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/edit/main/contents/0_maths/1_descriptive.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/issues/new?title=Issue%20on%20page%20%2Fcontents/0_maths/1_descriptive.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/0_maths/1_descriptive.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Descriptive Statistics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Descriptive Statistics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-central-tendency">1. Measures of Central Tendency</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-the-average">1. Mean (The “Average”)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#median-the-middle">2 Median (The “Middle”)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-the-most-common">3 Mode (The “Most Common”)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-each-measure">When to Use Each Measure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-python">Example in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-methods-summary"><strong>Tools and Methods Summary</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-variability-spread">2. Measures of Variability (Spread)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-variability">What is Variability?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#range">1. Range</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variance">2. Variance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-deviation-sd">3. Standard Deviation (SD)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-absolute-deviation-mad">4. Mean Absolute Deviation (MAD)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interquartile-range-iqr">5. Interquartile Range (IQR)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-table">Comparison Table</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">When to Use Each Measure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-examples-for-ml-dl">Python Examples for ML/DL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-calculating-variability-measures">Example 1: Calculating Variability Measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-robust-scaling-with-iqr">Example 2: Robust Scaling with IQR</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#outliers-and-leverage-points">3. Outliers and Leverage Points</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-outlier">What is an Outlier?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#characteristics">Characteristics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-outliers-matter-in-ml">Why Outliers Matter in ML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-find-outliers">How to Find Outliers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-finding-an-outlier-with-a-boxplot">Example: Finding an Outlier with a Boxplot</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-outliers-affect-machine-learning">Why Outliers Affect Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-outliers-change-statistics">How Outliers Change Statistics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-outliers">Handling Outliers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-outliers">1. Remove Outliers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transform-the-data">2. Transform the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-robust-models">3. Use Robust Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-using-isolation-forest">Example: Using Isolation Forest</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-leverage-points">What are Leverage Points?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Characteristics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-on-ml-models">Impact on ML Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-leverage-in-house-prices">Example: Leverage in House Prices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outliers-vs-leverage-points">Outliers vs. Leverage Points</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-leverage-outliers">High-Leverage Outliers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#five-number-summary"><strong>4. 📊 Five Number Summary</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-five-number-summary"><strong>Introduction to Five Number Summary</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-components-and-their-ml-dl-relevance"><strong>Core Components and Their ML/DL Relevance</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum-and-maximum"><strong>1. Minimum and Maximum</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quartiles-q1-q2-q3"><strong>2. Quartiles (Q1, Q2, Q3)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>3. Interquartile Range (IQR)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-calculate-it"><strong>How to Calculate It</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example"><strong>Python Example</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-its-useful"><strong>Why It’s Useful</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-with-a-box-plot"><strong>Visualizing with a Box Plot</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-visualization"><strong>Python Visualization</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identifying-outliers"><strong>Identifying Outliers</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Python Example</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-ml-dl-applications"><strong>Advanced ML/DL Applications</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outlier-detection"><strong>1. Outlier Detection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-feature-scaling"><strong>2. Robust Feature Scaling</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-binning"><strong>3. Data Binning</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparative-analysis"><strong>Comparative Analysis</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>Summary</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#percentiles-and-quartiles">5. Percentiles and Quartiles</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#percentiles-in-machine-learning">1. Percentiles in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-percentage">What is a Percentage?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-percentile">What is a Percentile?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-percentiles-help-in-ml">How Percentiles Help in ML</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quartiles-in-machine-learning">2. Quartiles in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-quartiles">What are Quartiles?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-quartiles-help-in-ml">How Quartiles Help in ML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Python Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interquartile-range-iqr-in-machine-learning">3. Interquartile Range (IQR) in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-iqr">What is IQR?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-iqr-matters-in-ml">Why IQR Matters in ML</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-uses-in-machine-learning">Practical Uses in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-missing-data">1. Handling Missing Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-engineering-with-quartiles">2. Feature Engineering with Quartiles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-outliers-with-iqr">3. Removing Outliers with IQR</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-table">Summary Table</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaways">Key Takeaways</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-shape">6. Measures of Shape</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-measures-of-shape">What Are Measures of Shape?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-distribution-no-skew">Symmetric Distribution (No Skew)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skewed-distribution-lopsided-data">Skewed Distribution (Lopsided Data)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#right-skewed-positive-skewness">1. Right-Skewed (Positive Skewness)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#left-skewed-negative-skewness">2. Left-Skewed (Negative Skewness)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spotting-skewness-with-box-plots">Spotting Skewness with Box Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-skewness-matters-in-ml-and-dl">Why Skewness Matters in ML and DL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-skewness">Fixing Skewness</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-skewness-isnt-a-big-deal">When Skewness Isn’t a Big Deal</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kurtosis-peaks-and-tails">Kurtosis: Peaks and Tails</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-kurtosis">Types of Kurtosis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-skewness-and-kurtosis-matter">Why Skewness and Kurtosis Matter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-skewness-and-kurtosis-in-python">Checking Skewness and Kurtosis in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-skewed-data-in-python">Fixing Skewed Data in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-world-uses-in-ml-and-dl">Real-World Uses in ML and DL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-normalization-neural-networks">1. Batch Normalization (Neural Networks)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nlp-example">2. NLP Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finance-example">3. Finance Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">Key Points</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-and-cumulative-distributions">7. Frequency and Cumulative Distributions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-distribution">1. Frequency Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-it">What is it?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-matters">Why It Matters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cumulative-frequency-distribution">2. Cumulative Frequency Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">What is it?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Why It Matters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Python Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-differences">Key Differences</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-distributions">Visualizing Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">1. Histograms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-plots">2. Box Plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ml-use">ML Use</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-applications-in-machine-learning">Practical Applications in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-class-imbalance">1. Checking Class Imbalance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-data-with-quartiles">2. Grouping Data with Quartiles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-ml-applications">Advanced ML Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#balancing-data">1. Balancing Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-classification-thresholds">2. Setting Classification Thresholds</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Key Takeaways</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-distribution-scaling-and-their-role">8. Normal Distribution, Scaling, and Their Role</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-normal-distribution">Introduction to Normal Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-properties">Key Properties</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-68-95-99-7-rule-empirical-rule">The 68-95-99.7 Rule (Empirical Rule)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-matters-in-ml">Why It Matters in ML</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-normal-distribution">Standard Normal Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-scores">Z-Scores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Why It’s Useful</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling-in-machine-learning">Scaling in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-scale-data">Why Scale Data?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-scaling-methods">Core Scaling Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standardization-z-score-scaling">1. Standardization (Z-Score Scaling)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-max-scaling">2. Min-Max Scaling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-scaling">3. Robust Scaling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalization-l2-norm-scaling">4. Normalization (L2 Norm Scaling)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Comparison Table</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-scaling-isnt-needed">When Scaling Isn’t Needed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-example">Practical Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topics-in-deep-learning">Advanced Topics in Deep Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-normalization">1. Batch Normalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-normalization">2. Layer Normalization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Key Takeaways</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="descriptive-statistics">
+<h1>Descriptive Statistics<a class="headerlink" href="#descriptive-statistics" title="Link to this heading">#</a></h1>
+</section>
+<hr class="docutils" />
+<section id="measures-of-central-tendency">
+<h1>1. Measures of Central Tendency<a class="headerlink" href="#measures-of-central-tendency" title="Link to this heading">#</a></h1>
+<p>Measures of central tendency are single values that represent the central point of a dataset, providing a summary of its typical or average behavior. They answer the question: <em>“What is the most representative value in this data?”</em></p>
+<p><strong>Purpose</strong>: Identify the “center” or typical value of a dataset to inform data preprocessing and model decisions in machine learning (ML) and deep learning (DL).</p>
+<hr class="docutils" />
+<section id="mean-the-average">
+<h2>1. Mean (The “Average”)<a class="headerlink" href="#mean-the-average" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Definition</strong>: The sum of all values divided by the number of values.</p></li>
+<li><p><strong>Formula</strong>: <code class="docutils literal notranslate"><span class="pre">Mean</span> <span class="pre">=</span> <span class="pre">Σx_i</span> <span class="pre">/</span> <span class="pre">n</span></code>, where <code class="docutils literal notranslate"><span class="pre">x_i</span></code> is each value and <code class="docutils literal notranslate"><span class="pre">n</span></code> is the total count.</p></li>
+<li><p><strong>Example</strong>:</p>
+<ul>
+<li><p>Test scores: 80, 90, 100</p></li>
+<li><p>Mean = (80 + 90 + 100) ÷ 3 = 90</p></li>
+</ul>
+</li>
+<li><p><strong>Best Use Case</strong>: When all values are equally important, such as:</p>
+<ul>
+<li><p>Average temperature</p></li>
+<li><p>Average student grades</p></li>
+</ul>
+</li>
+<li><p><strong>ML/DL Application</strong>:</p>
+<ul>
+<li><p>Used in loss functions like <strong>Mean Squared Error (MSE)</strong>, which measures how close a model’s predictions are to the actual values by averaging the squared differences.</p></li>
+<li><p>Example: In regression models, MSE helps evaluate model accuracy.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="median-the-middle">
+<h2>2 Median (The “Middle”)<a class="headerlink" href="#median-the-middle" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Definition</strong>: The middle value when data is sorted in ascending order.</p>
+<ul>
+<li><p>For an odd number of values, it’s the middle value.</p></li>
+<li><p>For an even number of values, average the two middle values.</p></li>
+</ul>
+</li>
+<li><p><strong>Example</strong>:</p>
+<ul>
+<li><p>House prices: $100k, $200k, $300k → Median = $200k</p></li>
+<li><p>For an even count:</p>
+<ul>
+<li><p>$100k, $200k, $300k, $400k → Median = ($200k + $300k) ÷ 2 = $250k</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Best Use Case</strong>: When data has outliers, such as:</p>
+<ul>
+<li><p>Income (e.g., a billionaire skews the mean)</p></li>
+<li><p>Home prices (e.g., one mansion affects the average)</p></li>
+</ul>
+</li>
+<li><p><strong>ML/DL Application</strong>:</p>
+<ul>
+<li><p>Handling skewed distributions in preprocessing (e.g., income data).</p></li>
+<li><p>Imputing missing values in a way that isn’t affected by extreme values.</p></li>
+<li><p>Setting thresholds for outlier detection.</p></li>
+<li><p>Used in feature scaling (e.g., <strong>RobustScaler</strong> in Python) to reduce the impact of outliers.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="mode-the-most-common">
+<h2>3 Mode (The “Most Common”)<a class="headerlink" href="#mode-the-most-common" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Definition</strong>: The value that appears most frequently in the dataset.</p></li>
+<li><p><strong>Example</strong>:</p>
+<ul>
+<li><p>Shoe sizes: 7, 8, 8, 9, 10 → Mode = 8</p></li>
+</ul>
+</li>
+<li><p><strong>Best Use Case</strong>: For categorical data, such as:</p>
+<ul>
+<li><p>Favorite color</p></li>
+<li><p>Most sold product</p></li>
+</ul>
+</li>
+<li><p><strong>ML/DL Application</strong>:</p>
+<ul>
+<li><p>Engineering features for categorical data.</p></li>
+<li><p>Imputing missing values with the most common category.</p></li>
+<li><p>Analyzing class imbalance in classification problems (e.g., identifying the most common class in an imbalanced dataset).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="when-to-use-each-measure">
+<h2>When to Use Each Measure<a class="headerlink" href="#when-to-use-each-measure" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Measure</p></th>
+<th class="head"><p>Formula</p></th>
+<th class="head"><p>Best For</p></th>
+<th class="head"><p>Outlier Sensitivity</p></th>
+<th class="head"><p>ML/DL Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Mean</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Σx_i</span> <span class="pre">/</span> <span class="pre">n</span></code></p></td>
+<td><p>Normal distributions</p></td>
+<td><p>High</p></td>
+<td><p>Calculating MSE in regression</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Median</strong></p></td>
+<td><p>Middle value</p></td>
+<td><p>Skewed data</p></td>
+<td><p>Low</p></td>
+<td><p>Imputing missing values in skewed data</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Mode</strong></p></td>
+<td><p>Most frequent value</p></td>
+<td><p>Categorical data</p></td>
+<td><p>None</p></td>
+<td><p>Handling class imbalance in classification</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="example-in-python">
+<h2>Example in Python<a class="headerlink" href="#example-in-python" title="Link to this heading">#</a></h2>
+<p>The following code demonstrates how to calculate the mean, median, and mode using Python libraries. It also shows how to use the median for scaling data with outliers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+import pandas as pd
+from sklearn.preprocessing import RobustScaler
+
+# Sample data with an outlier
+housing_prices = [75000, 80000, 85000, 90000, 1500000]
+
+# Calculate mean, median, and mode
+print(f&quot;Mean: {np.mean(housing_prices):.2f}&quot;)  # 357500.00
+print(f&quot;Median: {np.median(housing_prices)}&quot;)   # 85000.0
+print(f&quot;Mode: {pd.Series(housing_prices).mode()[0]}&quot;)  # 75000
+
+# Use median for outlier-resistant scaling
+scaler = RobustScaler(with_centering=True, with_scaling=True)
+scaled_prices = scaler.fit_transform(np.array(housing_prices).reshape(-1, 1))
+print(scaled_prices)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Explanation</strong>:</p>
+<ul class="simple">
+<li><p>The mean is heavily influenced by the outlier ($1,500,000), resulting in 357500.00, which doesn’t represent most of the data.</p></li>
+<li><p>The median remains stable at $85,000, making it a better measure for skewed data.</p></li>
+<li><p>The mode is 75,000, as all values appear once except for the outlier.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">RobustScaler</span></code> uses the median to scale the data, making it less sensitive to outliers, which is useful in ML preprocessing.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="tools-and-methods-summary">
+<h2><strong>Tools and Methods Summary</strong><a class="headerlink" href="#tools-and-methods-summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Central Tendency</strong>: <code class="docutils literal notranslate"><span class="pre">np.mean()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.median()</span></code>, <code class="docutils literal notranslate"><span class="pre">statistics.mode()</span></code>, <code class="docutils literal notranslate"><span class="pre">pd.Series.mean()</span></code>.</p></li>
+<li><p><strong>Dispersion</strong>: <code class="docutils literal notranslate"><span class="pre">np.var()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.std()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.percentile()</span></code>, <code class="docutils literal notranslate"><span class="pre">max()</span> <span class="pre">-</span> <span class="pre">min()</span></code>.</p></li>
+<li><p><strong>Shape</strong>: <code class="docutils literal notranslate"><span class="pre">scipy.stats.skew()</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy.stats.kurtosis()</span></code>.</p></li>
+<li><p><strong>Frequency</strong>: <code class="docutils literal notranslate"><span class="pre">pd.value_counts()</span></code>.</p></li>
+<li><p><strong>Visualization</strong>: <code class="docutils literal notranslate"><span class="pre">sns.histplot()</span></code>, <code class="docutils literal notranslate"><span class="pre">sns.boxplot()</span></code>, <code class="docutils literal notranslate"><span class="pre">sns.violinplot()</span></code>, <code class="docutils literal notranslate"><span class="pre">sns.lineplot()</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="measures-of-variability-spread">
+<h1>2. Measures of Variability (Spread)<a class="headerlink" href="#measures-of-variability-spread" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="what-is-variability">
+<h2>What is Variability?<a class="headerlink" href="#what-is-variability" title="Link to this heading">#</a></h2>
+<p>Variability, or spread, measures how scattered data points are in a dataset. It tells you if the data clusters around the center (like the mean) or spreads out widely.</p>
+<p><strong>Purpose</strong>: To measure how spread out the data is, which helps in understanding datasets and making decisions in ML and DL.</p>
+<p><strong>Why It’s Important in ML/DL</strong>:</p>
+<ul class="simple">
+<li><p>Spots outliers that can confuse models.</p></li>
+<li><p>Helps scale features so algorithms like neural networks work better.</p></li>
+<li><p>Guides data preprocessing and model choices.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="range">
+<h2>1. Range<a class="headerlink" href="#range" title="Link to this heading">#</a></h2>
+<p><strong>Definition</strong>: The difference between the largest and smallest values in a dataset.</p>
+<ul class="simple">
+<li><p><strong>Formula</strong>:<br />
+<code class="docutils literal notranslate"><span class="pre">Range</span> <span class="pre">=</span> <span class="pre">Maximum</span> <span class="pre">-</span> <span class="pre">Minimum</span></code></p></li>
+<li><p><strong>Example</strong>:<br />
+For house prices <code class="docutils literal notranslate"><span class="pre">[200,</span> <span class="pre">250,</span> <span class="pre">300,</span> <span class="pre">350,</span> <span class="pre">400]</span></code> (in thousands):</p>
+<ul>
+<li><p>Maximum: 400, Minimum: 200</p></li>
+<li><p>Range: <code class="docutils literal notranslate"><span class="pre">400</span> <span class="pre">-</span> <span class="pre">200</span> <span class="pre">=</span> <span class="pre">200</span></code> thousand dollars</p></li>
+</ul>
+</li>
+<li><p><strong>Best Use</strong>: A fast way to see the total spread of data.</p></li>
+<li><p><strong>ML/DL Use</strong>:</p>
+<ul>
+<li><p>Checks for extreme values in features (e.g., very high prices).</p></li>
+<li><p>Identifies outliers that might affect model training.</p></li>
+</ul>
+</li>
+<li><p><strong>Limitation</strong>: Outliers can make the range misleading. For example, adding 1000 would change the range to 800, hiding the true spread.</p></li>
+</ul>
+<p><strong>Key Point</strong>: Range is quick but doesn’t show how data is distributed between the extremes.</p>
+</section>
+<hr class="docutils" />
+<section id="variance">
+<h2>2. Variance<a class="headerlink" href="#variance" title="Link to this heading">#</a></h2>
+<p><strong>Definition</strong>: The average of the squared differences between each data point and the mean.</p>
+<ul class="simple">
+<li><p><strong>Formula</strong>:<br />
+<code class="docutils literal notranslate"><span class="pre">Variance</span> <span class="pre">=</span> <span class="pre">Σ(x_i</span> <span class="pre">-</span> <span class="pre">μ)²</span> <span class="pre">/</span> <span class="pre">n</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">x_i</span></code>: each data point, <code class="docutils literal notranslate"><span class="pre">μ</span></code>: mean, <code class="docutils literal notranslate"><span class="pre">n</span></code>: number of points</p></li>
+</ul>
+</li>
+<li><p><strong>Example</strong>:<br />
+For house prices <code class="docutils literal notranslate"><span class="pre">[200,</span> <span class="pre">250,</span> <span class="pre">300,</span> <span class="pre">350,</span> <span class="pre">400]</span></code> (in thousands):</p>
+<ul>
+<li><p>Mean (<code class="docutils literal notranslate"><span class="pre">μ</span></code>): <code class="docutils literal notranslate"><span class="pre">(200</span> <span class="pre">+</span> <span class="pre">250</span> <span class="pre">+</span> <span class="pre">300</span> <span class="pre">+</span> <span class="pre">350</span> <span class="pre">+</span> <span class="pre">400)</span> <span class="pre">/</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">300</span></code></p></li>
+<li><p>Squared differences: <code class="docutils literal notranslate"><span class="pre">(200-300)²</span> <span class="pre">=</span> <span class="pre">10000</span></code>, <code class="docutils literal notranslate"><span class="pre">(250-300)²</span> <span class="pre">=</span> <span class="pre">2500</span></code>, <code class="docutils literal notranslate"><span class="pre">(300-300)²</span> <span class="pre">=</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">(350-300)²</span> <span class="pre">=</span> <span class="pre">2500</span></code>, <code class="docutils literal notranslate"><span class="pre">(400-300)²</span> <span class="pre">=</span> <span class="pre">10000</span></code></p></li>
+<li><p>Variance: <code class="docutils literal notranslate"><span class="pre">(10000</span> <span class="pre">+</span> <span class="pre">2500</span> <span class="pre">+</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">2500</span> <span class="pre">+</span> <span class="pre">10000)</span> <span class="pre">/</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">5000</span></code> thousand dollars²</p></li>
+</ul>
+</li>
+<li><p><strong>Best Use</strong>: Good for precise spread measurement, especially with normal (bell-shaped) data.</p></li>
+<li><p><strong>ML/DL Use</strong>:</p>
+<ul>
+<li><p><strong>PCA</strong>: Finds important features by looking at variance.</p></li>
+<li><p><strong>Feature Selection</strong>: Features with higher variance often matter more.</p></li>
+<li><p><strong>Loss Functions</strong>: Used to measure errors in regression models.</p></li>
+</ul>
+</li>
+<li><p><strong>Limitation</strong>: Squared units (e.g., thousand dollars²) make it hard to interpret directly.</p></li>
+</ul>
+<p><strong>Key Point</strong>: Variance is exact but less intuitive due to squared units.</p>
+</section>
+<hr class="docutils" />
+<section id="standard-deviation-sd">
+<h2>3. Standard Deviation (SD)<a class="headerlink" href="#standard-deviation-sd" title="Link to this heading">#</a></h2>
+<p><strong>Definition</strong>: The square root of the variance, putting the spread back into the original units.</p>
+<ul class="simple">
+<li><p><strong>Formula</strong>:<br />
+<code class="docutils literal notranslate"><span class="pre">SD</span> <span class="pre">=</span> <span class="pre">√Variance</span></code></p></li>
+<li><p><strong>Example</strong>:<br />
+For variance = 5000 thousand dollars²:</p>
+<ul>
+<li><p>SD: <code class="docutils literal notranslate"><span class="pre">√5000</span> <span class="pre">≈</span> <span class="pre">70.71</span></code> thousand dollars</p></li>
+</ul>
+</li>
+<li><p><strong>Best Use</strong>: When you need a clear, interpretable measure of spread.</p></li>
+<li><p><strong>ML/DL Use</strong>:</p>
+<ul>
+<li><p><strong>Feature Scaling</strong>: Standardizes features (mean = 0, SD = 1) for algorithms like gradient descent.</p></li>
+<li><p><strong>Model Evaluation</strong>: Shows how much predictions vary.</p></li>
+</ul>
+</li>
+<li><p><strong>Limitation</strong>: Sensitive to outliers, like variance.</p></li>
+</ul>
+<p><strong>Key Point</strong>: SD is widely used because it’s easy to understand and matches the data’s units.</p>
+</section>
+<hr class="docutils" />
+<section id="mean-absolute-deviation-mad">
+<h2>4. Mean Absolute Deviation (MAD)<a class="headerlink" href="#mean-absolute-deviation-mad" title="Link to this heading">#</a></h2>
+<p><strong>Definition</strong>: The average of the absolute differences between each data point and the mean.</p>
+<ul class="simple">
+<li><p><strong>Formula</strong>:<br />
+<code class="docutils literal notranslate"><span class="pre">MAD</span> <span class="pre">=</span> <span class="pre">Σ|x_i</span> <span class="pre">-</span> <span class="pre">μ|</span> <span class="pre">/</span> <span class="pre">n</span></code></p></li>
+<li><p><strong>Example</strong>:<br />
+For house prices <code class="docutils literal notranslate"><span class="pre">[200,</span> <span class="pre">250,</span> <span class="pre">300,</span> <span class="pre">350,</span> <span class="pre">400]</span></code> (in thousands):</p>
+<ul>
+<li><p>Mean (<code class="docutils literal notranslate"><span class="pre">μ</span></code>): 300</p></li>
+<li><p>Absolute differences: <code class="docutils literal notranslate"><span class="pre">|200-300|</span> <span class="pre">=</span> <span class="pre">100</span></code>, <code class="docutils literal notranslate"><span class="pre">|250-300|</span> <span class="pre">=</span> <span class="pre">50</span></code>, <code class="docutils literal notranslate"><span class="pre">|300-300|</span> <span class="pre">=</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">|350-300|</span> <span class="pre">=</span> <span class="pre">50</span></code>, <code class="docutils literal notranslate"><span class="pre">|400-300|</span> <span class="pre">=</span> <span class="pre">100</span></code></p></li>
+<li><p>MAD: <code class="docutils literal notranslate"><span class="pre">(100</span> <span class="pre">+</span> <span class="pre">50</span> <span class="pre">+</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">50</span> <span class="pre">+</span> <span class="pre">100)</span> <span class="pre">/</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">60</span></code> thousand dollars</p></li>
+</ul>
+</li>
+<li><p><strong>Best Use</strong>: When you want a measure less affected by outliers.</p></li>
+<li><p><strong>ML/DL Use</strong>:</p>
+<ul>
+<li><p><strong>Robust Regression</strong>: Helps models handle outliers (e.g., in Huber loss).</p></li>
+<li><p><strong>Anomaly Detection</strong>: Finds unusual patterns, like fraud in transactions.</p></li>
+</ul>
+</li>
+<li><p><strong>Limitation</strong>: Less common in advanced stats compared to variance.</p></li>
+</ul>
+<p><strong>Key Point</strong>: MAD gives a simple average distance from the mean and resists outliers.</p>
+</section>
+<hr class="docutils" />
+<section id="interquartile-range-iqr">
+<h2>5. Interquartile Range (IQR)<a class="headerlink" href="#interquartile-range-iqr" title="Link to this heading">#</a></h2>
+<p><strong>Definition</strong>: The difference between the 75th percentile (Q3) and 25th percentile (Q1), showing the spread of the middle 50% of data.</p>
+<ul class="simple">
+<li><p><strong>Formula</strong>:<br />
+<code class="docutils literal notranslate"><span class="pre">IQR</span> <span class="pre">=</span> <span class="pre">Q3</span> <span class="pre">-</span> <span class="pre">Q1</span></code></p></li>
+<li><p><strong>Example</strong>:<br />
+For house prices <code class="docutils literal notranslate"><span class="pre">[200,</span> <span class="pre">220,</span> <span class="pre">250,</span> <span class="pre">300,</span> <span class="pre">350,</span> <span class="pre">400,</span> <span class="pre">450]</span></code> (in thousands):</p>
+<ul>
+<li><p>Q1 (25th percentile): 220</p></li>
+<li><p>Q3 (75th percentile): 400</p></li>
+<li><p>IQR: <code class="docutils literal notranslate"><span class="pre">400</span> <span class="pre">-</span> <span class="pre">220</span> <span class="pre">=</span> <span class="pre">180</span></code> thousand dollars</p></li>
+</ul>
+</li>
+<li><p><strong>Best Use</strong>: When you need a measure that ignores outliers and focuses on the central data.</p></li>
+<li><p><strong>ML/DL Use</strong>:</p>
+<ul>
+<li><p><strong>Outlier Detection</strong>: Marks values outside <code class="docutils literal notranslate"><span class="pre">Q1</span> <span class="pre">-</span> <span class="pre">1.5</span> <span class="pre">×</span> <span class="pre">IQR</span></code> or <code class="docutils literal notranslate"><span class="pre">Q3</span> <span class="pre">+</span> <span class="pre">1.5</span> <span class="pre">×</span> <span class="pre">IQR</span></code> as outliers.</p></li>
+<li><p><strong>Robust Scaling</strong>: Used in tools like <code class="docutils literal notranslate"><span class="pre">RobustScaler</span></code> to make features less sensitive to outliers.</p></li>
+</ul>
+</li>
+<li><p><strong>Limitation</strong>: Only looks at the middle 50%, ignoring the tails.</p></li>
+</ul>
+<p><strong>Key Point</strong>: IQR is perfect for skewed data or when outliers are a concern.</p>
+</section>
+<hr class="docutils" />
+<section id="comparison-table">
+<h2>Comparison Table<a class="headerlink" href="#comparison-table" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Measure</p></th>
+<th class="head"><p>Formula</p></th>
+<th class="head"><p>Units</p></th>
+<th class="head"><p>Outlier Sensitivity</p></th>
+<th class="head"><p>ML/DL Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Range</strong></p></td>
+<td><p>Max - Min</p></td>
+<td><p>Same as data</p></td>
+<td><p>High</p></td>
+<td><p>Quick data checks</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Variance</strong></p></td>
+<td><p>Σ(x_i - μ)² / n</p></td>
+<td><p>Squared units</p></td>
+<td><p>High</p></td>
+<td><p>PCA, feature selection</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Standard Deviation</strong></p></td>
+<td><p>√Variance</p></td>
+<td><p>Same as data</p></td>
+<td><p>High</p></td>
+<td><p>Feature scaling</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>MAD</strong></p></td>
+<td><p>Σ</p></td>
+<td><p>x_i - μ</p></td>
+<td><p>/ n</p></td>
+<td><p>Same as data</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>IQR</strong></p></td>
+<td><p>Q3 - Q1</p></td>
+<td><p>Same as data</p></td>
+<td><p>Low</p></td>
+<td><p>Outlier detection</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2>When to Use Each Measure<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Range</strong>: For a fast look at spread.</p></li>
+<li><p><strong>Variance</strong>: For advanced methods like PCA or regression.</p></li>
+<li><p><strong>Standard Deviation</strong>: For most tasks, especially when units matter.</p></li>
+<li><p><strong>MAD</strong>: When outliers might distort results.</p></li>
+<li><p><strong>IQR</strong>: For skewed data or to avoid outlier impact.</p></li>
+</ul>
+<p>The right choice depends on your data and ML/DL goals.</p>
+</section>
+<hr class="docutils" />
+<section id="python-examples-for-ml-dl">
+<h2>Python Examples for ML/DL<a class="headerlink" href="#python-examples-for-ml-dl" title="Link to this heading">#</a></h2>
+<section id="example-1-calculating-variability-measures">
+<h3>Example 1: Calculating Variability Measures<a class="headerlink" href="#example-1-calculating-variability-measures" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+from sklearn.datasets import fetch_california_housing
+
+# Load California housing data (prices in USD)
+data = fetch_california_housing()
+prices = data.target * 100000  # Convert to dollars
+
+# Calculate measures
+print(f&quot;Range: {np.ptp(prices):,.0f} USD&quot;)
+print(f&quot;Variance: {np.var(prices):,.0f} USD²&quot;)
+print(f&quot;SD: {np.std(prices):,.0f} USD&quot;)
+print(f&quot;MAD: {np.mean(np.abs(prices - np.mean(prices))):,.0f} USD&quot;)
+print(f&quot;IQR: {np.percentile(prices, 75) - np.percentile(prices, 25):,.0f} USD&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Sample Output</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Range: 485,000 USD
+Variance: 1,200,000,000 USD²
+SD: 34,641 USD
+MAD: 25,000 USD
+IQR: 28,000 USD
+</pre></div>
+</div>
+</div>
+</div>
+<p>This shows the spread of house prices, useful for regression tasks.</p>
+</section>
+<section id="example-2-robust-scaling-with-iqr">
+<h3>Example 2: Robust Scaling with IQR<a class="headerlink" href="#example-2-robust-scaling-with-iqr" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+from sklearn.preprocessing import RobustScaler
+from sklearn.datasets import fetch_california_housing
+
+# Load California housing data
+data = fetch_california_housing()
+X = data.data  # Features
+
+# Scale using IQR
+scaler = RobustScaler(quantile_range=(25, 75))
+scaled_features = scaler.fit_transform(X)
+
+# Check IQR before and after for the first feature
+feature = X[:, 0]
+scaled_feature = scaled_features[:, 0]
+print(f&quot;Original IQR: {np.percentile(feature, 75) - np.percentile(feature, 25):.2f}&quot;)
+print(f&quot;Scaled IQR: {np.percentile(scaled_feature, 75) - np.percentile(scaled_feature, 25):.2f}&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Sample Output</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Original IQR: 2.50
+Scaled IQR: 1.00
+</pre></div>
+</div>
+</div>
+</div>
+<p>Scaling with IQR reduces outlier effects, improving model performance.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Range</strong>: Fast and simple, but sensitive to outliers.</p></li>
+<li><p><strong>Variance</strong>: Precise but in squared units.</p></li>
+<li><p><strong>Standard Deviation</strong>: Clear and common in ML/DL.</p></li>
+<li><p><strong>MAD</strong>: Robust to outliers, good for uneven data.</p></li>
+<li><p><strong>IQR</strong>: Focuses on the middle 50%, resists outliers.</p></li>
+</ul>
+<p>These measures help you understand your data, clean it, and build stronger ML/DL models.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="outliers-and-leverage-points">
+<h1>3. Outliers and Leverage Points<a class="headerlink" href="#outliers-and-leverage-points" title="Link to this heading">#</a></h1>
+<p>In Machine Learning (ML) and Deep Learning (DL), data is the foundation of every model. However, not all data points are equal—some stand out and can disrupt how models learn. These are called <strong>outliers</strong> and <strong>leverage points</strong>. This guide explains what they are, why they matter, and how to handle them, using simple language, clear examples, and practical Python code.</p>
+<hr class="docutils" />
+<section id="what-is-an-outlier">
+<h2>What is an Outlier?<a class="headerlink" href="#what-is-an-outlier" title="Link to this heading">#</a></h2>
+<p>An <strong>outlier</strong> is a data point that is very different from the rest of the dataset. It’s like the odd one out—much larger or smaller than the other values.</p>
+<section id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h3>
+<p>An outlier is an unusual observation that doesn’t fit the general pattern of the data.</p>
+</section>
+<section id="characteristics">
+<h3>Characteristics<a class="headerlink" href="#characteristics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Outliers have extreme values in the <strong>outcome</strong> (the variable we predict, often called Y).</p></li>
+<li><p>They can affect key numbers like:</p>
+<ul>
+<li><p><strong>Mean</strong> (average): Outliers pull it up or down.</p></li>
+<li><p><strong>Variance</strong> (spread): Outliers make the data seem more scattered.</p></li>
+</ul>
+</li>
+<li><p>They can be much higher or lower than typical values.</p></li>
+</ul>
+</section>
+<section id="why-outliers-matter-in-ml">
+<h3>Why Outliers Matter in ML<a class="headerlink" href="#why-outliers-matter-in-ml" title="Link to this heading">#</a></h3>
+<p>Outliers can cause trouble in ML models:</p>
+<ul class="simple">
+<li><p><strong>Lower accuracy</strong>: They add <strong>noise</strong> or <strong>bias</strong>, leading to wrong predictions.</p></li>
+<li><p><strong>Skewed metrics</strong>: They mess up measures like <strong>mean squared error (MSE)</strong>, which shows how well the model performs.</p></li>
+<li><p><strong>Training problems</strong>: They can slow down or confuse training, especially in models sensitive to extremes, like linear regression or DL networks with small datasets.</p></li>
+</ul>
+</section>
+<section id="how-to-find-outliers">
+<h3>How to Find Outliers<a class="headerlink" href="#how-to-find-outliers" title="Link to this heading">#</a></h3>
+<p>Spotting outliers is a key step in preparing data. Here are common ways:</p>
+<ul class="simple">
+<li><p><strong>Visual Tools</strong>:</p>
+<ul>
+<li><p><strong>Boxplots</strong>: Show outliers as points outside the “whiskers.”</p></li>
+<li><p><strong>Scatter plots</strong>: Highlight points far from the main group.</p></li>
+<li><p><strong>Histograms</strong>: Show extreme values that don’t fit the pattern.</p></li>
+</ul>
+</li>
+<li><p><strong>Statistical Methods</strong>:</p>
+<ul>
+<li><p><strong>Z-score</strong>: If a point is more than 3 standard deviations from the mean, it’s likely an outlier.</p></li>
+<li><p><strong>Interquartile Range (IQR)</strong>: Points outside 1.5 times the IQR are outliers.</p></li>
+</ul>
+</li>
+<li><p><strong>ML Tools</strong>:</p>
+<ul>
+<li><p><strong>Isolation Forest</strong>: An algorithm that identifies outliers by isolating them in decision trees.</p></li>
+<li><p><strong>DBSCAN (Density-Based Spatial Clustering)</strong>: Marks sparse points as outliers.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="example-finding-an-outlier-with-a-boxplot">
+<h3>Example: Finding an Outlier with a Boxplot<a class="headerlink" href="#example-finding-an-outlier-with-a-boxplot" title="Link to this heading">#</a></h3>
+<p>Let’s look at exam scores: 55, 60, 65, 70, 75, 80, and 1000. The score 1000 looks out of place.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample data
+scores = [55, 60, 65, 70, 75, 80, 1000]
+
+# Create a boxplot
+plt.boxplot(scores)
+plt.title(&quot;Boxplot of Exam Scores&quot;)
+plt.show()
+</pre></div>
+</div>
+</div>
+</div>
+<p>The boxplot shows <strong>1000</strong> as a point far above the rest, marking it as an outlier.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="why-outliers-affect-machine-learning">
+<h2>Why Outliers Affect Machine Learning<a class="headerlink" href="#why-outliers-affect-machine-learning" title="Link to this heading">#</a></h2>
+<p>Outliers can change how we understand data and how models behave. Let’s see how they impact key numbers.</p>
+<section id="how-outliers-change-statistics">
+<h3>How Outliers Change Statistics<a class="headerlink" href="#how-outliers-change-statistics" title="Link to this heading">#</a></h3>
+<p>Here’s a table showing the effect:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Measure</strong></p></th>
+<th class="head"><p><strong>Without Outlier</strong></p></th>
+<th class="head"><p><strong>With Outlier</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Mean</strong></p></td>
+<td><p>Closer to the data</p></td>
+<td><p>Much higher/lower</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Median</strong></p></td>
+<td><p>Stays the same</p></td>
+<td><p>Almost no change</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Range</strong></p></td>
+<td><p>Smaller</p></td>
+<td><p>Much larger</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example</strong>: Salaries of $30,000, $35,000, $40,000, and $1,000,000:</p>
+<ul class="simple">
+<li><p><strong>Without $1,000,000</strong>: Mean = $35,000, Median = $35,000, Range = $10,000.</p></li>
+<li><p><strong>With $1,000,000</strong>: Mean = $276,250, Median = $35,000 (unchanged), Range = $970,000.</p></li>
+</ul>
+<p>The mean jumps up a lot, but the median stays steady. This is why median-based methods are useful in ML when outliers exist.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="handling-outliers">
+<h2>Handling Outliers<a class="headerlink" href="#handling-outliers" title="Link to this heading">#</a></h2>
+<p>To make ML models work better, we need to deal with outliers. Here are three ways:</p>
+<section id="remove-outliers">
+<h3>1. Remove Outliers<a class="headerlink" href="#remove-outliers" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>If they’re <strong>errors</strong> (e.g., a typo), take them out.</p></li>
+<li><p>Example: If a height is listed as 20 feet, it’s likely a mistake and should be removed.</p></li>
+</ul>
+</section>
+<section id="transform-the-data">
+<h3>2. Transform the Data<a class="headerlink" href="#transform-the-data" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Log Transformation</strong>: Shrinks big values to lessen their impact.</p>
+<ul>
+<li><p>Example: If salaries range from $10,000 to $1,000,000, applying <code class="docutils literal notranslate"><span class="pre">log(salary)</span></code> makes extreme values less dominant.</p></li>
+</ul>
+</li>
+<li><p><strong>Normalization</strong>: Scales all values (e.g., 0 to 1) to reduce outlier effects.</p>
+<ul>
+<li><p>Example: Use Python’s <code class="docutils literal notranslate"><span class="pre">MinMaxScaler</span></code> for this.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="use-robust-models">
+<h3>3. Use Robust Models<a class="headerlink" href="#use-robust-models" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Tree-based models</strong>: Like Random Forests or Gradient Boosting, which handle outliers better than linear models.</p></li>
+<li><p><strong>Median-based methods</strong>: Use measures like median absolute deviation (MAD) or IQR, which are less affected by outliers compared to mean-based methods.</p></li>
+</ul>
+</section>
+<section id="example-using-isolation-forest">
+<h3>Example: Using Isolation Forest<a class="headerlink" href="#example-using-isolation-forest" title="Link to this heading">#</a></h3>
+<p>Let’s detect an outlier with Python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.ensemble import IsolationForest
+import numpy as np
+
+# Sample data
+data = np.array([[10], [12], [15], [14], [11], [9000]])
+
+# Train the model
+model = IsolationForest(contamination=0.1)  # Expect 10% outliers
+outliers = model.fit_predict(data)
+
+print(outliers)  # Output: [1 1 1 1 1 -1]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, <strong>9000</strong> is flagged as an outlier (-1), while others are normal (1).</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="what-are-leverage-points">
+<h2>What are Leverage Points?<a class="headerlink" href="#what-are-leverage-points" title="Link to this heading">#</a></h2>
+<p>A <strong>leverage point</strong> is a data point with an extreme value in the <strong>input features</strong> (often called X). It can pull the model toward it, especially in linear models.</p>
+<section id="id2">
+<h3>Definition<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>A leverage point is an observation with an extreme input that strongly influences the model’s fit.</p>
+</section>
+<section id="id3">
+<h3>Characteristics<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Extreme in the <strong>input</strong> (X), not necessarily the outcome (Y).</p></li>
+<li><p>Changes the <strong>slope</strong> or direction of a model’s predictions.</p></li>
+<li><p>Has a big impact on how the model learns.</p></li>
+</ul>
+</section>
+<section id="impact-on-ml-models">
+<h3>Impact on ML Models<a class="headerlink" href="#impact-on-ml-models" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Distorts predictions</strong>: Alters the model’s parameters (e.g., slope in regression).</p></li>
+<li><p><strong>Overfitting</strong>: The model may focus too much on the leverage point.</p></li>
+<li><p><strong>Affects linear models most</strong>: Tree-based models are less sensitive.</p></li>
+</ul>
+</section>
+<section id="example-leverage-in-house-prices">
+<h3>Example: Leverage in House Prices<a class="headerlink" href="#example-leverage-in-house-prices" title="Link to this heading">#</a></h3>
+<p>Let’s see how a leverage point affects a regression line.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Sample data
+data = pd.DataFrame({
+    &#39;Size (sq.ft)&#39;: [1000, 1500, 2000, 10000],  # 10000 is extreme
+    &#39;Price ($)&#39;: [200000, 300000, 400000, 1000000]
+})
+
+# Plot regression
+sns.lmplot(x=&#39;Size (sq.ft)&#39;, y=&#39;Price ($)&#39;, data=data)
+plt.title(&quot;Regression with Leverage Point&quot;)
+plt.show()
+</pre></div>
+</div>
+</div>
+</div>
+<p>The house with <strong>10,000 sq. ft.</strong> pulls the line up, changing predictions for smaller houses.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="outliers-vs-leverage-points">
+<h2>Outliers vs. Leverage Points<a class="headerlink" href="#outliers-vs-leverage-points" title="Link to this heading">#</a></h2>
+<p>Here’s how they differ:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Aspect</strong></p></th>
+<th class="head"><p><strong>Outlier</strong></p></th>
+<th class="head"><p><strong>Leverage Point</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Location</strong></p></td>
+<td><p>Extreme in <strong>outcome</strong> (Y)</p></td>
+<td><p>Extreme in <strong>input</strong> (X)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Impact</strong></p></td>
+<td><p>Changes stats like mean and variance</p></td>
+<td><p>Pulls the model’s line or curve</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Example</strong></p></td>
+<td><p>A CEO’s $1 salary in a salary dataset</p></td>
+<td><p>A 100-year-old student in a class</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="high-leverage-outliers">
+<h3>High-Leverage Outliers<a class="headerlink" href="#high-leverage-outliers" title="Link to this heading">#</a></h3>
+<p>A point can be both if it’s extreme in X and Y. Example: A <strong>10,000 sq. ft. house sold for $1</strong>. It pulls the model and skews stats.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Summary<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Outliers</strong>:</p>
+<ul>
+<li><p>Extreme values in the <strong>outcome</strong> (Y).</p></li>
+<li><p>Example: A billionaire’s income in a salary dataset.</p></li>
+<li><p>Impact: Skews statistical measures like mean and variance, reduces model accuracy.</p></li>
+</ul>
+</li>
+<li><p><strong>Leverage Points</strong>:</p>
+<ul>
+<li><p>Extreme values in the <strong>input</strong> (X).</p></li>
+<li><p>Example: A much older student in a class dataset.</p></li>
+<li><p>Impact: Pulls the model’s line or curve, increases overfitting risk.</p></li>
+</ul>
+</li>
+<li><p><strong>High-Leverage Outliers</strong>:</p>
+<ul>
+<li><p>Extreme in both X and Y.</p></li>
+<li><p>Example: A 10,000 sq. ft. house sold for $1.</p></li>
+<li><p>Impact: Strongly affects model fit and accuracy.</p></li>
+</ul>
+</li>
+<li><p><strong>Handling Strategies</strong>:</p>
+<ul>
+<li><p><strong>Remove</strong>: Eliminate outliers or leverage points if they are errors.</p></li>
+<li><p><strong>Transform</strong>: Use log transformation, normalization, or other scaling methods.</p></li>
+<li><p><strong>Robust Models</strong>: Use median-based metrics or tree-based algorithms (e.g., Random Forests) to reduce sensitivity to extreme values.</p></li>
+</ul>
+</li>
+</ul>
+<p>By managing outliers and leverage points, you can build stronger ML and DL models that handle real-world data better.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="five-number-summary">
+<h1><strong>4. 📊 Five Number Summary</strong><a class="headerlink" href="#five-number-summary" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="introduction-to-five-number-summary">
+<h2><strong>Introduction to Five Number Summary</strong><a class="headerlink" href="#introduction-to-five-number-summary" title="Link to this heading">#</a></h2>
+<p>The <strong>Five Number Summary</strong> is a simple way to describe a dataset using five key values:</p>
+<ol class="arabic simple">
+<li><p><strong>Minimum</strong>: The smallest value in the dataset.</p></li>
+<li><p><strong>First Quartile (Q1)</strong>: The value where 25% of the data falls below (25th percentile).</p></li>
+<li><p><strong>Median (Q2)</strong>: The middle value, where 50% of the data is below and 50% is above (50th percentile).</p></li>
+<li><p><strong>Third Quartile (Q3)</strong>: The value where 75% of the data falls below (75th percentile).</p></li>
+<li><p><strong>Maximum</strong>: The largest value in the dataset.</p></li>
+</ol>
+<p>These five numbers give a quick snapshot of how the data is spread out and where its center lies. They are especially useful in data analysis for ML and DL, where understanding the data’s range and distribution is a critical first step.</p>
+<blockquote>
+<div><p><strong>Why it matters</strong>: Imagine you’re analyzing house prices. These five numbers can tell you the cheapest and most expensive homes, the typical price range, and whether some prices stand out as unusual.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="core-components-and-their-ml-dl-relevance">
+<h2><strong>Core Components and Their ML/DL Relevance</strong><a class="headerlink" href="#core-components-and-their-ml-dl-relevance" title="Link to this heading">#</a></h2>
+<section id="minimum-and-maximum">
+<h3><strong>1. Minimum and Maximum</strong><a class="headerlink" href="#minimum-and-maximum" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What they do</strong>: Show the full range of the data (from lowest to highest).</p></li>
+<li><p><strong>In ML</strong>: Used in feature scaling (e.g., Min-Max scaling) to adjust data to a range like [0, 1].</p></li>
+<li><p><strong>In DL</strong>: Help choose activation functions (e.g., ReLU or sigmoid), which work best with specific input ranges.</p></li>
+</ul>
+</section>
+<section id="quartiles-q1-q2-q3">
+<h3><strong>2. Quartiles (Q1, Q2, Q3)</strong><a class="headerlink" href="#quartiles-q1-q2-q3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What they do</strong>: Split the data into four parts, showing how it’s distributed.</p>
+<ul>
+<li><p><em>Percentiles</em> divide data into 100 equal parts. Q1 is the 25th percentile, meaning 25% of values are below it, and so on.</p></li>
+</ul>
+</li>
+<li><p><strong>In ML</strong>: Used to bin data into categories or for robust scaling that ignores extreme values.</p></li>
+<li><p><strong>In DL</strong>: Guide normalization layers (e.g., batch normalization) to keep training stable.</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3><strong>3. Interquartile Range (IQR)</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Formula</strong>: ( \text{IQR} = Q3 - Q1 )</p></li>
+<li><p><strong>What it does</strong>: Measures the spread of the middle 50% of the data.</p></li>
+<li><p><strong>In ML</strong>: Identifies outliers—values far outside the norm—that might confuse a model.</p></li>
+<li><p><strong>In DL</strong>: Helps design loss functions that aren’t thrown off by outliers.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="how-to-calculate-it">
+<h2><strong>How to Calculate It</strong><a class="headerlink" href="#how-to-calculate-it" title="Link to this heading">#</a></h2>
+<p>Here’s how to find the Five Number Summary:</p>
+<ol class="arabic simple">
+<li><p><strong>Sort the data</strong> from smallest to largest.</p></li>
+<li><p><strong>Find the minimum</strong> (first value) and <strong>maximum</strong> (last value).</p></li>
+<li><p><strong>Find the median (Q2)</strong>: The middle value. If the dataset has an even number of points, average the two middle values.</p></li>
+<li><p><strong>Find Q1</strong>: The median of the lower half (values below Q2).</p></li>
+<li><p><strong>Find Q3</strong>: The median of the upper half (values above Q2).</p></li>
+</ol>
+<section id="python-example">
+<h3><strong>Python Example</strong><a class="headerlink" href="#python-example" title="Link to this heading">#</a></h3>
+<p>Let’s calculate it using the California Housing dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+from sklearn.datasets import fetch_california_housing
+
+# Load the dataset
+data = fetch_california_housing()
+prices = data.target * 1000  # Convert to USD for readability
+
+# Calculate the Five Number Summary
+minimum = np.min(prices)
+Q1 = np.percentile(prices, 25)
+median = np.median(prices)
+Q3 = np.percentile(prices, 75)
+maximum = np.max(prices)
+
+# Display the results
+print(f&quot;Minimum: ${minimum:,.0f}&quot;)
+print(f&quot;Q1: ${Q1:,.0f}&quot;)
+print(f&quot;Median: ${median:,.0f}&quot;)
+print(f&quot;Q3: ${Q3:,.0f}&quot;)
+print(f&quot;Maximum: ${maximum:,.0f}&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Output</strong> (example values):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Minimum: $149,000
+Q1: $1,290,000
+Median: $1,799,000
+Q3: $2,641,000
+Maximum: $5,000,000
+</pre></div>
+</div>
+</div>
+</div>
+<p>This code shows the range and distribution of house prices in California.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="why-its-useful">
+<h2><strong>Why It’s Useful</strong><a class="headerlink" href="#why-its-useful" title="Link to this heading">#</a></h2>
+<p>The Five Number Summary is valuable because it:</p>
+<ul class="simple">
+<li><p><strong>Summarizes data quickly</strong>: Gives a clear picture of spread and center.</p></li>
+<li><p><strong>Spots outliers</strong>: Highlights unusual values that might need attention.</p></li>
+<li><p><strong>Supports visualization</strong>: Forms the basis of box plots.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Fun fact</strong>: Unlike the average (mean), the median isn’t swayed by extreme values, making it a sturdy anchor for uneven data—like house prices with a few mansions.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="visualizing-with-a-box-plot">
+<h2><strong>Visualizing with a Box Plot</strong><a class="headerlink" href="#visualizing-with-a-box-plot" title="Link to this heading">#</a></h2>
+<p>A <strong>box plot</strong> turns the Five Number Summary into a picture:</p>
+<ul class="simple">
+<li><p><strong>Box</strong>: From Q1 to Q3 (the IQR, covering the middle 50% of data).</p></li>
+<li><p><strong>Line in the box</strong>: The median (Q2).</p></li>
+<li><p><strong>Whiskers</strong>: Lines stretching to the minimum and maximum (unless there are outliers).</p></li>
+<li><p><strong>Outliers</strong>: Points outside the whiskers, plotted separately.</p></li>
+</ul>
+<section id="python-visualization">
+<h3><strong>Python Visualization</strong><a class="headerlink" href="#python-visualization" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
+
+# Create a box plot
+plt.boxplot(prices, vert=False)
+plt.title(&quot;California Housing Prices Distribution&quot;)
+plt.xlabel(&quot;Price (USD)&quot;)
+plt.show()
+</pre></div>
+</div>
+</div>
+</div>
+<p>This code generates a horizontal box plot. When you run it in a Jupyter notebook, you’ll see the plot directly below the cell, showing the data’s spread and any outliers.</p>
+<blockquote>
+<div><p><strong>Think of it like this</strong>: The box plot is a snapshot of your data’s “personality”—where it clusters, how far it stretches, and which values are the rebels standing apart.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="identifying-outliers">
+<h2><strong>Identifying Outliers</strong><a class="headerlink" href="#identifying-outliers" title="Link to this heading">#</a></h2>
+<p>Outliers are extreme values that don’t fit with the rest. To find them:</p>
+<ul class="simple">
+<li><p>Calculate the IQR: ( Q3 - Q1 ).</p></li>
+<li><p>Define bounds:</p>
+<ul>
+<li><p>Lower bound: ( Q1 - 1.5 \times \text{IQR} )</p></li>
+<li><p>Upper bound: ( Q3 + 1.5 \times \text{IQR} )</p></li>
+</ul>
+</li>
+<li><p>Any value <strong>below the lower bound</strong> or <strong>above the upper bound</strong> is an outlier.</p></li>
+</ul>
+<section id="id6">
+<h3><strong>Python Example</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+outliers = prices[(prices &lt; lower_bound) | (prices &gt; upper_bound)]
+print(f&quot;Number of outliers: {len(outliers)}&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>This identifies houses with unusually low or high prices.</p>
+<blockquote>
+<div><p><strong>Why care?</strong>: Outliers are like noisy neighbors—they can distract your ML model from the real patterns.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="advanced-ml-dl-applications">
+<h2><strong>Advanced ML/DL Applications</strong><a class="headerlink" href="#advanced-ml-dl-applications" title="Link to this heading">#</a></h2>
+<section id="outlier-detection">
+<h3><strong>1. Outlier Detection</strong><a class="headerlink" href="#outlier-detection" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Use</strong>: Clean data by finding and handling outliers.</p></li>
+<li><p><strong>Code</strong> (from above):</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+outliers = prices[(prices &lt; lower_bound) | (prices &gt; upper_bound)]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="robust-feature-scaling">
+<h3><strong>2. Robust Feature Scaling</strong><a class="headerlink" href="#robust-feature-scaling" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Use</strong>: Scale data using the IQR to reduce outlier impact.</p></li>
+<li><p><strong>Formula</strong>: ( \text{Scaled Value} = \frac{x - \text{Median}}{\text{IQR}} )</p></li>
+<li><p><strong>Code</strong>:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.preprocessing import RobustScaler
+
+scaler = RobustScaler()
+scaled_prices = scaler.fit_transform(prices.reshape(-1, 1))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-binning">
+<h3><strong>3. Data Binning</strong><a class="headerlink" href="#data-binning" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Use</strong>: Turn numbers into categories (e.g., “Low,” “High”) using quartiles.</p></li>
+<li><p><strong>Code</strong>:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+
+bins = [minimum, Q1, median, Q3, maximum]
+labels = [&#39;Low&#39;, &#39;Medium-Low&#39;, &#39;Medium-High&#39;, &#39;High&#39;]
+price_groups = pd.cut(prices, bins=bins, labels=labels)
+print(price_groups[:5])  # Show first 5 categories
+</pre></div>
+</div>
+</div>
+</div>
+<p>These techniques make data ready for ML models like decision trees or DL networks like neural networks.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="comparative-analysis">
+<h2><strong>Comparative Analysis</strong><a class="headerlink" href="#comparative-analysis" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Metric</strong></p></th>
+<th class="head"><p><strong>ML Application</strong></p></th>
+<th class="head"><p><strong>DL Consideration</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Minimum/Maximum</strong></p></td>
+<td><p>Sets scaling limits</p></td>
+<td><p>Guides activation ranges</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Quartiles</strong></p></td>
+<td><p>Bins data into categories</p></td>
+<td><p>Helps normalize layers</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>IQR</strong></p></td>
+<td><p>Spots outliers</p></td>
+<td><p>Builds robust loss functions</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Median</strong></p></td>
+<td><p>Fills missing values</p></td>
+<td><p>Centers batch normalization</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This table shows how the Five Number Summary powers both ML and DL workflows.</p>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2><strong>Summary</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The <strong>Five Number Summary</strong> offers a fast, clear view of your data’s range and distribution.</p></li>
+<li><p>It’s perfect for spotting outliers and understanding patterns, especially with box plots.</p></li>
+<li><p>In ML and DL, it helps prepare data—scaling features, handling outliers, and more—to build better models.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="percentiles-and-quartiles">
+<h1>5. Percentiles and Quartiles<a class="headerlink" href="#percentiles-and-quartiles" title="Link to this heading">#</a></h1>
+<p>In data analysis, <strong>percentiles</strong> and <strong>quartiles</strong> help us understand how data is spread out. They’re powerful tools in Machine Learning (ML) for preparing data, spotting unusual values, and checking how well models perform. Let’s explore these concepts step by step.</p>
+<hr class="docutils" />
+<section id="percentiles-in-machine-learning">
+<h2>1. Percentiles in Machine Learning<a class="headerlink" href="#percentiles-in-machine-learning" title="Link to this heading">#</a></h2>
+<section id="what-is-a-percentage">
+<h3>What is a Percentage?<a class="headerlink" href="#what-is-a-percentage" title="Link to this heading">#</a></h3>
+<p>A <strong>percentage</strong> shows how much of something you have out of 100.</p>
+<ul>
+<li><p><strong>Example</strong>: If you score 24 out of 30 on a test:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(24 ÷ 30) × 100 = 80%
+</pre></div>
+</div>
+<p>This means you got 80% of the test right.</p>
+</li>
+<li><p><strong>Analogy</strong>: Picture a pizza cut into 100 slices. Eating 80 slices means you ate 80% of the pizza.</p></li>
+</ul>
+</section>
+<section id="what-is-a-percentile">
+<h3>What is a Percentile?<a class="headerlink" href="#what-is-a-percentile" title="Link to this heading">#</a></h3>
+<p>A <strong>percentile</strong> tells you your position compared to others. It shows what percentage of values are <strong>below</strong> yours.</p>
+<ul class="simple">
+<li><p><strong>Example</strong>: If your score is in the <strong>90th percentile</strong>, you did better than 90% of people.</p></li>
+<li><p><strong>Analogy</strong>: In a race with 100 runners, being in the 90th percentile means you beat 90 of them.</p></li>
+</ul>
+</section>
+<section id="how-percentiles-help-in-ml">
+<h3>How Percentiles Help in ML<a class="headerlink" href="#how-percentiles-help-in-ml" title="Link to this heading">#</a></h3>
+<p>Percentiles are used in ML for:</p>
+<ul class="simple">
+<li><p><strong>Feature Scaling</strong>: Adjusting data (e.g., Min-Max scaling) so it fits between 0 and 1.</p></li>
+<li><p><strong>Anomaly Detection</strong>: Finding outliers, like values above the 95th percentile.</p></li>
+<li><p><strong>Model Evaluation</strong>: Checking how a model performs across different parts of the data.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="quartiles-in-machine-learning">
+<h2>2. Quartiles in Machine Learning<a class="headerlink" href="#quartiles-in-machine-learning" title="Link to this heading">#</a></h2>
+<section id="what-are-quartiles">
+<h3>What are Quartiles?<a class="headerlink" href="#what-are-quartiles" title="Link to this heading">#</a></h3>
+<p><strong>Quartiles</strong> split your data into <strong>four equal parts</strong>:</p>
+<ul class="simple">
+<li><p><strong>Q1 (25th percentile)</strong>: 25% of the data is below this point.</p></li>
+<li><p><strong>Q2 (50th percentile)</strong>: The <strong>median</strong>, where 50% of the data sits below.</p></li>
+<li><p><strong>Q3 (75th percentile)</strong>: 75% of the data is below this value.</p></li>
+</ul>
+<p><strong>Example</strong>: For the scores <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">50,</span> <span class="pre">60,</span> <span class="pre">70,</span> <span class="pre">80]</span></code>:</p>
+<ul class="simple">
+<li><p><strong>Q1</strong>: 25</p></li>
+<li><p><strong>Q2 (Median)</strong>: 45</p></li>
+<li><p><strong>Q3</strong>: 65</p></li>
+<li><p><strong>Analogy</strong>: Imagine slicing a cake into four equal pieces. Each piece is 25% of the cake.</p></li>
+</ul>
+</section>
+<section id="how-quartiles-help-in-ml">
+<h3>How Quartiles Help in ML<a class="headerlink" href="#how-quartiles-help-in-ml" title="Link to this heading">#</a></h3>
+<p>Quartiles are useful for:</p>
+<ul class="simple">
+<li><p><strong>Data Visualization</strong>: Box plots use quartiles to show how data is spread and highlight outliers.</p></li>
+<li><p><strong>Feature Engineering</strong>: Grouping data into categories (e.g., “Low,” “Medium,” “High”) based on quartiles.</p></li>
+<li><p><strong>Decision Trees</strong>: Setting split points in decision-making algorithms.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Python Example<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+scores = [55, 68, 72, 75, 82, 88, 95]
+
+# Calculate quartiles
+Q1 = np.percentile(scores, 25)  # 68.0
+median = np.median(scores)      # 75.0
+Q3 = np.percentile(scores, 75)  # 88.0
+
+print(f&quot;Q1: {Q1}&quot;)
+print(f&quot;Median: {median}&quot;)
+print(f&quot;Q3: {Q3}&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="interquartile-range-iqr-in-machine-learning">
+<h2>3. Interquartile Range (IQR) in Machine Learning<a class="headerlink" href="#interquartile-range-iqr-in-machine-learning" title="Link to this heading">#</a></h2>
+<section id="what-is-iqr">
+<h3>What is IQR?<a class="headerlink" href="#what-is-iqr" title="Link to this heading">#</a></h3>
+<p>The <strong>Interquartile Range (IQR)</strong> measures the spread of the <strong>middle 50%</strong> of your data.</p>
+<ul>
+<li><p><strong>Formula</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Example</strong>: For scores <code class="docutils literal notranslate"><span class="pre">[50,</span> <span class="pre">60,</span> <span class="pre">70,</span> <span class="pre">80,</span> <span class="pre">90]</span></code>:</p>
+<ul class="simple">
+<li><p><strong>Q1</strong>: 60</p></li>
+<li><p><strong>Q3</strong>: 80</p></li>
+<li><p><strong>IQR</strong>: 80 - 60 = 20</p></li>
+</ul>
+</li>
+<li><p><strong>Analogy</strong>: Think of a pizza cut into four parts. The IQR is the size of the two middle slices—the part you focus on most.</p></li>
+</ul>
+</section>
+<section id="why-iqr-matters-in-ml">
+<h3>Why IQR Matters in ML<a class="headerlink" href="#why-iqr-matters-in-ml" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Outlier Detection</strong>: Values outside <strong>Q1 - 1.5 × IQR</strong> or <strong>Q3 + 1.5 × IQR</strong> are often outliers.</p></li>
+<li><p><strong>Model Robustness</strong>: By focusing on the middle 50%, IQR helps models ignore extreme values.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="practical-uses-in-machine-learning">
+<h2>Practical Uses in Machine Learning<a class="headerlink" href="#practical-uses-in-machine-learning" title="Link to this heading">#</a></h2>
+<section id="handling-missing-data">
+<h3>1. Handling Missing Data<a class="headerlink" href="#handling-missing-data" title="Link to this heading">#</a></h3>
+<p>When data is missing, the <strong>median (Q2)</strong> is a great choice to fill gaps, especially if the data has outliers.</p>
+<ul>
+<li><p><strong>Example (Titanic Dataset)</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">titanic</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;titanic.csv&quot;</span><span class="p">)</span>
+<span class="n">median_age</span> <span class="o">=</span> <span class="n">titanic</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">titanic</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">median_age</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="feature-engineering-with-quartiles">
+<h3>2. Feature Engineering with Quartiles<a class="headerlink" href="#feature-engineering-with-quartiles" title="Link to this heading">#</a></h3>
+<p>Quartiles can turn numbers into groups for better analysis.</p>
+<ul>
+<li><p><strong>Example</strong>: Grouping ages into “Young,” “Adult,” and “Senior”:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">titanic</span><span class="p">[</span><span class="s1">&#39;Age_Group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">titanic</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">],</span> <span class="n">q</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Young&#39;</span><span class="p">,</span> <span class="s1">&#39;Adult&#39;</span><span class="p">,</span> <span class="s1">&#39;Senior&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="removing-outliers-with-iqr">
+<h3>3. Removing Outliers with IQR<a class="headerlink" href="#removing-outliers-with-iqr" title="Link to this heading">#</a></h3>
+<p>Use IQR to clean data by removing extreme values.</p>
+<ul>
+<li><p><strong>Example</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+<span class="n">titanic_cleaned</span> <span class="o">=</span> <span class="n">titanic</span><span class="p">[(</span><span class="n">titanic</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">lower_bound</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">titanic</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">upper_bound</span><span class="p">)]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="summary-table">
+<h2>Summary Table<a class="headerlink" href="#summary-table" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Concept</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+<th class="head"><p><strong>ML Use</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Percentile</strong></p></td>
+<td><p>Shows your rank compared to others</p></td>
+<td><p>Model evaluation, anomaly detection</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Quartiles</strong></p></td>
+<td><p>Splits data into 4 equal parts</p></td>
+<td><p>Feature engineering, decision trees</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>IQR</strong></p></td>
+<td><p>Spread of the middle 50% of data</p></td>
+<td><p>Outlier removal, data preprocessing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="key-takeaways">
+<h2>Key Takeaways<a class="headerlink" href="#key-takeaways" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Percentiles</strong> tell you where a value ranks—great for spotting outliers or scaling data.</p></li>
+<li><p><strong>Quartiles</strong> divide data into four parts, helping with visualization and grouping.</p></li>
+<li><p><strong>IQR</strong> focuses on the middle of the data, making models more reliable by ignoring extremes.</p></li>
+<li><p>These tools simplify data preparation and improve ML models in real-world tasks.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="measures-of-shape">
+<h1>6. Measures of Shape<a class="headerlink" href="#measures-of-shape" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="what-are-measures-of-shape">
+<h2>What Are Measures of Shape?<a class="headerlink" href="#what-are-measures-of-shape" title="Link to this heading">#</a></h2>
+<p>Measures of shape describe the <strong>pattern</strong> of your data’s distribution. They answer two main questions:</p>
+<ul class="simple">
+<li><p><strong>Is the data uneven or lopsided?</strong> (That’s <strong>skewness</strong>.)</p></li>
+<li><p><strong>Is the data very peaked or flat, with lots of outliers?</strong> (That’s <strong>kurtosis</strong>.)</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="symmetric-distribution-no-skew">
+<h2>Symmetric Distribution (No Skew)<a class="headerlink" href="#symmetric-distribution-no-skew" title="Link to this heading">#</a></h2>
+<p>A <strong>symmetric</strong> distribution looks the same on both sides when split down the middle.</p>
+<ul class="simple">
+<li><p><strong>Features</strong>:</p>
+<ul>
+<li><p>The left and right halves are like mirror images.</p></li>
+<li><p>The <strong>mean</strong> (average), <strong>median</strong> (middle value), and <strong>mode</strong> (most common value) are about the same.</p></li>
+<li><p>A histogram looks balanced, like a bell curve.</p></li>
+</ul>
+</li>
+<li><p><strong>Example</strong>: Heights of adults often form a symmetric “bell” shape.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="skewed-distribution-lopsided-data">
+<h2>Skewed Distribution (Lopsided Data)<a class="headerlink" href="#skewed-distribution-lopsided-data" title="Link to this heading">#</a></h2>
+<p><strong>Skewness</strong> shows if the data leans to one side. It measures how uneven the distribution is.</p>
+<section id="right-skewed-positive-skewness">
+<h3>1. Right-Skewed (Positive Skewness)<a class="headerlink" href="#right-skewed-positive-skewness" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What it looks like</strong>: Most values are small (on the left), with a few large ones stretching the tail to the right.</p></li>
+<li><p><strong>Order</strong>: Mode &lt; Median &lt; Mean.</p></li>
+<li><p><strong>Example</strong>: Income data—most people earn average amounts, but a few millionaires pull the tail right.</p></li>
+<li><p><strong>Picture it</strong>: Like a slide sloping down to the right.</p></li>
+</ul>
+</section>
+<section id="left-skewed-negative-skewness">
+<h3>2. Left-Skewed (Negative Skewness)<a class="headerlink" href="#left-skewed-negative-skewness" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What it looks like</strong>: Most values are large (on the right), with a few small ones stretching the tail to the left.</p></li>
+<li><p><strong>Order</strong>: Mode &gt; Median &gt; Mean.</p></li>
+<li><p><strong>Example</strong>: Exam scores—most students score high, but a few score very low.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="spotting-skewness-with-box-plots">
+<h2>Spotting Skewness with Box Plots<a class="headerlink" href="#spotting-skewness-with-box-plots" title="Link to this heading">#</a></h2>
+<p>A <strong>box plot</strong> is a quick way to see skewness:</p>
+<ul class="simple">
+<li><p><strong>Right-Skewed</strong>: The right side of the box is bigger, and the right “whisker” (line) is longer.</p></li>
+<li><p><strong>Left-Skewed</strong>: The left side is bigger, and the left whisker is longer.</p></li>
+<li><p><strong>Symmetric</strong>: Both sides and whiskers look equal.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="why-skewness-matters-in-ml-and-dl">
+<h2>Why Skewness Matters in ML and DL<a class="headerlink" href="#why-skewness-matters-in-ml-and-dl" title="Link to this heading">#</a></h2>
+<p>Skewed data can cause problems for models. Here’s how:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Area</strong></p></th>
+<th class="head"><p><strong>Why It’s a Problem</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Training Models</strong></p></td>
+<td><p>Linear regression expects normal data—skewness can mess it up. Neural networks may train slower with skewed inputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Metrics</strong></p></td>
+<td><p>In classification, accuracy fails if classes are skewed (unbalanced). Use F1-score instead. In regression, skewed data affects Mean Squared Error (MSE).</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Outliers</strong></p></td>
+<td><p>Skewed data can hide unusual points or make normal ones look odd.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="fixing-skewness">
+<h3>Fixing Skewness<a class="headerlink" href="#fixing-skewness" title="Link to this heading">#</a></h3>
+<p>Here are ways to handle skewness:</p>
+<ul class="simple">
+<li><p><strong>Log Transform</strong>: Shrinks big values (great for right-skewed data like prices).</p></li>
+<li><p><strong>Yeo-Johnson Transform</strong>: Adjusts data to look more normal.</p></li>
+<li><p><strong>Batch Normalization</strong>: Fixes skewed inputs in neural networks.</p></li>
+<li><p><strong>Robust Scaling</strong>: Uses the median instead of the mean to ignore outliers.</p></li>
+</ul>
+</section>
+<section id="when-skewness-isnt-a-big-deal">
+<h3>When Skewness Isn’t a Big Deal<a class="headerlink" href="#when-skewness-isnt-a-big-deal" title="Link to this heading">#</a></h3>
+<p>Some models don’t mind skewness:</p>
+<ul class="simple">
+<li><p><strong>Tree-based models</strong> (e.g., Random Forest) work fine with lopsided data.</p></li>
+<li><p><strong>Decision Trees</strong> don’t need normal data.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="kurtosis-peaks-and-tails">
+<h2>Kurtosis: Peaks and Tails<a class="headerlink" href="#kurtosis-peaks-and-tails" title="Link to this heading">#</a></h2>
+<p><strong>Kurtosis</strong> tells us how <strong>sharp</strong> or <strong>flat</strong> the data’s peak is and how many extreme values (outliers) it has.</p>
+<section id="types-of-kurtosis">
+<h3>Types of Kurtosis<a class="headerlink" href="#types-of-kurtosis" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Leptokurtic (High Kurtosis)</strong>:</p>
+<ul>
+<li><p>Sharp peak, thick tails (lots of outliers).</p></li>
+<li><p><strong>Example</strong>: Stock prices—mostly small changes, but big jumps happen sometimes.</p></li>
+<li><p><strong>Visual</strong>: A tall, pointy hill.</p></li>
+</ul>
+</li>
+<li><p><strong>Platykurtic (Low Kurtosis)</strong>:</p>
+<ul>
+<li><p>Flat peak, thin tails (few outliers).</p></li>
+<li><p><strong>Example</strong>: Adult shoe sizes—most are average, with rare extremes.</p></li>
+<li><p><strong>Visual</strong>: A wide, gentle hill.</p></li>
+</ul>
+</li>
+<li><p><strong>Mesokurtic</strong>:</p>
+<ul>
+<li><p>Normal curve with a medium peak and tails.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="why-skewness-and-kurtosis-matter">
+<h2>Why Skewness and Kurtosis Matter<a class="headerlink" href="#why-skewness-and-kurtosis-matter" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Skewness</strong>: Shows if data leans one way, which can bias predictions.</p></li>
+<li><p><strong>Kurtosis</strong>: Highlights extreme values, important for tasks like risk analysis.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="checking-skewness-and-kurtosis-in-python">
+<h2>Checking Skewness and Kurtosis in Python<a class="headerlink" href="#checking-skewness-and-kurtosis-in-python" title="Link to this heading">#</a></h2>
+<p>Here’s a simple example to calculate and visualize them:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Create fake normal data
+np.random.seed(42)
+data = np.random.normal(0, 100, 1000)
+df = pd.DataFrame({&#39;x&#39;: data})
+
+# Calculate skewness and kurtosis
+print(f&quot;Skewness: {df[&#39;x&#39;].skew():.2f}&quot;)
+print(f&quot;Kurtosis: {df[&#39;x&#39;].kurt():.2f}&quot;)
+
+# Plot it
+sns.histplot(df[&#39;x&#39;], kde=True, bins=30)
+plt.title(&quot;Data Distribution&quot;)
+plt.show()
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Output</strong>: For normal data, skewness is near 0, and kurtosis is near 0.</p></li>
+<li><p><strong>Graph</strong>: Shows a bell curve if symmetric.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="fixing-skewed-data-in-python">
+<h2>Fixing Skewed Data in Python<a class="headerlink" href="#fixing-skewed-data-in-python" title="Link to this heading">#</a></h2>
+<p>To make skewed data more normal:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.preprocessing import PowerTransformer
+
+# Use Yeo-Johnson to fix skewness
+pt = PowerTransformer(method=&#39;yeo-johnson&#39;)
+df[&#39;x_fixed&#39;] = pt.fit_transform(df[[&#39;x&#39;]])
+
+# Check new skewness
+print(f&quot;New Skewness: {df[&#39;x_fixed&#39;].skew():.2f}&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="real-world-uses-in-ml-and-dl">
+<h2>Real-World Uses in ML and DL<a class="headerlink" href="#real-world-uses-in-ml-and-dl" title="Link to this heading">#</a></h2>
+<section id="batch-normalization-neural-networks">
+<h3>1. Batch Normalization (Neural Networks)<a class="headerlink" href="#batch-normalization-neural-networks" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>What it does</strong>: Keeps layer inputs balanced, even if data is skewed.</p></li>
+<li><p><strong>How it works</strong>: Adjusts data using the mean and variance of each batch.</p></li>
+<li><p><strong>Code</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras.layers</span><span class="w"> </span><span class="kn">import</span> <span class="n">BatchNormalization</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="nlp-example">
+<h3>2. NLP Example<a class="headerlink" href="#nlp-example" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Word frequencies are often right-skewed. Use <strong>TF-IDF</strong> to balance them for text models.</p></li>
+</ul>
+</section>
+<section id="finance-example">
+<h3>3. Finance Example<a class="headerlink" href="#finance-example" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Stock returns are skewed and have high kurtosis. Log-transform them for better predictions.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-points">
+<h2>Key Points<a class="headerlink" href="#key-points" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Skewness</strong> shows if data is uneven, which can hurt model accuracy.</p></li>
+<li><p><strong>Kurtosis</strong> tells you about peaks and outliers, useful for spotting extremes.</p></li>
+<li><p>Use <strong>transforms</strong> (log, Yeo-Johnson) or <strong>normalization</strong> to fix skewness.</p></li>
+<li><p><strong>Visualize</strong> with histograms or box plots to see the shape clearly.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="frequency-and-cumulative-distributions">
+<h1>7. Frequency and Cumulative Distributions<a class="headerlink" href="#frequency-and-cumulative-distributions" title="Link to this heading">#</a></h1>
+<p>Understanding how data is distributed is essential for building effective Machine Learning (ML) models. <strong>Frequency distributions</strong> and <strong>cumulative frequency distributions</strong> are simple yet powerful tools to summarize data, spot patterns, and prepare it for training.</p>
+<hr class="docutils" />
+<section id="frequency-distribution">
+<h2>1. Frequency Distribution<a class="headerlink" href="#frequency-distribution" title="Link to this heading">#</a></h2>
+<section id="what-is-it">
+<h3>What is it?<a class="headerlink" href="#what-is-it" title="Link to this heading">#</a></h3>
+<p>A <strong>frequency distribution</strong> counts how many times each value appears in a dataset. It organizes data into a table or chart to show patterns easily.</p>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<p>Suppose you ask 10 people, <em>“How many pets do you own?”</em> Their answers are: <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">0,</span> <span class="pre">3,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">2,</span> <span class="pre">1]</span></code>.</p>
+<p>Here’s the frequency distribution:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Number of Pets</p></th>
+<th class="head"><p>Frequency (Count)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This shows that most people (4 out of 10) own 1 pet.</p>
+</section>
+<section id="why-it-matters">
+<h3>Why It Matters<a class="headerlink" href="#why-it-matters" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Identifies patterns</strong>: Highlights common or rare values.</p></li>
+<li><p><strong>Real-world use</strong>: Used in education (e.g., grade tracking), business (e.g., sales analysis), and research.</p></li>
+<li><p><strong>In ML</strong>: Helps understand data before feeding it into a model.</p></li>
+</ul>
+</section>
+<section id="python-code">
+<h3>Python Code<a class="headerlink" href="#python-code" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+
+data = [0, 1, 1, 2, 0, 3, 1, 0, 2, 1]
+freq_dist = pd.Series(data).value_counts().sort_index()
+print(freq_dist)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="cumulative-frequency-distribution">
+<h2>2. Cumulative Frequency Distribution<a class="headerlink" href="#cumulative-frequency-distribution" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h3>What is it?<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>A <strong>cumulative frequency distribution</strong> adds up the frequencies step-by-step, showing the total count up to each value. It answers questions like, <em>“How many people own up to a certain number of pets?”</em></p>
+</section>
+<section id="id10">
+<h3>Example<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Using the same pet data:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Number of Pets</p></th>
+<th class="head"><p>Frequency</p></th>
+<th class="head"><p>Cumulative Frequency</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>3</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>4</p></td>
+<td><p>3 + 4 = 7</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>7 + 2 = 9</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>1</p></td>
+<td><p>9 + 1 = 10</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>From this, 9 people own 2 pets or fewer.</p>
+</section>
+<section id="id11">
+<h3>Why It Matters<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Percentiles</strong>: Helps find thresholds (e.g., top 25% of values).</p></li>
+<li><p><strong>Data prep</strong>: Useful for normalizing features in ML.</p></li>
+<li><p><strong>Quick insights</strong>: Answers cumulative questions efficiently.</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>Python Code<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cumulative_dist = freq_dist.cumsum()
+print(cumulative_dist)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-differences">
+<h2>Key Differences<a class="headerlink" href="#key-differences" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Aspect</strong></p></th>
+<th class="head"><p><strong>Frequency Distribution</strong></p></th>
+<th class="head"><p><strong>Cumulative Frequency Distribution</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Definition</strong></p></td>
+<td><p>Counts each value’s occurrences.</p></td>
+<td><p>Running total of frequencies.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Purpose</strong></p></td>
+<td><p>Shows individual value counts.</p></td>
+<td><p>Shows totals up to each value.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Example Question</strong></p></td>
+<td><p>“How many own exactly 2 pets?” (2)</p></td>
+<td><p>“How many own 2 pets or fewer?” (9)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="visualizing-distributions">
+<h2>Visualizing Distributions<a class="headerlink" href="#visualizing-distributions" title="Link to this heading">#</a></h2>
+<section id="histograms">
+<h3>1. Histograms<a class="headerlink" href="#histograms" title="Link to this heading">#</a></h3>
+<p>A <strong>histogram</strong> is a bar chart showing the frequency of values. It helps visualize the data’s shape and detect outliers.</p>
+</section>
+<section id="box-plots">
+<h3>2. Box Plots<a class="headerlink" href="#box-plots" title="Link to this heading">#</a></h3>
+<p>A <strong>box plot</strong> shows the median, quartiles, and outliers, giving a snapshot of data spread.</p>
+</section>
+<section id="ml-use">
+<h3>ML Use<a class="headerlink" href="#ml-use" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Exploratory Data Analysis (EDA)</strong>: Understand data before modeling.</p></li>
+<li><p><strong>Feature Engineering</strong>: Identify rare values for better features.</p></li>
+<li><p><strong>Outlier Detection</strong>: Decide which values to adjust or remove.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="practical-applications-in-machine-learning">
+<h2>Practical Applications in Machine Learning<a class="headerlink" href="#practical-applications-in-machine-learning" title="Link to this heading">#</a></h2>
+<section id="checking-class-imbalance">
+<h3>1. Checking Class Imbalance<a class="headerlink" href="#checking-class-imbalance" title="Link to this heading">#</a></h3>
+<p>In classification tasks, uneven class sizes can reduce model performance. Frequency distributions help spot this issue.</p>
+<p><strong>Example (Iris Dataset)</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+
+iris = load_iris()
+target_counts = pd.Series(iris.target).value_counts()
+target_counts.plot(kind=&#39;bar&#39;)
+plt.title(&quot;Class Distribution in Iris Dataset&quot;)
+plt.xlabel(&quot;Class&quot;)
+plt.ylabel(&quot;Frequency&quot;)
+plt.show()
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="grouping-data-with-quartiles">
+<h3>2. Grouping Data with Quartiles<a class="headerlink" href="#grouping-data-with-quartiles" title="Link to this heading">#</a></h3>
+<p>Cumulative distributions help divide data into groups (e.g., low, medium, high) based on percentiles.</p>
+<p><strong>Example</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+
+data = [0, 1, 1, 2, 0, 3, 1, 0, 2, 1]
+quartiles = np.percentile(data, [25, 50, 75])
+print(f&quot;Quartiles: {quartiles}&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="advanced-ml-applications">
+<h2>Advanced ML Applications<a class="headerlink" href="#advanced-ml-applications" title="Link to this heading">#</a></h2>
+<section id="balancing-data">
+<h3>1. Balancing Data<a class="headerlink" href="#balancing-data" title="Link to this heading">#</a></h3>
+<p>If some classes are rare, tools like <strong>SMOTE</strong> can create synthetic samples to balance the dataset.</p>
+<p><strong>Code</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from imblearn.over_sampling import SMOTE
+
+smote = SMOTE()
+X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="setting-classification-thresholds">
+<h3>2. Setting Classification Thresholds<a class="headerlink" href="#setting-classification-thresholds" title="Link to this heading">#</a></h3>
+<p>Cumulative distributions help choose optimal cutoff points for classifying data.</p>
+<p><strong>Code</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.metrics import precision_recall_curve
+
+precision, recall, thresholds = precision_recall_curve(y_true, y_scores)
+optimal_idx = np.argmax(precision + recall)
+optimal_threshold = thresholds[optimal_idx]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id13">
+<h2>Key Takeaways<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Frequency distributions</strong> count how often values appear, revealing patterns.</p></li>
+<li><p><strong>Cumulative frequency distributions</strong> track running totals, aiding in percentile analysis.</p></li>
+<li><p><strong>Visualization</strong> (histograms, box plots) makes data easier to interpret.</p></li>
+<li><p><strong>ML benefits</strong>: Improves data preprocessing, feature engineering, and model performance.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="normal-distribution-scaling-and-their-role">
+<h1>8. Normal Distribution, Scaling, and Their Role<a class="headerlink" href="#normal-distribution-scaling-and-their-role" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="introduction-to-normal-distribution">
+<h2>Introduction to Normal Distribution<a class="headerlink" href="#introduction-to-normal-distribution" title="Link to this heading">#</a></h2>
+<p>The <strong>normal distribution</strong>, also called the Gaussian distribution, is a bell-shaped curve that shows how data points are spread around the mean (average). It’s a key concept in ML because many algorithms rely on its properties.</p>
+<section id="key-properties">
+<h3>Key Properties<a class="headerlink" href="#key-properties" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Symmetry</strong>: The curve is the same on both sides of the mean.</p></li>
+<li><p><strong>Mean, Median, Mode</strong>: These are all equal and sit at the center.</p></li>
+<li><p><strong>Most Data Near the Mean</strong>: Values cluster around the average, with fewer points further away.</p></li>
+</ul>
+</section>
+<section id="the-68-95-99-7-rule-empirical-rule">
+<h3>The 68-95-99.7 Rule (Empirical Rule)<a class="headerlink" href="#the-68-95-99-7-rule-empirical-rule" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>About <strong>68%</strong> of data is within <strong>1 standard deviation (σ)</strong> of the mean.</p></li>
+<li><p>About <strong>95%</strong> is within <strong>2σ</strong>.</p></li>
+<li><p>About <strong>99.7%</strong> is within <strong>3σ</strong>.</p></li>
+</ul>
+</section>
+<section id="why-it-matters-in-ml">
+<h3>Why It Matters in ML<a class="headerlink" href="#why-it-matters-in-ml" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Linear Regression</strong>: Assumes errors (differences between predicted and actual values) are normally distributed.</p></li>
+<li><p><strong>Deep Learning</strong>: Neural network weights are often set initially using values from a normal distribution.</p></li>
+<li><p><strong>Statistics</strong>: Helps calculate probabilities and make predictions.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="standard-normal-distribution">
+<h2>Standard Normal Distribution<a class="headerlink" href="#standard-normal-distribution" title="Link to this heading">#</a></h2>
+<p>The <strong>standard normal distribution</strong> is a simplified version of the normal distribution with:</p>
+<ul class="simple">
+<li><p><strong>Mean (μ) = 0</strong></p></li>
+<li><p><strong>Standard Deviation (σ) = 1</strong></p></li>
+</ul>
+<p>It’s used to standardize data, making it easier to compare values from different datasets.</p>
+<section id="z-scores">
+<h3>Z-Scores<a class="headerlink" href="#z-scores" title="Link to this heading">#</a></h3>
+<p>A <strong>z-score</strong> shows how far a data point is from the mean in terms of standard deviations.</p>
+<p><strong>Formula</strong>:
+[
+z = \frac{X - \mu}{\sigma}
+]</p>
+<ul class="simple">
+<li><p>(X): The data point</p></li>
+<li><p>(\mu): Mean</p></li>
+<li><p>(\sigma): Standard deviation</p></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<ul class="simple">
+<li><p>If a test score is 85, with (\mu = 75) and (\sigma = 5):
+[
+z = \frac{85 - 75}{5} = 2
+]
+This score is 2 standard deviations above the mean.</p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>Why It’s Useful<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Compares data across different scales (e.g., test scores vs. heights).</p></li>
+<li><p>Used in ML for <strong>hypothesis testing</strong> and <strong>confidence intervals</strong>.</p></li>
+<li><p>Helps standardize features for algorithms.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="scaling-in-machine-learning">
+<h2>Scaling in Machine Learning<a class="headerlink" href="#scaling-in-machine-learning" title="Link to this heading">#</a></h2>
+<p><strong>Scaling</strong> adjusts the range of data features so they contribute equally to a model. Without scaling, features with larger ranges (e.g., income in dollars) might overpower smaller ones (e.g., age in years).</p>
+<section id="why-scale-data">
+<h3>Why Scale Data?<a class="headerlink" href="#why-scale-data" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Fairness</strong>: Ensures all features have equal influence.</p></li>
+<li><p><strong>Better Performance</strong>: Helps algorithms like K-Nearest Neighbors (KNN) and neural networks work faster and more accurately.</p></li>
+<li><p><strong>Distance-Based Models</strong>: Scaling is critical for methods that measure distances between points.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="core-scaling-methods">
+<h2>Core Scaling Methods<a class="headerlink" href="#core-scaling-methods" title="Link to this heading">#</a></h2>
+<p>Here are the main scaling techniques, their uses, and ML/DL examples:</p>
+<section id="standardization-z-score-scaling">
+<h3>1. Standardization (Z-Score Scaling)<a class="headerlink" href="#standardization-z-score-scaling" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What It Does</strong>: Sets the mean to 0 and standard deviation to 1.</p></li>
+<li><p><strong>Formula</strong>: (z = \frac{X - \mu}{\sigma})</p></li>
+<li><p><strong>When to Use</strong>: For normally distributed data or features with different units.</p></li>
+<li><p><strong>ML Examples</strong>:</p>
+<ul>
+<li><p>Principal Component Analysis (PCA)</p></li>
+<li><p>Support Vector Machines (SVM)</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Python Code</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X_train)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="min-max-scaling">
+<h3>2. Min-Max Scaling<a class="headerlink" href="#min-max-scaling" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What It Does</strong>: Rescales data to a range, usually [0, 1].</p></li>
+<li><p><strong>Formula</strong>:
+[
+X’ = \frac{X - X_{\text{min}}}{X_{\text{max}} - X_{\text{min}}}
+]</p></li>
+<li><p><strong>When to Use</strong>: For algorithms needing bounded inputs (e.g., neural networks).</p></li>
+<li><p><strong>ML Examples</strong>:</p>
+<ul>
+<li><p>Image processing (pixel values from 0-255 to 0-1)</p></li>
+<li><p>KNN</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Python Code</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler(feature_range=(0, 1))
+X_scaled = scaler.fit_transform(X_train)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="robust-scaling">
+<h3>3. Robust Scaling<a class="headerlink" href="#robust-scaling" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What It Does</strong>: Uses the median and interquartile range (IQR) to scale, reducing the impact of outliers.</p></li>
+<li><p><strong>Formula</strong>:
+[
+X’ = \frac{X - \text{median}}{\text{IQR}}
+]</p></li>
+<li><p><strong>When to Use</strong>: For data with outliers.</p></li>
+<li><p><strong>ML Examples</strong>:</p>
+<ul>
+<li><p>Regression with noisy data</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Python Code</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.preprocessing import RobustScaler
+scaler = RobustScaler()
+X_scaled = scaler.fit_transform(X_train)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="normalization-l2-norm-scaling">
+<h3>4. Normalization (L2 Norm Scaling)<a class="headerlink" href="#normalization-l2-norm-scaling" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What It Does</strong>: Adjusts data so each point has a unit length.</p></li>
+<li><p><strong>Why</strong>: Ensures all data points contribute equally, even if their raw sizes differ.</p></li>
+<li><p><strong>Formula</strong>:
+[
+X’ = \frac{X}{|X|}
+]
+(where (|X|) is the Euclidean norm)</p></li>
+<li><p><strong>When to Use</strong>: For text data or clustering.</p></li>
+<li><p><strong>ML Examples</strong>:</p>
+<ul>
+<li><p>Text processing (TF-IDF vectors)</p></li>
+<li><p>k-means clustering</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Python Code</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from sklearn.preprocessing import Normalizer
+scaler = Normalizer(norm=&#39;l2&#39;)
+X_scaled = scaler.fit_transform(X_train)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id15">
+<h3>Comparison Table<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Formula</p></th>
+<th class="head"><p>Best For</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Standardization</p></td>
+<td><p>(z = \frac{X - \mu}{\sigma})</p></td>
+<td><p>Normal data, PCA, SVM</p></td>
+</tr>
+<tr class="row-odd"><td><p>Min-Max Scaling</p></td>
+<td><p>(X’ = \frac{X - X_{\text{min}}}{X_{\text{max}} - X_{\text{min}}})</p></td>
+<td><p>Neural networks, KNN</p></td>
+</tr>
+<tr class="row-even"><td><p>Robust Scaling</p></td>
+<td><p>(X’ = \frac{X - \text{median}}{\text{IQR}})</p></td>
+<td><p>Outliers, regression</p></td>
+</tr>
+<tr class="row-odd"><td><p>Normalization</p></td>
+<td><p>(X’ = \frac{X}{|X|})</p></td>
+<td><p>Text, clustering</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="when-scaling-isnt-needed">
+<h2>When Scaling Isn’t Needed<a class="headerlink" href="#when-scaling-isnt-needed" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Decision Trees</strong> and <strong>Random Forests</strong>: These don’t rely on distances or scales.</p></li>
+<li><p>When all features are already in the same units (e.g., height and width in meters).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="practical-example">
+<h2>Practical Example<a class="headerlink" href="#practical-example" title="Link to this heading">#</a></h2>
+<p>Here’s how to generate and scale data in Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+
+# Generate normal distribution data
+data = np.random.normal(0, 1, 1000)
+
+# Plot it
+plt.hist(data, bins=30, density=True, alpha=0.6, color=&#39;blue&#39;)
+plt.title(&quot;Normal Distribution&quot;)
+plt.xlabel(&quot;Value&quot;)
+plt.ylabel(&quot;Density&quot;)
+plt.show()
+
+# Standardize
+scaler = StandardScaler()
+data_standardized = scaler.fit_transform(data.reshape(-1, 1))
+
+# Min-Max Scale
+minmax_scaler = MinMaxScaler(feature_range=(0, 1))
+data_minmax = minmax_scaler.fit_transform(data.reshape(-1, 1))
+</pre></div>
+</div>
+</div>
+</div>
+<p>This code:</p>
+<ul class="simple">
+<li><p>Creates a normal distribution.</p></li>
+<li><p>Visualizes it with a histogram.</p></li>
+<li><p>Applies two scaling methods.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="advanced-topics-in-deep-learning">
+<h2>Advanced Topics in Deep Learning<a class="headerlink" href="#advanced-topics-in-deep-learning" title="Link to this heading">#</a></h2>
+<section id="batch-normalization">
+<h3>1. Batch Normalization<a class="headerlink" href="#batch-normalization" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What It Does</strong>: Normalizes layer inputs during training to stabilize learning.</p></li>
+<li><p><strong>Formula</strong>:
+[
+\hat{x} = \frac{x - \mu_B}{\sqrt{\sigma_B^2 + \epsilon}} \cdot \gamma + \beta
+]
+(where (\mu_B) and (\sigma_B) are batch statistics, and (\gamma), (\beta) are learned)</p></li>
+<li><p><strong>Benefit</strong>: Speeds up training and reduces sensitivity to initial weights.</p></li>
+<li><p><strong>Use</strong>: In convolutional neural networks (CNNs).</p></li>
+</ul>
+<p><strong>Python Code</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from tensorflow.keras.layers import BatchNormalization
+model.add(BatchNormalization())
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="layer-normalization">
+<h3>2. Layer Normalization<a class="headerlink" href="#layer-normalization" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What It Does</strong>: Normalizes across features for each data point.</p></li>
+<li><p><strong>Use</strong>: Common in Transformers and recurrent neural networks (RNNs).</p></li>
+<li><p><strong>Benefit</strong>: Handles varying input sizes effectively.</p></li>
+</ul>
+<p><strong>Python Code</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from tensorflow.keras.layers import LayerNormalization
+model.add(LayerNormalization())
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id16">
+<h2>Key Takeaways<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Normal Distribution</strong>: A bell-shaped curve that’s central to ML assumptions.</p></li>
+<li><p><strong>Z-Scores</strong>: Standardize data for fair comparison.</p></li>
+<li><p><strong>Scaling</strong>: Adjusts data ranges to improve model performance.</p></li>
+<li><p><strong>Methods</strong>: Standardization, Min-Max, Robust, and Normalization suit different needs.</p></li>
+<li><p><strong>Deep Learning</strong>: Batch and Layer Normalization stabilize training.</p></li>
+<li><p><strong>When to Skip</strong>: Scaling isn’t needed for tree-based models.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\0_maths"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2_probability.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Probability in ML</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3_inferential.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Inferential Statistics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Descriptive Statistics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-central-tendency">1. Measures of Central Tendency</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-the-average">1. Mean (The “Average”)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#median-the-middle">2 Median (The “Middle”)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-the-most-common">3 Mode (The “Most Common”)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-each-measure">When to Use Each Measure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-python">Example in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-methods-summary"><strong>Tools and Methods Summary</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-variability-spread">2. Measures of Variability (Spread)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-variability">What is Variability?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#range">1. Range</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variance">2. Variance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-deviation-sd">3. Standard Deviation (SD)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-absolute-deviation-mad">4. Mean Absolute Deviation (MAD)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interquartile-range-iqr">5. Interquartile Range (IQR)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-table">Comparison Table</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">When to Use Each Measure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-examples-for-ml-dl">Python Examples for ML/DL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-calculating-variability-measures">Example 1: Calculating Variability Measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-robust-scaling-with-iqr">Example 2: Robust Scaling with IQR</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#outliers-and-leverage-points">3. Outliers and Leverage Points</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-outlier">What is an Outlier?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#characteristics">Characteristics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-outliers-matter-in-ml">Why Outliers Matter in ML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-find-outliers">How to Find Outliers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-finding-an-outlier-with-a-boxplot">Example: Finding an Outlier with a Boxplot</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-outliers-affect-machine-learning">Why Outliers Affect Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-outliers-change-statistics">How Outliers Change Statistics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-outliers">Handling Outliers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-outliers">1. Remove Outliers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transform-the-data">2. Transform the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-robust-models">3. Use Robust Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-using-isolation-forest">Example: Using Isolation Forest</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-leverage-points">What are Leverage Points?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Characteristics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-on-ml-models">Impact on ML Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-leverage-in-house-prices">Example: Leverage in House Prices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outliers-vs-leverage-points">Outliers vs. Leverage Points</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-leverage-outliers">High-Leverage Outliers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#five-number-summary"><strong>4. 📊 Five Number Summary</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-five-number-summary"><strong>Introduction to Five Number Summary</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-components-and-their-ml-dl-relevance"><strong>Core Components and Their ML/DL Relevance</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum-and-maximum"><strong>1. Minimum and Maximum</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quartiles-q1-q2-q3"><strong>2. Quartiles (Q1, Q2, Q3)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>3. Interquartile Range (IQR)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-calculate-it"><strong>How to Calculate It</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example"><strong>Python Example</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-its-useful"><strong>Why It’s Useful</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-with-a-box-plot"><strong>Visualizing with a Box Plot</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-visualization"><strong>Python Visualization</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identifying-outliers"><strong>Identifying Outliers</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Python Example</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-ml-dl-applications"><strong>Advanced ML/DL Applications</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outlier-detection"><strong>1. Outlier Detection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-feature-scaling"><strong>2. Robust Feature Scaling</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-binning"><strong>3. Data Binning</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparative-analysis"><strong>Comparative Analysis</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>Summary</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#percentiles-and-quartiles">5. Percentiles and Quartiles</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#percentiles-in-machine-learning">1. Percentiles in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-percentage">What is a Percentage?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-percentile">What is a Percentile?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-percentiles-help-in-ml">How Percentiles Help in ML</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quartiles-in-machine-learning">2. Quartiles in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-quartiles">What are Quartiles?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-quartiles-help-in-ml">How Quartiles Help in ML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Python Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interquartile-range-iqr-in-machine-learning">3. Interquartile Range (IQR) in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-iqr">What is IQR?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-iqr-matters-in-ml">Why IQR Matters in ML</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-uses-in-machine-learning">Practical Uses in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-missing-data">1. Handling Missing Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-engineering-with-quartiles">2. Feature Engineering with Quartiles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-outliers-with-iqr">3. Removing Outliers with IQR</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-table">Summary Table</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaways">Key Takeaways</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-shape">6. Measures of Shape</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-measures-of-shape">What Are Measures of Shape?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-distribution-no-skew">Symmetric Distribution (No Skew)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skewed-distribution-lopsided-data">Skewed Distribution (Lopsided Data)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#right-skewed-positive-skewness">1. Right-Skewed (Positive Skewness)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#left-skewed-negative-skewness">2. Left-Skewed (Negative Skewness)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spotting-skewness-with-box-plots">Spotting Skewness with Box Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-skewness-matters-in-ml-and-dl">Why Skewness Matters in ML and DL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-skewness">Fixing Skewness</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-skewness-isnt-a-big-deal">When Skewness Isn’t a Big Deal</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kurtosis-peaks-and-tails">Kurtosis: Peaks and Tails</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-kurtosis">Types of Kurtosis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-skewness-and-kurtosis-matter">Why Skewness and Kurtosis Matter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-skewness-and-kurtosis-in-python">Checking Skewness and Kurtosis in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-skewed-data-in-python">Fixing Skewed Data in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-world-uses-in-ml-and-dl">Real-World Uses in ML and DL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-normalization-neural-networks">1. Batch Normalization (Neural Networks)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nlp-example">2. NLP Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finance-example">3. Finance Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">Key Points</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-and-cumulative-distributions">7. Frequency and Cumulative Distributions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-distribution">1. Frequency Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-it">What is it?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-matters">Why It Matters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cumulative-frequency-distribution">2. Cumulative Frequency Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">What is it?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Why It Matters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Python Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-differences">Key Differences</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-distributions">Visualizing Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">1. Histograms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-plots">2. Box Plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ml-use">ML Use</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-applications-in-machine-learning">Practical Applications in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-class-imbalance">1. Checking Class Imbalance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-data-with-quartiles">2. Grouping Data with Quartiles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-ml-applications">Advanced ML Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#balancing-data">1. Balancing Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-classification-thresholds">2. Setting Classification Thresholds</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Key Takeaways</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-distribution-scaling-and-their-role">8. Normal Distribution, Scaling, and Their Role</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-normal-distribution">Introduction to Normal Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-properties">Key Properties</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-68-95-99-7-rule-empirical-rule">The 68-95-99.7 Rule (Empirical Rule)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-matters-in-ml">Why It Matters in ML</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-normal-distribution">Standard Normal Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-scores">Z-Scores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Why It’s Useful</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling-in-machine-learning">Scaling in Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-scale-data">Why Scale Data?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-scaling-methods">Core Scaling Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standardization-z-score-scaling">1. Standardization (Z-Score Scaling)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-max-scaling">2. Min-Max Scaling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-scaling">3. Robust Scaling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalization-l2-norm-scaling">4. Normalization (L2 Norm Scaling)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Comparison Table</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-scaling-isnt-needed">When Scaling Isn’t Needed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-example">Practical Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topics-in-deep-learning">Advanced Topics in Deep Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-normalization">1. Batch Normalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-normalization">2. Layer Normalization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Key Takeaways</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
