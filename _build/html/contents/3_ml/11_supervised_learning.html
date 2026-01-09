@@ -1,0 +1,1541 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Supervised Learning &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/3_ml/11_supervised_learning';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Regression Algorithms" href="12_regression.html" />
+    <link rel="prev" title="4️⃣ Model Evaluation" href="5_model_evaluation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/1_basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/9_regex.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html"><strong>What is Exploratory Data Analysis (EDA)?</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10_core_algo.html">Core ML Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_deployment.html">Deployment</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self_introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/edit/main/contents/3_ml/11_supervised_learning.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/issues/new?title=Issue%20on%20page%20%2Fcontents/3_ml/11_supervised_learning.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/3_ml/11_supervised_learning.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Supervised Learning</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Supervised Learning</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example"><strong>Example</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-supervised-learning"><strong>1️⃣ Types of Supervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-regression"><strong>A. Regression</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-classification"><strong>B. Classification</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-supervised-learning-process"><strong>2️⃣ The Supervised Learning Process</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-algorithms"><strong>3️⃣ Key Algorithms</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-regression-algorithms"><strong>A. Regression Algorithms</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-classification-algorithms"><strong>B. Classification Algorithms</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation-metrics"><strong>4️⃣ Model Evaluation Metrics</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-regression-metrics"><strong>A. Regression Metrics</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-classification-metrics"><strong>B. Classification Metrics</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-in-supervised-learning"><strong>5️⃣ Challenges in Supervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overfitting">1. <strong>Overfitting</strong>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#underfitting">2. <strong>Underfitting</strong>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-quality-issues">3. <strong>Data Quality Issues</strong>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class-imbalance">4. <strong>Class Imbalance</strong>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curse-of-dimensionality">5. <strong>Curse of Dimensionality</strong>:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications"><strong>6️⃣ Applications</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pros-and-cons"><strong>7️⃣ Pros and Cons</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametric-vs-non-parametric-models"><strong>8️⃣ Parametric vs. Non-Parametric Models</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametric-models-e-g-linear-regression"><strong>Parametric Models</strong> (e.g., Linear Regression):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-parametric-models-e-g-decision-trees-k-nn"><strong>Non-Parametric Models</strong> (e.g., Decision Trees, k-NN):</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary"><strong>9️⃣ Summary</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>A. Regression Algorithms</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression"><strong>1. Linear Regression</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-regression"><strong>2. Polynomial Regression</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-regression-l2-regularization"><strong>3. Ridge Regression (L2 Regularization)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso-regression-l1-regularization"><strong>4. Lasso Regression (L1 Regularization)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-net-regression"><strong>5. Elastic Net Regression</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-table"><strong>Comparison Table</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-which-algorithm"><strong>When to Use Which Algorithm?</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaway"><strong>Key Takeaway</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-algorithms">Classification Algorithms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-components">1. Key Components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training-process">2. Model Training Process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-metrics">3. Evaluation Metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-solutions">4. Challenges &amp; Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5. Applications</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Classification Algorithms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression">1. Logistic Regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-trees">2. Decision Trees</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">3. Random Forest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-vector-machines-svm">4. Support Vector Machines (SVM)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbors-k-nn">5. k-Nearest Neighbors (k-NN)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">6. Naive Bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neural-networks">7. Neural Networks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-boosting-machines-gbm">8. Gradient Boosting Machines (GBM)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm-selection-considerations">Algorithm Selection Considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Summary</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="supervised-learning">
+<h1><strong>Supervised Learning</strong><a class="headerlink" href="#supervised-learning" title="Link to this heading">#</a></h1>
+<p>Supervised Learning is a machine learning paradigm where models are trained on <strong>labeled datasets</strong>. Each training example consists of an <strong>input</strong> (features) and a corresponding <strong>output</strong> (label or target). The goal is to learn a mapping function ( f: X \rightarrow Y ) to predict outputs for new, unseen inputs accurately.</p>
+<section id="example">
+<h2><strong>Example</strong><a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Input (X)</strong>: Features like size, location, and age of a house.</p></li>
+<li><p><strong>Output (Y)</strong>: Price of the house (regression) or whether it’s sold (classification).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="types-of-supervised-learning">
+<h2><strong>1️⃣ Types of Supervised Learning</strong><a class="headerlink" href="#types-of-supervised-learning" title="Link to this heading">#</a></h2>
+<section id="a-regression">
+<h3><strong>A. Regression</strong><a class="headerlink" href="#a-regression" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Predict <strong>continuous numerical values</strong>.</p></li>
+<li><p><strong>Examples</strong>:</p>
+<ul>
+<li><p>Predicting house prices.</p></li>
+<li><p>Forecasting stock market trends.</p></li>
+</ul>
+</li>
+<li><p><strong>Algorithms</strong>:</p>
+<ul>
+<li><p>Linear Regression</p></li>
+<li><p>Decision Trees (Regression)</p></li>
+<li><p>Support Vector Regression (SVR)</p></li>
+<li><p>Neural Networks</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="b-classification">
+<h3><strong>B. Classification</strong><a class="headerlink" href="#b-classification" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Assign inputs to <strong>discrete categories (classes)</strong>.</p></li>
+<li><p><strong>Examples</strong>:</p>
+<ul>
+<li><p>Spam detection (spam vs. not spam).</p></li>
+<li><p>Diagnosing diseases (positive vs. negative).</p></li>
+</ul>
+</li>
+<li><p><strong>Algorithms</strong>:</p>
+<ul>
+<li><p>Logistic Regression</p></li>
+<li><p>Support Vector Machines (SVM)</p></li>
+<li><p>k-Nearest Neighbors (k-NN)</p></li>
+<li><p>Decision Trees (Classification)</p></li>
+<li><p>Naive Bayes</p></li>
+<li><p>Neural Networks</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-supervised-learning-process">
+<h2><strong>2️⃣ The Supervised Learning Process</strong><a class="headerlink" href="#the-supervised-learning-process" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Data Collection</strong>:</p>
+<ul class="simple">
+<li><p>Gather labeled data (e.g., historical sales data with prices).</p></li>
+</ul>
+</li>
+<li><p><strong>Data Preprocessing</strong>:</p>
+<ul class="simple">
+<li><p>Handle missing values, normalize/standardize features, encode categorical variables.</p></li>
+</ul>
+</li>
+<li><p><strong>Train-Test Split</strong>:</p>
+<ul class="simple">
+<li><p>Split data into <strong>training set</strong> (70-80%) and <strong>test set</strong> (20-30%).</p></li>
+</ul>
+</li>
+<li><p><strong>Model Selection</strong>:</p>
+<ul class="simple">
+<li><p>Choose an algorithm based on the problem type (regression/classification).</p></li>
+</ul>
+</li>
+<li><p><strong>Training</strong>:</p>
+<ul class="simple">
+<li><p>Feed the training data to the model to learn the input-output relationship.</p></li>
+</ul>
+</li>
+<li><p><strong>Evaluation</strong>:</p>
+<ul class="simple">
+<li><p>Test the model on unseen data (test set) using metrics like MSE or accuracy.</p></li>
+</ul>
+</li>
+<li><p><strong>Hyperparameter Tuning</strong>:</p>
+<ul class="simple">
+<li><p>Optimize model parameters (e.g., learning rate, tree depth) using techniques like grid search.</p></li>
+</ul>
+</li>
+<li><p><strong>Deployment</strong>:</p>
+<ul class="simple">
+<li><p>Deploy the trained model to make predictions on new data.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="key-algorithms">
+<h2><strong>3️⃣ Key Algorithms</strong><a class="headerlink" href="#key-algorithms" title="Link to this heading">#</a></h2>
+<section id="a-regression-algorithms">
+<h3><strong>A. Regression Algorithms</strong><a class="headerlink" href="#a-regression-algorithms" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Linear Regression</strong>:</p>
+<ul>
+<li><p>Models a linear relationship between inputs and output.</p></li>
+<li><p>Equation: ( y = \beta_0 + \beta_1x_1 + \beta_2x_2 + … + \beta_nx_n ).</p></li>
+</ul>
+</li>
+<li><p><strong>Decision Trees</strong>:</p>
+<ul>
+<li><p>Splits data into branches based on feature values to predict outcomes.</p></li>
+</ul>
+</li>
+<li><p><strong>Support Vector Regression (SVR)</strong>:</p>
+<ul>
+<li><p>Finds the best hyperplane to predict continuous values within a margin of tolerance.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="b-classification-algorithms">
+<h3><strong>B. Classification Algorithms</strong><a class="headerlink" href="#b-classification-algorithms" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Logistic Regression</strong>:</p>
+<ul>
+<li><p>Predicts probabilities using the logistic function (sigmoid). Outputs class labels via thresholds (e.g., 0.5).</p></li>
+</ul>
+</li>
+<li><p><strong>Support Vector Machines (SVM)</strong>:</p>
+<ul>
+<li><p>Finds the optimal hyperplane to separate classes with the maximum margin.</p></li>
+</ul>
+</li>
+<li><p><strong>k-Nearest Neighbors (k-NN)</strong>:</p>
+<ul>
+<li><p>Assigns a class based on the majority vote of the ( k ) closest training examples.</p></li>
+</ul>
+</li>
+<li><p><strong>Naive Bayes</strong>:</p>
+<ul>
+<li><p>Uses Bayes’ theorem with the “naive” assumption of feature independence.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="model-evaluation-metrics">
+<h2><strong>4️⃣ Model Evaluation Metrics</strong><a class="headerlink" href="#model-evaluation-metrics" title="Link to this heading">#</a></h2>
+<section id="a-regression-metrics">
+<h3><strong>A. Regression Metrics</strong><a class="headerlink" href="#a-regression-metrics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Mean Squared Error (MSE)</strong>: Average of squared errors.</p></li>
+<li><p><strong>Root Mean Squared Error (RMSE)</strong>: (\sqrt{\text{MSE}}).</p></li>
+<li><p><strong>Mean Absolute Error (MAE)</strong>: Average of absolute errors.</p></li>
+<li><p><strong>R² (R-Squared)</strong>: Proportion of variance explained by the model (0 to 1).</p></li>
+</ul>
+</section>
+<section id="b-classification-metrics">
+<h3><strong>B. Classification Metrics</strong><a class="headerlink" href="#b-classification-metrics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Accuracy</strong>: (Correct Predictions) / (Total Predictions).</p></li>
+<li><p><strong>Precision</strong>: (True Positives) / (True Positives + False Positives).</p></li>
+<li><p><strong>Recall</strong>: (True Positives) / (True Positives + False Negatives).</p></li>
+<li><p><strong>F1-Score</strong>: Harmonic mean of precision and recall.</p></li>
+<li><p><strong>ROC-AUC</strong>: Area under the ROC curve (measures class separation).</p></li>
+<li><p><strong>Confusion Matrix</strong>: Table showing true vs. predicted classes.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="challenges-in-supervised-learning">
+<h2><strong>5️⃣ Challenges in Supervised Learning</strong><a class="headerlink" href="#challenges-in-supervised-learning" title="Link to this heading">#</a></h2>
+<section id="overfitting">
+<h3>1. <strong>Overfitting</strong>:<a class="headerlink" href="#overfitting" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Model memorizes training data (including noise) and fails on new data.</p></li>
+<li><p><strong>Solution</strong>: Regularization (L1/L2), cross-validation, pruning (for trees).</p></li>
+</ul>
+</section>
+<section id="underfitting">
+<h3>2. <strong>Underfitting</strong>:<a class="headerlink" href="#underfitting" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Model is too simple to capture patterns.</p></li>
+<li><p><strong>Solution</strong>: Use a more complex model or add relevant features.</p></li>
+</ul>
+</section>
+<section id="data-quality-issues">
+<h3>3. <strong>Data Quality Issues</strong>:<a class="headerlink" href="#data-quality-issues" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Missing values, outliers, or irrelevant features.</p></li>
+<li><p><strong>Solution</strong>: Imputation, outlier removal, feature selection.</p></li>
+</ul>
+</section>
+<section id="class-imbalance">
+<h3>4. <strong>Class Imbalance</strong>:<a class="headerlink" href="#class-imbalance" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>One class dominates the dataset (e.g., fraud detection).</p></li>
+<li><p><strong>Solution</strong>: Resampling (oversampling minority class, undersampling majority class), using F1-score instead of accuracy.</p></li>
+</ul>
+</section>
+<section id="curse-of-dimensionality">
+<h3>5. <strong>Curse of Dimensionality</strong>:<a class="headerlink" href="#curse-of-dimensionality" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>High-dimensional data reduces model performance.</p></li>
+<li><p><strong>Solution</strong>: Feature selection (e.g., PCA, Lasso).</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="applications">
+<h2><strong>6️⃣ Applications</strong><a class="headerlink" href="#applications" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Healthcare</strong>: Predicting disease risk from patient data.</p></li>
+<li><p><strong>Finance</strong>: Credit scoring, stock price prediction.</p></li>
+<li><p><strong>Natural Language Processing (NLP)</strong>: Sentiment analysis, text classification.</p></li>
+<li><p><strong>Computer Vision</strong>: Image recognition (e.g., classifying cats vs. dogs).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="pros-and-cons">
+<h2><strong>7️⃣ Pros and Cons</strong><a class="headerlink" href="#pros-and-cons" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Pros</strong></p></th>
+<th class="head"><p><strong>Cons</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Clear objectives (labeled data).</p></td>
+<td><p>Requires large labeled datasets.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Easy to evaluate performance.</p></td>
+<td><p>Costly/time-consuming to label data.</p></td>
+</tr>
+<tr class="row-even"><td><p>Wide range of applications.</p></td>
+<td><p>Risk of biased training data.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="parametric-vs-non-parametric-models">
+<h2><strong>8️⃣ Parametric vs. Non-Parametric Models</strong><a class="headerlink" href="#parametric-vs-non-parametric-models" title="Link to this heading">#</a></h2>
+<section id="parametric-models-e-g-linear-regression">
+<h3><strong>Parametric Models</strong> (e.g., Linear Regression):<a class="headerlink" href="#parametric-models-e-g-linear-regression" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Assume a fixed functional form.</p></li>
+<li><p>Fewer parameters, faster training.</p></li>
+</ul>
+</section>
+<section id="non-parametric-models-e-g-decision-trees-k-nn">
+<h3><strong>Non-Parametric Models</strong> (e.g., Decision Trees, k-NN):<a class="headerlink" href="#non-parametric-models-e-g-decision-trees-k-nn" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Flexibility to fit complex patterns.</p></li>
+<li><p>More parameters, risk of overfitting.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="summary">
+<h2><strong>9️⃣ Summary</strong><a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>Supervised learning is the backbone of predictive modeling, enabling systems to learn from labeled data and make accurate predictions. By balancing model complexity, addressing data challenges, and selecting appropriate evaluation metrics, supervised learning powers solutions across industries—from healthcare to finance.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h1><strong>A. Regression Algorithms</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="linear-regression">
+<h2><strong>1. Linear Regression</strong><a class="headerlink" href="#linear-regression" title="Link to this heading">#</a></h2>
+<p><strong>Objective</strong>: Model the relationship between a dependent variable ( y ) and one or more independent variables ( X ) by fitting a linear equation.<br />
+<strong>Equation</strong>:<br />
+[
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n + \epsilon
+]</p>
+<ul class="simple">
+<li><p>( \beta_0 ): Intercept</p></li>
+<li><p>( \beta_1, \dots, \beta_n ): Coefficients</p></li>
+<li><p>( \epsilon ): Error term</p></li>
+</ul>
+<p><strong>How it works</strong>:</p>
+<ul class="simple">
+<li><p>Minimizes the <strong>sum of squared residuals</strong> (Ordinary Least Squares, OLS).</p></li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p>Simple, interpretable, and computationally fast.</p></li>
+<li><p>Works well for linearly separable data.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p>Assumes linearity, independence of features, and homoscedasticity (constant variance of errors).</p></li>
+<li><p>Sensitive to outliers.</p></li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul class="simple">
+<li><p>Predicting house prices based on square footage.</p></li>
+<li><p>Sales forecasting.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="polynomial-regression">
+<h2><strong>2. Polynomial Regression</strong><a class="headerlink" href="#polynomial-regression" title="Link to this heading">#</a></h2>
+<p><strong>Objective</strong>: Model non-linear relationships by adding polynomial terms (e.g., ( x^2, x^3 )).<br />
+<strong>Equation</strong>:<br />
+[
+y = \beta_0 + \beta_1 x + \beta_2 x^2 + \dots + \beta_n x^n + \epsilon
+]</p>
+<p><strong>How it works</strong>:</p>
+<ul class="simple">
+<li><p>Extends linear regression by including higher-degree terms.</p></li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p>Captures non-linear trends.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p>Prone to overfitting with high degrees.</p></li>
+<li><p>Requires careful tuning of polynomial degree.</p></li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul class="simple">
+<li><p>Modeling growth rates (e.g., population vs. time).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="ridge-regression-l2-regularization">
+<h2><strong>3. Ridge Regression (L2 Regularization)</strong><a class="headerlink" href="#ridge-regression-l2-regularization" title="Link to this heading">#</a></h2>
+<p><strong>Objective</strong>: Prevent overfitting by adding a penalty term to shrink coefficients.<br />
+<strong>Equation</strong>:<br />
+[
+\text{Loss} = \text{MSE} + \lambda \sum_{i=1}^n \beta_i^2
+]</p>
+<ul class="simple">
+<li><p>( \lambda ): Regularization strength.</p></li>
+</ul>
+<p><strong>How it works</strong>:</p>
+<ul class="simple">
+<li><p>Penalizes large coefficients, reducing model complexity.</p></li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p>Handles multicollinearity (correlated features).</p></li>
+<li><p>Reduces overfitting.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p>Coefficients approach zero but never exactly zero (no feature selection).</p></li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul class="simple">
+<li><p>Datasets with many correlated features (e.g., economic indicators).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="lasso-regression-l1-regularization">
+<h2><strong>4. Lasso Regression (L1 Regularization)</strong><a class="headerlink" href="#lasso-regression-l1-regularization" title="Link to this heading">#</a></h2>
+<p><strong>Objective</strong>: Shrink coefficients and perform feature selection.<br />
+<strong>Equation</strong>:<br />
+[
+\text{Loss} = \text{MSE} + \lambda \sum_{i=1}^n |\beta_i|
+]</p>
+<p><strong>How it works</strong>:</p>
+<ul class="simple">
+<li><p>Forces some coefficients to zero, effectively removing irrelevant features.</p></li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p>Automatic feature selection.</p></li>
+<li><p>Reduces overfitting.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p>Struggles with highly correlated features.</p></li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul class="simple">
+<li><p>Feature selection in high-dimensional data (e.g., genomics).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="elastic-net-regression">
+<h2><strong>5. Elastic Net Regression</strong><a class="headerlink" href="#elastic-net-regression" title="Link to this heading">#</a></h2>
+<p><strong>Objective</strong>: Combine L1 and L2 regularization for balanced shrinkage and feature selection.<br />
+<strong>Equation</strong>:<br />
+[
+\text{Loss} = \text{MSE} + \lambda_1 \sum_{i=1}^n |\beta_i| + \lambda_2 \sum_{i=1}^n \beta_i^2
+]</p>
+<p><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p>Balances Ridge and Lasso strengths.</p></li>
+<li><p>Handles multicollinearity better than Lasso.</p></li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p>Requires tuning two hyperparameters (( \lambda_1, \lambda_2 )).</p></li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul class="simple">
+<li><p>Datasets with many features and moderate correlations.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="comparison-table">
+<h2><strong>Comparison Table</strong><a class="headerlink" href="#comparison-table" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Algorithm</strong></p></th>
+<th class="head"><p><strong>Best For</strong></p></th>
+<th class="head"><p><strong>Pros</strong></p></th>
+<th class="head"><p><strong>Cons</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Linear</strong></p></td>
+<td><p>Linear relationships</p></td>
+<td><p>Simple, fast</p></td>
+<td><p>Assumes linearity</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Ridge</strong></p></td>
+<td><p>Correlated features</p></td>
+<td><p>Reduces overfitting</p></td>
+<td><p>No feature selection</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Lasso</strong></p></td>
+<td><p>High-dimensional data</p></td>
+<td><p>Feature selection</p></td>
+<td><p>Struggles with correlations</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Elastic Net</strong></p></td>
+<td><p>Mixed feature correlations</p></td>
+<td><p>Balances L1/L2</p></td>
+<td><p>Complex tuning</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="when-to-use-which-algorithm">
+<h2><strong>When to Use Which Algorithm?</strong><a class="headerlink" href="#when-to-use-which-algorithm" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Start simple</strong>: Use linear regression for interpretability.</p></li>
+<li><p><strong>Non-linear data</strong>: Try polynomial regression, SVR, or tree-based models.</p></li>
+<li><p><strong>High dimensionality</strong>: Use Lasso or Elastic Net for feature selection.</p></li>
+<li><p><strong>Uncertainty needed</strong>: Bayesian regression.</p></li>
+<li><p><strong>Robust predictions</strong>: Quantile regression.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="key-takeaway">
+<h2><strong>Key Takeaway</strong><a class="headerlink" href="#key-takeaway" title="Link to this heading">#</a></h2>
+<p>Regression algorithms vary from simple linear models to complex ensembles. The choice depends on data structure, interpretability needs, and the problem’s complexity. Always validate with metrics like <strong>MSE, MAE, or R²</strong>!</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="classification-algorithms">
+<h1>Classification Algorithms<a class="headerlink" href="#classification-algorithms" title="Link to this heading">#</a></h1>
+<p>Classification is a supervised learning task where models predict categorical labels. These models learn patterns from labeled training data to classify new, unseen instances. Examples include spam detection (binary classification) and image recognition (multi-class classification).</p>
+<section id="key-components">
+<h2>1. Key Components<a class="headerlink" href="#key-components" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Features</strong>: Input variables (numerical/categorical). Categorical features require encoding (e.g., one-hot encoding).</p></li>
+<li><p><strong>Training Data</strong>: Labeled dataset split into training, validation, and test sets.</p></li>
+<li><p><strong>Loss Function</strong>: Quantifies prediction error (e.g., cross-entropy for logistic regression).</p></li>
+<li><p><strong>Optimization</strong>: Algorithms like gradient descent adjust model parameters to minimize loss.</p></li>
+<li><p><strong>Hyperparameters</strong>: Settings tuned before training (e.g., learning rate, tree depth).</p></li>
+</ul>
+</section>
+<section id="model-training-process">
+<h2>2. Model Training Process<a class="headerlink" href="#model-training-process" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Data Preprocessing</strong></p>
+<ul class="simple">
+<li><p>Handle missing values (imputation/removal).</p></li>
+<li><p>Normalize/standardize features (e.g., Min-Max scaling).</p></li>
+</ul>
+</li>
+<li><p><strong>Feature Engineering</strong></p>
+<ul class="simple">
+<li><p>Create interaction terms, reduce dimensionality (PCA).</p></li>
+</ul>
+</li>
+<li><p><strong>Model Selection</strong></p>
+<ul class="simple">
+<li><p>Choose an algorithm based on data size, interpretability, and complexity.</p></li>
+</ul>
+</li>
+<li><p><strong>Training</strong></p>
+<ul class="simple">
+<li><p>Optimize parameters using training data.</p></li>
+</ul>
+</li>
+<li><p><strong>Validation</strong></p>
+<ul class="simple">
+<li><p>Tune hyperparameters via cross-validation to prevent overfitting.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="evaluation-metrics">
+<h2>3. Evaluation Metrics<a class="headerlink" href="#evaluation-metrics" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Accuracy</strong>: (TP + TN) / Total instances. Misleading for imbalanced data.</p></li>
+<li><p><strong>Precision</strong>: TP / (TP + FP) (e.g., minimizing false positives in medical diagnoses).</p></li>
+<li><p><strong>Recall</strong>: TP / (TP + FN) (e.g., maximizing fraud detection).</p></li>
+<li><p><strong>F1-Score</strong>: Harmonic mean of precision and recall.</p></li>
+<li><p><strong>ROC-AUC</strong>: Area under the Receiver Operating Characteristic curve (higher = better class separation).</p></li>
+</ul>
+</section>
+<section id="challenges-solutions">
+<h2>4. Challenges &amp; Solutions<a class="headerlink" href="#challenges-solutions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Class Imbalance</strong>: Use SMOTE (synthetic oversampling), class weights, or metrics like F1-score.</p></li>
+<li><p><strong>Overfitting</strong>: Apply regularization (L1/L2), dropout (neural nets), or pruning (trees).</p></li>
+<li><p><strong>Feature Selection</strong>: Use techniques like Recursive Feature Elimination (RFE).</p></li>
+<li><p><strong>Computational Cost</strong>: Optimize with parallelization (e.g., Random Forests) or approximate methods.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>5. Applications<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Healthcare</strong>: Disease diagnosis (e.g., cancer detection via SVM).</p></li>
+<li><p><strong>Finance</strong>: Credit scoring (logistic regression).</p></li>
+<li><p><strong>Marketing</strong>: Customer segmentation (decision trees).</p></li>
+<li><p><strong>Natural Language Processing</strong>: Sentiment analysis (Naive Bayes).</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h1>Classification Algorithms<a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
+<section id="logistic-regression">
+<h2>1. Logistic Regression<a class="headerlink" href="#logistic-regression" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Concept</strong>: Models the probability of a binary outcome using a logistic (sigmoid) function.</p></li>
+<li><p><strong>Mathematics</strong>:</p>
+<ul>
+<li><p>Sigmoid function: ( P(y=1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x)}} )</p></li>
+<li><p>Coefficients ((\beta)) optimized via maximum likelihood estimation.</p></li>
+</ul>
+</li>
+<li><p><strong>Pros</strong>: Interpretable, efficient, works with linear relationships.</p></li>
+<li><p><strong>Cons</strong>: Assumes linearity; cannot handle non-linear data.</p></li>
+<li><p><strong>Use Cases</strong>: Credit scoring, medical diagnosis, customer churn.</p></li>
+</ul>
+</section>
+<section id="decision-trees">
+<h2>2. Decision Trees<a class="headerlink" href="#decision-trees" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Concept</strong>: Hierarchical splits based on feature values to maximize class purity.</p></li>
+<li><p><strong>Mathematics</strong>:</p>
+<ul>
+<li><p>Splitting criteria: <strong>Gini impurity</strong> ( G = 1 - \sum p_i^2 ) or <strong>entropy</strong> ( H = -\sum p_i \log p_i ).</p></li>
+</ul>
+</li>
+<li><p><strong>Pros</strong>: Interpretable, handles mixed data types, non-linear relationships.</p></li>
+<li><p><strong>Cons</strong>: Prone to overfitting; mitigated via pruning or ensembles.</p></li>
+<li><p><strong>Use Cases</strong>: Customer segmentation, fraud detection.</p></li>
+</ul>
+</section>
+<section id="random-forest">
+<h2>3. Random Forest<a class="headerlink" href="#random-forest" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Concept</strong>: Ensemble of decision trees via bagging and feature randomization.</p></li>
+<li><p><strong>Mathematics</strong>:</p>
+<ul>
+<li><p>Aggregates predictions from multiple trees (majority vote/average).</p></li>
+</ul>
+</li>
+<li><p><strong>Pros</strong>: Reduces overfitting, robust to outliers, handles high-dimensional data.</p></li>
+<li><p><strong>Cons</strong>: Computationally intensive, less interpretable.</p></li>
+<li><p><strong>Use Cases</strong>: Bioinformatics, stock market forecasting.</p></li>
+</ul>
+</section>
+<section id="support-vector-machines-svm">
+<h2>4. Support Vector Machines (SVM)<a class="headerlink" href="#support-vector-machines-svm" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Concept</strong>: Finds the optimal hyperplane maximizing the margin between classes.</p></li>
+<li><p><strong>Mathematics</strong>:</p>
+<ul>
+<li><p>Optimization: Minimize ( \frac{1}{2}||w||^2 + C \sum \xi_i ) (hinge loss + regularization).</p></li>
+<li><p>Kernel trick (e.g., RBF, polynomial) for non-linear data.</p></li>
+</ul>
+</li>
+<li><p><strong>Pros</strong>: Effective in high dimensions, versatile with kernels.</p></li>
+<li><p><strong>Cons</strong>: Sensitive to parameters, poor scalability.</p></li>
+<li><p><strong>Use Cases</strong>: Image classification, text categorization.</p></li>
+</ul>
+</section>
+<section id="k-nearest-neighbors-k-nn">
+<h2>5. k-Nearest Neighbors (k-NN)<a class="headerlink" href="#k-nearest-neighbors-k-nn" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Concept</strong>: Assigns class based on majority vote of the ( k ) closest instances.</p></li>
+<li><p><strong>Mathematics</strong>:</p>
+<ul>
+<li><p>Distance metrics (Euclidean, Manhattan) identify neighbors.</p></li>
+</ul>
+</li>
+<li><p><strong>Pros</strong>: Simple, no training phase, adaptable to new data.</p></li>
+<li><p><strong>Cons</strong>: Slow prediction, sensitive to noise/irrelevant features.</p></li>
+<li><p><strong>Use Cases</strong>: Recommendation systems, pattern recognition.</p></li>
+</ul>
+</section>
+<section id="naive-bayes">
+<h2>6. Naive Bayes<a class="headerlink" href="#naive-bayes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Concept</strong>: Applies Bayes’ theorem with feature independence assumption.</p></li>
+<li><p><strong>Mathematics</strong>:</p>
+<ul>
+<li><p>( P(y|x_1, …, x_n) \propto P(y) \prod P(x_i|y) ).</p></li>
+<li><p><strong>Variants</strong>: Gaussian (continuous data), Multinomial (count data).</p></li>
+</ul>
+</li>
+<li><p><strong>Pros</strong>: Fast, performs well with high-dimensional data.</p></li>
+<li><p><strong>Cons</strong>: Independence assumption rarely holds.</p></li>
+<li><p><strong>Use Cases</strong>: Spam filtering, sentiment analysis.</p></li>
+</ul>
+</section>
+<section id="neural-networks">
+<h2>7. Neural Networks<a class="headerlink" href="#neural-networks" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Concept</strong>: Multi-layered architectures learning hierarchical representations.</p></li>
+<li><p><strong>Mathematics</strong>:</p>
+<ul>
+<li><p>Activation functions (ReLU, sigmoid), backpropagation, gradient descent.</p></li>
+</ul>
+</li>
+<li><p><strong>Pros</strong>: State-of-the-art accuracy, handles complex patterns.</p></li>
+<li><p><strong>Cons</strong>: Requires large data and computational resources.</p></li>
+<li><p><strong>Use Cases</strong>: Speech recognition, image recognition, NLP tasks.</p></li>
+</ul>
+</section>
+<section id="gradient-boosting-machines-gbm">
+<h2>8. Gradient Boosting Machines (GBM)<a class="headerlink" href="#gradient-boosting-machines-gbm" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Concept</strong>: Sequentially builds weak learners (e.g., trees) to correct errors.</p></li>
+<li><p><strong>Mathematics</strong>:</p>
+<ul>
+<li><p>Loss minimization via gradient descent; examples: XGBoost, LightGBM.</p></li>
+</ul>
+</li>
+<li><p><strong>Pros</strong>: High accuracy, handles heterogeneous data.</p></li>
+<li><p><strong>Cons</strong>: Prone to overfitting, parameter tuning critical.</p></li>
+<li><p><strong>Use Cases</strong>: Click-through prediction, ranking algorithms.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="algorithm-selection-considerations">
+<h2>Algorithm Selection Considerations<a class="headerlink" href="#algorithm-selection-considerations" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Data Size</strong>: Neural networks need large data; Naive Bayes works with small sets.</p></li>
+<li><p><strong>Interpretability</strong>: Logistic Regression/Decision Trees vs. “black-box” models (Neural Networks).</p></li>
+<li><p><strong>Linearity</strong>: SVM (linear kernel) vs. tree-based models (non-linear).</p></li>
+<li><p><strong>Computational Resources</strong>: Random Forest/GBM vs. lightweight k-NN.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Summary<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Each classification algorithm has its strengths and trade-offs. Logistic Regression and SVM suit linear problems, while tree-based methods and Neural Networks excel in non-linear contexts. Ensemble methods (Random Forest, GBM) boost accuracy, whereas Naive Bayes and k-NN offer simplicity. The choice depends on data characteristics, interpretability needs, and computational constraints.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\3_ml"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5_model_evaluation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4️⃣ Model Evaluation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="12_regression.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Regression Algorithms</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Supervised Learning</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example"><strong>Example</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-supervised-learning"><strong>1️⃣ Types of Supervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-regression"><strong>A. Regression</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-classification"><strong>B. Classification</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-supervised-learning-process"><strong>2️⃣ The Supervised Learning Process</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-algorithms"><strong>3️⃣ Key Algorithms</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-regression-algorithms"><strong>A. Regression Algorithms</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-classification-algorithms"><strong>B. Classification Algorithms</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation-metrics"><strong>4️⃣ Model Evaluation Metrics</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-regression-metrics"><strong>A. Regression Metrics</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-classification-metrics"><strong>B. Classification Metrics</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-in-supervised-learning"><strong>5️⃣ Challenges in Supervised Learning</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overfitting">1. <strong>Overfitting</strong>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#underfitting">2. <strong>Underfitting</strong>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-quality-issues">3. <strong>Data Quality Issues</strong>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class-imbalance">4. <strong>Class Imbalance</strong>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curse-of-dimensionality">5. <strong>Curse of Dimensionality</strong>:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications"><strong>6️⃣ Applications</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pros-and-cons"><strong>7️⃣ Pros and Cons</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametric-vs-non-parametric-models"><strong>8️⃣ Parametric vs. Non-Parametric Models</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametric-models-e-g-linear-regression"><strong>Parametric Models</strong> (e.g., Linear Regression):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-parametric-models-e-g-decision-trees-k-nn"><strong>Non-Parametric Models</strong> (e.g., Decision Trees, k-NN):</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary"><strong>9️⃣ Summary</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>A. Regression Algorithms</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression"><strong>1. Linear Regression</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-regression"><strong>2. Polynomial Regression</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-regression-l2-regularization"><strong>3. Ridge Regression (L2 Regularization)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso-regression-l1-regularization"><strong>4. Lasso Regression (L1 Regularization)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-net-regression"><strong>5. Elastic Net Regression</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-table"><strong>Comparison Table</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-which-algorithm"><strong>When to Use Which Algorithm?</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaway"><strong>Key Takeaway</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-algorithms">Classification Algorithms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-components">1. Key Components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training-process">2. Model Training Process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-metrics">3. Evaluation Metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-solutions">4. Challenges &amp; Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5. Applications</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Classification Algorithms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression">1. Logistic Regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-trees">2. Decision Trees</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">3. Random Forest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-vector-machines-svm">4. Support Vector Machines (SVM)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbors-k-nn">5. k-Nearest Neighbors (k-NN)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">6. Naive Bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neural-networks">7. Neural Networks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-boosting-machines-gbm">8. Gradient Boosting Machines (GBM)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm-selection-considerations">Algorithm Selection Considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Summary</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

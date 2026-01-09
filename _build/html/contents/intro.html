@@ -1,0 +1,993 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Machine Learning &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d567e03f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/intro';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Essential Maths" href="0_maths/0_essential.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_maths/0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="0_maths/2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0_maths/1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="0_maths/3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="0_maths/5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_python/1_basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_python/2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_python/3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_python/4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_python/5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_python/6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_python/8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_python/9_regex.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_pandas/4_eda.html"><strong>What is Exploratory Data Analysis (EDA)?</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3_ml/1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/10_core_algo.html">Core ML Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_ml/17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_ml/21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_ml/6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_ml/6_deployment.html">Deployment</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp6.html">Sentiment Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6_interview/self_introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_interview/mlflow.html">MLflow</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/edit/main/contents/intro.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/issues/new?title=Issue%20on%20page%20%2Fcontents/intro.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/contents/intro.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Machine Learning</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics">Mathematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">Data Visualization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-for-machine-learning">Python for Machine Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-for-data-analysis">Pandas for Data Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-for-numerical-computing">NumPy for Numerical Computing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-engineering">Feature Engineering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamentals-of-ml">Fundamentals of ML</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regression">Regression</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-function">Cost Function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classification">Classification</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised-learning">Unsupervised Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning">Deep Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-language-processing-nlp">Natural Language Processing (NLP)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interview-preparation">Interview Preparation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-round">Technical Round</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-technologies">Other Technologies</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <hr class="docutils" />
+<section id="machine-learning">
+<h1>Machine Learning<a class="headerlink" href="#machine-learning" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ML.md"><span class="xref myst">ML: Essential Concepts</span></a></p></li>
+</ul>
+<hr class="docutils" />
+<section id="mathematics">
+<h2>Mathematics<a class="headerlink" href="#mathematics" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#0_maths/0_essential.ipynb"><span class="xref myst">Math: Essential Maths</span></a></p></li>
+<li><p><a class="reference internal" href="#0_maths/1_statistics_fundamentals.ipynb"><span class="xref myst">1: Fundamentals of Statistics</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#0_maths/1_descriptive.ipynb"><span class="xref myst">1: Description Statistics</span></a></p></li>
+<li><p><a class="reference internal" href="#0_maths/3_inferential.ipynb"><span class="xref myst">1.2: Measures of Spread</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#0_maths/2_probability.ipynb"><span class="xref myst">2: Probability</span></a></p></li>
+<li><p><a class="reference internal" href="#0_maths/3_inferential.ipynb"><span class="xref myst">3: Inferential Statistics</span></a></p></li>
+<li><p><a class="reference internal" href="#0_maths/4_linear_algebra.ipynb"><span class="xref myst">4: Linear Algebra</span></a></p></li>
+<li><p><a class="reference internal" href="#0_maths/5_calculus.ipynb"><span class="xref myst">5: Calculus</span></a></p></li>
+</ul>
+<hr class="docutils" />
+<section id="data-visualization">
+<h3>Data Visualization<a class="headerlink" href="#data-visualization" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#2_pandas/3_visualization.ipynb"><span class="xref myst">2: Data Visualization</span></a></p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="python-for-machine-learning">
+<h2>Python for Machine Learning<a class="headerlink" href="#python-for-machine-learning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#1_python/1_basics.ipynb"><span class="xref myst">1: Python Basics</span></a></p></li>
+<li><p><a class="reference internal" href="#1_python/2_advance.ipynb"><span class="xref myst">2: Advanced Python</span></a></p></li>
+<li><p><a class="reference internal" href="#1_python/3_data_structures.ipynb"><span class="xref myst">3: Data Structures</span></a></p></li>
+<li><p><a class="reference internal" href="#1_python/3_data_structures.ipynb"><span class="xref myst">4: Modules and Packages</span></a></p></li>
+<li><p><a class="reference internal" href="#1_python/5_functions.ipynb"><span class="xref myst">5: Functions</span></a></p></li>
+<li><p><a class="reference internal" href="#1_python/6_oop.ipynb"><span class="xref myst">6: Object-Oriented Programming (OOPs)</span></a></p></li>
+<li><p><a class="reference internal" href="#1_python/7_error_handling.ipynb"><span class="xref myst">7: Error Handling</span></a></p></li>
+<li><p><a class="reference internal" href="#1_python/8_exceptions.ipynb"><span class="xref myst">8: Exceptions Handling</span></a></p></li>
+<li><p><a class="reference internal" href="#1_python/9_regex.ipynb"><span class="xref myst">9: Regex</span></a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="pandas-for-data-analysis">
+<h2>Pandas for Data Analysis<a class="headerlink" href="#pandas-for-data-analysis" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#2_pandas/1_series.ipynb"><span class="xref myst">1: Series</span></a></p></li>
+<li><p><a class="reference internal" href="#2_pandas/2_dataframes.ipynb"><span class="xref myst">2: Pandas DataFrame</span></a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="numpy-for-numerical-computing">
+<h2>NumPy for Numerical Computing<a class="headerlink" href="#numpy-for-numerical-computing" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#2_numpy/1_numpy.ipynb"><span class="xref myst">1: NumPy for Numerical Computing</span></a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="exploratory-data-analysis-eda">
+<h2>Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#2_pandas/4_eda.ipynb"><span class="xref myst">Exploratory Data Analysis</span></a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="feature-engineering">
+<h2>Feature Engineering<a class="headerlink" href="#feature-engineering" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#2_pandas/5_feature_engineering.ipynb"><span class="xref myst">Feature Engineering</span></a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2>Machine Learning<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="fundamentals-of-ml">
+<h3>Fundamentals of ML<a class="headerlink" href="#fundamentals-of-ml" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="3_ml/1_foundations.html"><span class="std std-doc">1: Fundamentals</span></a></p></li>
+<li><p><a class="reference internal" href="3_ml/2_data_preparation.html"><span class="std std-doc">2: Data and ML</span></a></p></li>
+<li><p><a class="reference internal" href="3_ml/2_train_test_split.html"><span class="std std-doc">3: Train Test Split</span></a></p></li>
+<li><p><a class="reference internal" href="3_ml/10_core_algo.html"><span class="std std-doc">4: Core Algorithm</span></a></p></li>
+<li><p><a class="reference internal" href="3_ml/11_supervised_learning.html"><span class="std std-doc">5: ML Life Cycle</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="3_ml/12_regression.html"><span class="std std-doc">6: Bias Variance Tradeoff</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml23_underfitting_overfitting.md"><span class="xref myst">7: Underfitting and Overfitting</span></a></p></li>
+</ul>
+</li>
+</ul>
+<section id="regression">
+<h4>Regression<a class="headerlink" href="#regression" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="#3_ml/ml8_r_value_and_regression.md"><span class="xref myst">1: R values and Regression</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml9_simple_linear_regression.md"><span class="xref myst">2: Simple Linear Regression</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml9.1_simple_linear_regression.md"><span class="xref myst">3: Simple Linear Regression</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml9.2_simple_linear_regression.md"><span class="xref myst">4: Simple Linear Regression</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml10_linear_regression.md"><span class="xref myst">5: Multiple Linear Regression</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml11_polynomial_features.md"><span class="xref myst">6: Polynomial Features</span></a></p></li>
+</ul>
+</section>
+<section id="cost-function">
+<h4>Cost Function<a class="headerlink" href="#cost-function" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="#3_ml/ml12_cost_function.md"><span class="xref myst">1: Cost Function</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml13_cost_function_regression.md"><span class="xref myst">2: Cost Function Regression</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml15_gradient_descent.md"><span class="xref myst">3: Gradient Descent</span></a></p></li>
+</ul>
+</section>
+<section id="classification">
+<h4>Classification<a class="headerlink" href="#classification" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="#3_ml/ml16_logistic_regression.md"><span class="xref myst">1: Logistic Regression</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml17_logistic_regression_mult.md"><span class="xref myst">2: Logistic Regression (Multiclass)</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml18_decision_tree.md"><span class="xref myst">3: Decision Tree</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml19_confusion_matrix.md"><span class="xref myst">4: Confusion Matrix</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml21_random_forest.md"><span class="xref myst">5: Random Forest</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml22_SVM.md"><span class="xref myst">6: SVM</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml26_k_nearest_neighbor.md"><span class="xref myst">7: k-Nearest Neighbor</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml27_Naive_bayes_classifier.md"><span class="xref myst">8: Naive Bayes Classifier</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="unsupervised-learning">
+<h3>Unsupervised Learning<a class="headerlink" href="#unsupervised-learning" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#3_ml/ml-unsupervise-learn.md"><span class="xref myst">1: Unsupervised Learning</span></a></p></li>
+<li><p><a class="reference internal" href="#3_ml/ml25_k_mean_clustering.md"><span class="xref myst">2: K-Means Clustering</span></a></p></li>
+</ul>
+</section>
+<section id="miscellaneous">
+<h3>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#3_ml/ml28_pickling_unpickling.md"><span class="xref myst">1: Pickling and Unpickling</span></a></p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="deep-learning">
+<h2>Deep Learning<a class="headerlink" href="#deep-learning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="4_dl/dl1_Introduction.html"><span class="std std-doc">1: DL: Introduction</span></a></p></li>
+<li><p><a class="reference internal" href="4_dl/dl2_Neuron.html"><span class="std std-doc">2: DL: Neuron</span></a></p></li>
+<li><p><a class="reference internal" href="4_dl/dl3_Libraries.html"><span class="std std-doc">3: DL: Libraries</span></a></p></li>
+<li><p><a class="reference internal" href="4_dl/dl4_Terminology.html"><span class="std std-doc">4: DL: Key Terminology</span></a></p></li>
+<li><p><a class="reference internal" href="#4_dl/dl5_ulti-Layer%20Perceptron%20(MLP).md"><span class="xref myst">5: DL: Multi-Layer Perceptron (MLP) Models in Keras</span></a></p></li>
+<li><p><a class="reference internal" href="#4_dl/dl6_First%20Neural%20Network.md"><span class="xref myst">6: DL: First Neural Network with Keras</span></a></p></li>
+<li><p><a class="reference internal" href="#4_dl/dl7_Evaluating%20Model.md"><span class="xref myst">7: DL: Evaluating Model Performance</span></a></p></li>
+<li><p><a class="reference internal" href="#4_dl/dl8_Multiclass%20Classification.md"><span class="xref myst">8: DL: Multiclass Classification of IRIS Species</span></a></p></li>
+<li><p><a class="reference internal" href="#4_dl/dl9_Multiclass_Classification_Handwritten.md"><span class="xref myst">9: DL: Multiclass Classification: Handwritten Digits Recognition</span></a></p></li>
+<li><p><a class="reference internal" href="#4_dl/dl10_Saving%20and%20Loading.md"><span class="xref myst">10: DL: Saving and Loading a Deep Learning Model</span></a></p></li>
+<li><p><span class="xref myst">11: DL: Checkpointing in Deep Learning: Save the Best Model</span></p></li>
+<li><p><a class="reference internal" href="#4_dl/dl12_Visualizing%20Model%20Training%20History.md"><span class="xref myst">12: DL: Visualizing Model Training History</span></a></p></li>
+<li><p><a class="reference internal" href="#4_dl/dl13_Loss%20Functions,%20Activation%20Functions,%20and%20Optimizers.md"><span class="xref myst">13: DL: Loss Functions, Activation Functions, and Optimizers</span></a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="natural-language-processing-nlp">
+<h2>Natural Language Processing (NLP)<a class="headerlink" href="#natural-language-processing-nlp" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="5_nlp/nlp1.html"><span class="std std-doc">NLP 1: Introduction</span></a></p></li>
+<li><p><a class="reference internal" href="5_nlp/nlp2.html"><span class="std std-doc">NLP 2: Text Wrangling and Cleaning</span></a></p></li>
+<li><p><a class="reference internal" href="5_nlp/nlp3.html"><span class="std std-doc">NLP 3: Replacing and Correcting Words</span></a></p></li>
+<li><p><a class="reference internal" href="5_nlp/nlp4.html"><span class="std std-doc">NLP 4: Components in NLP</span></a></p></li>
+<li><p><a class="reference internal" href="5_nlp/nlp5.html"><span class="std std-doc">NLP 5: Bag of Words, TF, and IDF</span></a></p></li>
+<li><p><a class="reference internal" href="5_nlp/nlp6.html"><span class="std std-doc">NLP 6: Twitter Sentiment Analysis using TextBlob</span></a></p></li>
+<li><p><a class="reference internal" href="5_nlp/nlp7.html"><span class="std std-doc">NLP 7: Natural Language Processing (NLP) with SpaCy</span></a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="interview-preparation">
+<h2>Interview Preparation<a class="headerlink" href="#interview-preparation" title="Link to this heading">#</a></h2>
+<section id="general">
+<h3>General<a class="headerlink" href="#general" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#6_interview/telephone.md"><span class="xref myst">1: Telephonic Round</span></a></p></li>
+<li><p><a class="reference internal" href="#6_interview/introduction.md"><span class="xref myst">2: Self-Introduction</span></a></p></li>
+</ul>
+</section>
+<section id="technical-round">
+<h3>Technical Round<a class="headerlink" href="#technical-round" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="6_interview/py.html"><span class="std std-doc">1: Python</span></a></p></li>
+<li><p><a class="reference internal" href="6_interview/pd.html"><span class="std std-doc">2: Pandas</span></a></p></li>
+<li><p><a class="reference internal" href="6_interview/ml.html"><span class="std std-doc">3: Machine Learning</span></a></p></li>
+<li><p><a class="reference internal" href="6_interview/dl.html"><span class="std std-doc">4: Deep Learning</span></a></p></li>
+</ul>
+</section>
+<section id="other-technologies">
+<h3>Other Technologies<a class="headerlink" href="#other-technologies" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="6_interview/git.html"><span class="std std-doc">1: Git and GitHub</span></a></p></li>
+<li><p><a class="reference internal" href="6_interview/dvc.html"><span class="std std-doc">2: DVC</span></a></p></li>
+<li><p><a class="reference internal" href="6_interview/mlflow.html"><span class="std std-doc">3: MLflow</span></a></p></li>
+<li><p><a class="reference internal" href="6_interview/yaml.html"><span class="std std-doc">4: YAML</span></a></p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="0_maths/0_essential.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Essential Maths</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics">Mathematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">Data Visualization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-for-machine-learning">Python for Machine Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-for-data-analysis">Pandas for Data Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-for-numerical-computing">NumPy for Numerical Computing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-engineering">Feature Engineering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Machine Learning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamentals-of-ml">Fundamentals of ML</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regression">Regression</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-function">Cost Function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classification">Classification</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised-learning">Unsupervised Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning">Deep Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-language-processing-nlp">Natural Language Processing (NLP)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interview-preparation">Interview Preparation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-round">Technical Round</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-technologies">Other Technologies</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

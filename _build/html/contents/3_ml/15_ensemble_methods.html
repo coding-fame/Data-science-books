@@ -1,0 +1,1114 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>🌳 Random Forest Algorithm &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/3_ml/15_ensemble_methods';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Support Vector Machine (SVM) in Detail" href="16_svm.html" />
+    <link rel="prev" title="Decision Trees" href="14_decision_trees.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/1_basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/9_regex.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html"><strong>What is Exploratory Data Analysis (EDA)?</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10_core_algo.html">Core ML Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_deployment.html">Deployment</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self_introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/edit/main/contents/3_ml/15_ensemble_methods.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/issues/new?title=Issue%20on%20page%20%2Fcontents/3_ml/15_ensemble_methods.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/3_ml/15_ensemble_methods.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>🌳 Random Forest Algorithm</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-random-forest-algorithm"><strong>What is the Random Forest Algorithm?</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-random-forest"><strong>Why Use Random Forest?</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works"><strong>How It Works</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-random-forest-algorithm-steps">The Random Forest Algorithm Steps</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-and-drawbacks">Advantages and Drawbacks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages">Advantages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drawbacks">Drawbacks</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts-and-methods"><strong>Key Concepts and Methods</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-core-mechanics"><strong>a. Core Mechanics</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-hyperparameters"><strong>b. Hyperparameters</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-examples"><strong>Practical Examples</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-classification-iris-dataset"><strong>Example 1: Classification (Iris Dataset)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-import-libraries-and-load-data">Step 1: Import Libraries and Load Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-split-data-into-training-and-testing-sets">Step 2: Split Data into Training and Testing Sets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-train-the-random-forest-model">Step 3: Train the Random Forest Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-make-predictions-and-evaluate-the-model">Step 4: Make Predictions and Evaluate the Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-analyze-feature-importance">Step 5: Analyze Feature Importance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-output">Example Output</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-tuning">Hyperparameter Tuning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-grid-search-for-hyperparameter-tuning">Example: Grid Search for Hyperparameter Tuning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Example Output</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-the-model">Interpreting the Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-visualize-a-single-tree">Example: Visualize a Single Tree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-partial-dependence-plot">Example: Partial Dependence Plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-regression"><strong>Example 2: Regression</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-methods-summary"><strong>4. Tools and Methods Summary</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion"><strong>Conclusion</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="random-forest-algorithm">
+<h1>🌳 Random Forest Algorithm<a class="headerlink" href="#random-forest-algorithm" title="Link to this heading">#</a></h1>
+<p>The Random Forest algorithm is a powerful and versatile supervised machine learning technique widely used for both classification and regression tasks. It builds an ensemble of decision trees, combining their predictions to improve accuracy, reduce overfitting, and enhance robustness.</p>
+<hr class="docutils" />
+<section id="what-is-the-random-forest-algorithm">
+<h2><strong>What is the Random Forest Algorithm?</strong><a class="headerlink" href="#what-is-the-random-forest-algorithm" title="Link to this heading">#</a></h2>
+<p>Random Forest is an <strong>ensemble learning</strong> technique that combines the predictions of multiple decision trees to produce a more accurate and stable outcome.
+Each tree is trained on a random subset of the data and features, and the final prediction is determined by aggregating the individual tree predictions typically by majority voting for classification or averaging for regression.</p>
+<section id="why-use-random-forest">
+<h3><strong>Why Use Random Forest?</strong><a class="headerlink" href="#why-use-random-forest" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Accuracy</strong>: Often outperforms single decision trees by reducing variance.</p></li>
+<li><p><strong>Robustness</strong>: Handles noisy data and overfitting well.</p></li>
+<li><p><strong>Versatility</strong>: Works for both classification (e.g., spam detection) and regression (e.g., house price prediction).</p></li>
+<li><p><strong>Feature Importance</strong>: Provides insights into which features drive predictions.</p></li>
+</ul>
+</section>
+<section id="how-it-works">
+<h3><strong>How It Works</strong><a class="headerlink" href="#how-it-works" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Bootstrap (Bagging) Sampling</strong>: Create multiple subsets of the data with replacement (bagging). Each subset trains a separate decision tree.</p></li>
+<li><p><strong>Feature Randomness</strong>: At each split in a decision tree, Random Forest considers only a random subset of features (e.g., <code class="docutils literal notranslate"><span class="pre">sqrt(n_features)</span></code> by default in <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>). The best feature from this subset is chosen for the split.</p></li>
+<li><p><strong>Tree Construction</strong>: Build independent decision trees on each subset.</p></li>
+<li><p><strong>Aggregation</strong>: Combining predictions of all decision trees and takes the <strong>majority vote</strong> (for classification) or <strong>average</strong> (for regression) as the final prediction.</p></li>
+</ol>
+</section>
+<section id="the-random-forest-algorithm-steps">
+<h3>The Random Forest Algorithm Steps<a class="headerlink" href="#the-random-forest-algorithm-steps" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Draw Random Samples</strong>: Create multiple bootstrap samples from the training dataset.</p></li>
+<li><p><strong>Build Decision Trees</strong>: For each sample, grow a tree, selecting a random subset of features at each node to determine the best split.</p></li>
+<li><p><strong>Repeat</strong>: Generate a forest of diverse trees (e.g., 100 or 500 trees).</p></li>
+<li><p><strong>Aggregate Predictions</strong>: For a new data point, collect predictions from all trees and compute the final output via voting (classification) or averaging (regression).</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="advantages-and-drawbacks">
+<h2>Advantages and Drawbacks<a class="headerlink" href="#advantages-and-drawbacks" title="Link to this heading">#</a></h2>
+<section id="advantages">
+<h3>Advantages<a class="headerlink" href="#advantages" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Improved Accuracy</strong>: Outperforms single decision trees and many other algorithms.</p></li>
+<li><p><strong>Reduced Overfitting</strong>: Randomness and averaging mitigate overfitting risks.</p></li>
+<li><p><strong>Handles Missing Values</strong>: Can work with incomplete datasets.</p></li>
+<li><p><strong>Feature Importance</strong>: Quantifies the contribution of each feature.</p></li>
+<li><p><strong>Parallelizable</strong>: Trees can be trained independently, speeding up computation.</p></li>
+</ul>
+</section>
+<section id="drawbacks">
+<h3>Drawbacks<a class="headerlink" href="#drawbacks" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Complexity</strong>: A large forest can be memory-intensive and hard to interpret.</p></li>
+<li><p><strong>Computationally Intensive</strong>: Training and prediction take longer than simpler models.</p></li>
+<li><p><strong>Less Interpretable</strong>: The ensemble obscures the simplicity of individual trees.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-concepts-and-methods">
+<h2><strong>Key Concepts and Methods</strong><a class="headerlink" href="#key-concepts-and-methods" title="Link to this heading">#</a></h2>
+<section id="a-core-mechanics">
+<h3><strong>a. Core Mechanics</strong><a class="headerlink" href="#a-core-mechanics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Bagging (Bootstrap Aggregating)</strong>: Reduces variance by averaging predictions from diverse trees.</p></li>
+<li><p><strong>Random Feature Selection</strong>: Ensures trees are decorrelated by limiting feature choices at splits.</p></li>
+<li><p><strong>Out-of-Bag (OOB) Error</strong>: Estimates generalization error using samples not included in each tree’s bootstrap sample.</p></li>
+</ul>
+</section>
+<section id="b-hyperparameters">
+<h3><strong>b. Hyperparameters</strong><a class="headerlink" href="#b-hyperparameters" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">n_estimators</span></code>: Number of trees in the forest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_depth</span></code>: Maximum depth of each tree.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_samples_split</span></code>: Minimum samples required to split a node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_features</span></code>: Number of features considered at each split (e.g., “sqrt”, “log2”).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oob_score</span></code>: Use out-of-bag samples for validation.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="practical-examples">
+<h2><strong>Practical Examples</strong><a class="headerlink" href="#practical-examples" title="Link to this heading">#</a></h2>
+<section id="example-1-classification-iris-dataset">
+<h3><strong>Example 1: Classification (Iris Dataset)</strong><a class="headerlink" href="#example-1-classification-iris-dataset" title="Link to this heading">#</a></h3>
+<p>We’ll implement Random Forest using <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> and the Iris dataset, a classic dataset with 150 samples, 4 features (sepal length, sepal width, petal length, petal width), and 3 classes (setosa, versicolor, virginica).</p>
+</section>
+<section id="step-1-import-libraries-and-load-data">
+<h3>Step 1: Import Libraries and Load Data<a class="headerlink" href="#step-1-import-libraries-and-load-data" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span>
+
+<span class="c1"># Load the Iris dataset</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span>  <span class="c1"># Features (4 columns)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>  <span class="c1"># Target labels (0, 1, 2)</span>
+
+<span class="c1"># Optional: Convert to DataFrame for exploration</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="step-2-split-data-into-training-and-testing-sets">
+<h3>Step 2: Split Data into Training and Testing Sets<a class="headerlink" href="#step-2-split-data-into-training-and-testing-sets" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split data: 80% training, 20% testing</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Training samples: </span><span class="si">{</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Testing samples: </span><span class="si">{</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="step-3-train-the-random-forest-model">
+<h3>Step 3: Train the Random Forest Model<a class="headerlink" href="#step-3-train-the-random-forest-model" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the Random Forest classifier</span>
+<span class="n">rf_clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Train the model</span>
+<span class="n">rf_clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">n_estimators=100</span></code>: Number of trees in the forest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">random_state=42</span></code>: Ensures reproducibility.</p></li>
+</ul>
+</section>
+<section id="step-4-make-predictions-and-evaluate-the-model">
+<h3>Step 4: Make Predictions and Evaluate the Model<a class="headerlink" href="#step-4-make-predictions-and-evaluate-the-model" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Predict on the test set</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">rf_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Calculate accuracy</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Detailed evaluation</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Classification Report:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="step-5-analyze-feature-importance">
+<h3>Step 5: Analyze Feature Importance<a class="headerlink" href="#step-5-analyze-feature-importance" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract feature importances</span>
+<span class="n">importances</span> <span class="o">=</span> <span class="n">rf_clf</span><span class="o">.</span><span class="n">feature_importances_</span>
+<span class="n">feature_names</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span>
+
+<span class="c1"># Display feature importances</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Feature Importances:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">feature</span><span class="p">,</span> <span class="n">importance</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">feature_names</span><span class="p">,</span> <span class="n">importances</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">importance</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="example-output">
+<h3>Example Output<a class="headerlink" href="#example-output" title="Link to this heading">#</a></h3>
+<p>Assuming the code runs on the Iris dataset:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Training</span> <span class="n">samples</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span> <span class="n">Testing</span> <span class="n">samples</span><span class="p">:</span> <span class="mi">30</span>
+<span class="n">Accuracy</span><span class="p">:</span> <span class="mf">1.00</span>
+
+<span class="n">Classification</span> <span class="n">Report</span><span class="p">:</span>
+              <span class="n">precision</span>    <span class="n">recall</span>  <span class="n">f1</span><span class="o">-</span><span class="n">score</span>   <span class="n">support</span>
+    <span class="n">setosa</span>      <span class="mf">1.00</span>      <span class="mf">1.00</span>      <span class="mf">1.00</span>        <span class="mi">10</span>
+<span class="n">versicolor</span>      <span class="mf">1.00</span>      <span class="mf">1.00</span>      <span class="mf">1.00</span>         <span class="mi">9</span>
+ <span class="n">virginica</span>      <span class="mf">1.00</span>      <span class="mf">1.00</span>      <span class="mf">1.00</span>        <span class="mi">11</span>
+
+<span class="n">Feature</span> <span class="n">Importances</span><span class="p">:</span>
+<span class="n">sepal</span> <span class="n">length</span> <span class="p">(</span><span class="n">cm</span><span class="p">):</span> <span class="mf">0.1023</span>
+<span class="n">sepal</span> <span class="n">width</span> <span class="p">(</span><span class="n">cm</span><span class="p">):</span> <span class="mf">0.0234</span>
+<span class="n">petal</span> <span class="n">length</span> <span class="p">(</span><span class="n">cm</span><span class="p">):</span> <span class="mf">0.4412</span>
+<span class="n">petal</span> <span class="n">width</span> <span class="p">(</span><span class="n">cm</span><span class="p">):</span> <span class="mf">0.4331</span>
+</pre></div>
+</div>
+<p>(Note: Exact values may vary slightly due to randomness, but the Iris dataset is small and well-separated, often yielding near-perfect accuracy.)</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="hyperparameter-tuning">
+<h2>Hyperparameter Tuning<a class="headerlink" href="#hyperparameter-tuning" title="Link to this heading">#</a></h2>
+<p>To optimize Random Forest, we can tune hyperparameters like <code class="docutils literal notranslate"><span class="pre">n_estimators</span></code>, <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>, and <code class="docutils literal notranslate"><span class="pre">min_samples_split</span></code> using <code class="docutils literal notranslate"><span class="pre">GridSearchCV</span></code> or <code class="docutils literal notranslate"><span class="pre">RandomizedSearchCV</span></code>.</p>
+<section id="example-grid-search-for-hyperparameter-tuning">
+<h3>Example: Grid Search for Hyperparameter Tuning<a class="headerlink" href="#example-grid-search-for-hyperparameter-tuning" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="c1"># Define the parameter grid</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>
+    <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+    <span class="s1">&#39;min_samples_split&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+    <span class="s1">&#39;min_samples_leaf&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Initialize GridSearchCV</span>
+<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Fit the model</span>
+<span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Best parameters and score</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best parameters: </span><span class="si">{</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best cross-validation score: </span><span class="si">{</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_score_</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Use the best model</span>
+<span class="n">best_rf</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span>
+<span class="n">y_pred_best</span> <span class="o">=</span> <span class="n">best_rf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test accuracy with best model: </span><span class="si">{</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_best</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cv=5</span></code>: 5-fold cross-validation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n_jobs=-1</span></code>: Use all available CPU cores.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>Example Output<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Best</span> <span class="n">parameters</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;min_samples_leaf&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;min_samples_split&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
+<span class="n">Best</span> <span class="n">cross</span><span class="o">-</span><span class="n">validation</span> <span class="n">score</span><span class="p">:</span> <span class="mf">0.97</span>
+<span class="n">Test</span> <span class="n">accuracy</span> <span class="k">with</span> <span class="n">best</span> <span class="n">model</span><span class="p">:</span> <span class="mf">1.00</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="interpreting-the-model">
+<h2>Interpreting the Model<a class="headerlink" href="#interpreting-the-model" title="Link to this heading">#</a></h2>
+<p>While Random Forest is less interpretable than a single tree, several tools help:</p>
+<ul class="simple">
+<li><p><strong>Feature Importance</strong>: Already shown above, highlights key predictors (e.g., petal length and width dominate in Iris).</p></li>
+<li><p><strong>Partial Dependence Plots</strong>: Visualize the effect of a feature on predictions.</p></li>
+<li><p><strong>Tree Visualization</strong>: Inspect individual trees (though less practical for large forests).</p></li>
+</ul>
+<section id="example-visualize-a-single-tree">
+<h3>Example: Visualize a Single Tree<a class="headerlink" href="#example-visualize-a-single-tree" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_tree</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Plot the first tree in the forest</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plot_tree</span><span class="p">(</span><span class="n">rf_clf</span><span class="o">.</span><span class="n">estimators_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">feature_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span> <span class="n">class_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">,</span> <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="example-partial-dependence-plot">
+<h3>Example: Partial Dependence Plot<a class="headerlink" href="#example-partial-dependence-plot" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.inspection</span><span class="w"> </span><span class="kn">import</span> <span class="n">PartialDependenceDisplay</span>
+
+<span class="c1"># Plot partial dependence for petal length (feature 2)</span>
+<span class="n">PartialDependenceDisplay</span><span class="o">.</span><span class="n">from_estimator</span><span class="p">(</span><span class="n">rf_clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">target</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="example-2-regression">
+<h3><strong>Example 2: Regression</strong><a class="headerlink" href="#example-2-regression" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span>
+
+<span class="c1"># Synthetic regression data</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># Fit Random Forest</span>
+<span class="n">rf_reg</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">rf_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+
+<span class="c1"># Predict</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">rf_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MSE:&quot;</span><span class="p">,</span> <span class="n">mse</span><span class="p">)</span>
+
+<span class="c1"># Visualize</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;RF Fit&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Random Forest Regression&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tools-and-methods-summary">
+<h2><strong>4. Tools and Methods Summary</strong><a class="headerlink" href="#tools-and-methods-summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Modeling</strong>: <code class="docutils literal notranslate"><span class="pre">sklearn.ensemble.RandomForestClassifier</span></code>, <code class="docutils literal notranslate"><span class="pre">RandomForestRegressor</span></code>.</p></li>
+<li><p><strong>Evaluation</strong>: <code class="docutils literal notranslate"><span class="pre">sklearn.metrics.accuracy_score</span></code>, <code class="docutils literal notranslate"><span class="pre">mean_squared_error</span></code>.</p></li>
+<li><p><strong>Tuning</strong>: <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.GridSearchCV</span></code>.</p></li>
+<li><p><strong>Visualization</strong>: <code class="docutils literal notranslate"><span class="pre">seaborn.barplot()</span></code> for feature importance.</p></li>
+<li><p><strong>Feature Importance</strong>: <code class="docutils literal notranslate"><span class="pre">.feature_importances_</span></code>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="conclusion">
+<h2><strong>Conclusion</strong><a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Random Forest is a powerful ensemble algorithm that combines the simplicity of decision trees with the strength of bagging and feature randomness, delivering high accuracy and robustness.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\3_ml"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="14_decision_trees.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Decision Trees</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="16_svm.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Support Vector Machine (SVM) in Detail</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-random-forest-algorithm"><strong>What is the Random Forest Algorithm?</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-random-forest"><strong>Why Use Random Forest?</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works"><strong>How It Works</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-random-forest-algorithm-steps">The Random Forest Algorithm Steps</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-and-drawbacks">Advantages and Drawbacks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages">Advantages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drawbacks">Drawbacks</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts-and-methods"><strong>Key Concepts and Methods</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-core-mechanics"><strong>a. Core Mechanics</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-hyperparameters"><strong>b. Hyperparameters</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-examples"><strong>Practical Examples</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-classification-iris-dataset"><strong>Example 1: Classification (Iris Dataset)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-import-libraries-and-load-data">Step 1: Import Libraries and Load Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-split-data-into-training-and-testing-sets">Step 2: Split Data into Training and Testing Sets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-train-the-random-forest-model">Step 3: Train the Random Forest Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-make-predictions-and-evaluate-the-model">Step 4: Make Predictions and Evaluate the Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-analyze-feature-importance">Step 5: Analyze Feature Importance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-output">Example Output</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-tuning">Hyperparameter Tuning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-grid-search-for-hyperparameter-tuning">Example: Grid Search for Hyperparameter Tuning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Example Output</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-the-model">Interpreting the Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-visualize-a-single-tree">Example: Visualize a Single Tree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-partial-dependence-plot">Example: Partial Dependence Plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-regression"><strong>Example 2: Regression</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-methods-summary"><strong>4. Tools and Methods Summary</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion"><strong>Conclusion</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

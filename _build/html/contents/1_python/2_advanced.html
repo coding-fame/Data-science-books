@@ -1,0 +1,1255 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Input/Output and Flow Control &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/1_python/2_advanced';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data Structures" href="3_data_structures.html" />
+    <link rel="prev" title="Python Basics" href="1_basics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_basics.html">Python Basics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_regex.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html"><strong>What is Exploratory Data Analysis (EDA)?</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core ML Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Deployment</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self_introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/edit/main/contents/1_python/2_advanced.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/issues/new?title=Issue%20on%20page%20%2Fcontents/1_python/2_advanced.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/1_python/2_advanced.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Input/Output and Flow Control</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-and-output-in-python">9. Input and Output in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-input-and-output">What is Input and Output?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-coding-vs-dynamic-input">Hard Coding vs. Dynamic Input</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-coding">Hard Coding</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-input">Dynamic Input</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-input-function">The <code class="docutils literal notranslate"><span class="pre">input()</span></code> Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#type-conversion">Type Conversion</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#common-type-conversion-functions">Common Type Conversion Functions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-control-in-python">10. Flow Control in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-flow-control">What is Flow Control?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-execution">Types of Execution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sequential-execution">1. Sequential Execution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">2. Conditional Execution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-execution">3. Looping Execution</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keywords-in-flow-control">Keywords in Flow Control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indentation-in-python">Indentation in Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional Statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statement">1. <code class="docutils literal notranslate"><span class="pre">if</span></code> Statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-else-statement">2. <code class="docutils literal notranslate"><span class="pre">if-else</span></code> Statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-elif-else-statement">3. <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> Statement</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-statements">Looping Statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop">1. <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loop">2. <code class="docutils literal notranslate"><span class="pre">while</span></code> Loop</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-keywords">Control Flow Keywords</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#break"><code class="docutils literal notranslate"><span class="pre">break</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#continue"><code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pass"><code class="docutils literal notranslate"><span class="pre">pass</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <hr class="docutils" />
+<section id="input-output-and-flow-control">
+<h1>Input/Output and Flow Control<a class="headerlink" href="#input-output-and-flow-control" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="input-and-output-in-python">
+<h2>9. Input and Output in Python<a class="headerlink" href="#input-and-output-in-python" title="Link to this heading">#</a></h2>
+<section id="what-is-input-and-output">
+<h3>What is Input and Output?<a class="headerlink" href="#what-is-input-and-output" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Input</strong>: Data provided to the program, such as user entries or datasets for ML models.</p></li>
+<li><p><strong>Output</strong>: Results generated by the program, like predictions or accuracy scores.</p></li>
+</ul>
+<p>Understanding input and output is essential in ML for feeding data into models and displaying results.</p>
+</section>
+<hr class="docutils" />
+<section id="hard-coding-vs-dynamic-input">
+<h3>Hard Coding vs. Dynamic Input<a class="headerlink" href="#hard-coding-vs-dynamic-input" title="Link to this heading">#</a></h3>
+<section id="hard-coding">
+<h4>Hard Coding<a class="headerlink" href="#hard-coding" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Values are directly assigned in the code (e.g., setting <code class="docutils literal notranslate"><span class="pre">age</span> <span class="pre">=</span> <span class="pre">16</span></code>).</p></li>
+<li><p>Useful for testing but not flexible for real-world ML applications where data changes.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>  <span class="c1"># Hard-coded value</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Age is:&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="dynamic-input">
+<h4>Dynamic Input<a class="headerlink" href="#dynamic-input" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Values are entered by the user during runtime.</p></li>
+<li><p>Essential for ML to handle real-time data, like user inputs for predictions.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dynamic input for ML model testing</span>
+<span class="c1"># age = input(&quot;Please enter the age: &quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entered age is:&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-input-function">
+<h3>The <code class="docutils literal notranslate"><span class="pre">input()</span></code> Function<a class="headerlink" href="#the-input-function" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">input(p)</span></code> is a built-in Python function that accepts keyboard input.</p></li>
+<li><p>It returns the input as a <strong>string</strong> type, even if the user enters a number.</p></li>
+<li><p>You can convert the string to other types (e.g., <code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code>) for ML calculations.</p></li>
+</ul>
+<p><strong>Example: Taking a Name as Input</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Taking user input for ML data preprocessing</span>
+<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You entered name as:&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Example: Checking the Type of Input</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Checking input type for ML data validation</span>
+<span class="n">value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the value: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entered value as:&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Type is:&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;str&#39;&gt;</span>
+</pre></div>
+</div>
+<p><strong>ML Tip:</strong></p>
+<ul class="simple">
+<li><p>Always validate input types to ensure compatibility with ML models (e.g., numerical inputs for regression).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="type-conversion">
+<h3>Type Conversion<a class="headerlink" href="#type-conversion" title="Link to this heading">#</a></h3>
+<p>Python allows converting data types to match your needs. This is crucial in ML for preparing data.</p>
+<section id="common-type-conversion-functions">
+<h4>Common Type Conversion Functions<a class="headerlink" href="#common-type-conversion-functions" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Function</strong></p></th>
+<th class="head"><p><strong>Purpose</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">int(p)</span></code></p></td>
+<td><p>Converts to integer (e.g., for epochs in training).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">float(p)</span></code></p></td>
+<td><p>Converts to float (e.g., for model accuracy).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">str(p)</span></code></p></td>
+<td><p>Converts to string (e.g., for text preprocessing).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bool(p)</span></code></p></td>
+<td><p>Converts to Boolean (e.g., for binary classification).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">list(p)</span></code></p></td>
+<td><p>Converts to list (e.g., for datasets).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tuple(p)</span></code></p></td>
+<td><p>Converts to tuple (e.g., for immutable data).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set(p)</span></code></p></td>
+<td><p>Converts to set (e.g., for unique labels).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dict(p)</span></code></p></td>
+<td><p>Converts to dictionary (e.g., for feature mapping).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h4>
+<ol class="arabic">
+<li><p><strong>String to Integer (for ML epochs):</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">epochs</span> <span class="o">=</span> <span class="s2">&quot;10&quot;</span>
+<span class="n">epochs_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Converted value:&quot;</span><span class="p">,</span> <span class="n">epochs_int</span><span class="p">)</span>  <span class="c1"># Output: 10</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>String to Float (for ML predictions):</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accuracy</span> <span class="o">=</span> <span class="s2">&quot;0.85&quot;</span>
+<span class="n">accuracy_float</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Converted value:&quot;</span><span class="p">,</span> <span class="n">accuracy_float</span><span class="p">)</span>  <span class="c1"># Output: 0.85</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Float to Integer (for ML batch size):</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">batch_size</span> <span class="o">=</span> <span class="mf">32.75</span>
+<span class="n">batch_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Converted value:&quot;</span><span class="p">,</span> <span class="n">batch_int</span><span class="p">)</span>  <span class="c1"># Output: 32</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>ML Tip:</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">float</span></code> for continuous data (e.g., weights) and <code class="docutils literal notranslate"><span class="pre">int</span></code> for discrete data (e.g., epochs).</p></li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="flow-control-in-python">
+<h2>10. Flow Control in Python<a class="headerlink" href="#flow-control-in-python" title="Link to this heading">#</a></h2>
+<section id="what-is-flow-control">
+<h3>What is Flow Control?<a class="headerlink" href="#what-is-flow-control" title="Link to this heading">#</a></h3>
+<p>Flow control determines the order in which statements in a program are executed. This is critical in ML for decision-making and iterating over data.</p>
+<p>There are three main execution styles:</p>
+<ol class="arabic simple">
+<li><p><strong>Sequential Execution</strong>: Runs code line by line.</p></li>
+<li><p><strong>Conditional Execution</strong>: Executes code based on conditions.</p></li>
+<li><p><strong>Looping Execution</strong>: Repeats code based on conditions.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="types-of-execution">
+<h3>Types of Execution<a class="headerlink" href="#types-of-execution" title="Link to this heading">#</a></h3>
+<section id="sequential-execution">
+<h4>1. Sequential Execution<a class="headerlink" href="#sequential-execution" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Code runs from top to bottom.</p></li>
+<li><p>Suitable for simple ML tasks, like printing model results.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training started&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model accuracy: 0.92&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training completed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="conditional-execution">
+<h4>2. Conditional Execution<a class="headerlink" href="#conditional-execution" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Allows decisions based on conditions.</p></li>
+<li><p>Essential for ML tasks like checking model performance.</p></li>
+</ul>
+<p><strong>Conditional Statements:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if-else</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if-elif-elif-else</span></code></p></li>
+</ul>
+</section>
+<section id="looping-execution">
+<h4>3. Looping Execution<a class="headerlink" href="#looping-execution" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Repeats code multiple times.</p></li>
+<li><p>Useful in ML for iterating over datasets or training epochs.</p></li>
+</ul>
+<p><strong>Loop Types:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="keywords-in-flow-control">
+<h3>Keywords in Flow Control<a class="headerlink" href="#keywords-in-flow-control" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Keyword</strong></p></th>
+<th class="head"><p><strong>Purpose</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">break</span></code></p></td>
+<td><p>Exits the loop early (e.g., stop training).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">continue</span></code></p></td>
+<td><p>Skips the current iteration (e.g., skip invalid data).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pass</span></code></p></td>
+<td><p>Placeholder for future code (e.g., empty ML function).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="indentation-in-python">
+<h3>Indentation in Python<a class="headerlink" href="#indentation-in-python" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Indentation</strong> defines blocks of code in Python.</p></li>
+<li><p>Use <strong>4 spaces</strong> as the standard (or any consistent number).</p></li>
+<li><p>Incorrect indentation causes an <code class="docutils literal notranslate"><span class="pre">IndentationError</span></code>.</p></li>
+</ul>
+<p><strong>Example Error:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ne">IndentationError</span><span class="p">:</span> <span class="n">expected</span> <span class="n">an</span> <span class="n">indented</span> <span class="n">block</span>
+</pre></div>
+</div>
+<p><strong>ML Tip:</strong></p>
+<ul class="simple">
+<li><p>Proper indentation ensures ML code runs correctly, especially in loops and conditionals.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="conditional-statements">
+<h3>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Link to this heading">#</a></h3>
+<section id="if-statement">
+<h4>1. <code class="docutils literal notranslate"><span class="pre">if</span></code> Statement<a class="headerlink" href="#if-statement" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Executes code if a condition is <strong>True</strong>.</p></li>
+<li><p>Useful in ML for checking thresholds (e.g., accuracy &gt; 0.9).</p></li>
+</ul>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="c1"># Block of code</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accuracy</span> <span class="o">=</span> <span class="mf">0.95</span>
+<span class="k">if</span> <span class="n">accuracy</span> <span class="o">&gt;</span> <span class="mf">0.9</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model performs well!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="if-else-statement">
+<h4>2. <code class="docutils literal notranslate"><span class="pre">if-else</span></code> Statement<a class="headerlink" href="#if-else-statement" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Executes one block if <strong>True</strong>, another if <strong>False</strong>.</p></li>
+<li><p>Useful in ML for binary decisions (e.g., pass/fail).</p></li>
+</ul>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="c1"># Block of code if True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Block of code if False</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accuracy</span> <span class="o">=</span> <span class="mf">0.85</span>
+<span class="k">if</span> <span class="n">accuracy</span> <span class="o">&gt;</span> <span class="mf">0.9</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model performs well!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model needs improvement.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="if-elif-else-statement">
+<h4>3. <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> Statement<a class="headerlink" href="#if-elif-else-statement" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> are keywords in Python</strong>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code>statement contains an <strong>expression/condition/value</strong>.</p></li>
+<li><p><strong>Colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>) is mandatory</strong>, otherwise, <strong>SyntaxError</strong> occurs.</p></li>
+<li><p>Checks multiple conditions in sequence.</p></li>
+<li><p>Executes the first <strong>True</strong> condition, skips others.</p></li>
+<li><p>If all conditions are <strong>False</strong>, runs the <code class="docutils literal notranslate"><span class="pre">else</span></code> block.</p></li>
+<li><p>Useful in ML for multi-class classification.</p></li>
+</ul>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span><span class="p">:</span>
+    <span class="c1"># Block of code for condition1</span>
+<span class="k">elif</span> <span class="n">condition2</span><span class="p">:</span>
+    <span class="c1"># Block of code for condition2</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Block of code if no condition is True</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ML example: Classify model performance</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter model accuracy (0-1): &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">accuracy</span> <span class="o">&gt;=</span> <span class="mf">0.9</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Excellent model!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">accuracy</span> <span class="o">&gt;=</span> <span class="mf">0.8</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Good model.&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">accuracy</span> <span class="o">&gt;=</span> <span class="mf">0.7</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fair model.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model needs retraining.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Notes:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> are keywords.</p></li>
+<li><p>Conditions must end with a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>), or a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> occurs.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="looping-statements">
+<h3>Looping Statements<a class="headerlink" href="#looping-statements" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>If we want to <strong>execute a group of statements multiple times</strong>, we use <strong>looping</strong>.</p></li>
+</ul>
+<section id="for-loop">
+<h4>1. <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#for-loop" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Iterates over a sequence (e.g., list, tuple, string).</p></li>
+<li><p>Essential in ML for processing datasets or epochs.</p></li>
+</ul>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+    <span class="c1"># Block of code</span>
+</pre></div>
+</div>
+<p><strong>Example: Iterate Over ML Dataset</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Process dataset</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data point:&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="while-loop">
+<h4>2. <code class="docutils literal notranslate"><span class="pre">while</span></code> Loop<a class="headerlink" href="#while-loop" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Repeats code while a condition is <strong>True</strong>.</p></li>
+<li><p>Useful in ML for training loops or stopping criteria.</p></li>
+</ul>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="c1"># Block of code</span>
+</pre></div>
+</div>
+<p><strong>Example: ML Training Loop</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">epoch</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">max_epochs</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">while</span> <span class="n">epoch</span> <span class="o">&lt;=</span> <span class="n">max_epochs</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training epoch:&quot;</span><span class="p">,</span> <span class="n">epoch</span><span class="p">)</span>
+    <span class="n">epoch</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="control-flow-keywords">
+<h3>Control Flow Keywords<a class="headerlink" href="#control-flow-keywords" title="Link to this heading">#</a></h3>
+<section id="break">
+<h4><code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#break" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Exits the loop early.</p></li>
+<li><p>Useful in ML for early stopping (e.g., stop if loss is low).</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Early stopping in ML training</span>
+<span class="n">epoch</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">epoch</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">/</span> <span class="n">epoch</span>  <span class="c1"># Simulated loss</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Epoch:&quot;</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="s2">&quot;Loss:&quot;</span><span class="p">,</span> <span class="n">loss</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">loss</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loss is low. Stopping training.&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="n">epoch</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+<section id="continue">
+<h4><code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#continue" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Skips the current iteration, continues with the next.</p></li>
+<li><p>Useful in ML for skipping invalid data.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Skip invalid ML data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>  <span class="c1"># -1 and -5 are invalid</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Skipping invalid data:&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Processing data:&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="pass">
+<h4><code class="docutils literal notranslate"><span class="pre">pass</span></code><a class="headerlink" href="#pass" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Placeholder for future code (does nothing).</p></li>
+<li><p>Useful in ML for planning functions or conditional blocks.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Placeholder for ML model evaluation</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">evaluate_model</span><span class="p">():</span>
+    <span class="k">pass</span>  <span class="c1"># To be implemented later</span>
+<span class="n">evaluate_model</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Input/Output</strong>: Use <code class="docutils literal notranslate"><span class="pre">input()</span></code> for dynamic data and type conversion for ML compatibility.</p></li>
+<li><p><strong>Flow Control</strong>: Use conditionals (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">if-else</span></code>, <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code>) for decisions and loops (<code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code>) for repetition.</p></li>
+<li><p><strong>Keywords</strong>: Use <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code>, and <code class="docutils literal notranslate"><span class="pre">pass</span></code> for advanced flow control.</p></li>
+<li><p><strong>ML Relevance</strong>: These concepts are essential for preprocessing data, training models, and evaluating performance.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\1_python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1_basics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Basics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3_data_structures.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Structures</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-and-output-in-python">9. Input and Output in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-input-and-output">What is Input and Output?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-coding-vs-dynamic-input">Hard Coding vs. Dynamic Input</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-coding">Hard Coding</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-input">Dynamic Input</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-input-function">The <code class="docutils literal notranslate"><span class="pre">input()</span></code> Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#type-conversion">Type Conversion</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#common-type-conversion-functions">Common Type Conversion Functions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-control-in-python">10. Flow Control in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-flow-control">What is Flow Control?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-execution">Types of Execution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sequential-execution">1. Sequential Execution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">2. Conditional Execution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-execution">3. Looping Execution</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keywords-in-flow-control">Keywords in Flow Control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indentation-in-python">Indentation in Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional Statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statement">1. <code class="docutils literal notranslate"><span class="pre">if</span></code> Statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-else-statement">2. <code class="docutils literal notranslate"><span class="pre">if-else</span></code> Statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-elif-else-statement">3. <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> Statement</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-statements">Looping Statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop">1. <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loop">2. <code class="docutils literal notranslate"><span class="pre">while</span></code> Loop</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-keywords">Control Flow Keywords</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#break"><code class="docutils literal notranslate"><span class="pre">break</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#continue"><code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pass"><code class="docutils literal notranslate"><span class="pre">pass</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Train the Model &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/3_ml/6_training';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Testing Machine Learning Models" href="6_evaluation.html" />
+    <link rel="prev" title="ML: Life Cycle" href="6_ml_lifecycle.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/3_inferential.html">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0_maths/6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/1_basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/9_regex.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html"><strong>What is Exploratory Data Analysis (EDA)?</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10_core_algo.html">Core ML Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="6_ml_lifecycle.html">ML Lifecycle</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_deployment.html">Deployment</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self_introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/edit/main/contents/3_ml/6_training.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/issues/new?title=Issue%20on%20page%20%2Fcontents/3_ml/6_training.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/3_ml/6_training.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Train the Model</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-train-the-model-mean"><strong>What Does “Train the Model” Mean?</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-train-a-model"><strong>Why Train a Model?</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-its-important"><strong>Why It’s Important</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts-and-methods"><strong>Key Concepts and Methods</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-data-preparation"><strong>a. Data Preparation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-model-selection"><strong>b. Model Selection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-loss-functions"><strong>c. Loss Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-optimization"><strong>d. Optimization</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-training-process"><strong>e. Training Process</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-methods-summary"><strong>4. Tools and Methods Summary</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-components-of-training-a-model">Key Components of Training a Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm-selection">1. <strong>Algorithm Selection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training">2. <strong>Model Training</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-tuning">3. <strong>Hyperparameter Tuning</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-validation">4. <strong>Cross-Validation</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-example-training-a-model-with-the-titanic-dataset">Practical Example: Training a Model with the Titanic Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-prepare-the-data">Step 1: Prepare the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-select-and-train-the-model">Step 2: Select and Train the Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-hyperparameter-tuning">Step 3: Hyperparameter Tuning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-cross-validation">Step 4: Cross-Validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-train-the-final-model">Step 5: Train the Final Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-evaluate-on-test-set-optional">Step 6: Evaluate on Test Set (Optional)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="train-the-model">
+<h1>Train the Model<a class="headerlink" href="#train-the-model" title="Link to this heading">#</a></h1>
+<section id="what-does-train-the-model-mean">
+<h2><strong>What Does “Train the Model” Mean?</strong><a class="headerlink" href="#what-does-train-the-model-mean" title="Link to this heading">#</a></h2>
+<p>Training the model involves feeding the training data into an algorithm so it can learn patterns and relationships. It’s like teaching a student by working through practice problems together.</p>
+<p>Training a model involves optimizing its parameters using a dataset (training data) so it can accurately predict outcomes or classify data points. The process adjusts the model based on a loss function, iteratively improving its performance by learning from examples.</p>
+</section>
+<section id="why-train-a-model">
+<h2><strong>Why Train a Model?</strong><a class="headerlink" href="#why-train-a-model" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Learn Patterns</strong>: Capture relationships between features and targets.</p></li>
+<li><p><strong>Generalization</strong>: Enable predictions on unseen data.</p></li>
+<li><p><strong>Task-Specific</strong>: Tailor the model to classification, regression, or other objectives.</p></li>
+</ul>
+</section>
+<section id="why-its-important">
+<h2><strong>Why It’s Important</strong><a class="headerlink" href="#why-its-important" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Pattern Recognition</strong>: The model adjusts its parameters (e.g., weights in a neural network) to fit the data, enabling it to make predictions.</p></li>
+<li><p><strong>Algorithm Selection</strong>: The right algorithm—like decision trees for simple tasks or neural networks for complex ones depends on your problem.</p></li>
+<li><p><strong>Optimization</strong>: Tuning hyperparameters (e.g., learning rate, number of trees) refines the model’s performance.</p></li>
+</ul>
+</section>
+<section id="key-concepts-and-methods">
+<h2><strong>Key Concepts and Methods</strong><a class="headerlink" href="#key-concepts-and-methods" title="Link to this heading">#</a></h2>
+<section id="a-data-preparation">
+<h3><strong>a. Data Preparation</strong><a class="headerlink" href="#a-data-preparation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Splitting</strong>: Divide data into training (fit model), validation (tune hyperparameters), and test (final evaluation) sets.</p></li>
+<li><p><strong>Preprocessing</strong>: Scale features, encode categoricals, handle missing values.</p></li>
+</ul>
+</section>
+<section id="b-model-selection">
+<h3><strong>b. Model Selection</strong><a class="headerlink" href="#b-model-selection" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Supervised</strong>: Linear regression, logistic regression, decision trees, etc.</p></li>
+<li><p><strong>Unsupervised</strong>: K-Means, PCA.</p></li>
+<li><p><strong>Deep Learning</strong>: Neural networks via TensorFlow/Keras.</p></li>
+</ul>
+</section>
+<section id="c-loss-functions">
+<h3><strong>c. Loss Functions</strong><a class="headerlink" href="#c-loss-functions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Regression</strong>: MSE, MAE.</p></li>
+<li><p><strong>Classification</strong>: Cross-entropy, log-loss.</p></li>
+</ul>
+</section>
+<section id="d-optimization">
+<h3><strong>d. Optimization</strong><a class="headerlink" href="#d-optimization" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Gradient Descent</strong>: Adjust parameters by minimizing loss via gradients.</p></li>
+<li><p><strong>Stochastic Gradient Descent (SGD)</strong>: Batch-based updates.</p></li>
+<li><p><strong>Advanced Optimizers</strong>: Adam, RMSprop (TensorFlow).</p></li>
+</ul>
+</section>
+<section id="e-training-process">
+<h3><strong>e. Training Process</strong><a class="headerlink" href="#e-training-process" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Fit</strong>: Adjust model parameters to data.</p></li>
+<li><p><strong>Epochs/Iterations</strong>: Number of passes over data (deep learning) or optimization steps.</p></li>
+<li><p><strong>Early Stopping</strong>: Halt training if validation loss stops improving.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tools-and-methods-summary">
+<h2><strong>4. Tools and Methods Summary</strong><a class="headerlink" href="#tools-and-methods-summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Modeling</strong>: <code class="docutils literal notranslate"><span class="pre">sklearn.linear_model</span></code>, <code class="docutils literal notranslate"><span class="pre">tensorflow.keras.Sequential</span></code>, <code class="docutils literal notranslate"><span class="pre">xgboost.XGBClassifier</span></code>.</p></li>
+<li><p><strong>Data Prep</strong>: <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.train_test_split</span></code>, <code class="docutils literal notranslate"><span class="pre">sklearn.preprocessing.StandardScaler</span></code>.</p></li>
+<li><p><strong>Evaluation</strong>: <code class="docutils literal notranslate"><span class="pre">sklearn.metrics.accuracy_score</span></code>, <code class="docutils literal notranslate"><span class="pre">mean_squared_error</span></code>.</p></li>
+<li><p><strong>Visualization</strong>: <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>, <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="key-components-of-training-a-model">
+<h2>Key Components of Training a Model<a class="headerlink" href="#key-components-of-training-a-model" title="Link to this heading">#</a></h2>
+<section id="algorithm-selection">
+<h3>1. <strong>Algorithm Selection</strong><a class="headerlink" href="#algorithm-selection" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Choose an algorithm based on the problem type classification (predicting categories) or regression (predicting numbers).</p></li>
+<li><p><strong>Examples</strong>:</p>
+<ul>
+<li><p><strong>Logistic Regression</strong>: For binary classification (e.g., spam vs. not spam).</p></li>
+<li><p><strong>Decision Trees</strong>: For classification or regression tasks.</p></li>
+<li><p><strong>Random Forest</strong>: An ensemble method combining multiple decision trees for better accuracy.</p></li>
+<li><p><strong>Support Vector Machines (SVM)</strong>: For complex classification problems.</p></li>
+<li><p><strong>Neural Networks</strong>: For advanced tasks like image or speech recognition.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="model-training">
+<h3>2. <strong>Model Training</strong><a class="headerlink" href="#model-training" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Teach the algorithm patterns in the data.</p></li>
+<li><p><strong>Process</strong>:</p>
+<ul>
+<li><p>Initialize the algorithm’s parameters (e.g., weights in a neural network).</p></li>
+<li><p>Feed the training data into the algorithm.</p></li>
+<li><p>Adjust parameters to minimize the loss function using optimization techniques (e.g., gradient descent).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="hyperparameter-tuning">
+<h3>3. <strong>Hyperparameter Tuning</strong><a class="headerlink" href="#hyperparameter-tuning" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Optimize settings that aren’t learned from the data (e.g., learning rate, regularization strength).</p></li>
+<li><p><strong>Methods</strong>:</p>
+<ul>
+<li><p><strong>Grid Search</strong>: Tests all possible combinations of hyperparameters.</p></li>
+<li><p><strong>Random Search</strong>: Samples random combinations, often faster than Grid Search.</p></li>
+<li><p><strong>Bayesian Optimization</strong>: Uses probabilistic models to find the best settings efficiently.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="cross-validation">
+<h3>4. <strong>Cross-Validation</strong><a class="headerlink" href="#cross-validation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Evaluate the model’s performance and prevent overfitting (where the model memorizes the training data instead of learning general patterns).</p></li>
+<li><p><strong>Technique</strong>: <strong>K-Fold Cross-Validation</strong> splits the data into K subsets, trains on K-1 subsets, and validates on the remaining one, repeating K times.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="practical-example-training-a-model-with-the-titanic-dataset">
+<h2>Practical Example: Training a Model with the Titanic Dataset<a class="headerlink" href="#practical-example-training-a-model-with-the-titanic-dataset" title="Link to this heading">#</a></h2>
+<p>Let’s train a model to predict whether a Titanic passenger survived (0 = No, 1 = Yes) using <strong>Logistic Regression</strong>. We’ll walk through data preparation, training, tuning, and validation, providing a complete Python code example.</p>
+<section id="step-1-prepare-the-data">
+<h3>Step 1: Prepare the Data<a class="headerlink" href="#step-1-prepare-the-data" title="Link to this heading">#</a></h3>
+<p>We’ll use the Titanic dataset, preprocess it (handle missing values, encode categorical variables), and split it into training and test sets.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="c1"># Load the Titanic dataset</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># Drop irrelevant columns and handle missing values</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;PassengerId&#39;</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Ticket&#39;</span><span class="p">,</span> <span class="s1">&#39;Cabin&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Embarked&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Embarked&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Encode categorical variables (Sex, Embarked)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Embarked&#39;</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Define features (X) and target (y)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span>
+
+<span class="c1"># Split into training and test sets (80% train, 20% test)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Explanation</strong>:</p>
+<ul>
+<li><p>Dropped columns like <code class="docutils literal notranslate"><span class="pre">Name</span></code> and <code class="docutils literal notranslate"><span class="pre">Cabin</span></code> that aren’t useful for prediction.</p></li>
+<li><p>Filled missing <code class="docutils literal notranslate"><span class="pre">Age</span></code> with the median and <code class="docutils literal notranslate"><span class="pre">Embarked</span></code> with the mode.</p></li>
+<li><p>Converted categorical variables into numerical ones using one-hot encoding.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="step-2-select-and-train-the-model">
+<h3>Step 2: Select and Train the Model<a class="headerlink" href="#step-2-select-and-train-the-model" title="Link to this heading">#</a></h3>
+<p>We’ll use Logistic Regression, a simple yet effective algorithm for binary classification.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogisticRegression</span>
+
+<span class="c1"># Initialize and train the model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>  <span class="c1"># Increased iterations for convergence</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model trained successfully!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Explanation</strong>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_iter=200</span></code>: Ensures the algorithm runs enough iterations to find the best parameters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fit()</span></code>: Trains the model by adjusting parameters to predict <code class="docutils literal notranslate"><span class="pre">Survived</span></code> based on features.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="step-3-hyperparameter-tuning">
+<h3>Step 3: Hyperparameter Tuning<a class="headerlink" href="#step-3-hyperparameter-tuning" title="Link to this heading">#</a></h3>
+<p>We’ll use <strong>Grid Search</strong> to find the best hyperparameters for Logistic Regression.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="c1"># Define hyperparameter grid</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>  <span class="c1"># Regularization strength</span>
+    <span class="s1">&#39;penalty&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;l1&#39;</span><span class="p">,</span> <span class="s1">&#39;l2&#39;</span><span class="p">]</span>    <span class="c1"># Type of regularization (L1 = Lasso, L2 = Ridge)</span>
+<span class="p">}</span>
+
+<span class="c1"># Set up Grid Search with 5-fold cross-validation</span>
+<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;liblinear&#39;</span><span class="p">),</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+
+<span class="c1"># Fit Grid Search to training data</span>
+<span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Best Parameters:&quot;</span><span class="p">,</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Best Cross-Validation Accuracy:&quot;</span><span class="p">,</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_score_</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Explanation</strong>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>: Controls regularization strength (smaller values = stronger regularization).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">penalty</span></code>: L1 removes unimportant features; L2 reduces their impact.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">solver='liblinear'</span></code>: Required for L1 penalty in Logistic Regression.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv=5</span></code>: Uses 5-fold cross-validation to evaluate each combination.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="step-4-cross-validation">
+<h3>Step 4: Cross-Validation<a class="headerlink" href="#step-4-cross-validation" title="Link to this heading">#</a></h3>
+<p>We’ll assess the model’s consistency with <strong>K-Fold Cross-Validation</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">cross_val_score</span>
+
+<span class="c1"># Perform 5-fold cross-validation on the base model</span>
+<span class="n">cv_scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cross-Validation Scores:&quot;</span><span class="p">,</span> <span class="n">cv_scores</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean CV Accuracy:&quot;</span><span class="p">,</span> <span class="n">cv_scores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Explanation</strong>:</p>
+<ul>
+<li><p>Splits the training data into 5 parts, training on 4 and testing on 1 each time.</p></li>
+<li><p>Outputs a range of accuracy scores and their mean, showing model robustness.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="step-5-train-the-final-model">
+<h3>Step 5: Train the Final Model<a class="headerlink" href="#step-5-train-the-final-model" title="Link to this heading">#</a></h3>
+<p>Using the best parameters from Grid Search, we’ll train the final model.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Train final model with optimized parameters</span>
+<span class="n">best_model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span>
+    <span class="n">C</span><span class="o">=</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_params_</span><span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">],</span>
+    <span class="n">penalty</span><span class="o">=</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_params_</span><span class="p">[</span><span class="s1">&#39;penalty&#39;</span><span class="p">],</span>
+    <span class="n">max_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;liblinear&#39;</span>
+<span class="p">)</span>
+<span class="n">best_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final model trained with optimized parameters!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Explanation</strong>:</p>
+<ul>
+<li><p>Uses the best <code class="docutils literal notranslate"><span class="pre">C</span></code> and <code class="docutils literal notranslate"><span class="pre">penalty</span></code> found by Grid Search.</p></li>
+<li><p>Ready to make predictions on <code class="docutils literal notranslate"><span class="pre">X_test</span></code> or new data.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="step-6-evaluate-on-test-set-optional">
+<h3>Step 6: Evaluate on Test Set (Optional)<a class="headerlink" href="#step-6-evaluate-on-test-set-optional" title="Link to this heading">#</a></h3>
+<p>To see how the model performs on unseen data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Evaluate on test set</span>
+<span class="n">test_accuracy</span> <span class="o">=</span> <span class="n">best_model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test Set Accuracy:&quot;</span><span class="p">,</span> <span class="n">test_accuracy</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\3_ml"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="6_ml_lifecycle.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ML: Life Cycle</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="6_evaluation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Testing Machine Learning Models</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-train-the-model-mean"><strong>What Does “Train the Model” Mean?</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-train-a-model"><strong>Why Train a Model?</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-its-important"><strong>Why It’s Important</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts-and-methods"><strong>Key Concepts and Methods</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-data-preparation"><strong>a. Data Preparation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-model-selection"><strong>b. Model Selection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-loss-functions"><strong>c. Loss Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-optimization"><strong>d. Optimization</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-training-process"><strong>e. Training Process</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-methods-summary"><strong>4. Tools and Methods Summary</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-components-of-training-a-model">Key Components of Training a Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm-selection">1. <strong>Algorithm Selection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training">2. <strong>Model Training</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-tuning">3. <strong>Hyperparameter Tuning</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-validation">4. <strong>Cross-Validation</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-example-training-a-model-with-the-titanic-dataset">Practical Example: Training a Model with the Titanic Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-prepare-the-data">Step 1: Prepare the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-select-and-train-the-model">Step 2: Select and Train the Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-hyperparameter-tuning">Step 3: Hyperparameter Tuning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-cross-validation">Step 4: Cross-Validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-train-the-final-model">Step 5: Train the Final Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-evaluate-on-test-set-optional">Step 6: Evaluate on Test Set (Optional)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

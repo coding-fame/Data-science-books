@@ -1,0 +1,1669 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Inferential Statistics &#8212; Data Science Books</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css?v=995e94df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css?v=21c0b90a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d567e03f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/0_maths/3_inferential';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Calculus" href="5_calculus.html" />
+    <link rel="prev" title="Descriptive Statistics" href="1_descriptive.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science Books</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Machine Learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I — Foundations</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_essential.html">Essential Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_linear_algebra.html">Linear Algebra</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_probability.html">Probability Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_descriptive.html">Descriptive Statistics</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Inferential Statistics</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="5_calculus.html">Calculus</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="6_regression_analysis.html">Explanatory and Response Variables</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/1_basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/2_advanced.html">Advanced Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/3_data_structures.html">Data Structures</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/4_modules_packages.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/5_functions.html">Functions &amp; Modular Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/6_oop.html">Object-Oriented Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_python/8_exceptions.html">Exception Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_python/9_regex.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_numpy/1_numpy.html">NumPy (<strong>Numerical Python</strong>)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/1_series.html">Pandas Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/2_dataframes.html">Pandas DataFrame</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/3_visualization.html"><strong>What is Data Visualization in Data Science?</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/4_eda.html"><strong>What is Exploratory Data Analysis (EDA)?</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../2_pandas/5_feature_engineering.html"><strong>What is Feature Engineering?</strong></a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II — Classical Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/1_foundations.html">ML Foundational</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_data_preparation.html">2️⃣ Data Handling</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/2_train_test_split.html">Train–Test Split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/5_model_evaluation.html">4️⃣ Model Evaluation</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/11_supervised_learning.html"><strong>Supervised Learning</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/12_regression.html">Regression Algorithms</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/13_classification.html">Classification Algorithms</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/10_core_algo.html">Core ML Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/14_decision_trees.html">Decision Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/15_ensemble_methods.html">Ensemble Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/16_svm.html">Support Vector Machine (SVM) in Detail</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/17_knn.html">k-Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/18_naive_bayes.html">Naive Bayes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III — Advanced Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/20_unsupervised_learning.html">Unsupervised Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/21_clustering.html">Clustering Techniques</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_ml/7_optimization_and_training.html">5️⃣ Optimization &amp; Training</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_ml/6_ml_lifecycle.html">ML Lifecycle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_ml/6_deployment.html">Deployment</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part IV — Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl1_Introduction.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl2_Neuron.html">Neuron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl3_Libraries.html">Deep Learning Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl4_Terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl5_multi_layer.html">Multi-Layer Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl6_first_nn.html">First Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl7_evaluating_model.html">Model Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl8_multiclass_classification.html">Multiclass Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl9_multiclass_classification_hand.html">Handwritten Digit Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl10_saving_and_loading.html">Saving &amp; Loading Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl11_checkpointing.html">Model Checkpointing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl12_visualizing_model_training.html"><strong>Visualizing Model Training History in Deep Learning</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../4_dl/dl13_loss_functions_activation_functions_and_optimizers.html">Loss Functions &amp; Optimizers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part V — NLP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp1.html">NLP Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp2.html">Text Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp3.html">Text Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp4.html">NLP Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp5.html">Bag of Words, TF-IDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp6.html">Sentiment Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_nlp/nlp7.html">NLP with SpaCy</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part VI — Career &amp; MLOps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/self_introduction.html">Self Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/py.html">Python: Interview Guide</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/pd.html">📚 Pandas: Interview Guide</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/ml.html">Machine Learning: Interview Guide</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/dvc.html">DVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_interview/mlflow.html">MLflow</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/edit/main/contents/0_maths/3_inferential.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-fame/Data-science-books/issues/new?title=Issue%20on%20page%20%2Fcontents/0_maths/3_inferential.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/0_maths/3_inferential.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Inferential Statistics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Inferential Statistics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Inferential Statistics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-components">Core Components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-objectives"><strong>Key Objectives</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-statistical-concepts">Key Statistical Concepts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-analysis">1. Population vs Sample Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-management">2. Uncertainty Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing-framework">3. Hypothesis Testing Framework</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-analysis-in-modeling">4. Error Analysis in Modeling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#essential-statistical-tools">Essential Statistical Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confidence-interval-construction">1. Confidence Interval Construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-statistical-tests">2. Common Statistical Tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-central-limit-theorem-clt-in-machine-learning">The Central Limit Theorem (CLT) in Machine Learning</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-principles-of-clt">1. Core Principles of CLT</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-statement">Theorem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-conditions">Key Conditions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-matters">Why It Matters</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-clt-matters-in-ai-ml">2. Why CLT Matters in AI/ML</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#foundational-applications">Foundational Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#real-world-impact">Real-World Impact</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-implementation-guide">3. Practical Implementation Guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-data-collection">Step 1: Data Collection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-distribution-analysis">Step 2: Distribution Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-statistical-validation">Step 3: Statistical Validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-feline-food-preference">4. Case Study: Feline Food Preference</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-design">Experimental Design</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-analysis">Results Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-model-performance-evaluation">5. Case Study: Model Performance Evaluation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-setup">Experimental Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clt-application">CLT Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-limitations-and-solutions">6. Key Limitations and Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing">Hypothesis Testing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario">Scenario</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#investigation-steps">Investigation Steps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works">How It Works</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing-workflow">Hypothesis Testing Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts">Key Concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">🧪 Common Statistical Tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details">Details</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-types">Error Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Practical Implementation Guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-example-z-test">Code Example: Z-Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-example-t-test">Code Example: T-Test</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-1-z-test-exam-scores">Case Study 1: Z-Test (Exam Scores)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-2-t-test-product-weights">Case Study 2: T-Test (Product Weights)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-3-chi-square-dice-fairness">Case Study 3: Chi-Square (Dice Fairness)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-inferential-methods"><strong>4. Advanced Inferential Methods</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-analysis-of-variance-anova"><strong>a. Analysis of Variance (ANOVA)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-regression-analysis"><strong>b. Regression Analysis</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pro-tips">Pro Tips</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="inferential-statistics">
+<h1>Inferential Statistics<a class="headerlink" href="#inferential-statistics" title="Link to this heading">#</a></h1>
+<p>Inferential statistics involves using sample data to draw conclusions (inferences) about a larger population.</p>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h1>Inferential Statistics<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Inferential statistics allows us to make conclusions about large populations using data from smaller, representative samples. This is essential for studying massive groups where analyzing everyone is impractical or impossible.</p>
+<ul class="simple">
+<li><p><strong>Example 1</strong>: Survey 100 people to estimate the average income of a city’s 1 million residents.</p></li>
+<li><p><strong>Example 2</strong>: Measure the heights of 50 students to infer the average height of all students in a school.</p></li>
+</ul>
+<hr class="docutils" />
+<section id="core-components">
+<h2>Core Components<a class="headerlink" href="#core-components" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Population</strong>: The entire group we’re interested in studying.</p>
+<ul>
+<li><p><em>Example</em>: All registered voters in a country.</p></li>
+</ul>
+</li>
+<li><p><strong>Sample</strong>: A smaller, representative subset of the population.</p>
+<ul>
+<li><p><em>Example</em>: 1,000 surveyed voters.</p></li>
+</ul>
+</li>
+<li><p><strong>Inference</strong>: Using sample data to make generalizations about the population.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="key-objectives">
+<h2><strong>Key Objectives</strong><a class="headerlink" href="#key-objectives" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Estimate Parameters</strong>: Infer population characteristics (e.g., mean, proportion).</p></li>
+<li><p><strong>Test Hypotheses</strong>: Assess whether observed effects are statistically significant.</p></li>
+<li><p><strong>Quantify Uncertainty</strong>: Provide confidence intervals and p-values.</p></li>
+</ul>
+</section>
+<section id="key-statistical-concepts">
+<h2>Key Statistical Concepts<a class="headerlink" href="#key-statistical-concepts" title="Link to this heading">#</a></h2>
+<section id="population-vs-sample-analysis">
+<h3>1. Population vs Sample Analysis<a class="headerlink" href="#population-vs-sample-analysis" title="Link to this heading">#</a></h3>
+<p>This concept helps us understand the differences between studying the entire population and a sample.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aspect</p></th>
+<th class="head"><p>Population</p></th>
+<th class="head"><p>Sample</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Size</p></td>
+<td><p>Entire group</p></td>
+<td><p>Subset (often 10-30% of population)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Analysis Type</p></td>
+<td><p>Census (exact)</p></td>
+<td><p>Estimation (approximate)</p></td>
+</tr>
+<tr class="row-even"><td><p>Cost</p></td>
+<td><p>High</p></td>
+<td><p>Moderate</p></td>
+</tr>
+<tr class="row-odd"><td><p>Accuracy</p></td>
+<td><p>Exact</p></td>
+<td><p>Probabilistic</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>Note</strong>: The “10-30% rule” is a general guideline for sample size, but the actual size needed depends on the population’s variability and desired precision.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="uncertainty-management">
+<h3>2. Uncertainty Management<a class="headerlink" href="#uncertainty-management" title="Link to this heading">#</a></h3>
+<p>Inferential statistics helps quantify how confident we are in our estimates or predictions, which is crucial for ML models.</p>
+<ul class="simple">
+<li><p><strong>Confidence Intervals (CIs)</strong>: A range likely containing the true population parameter.</p>
+<ul>
+<li><p><em>Example</em>: A model predicts a house price of $500k with a 95% CI of [$480k, $520k].</p></li>
+<li><p><strong>Interpretation</strong>: If we repeated the sampling process many times, approximately 95% of the CIs would contain the true population parameter.</p></li>
+</ul>
+</li>
+<li><p><strong>Prediction Intervals</strong>: A range for individual observations, accounting for both model uncertainty and data variability.</p></li>
+<li><p><strong>Bayesian Credible Intervals</strong>: Probability-based ranges for parameters, often used in Bayesian statistics.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="hypothesis-testing-framework">
+<h3>3. Hypothesis Testing Framework<a class="headerlink" href="#hypothesis-testing-framework" title="Link to this heading">#</a></h3>
+<p>Hypothesis testing determines if observed patterns in data are statistically significant or likely due to random chance. This is vital for validating ML model features.</p>
+<ul class="simple">
+<li><p><strong>Example</strong>: Does feature X <em>actually</em> affect the target variable, or is the observed effect a fluke?</p></li>
+</ul>
+<p><strong>Steps in Hypothesis Testing</strong>:</p>
+<ol class="arabic simple">
+<li><p>Formulate the null hypothesis (H₀) and alternative hypothesis (H₁).</p>
+<ul class="simple">
+<li><p><em>Example</em>: H₀: No difference in effectiveness between two drugs. H₁: The new drug is more effective.</p></li>
+</ul>
+</li>
+<li><p>Choose a significance level (α), typically 0.05.</p></li>
+<li><p>Calculate the test statistic based on sample data.</p></li>
+<li><p>Compare the test statistic to a critical value or use the p-value to make a decision.</p></li>
+<li><p>Draw a conclusion: Reject H₀ if p-value &lt; α; otherwise, fail to reject H₀.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="error-analysis-in-modeling">
+<h3>4. Error Analysis in Modeling<a class="headerlink" href="#error-analysis-in-modeling" title="Link to this heading">#</a></h3>
+<p>Understanding errors in modeling helps diagnose and improve ML models, balancing bias and variance.</p>
+<ul class="simple">
+<li><p><strong>Bias</strong>: Systematic errors in predictions, often due to oversimplified models.</p>
+<ul>
+<li><p><em>Example</em>: A linear model trying to fit nonlinear data (underfitting).</p></li>
+</ul>
+</li>
+<li><p><strong>Variance</strong>: Sensitivity of the model to fluctuations in training data, often due to overly complex models.</p>
+<ul>
+<li><p><em>Example</em>: A decision tree memorizing training data (overfitting).</p></li>
+</ul>
+</li>
+<li><p><strong>Bias-Variance Tradeoff</strong>: Balancing model complexity to minimize both bias and variance for optimal performance.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="essential-statistical-tools">
+<h2>Essential Statistical Tools<a class="headerlink" href="#essential-statistical-tools" title="Link to this heading">#</a></h2>
+<section id="confidence-interval-construction">
+<h3>1. Confidence Interval Construction<a class="headerlink" href="#confidence-interval-construction" title="Link to this heading">#</a></h3>
+<p>Confidence intervals are key for understanding the reliability of estimates. Below is a Python code block to calculate a 95% confidence interval for the mean of a sample.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python implementation for mean confidence interval</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Generate sample data (e.g., heights of students)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">170</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Mean=170, SD=5, n=100</span>
+<span class="n">confidence</span> <span class="o">=</span> <span class="mf">0.95</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">sem</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">sem</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># Standard error of the mean</span>
+<span class="n">ci</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="n">confidence</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sem</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;95% CI for the mean: (</span><span class="si">{</span><span class="n">ci</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">ci</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Output Explanation</strong>: The code calculates the 95% CI for the sample mean. For example, if the output is (168.5, 171.5), we are 95% confident the true population mean lies within this range.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="common-statistical-tests">
+<h3>2. Common Statistical Tests<a class="headerlink" href="#common-statistical-tests" title="Link to this heading">#</a></h3>
+<p>Different tests are used depending on the data and research question. Below is a table summarizing common tests and their applications in ML.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Test Type</p></th>
+<th class="head"><p>Use Case</p></th>
+<th class="head"><p>Example Application</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>t-test</p></td>
+<td><p>Compare means of two groups</p></td>
+<td><p>Drug efficacy analysis</p></td>
+</tr>
+<tr class="row-odd"><td><p>ANOVA</p></td>
+<td><p>Compare means of multiple groups</p></td>
+<td><p>Crop yield across fertilizers</p></td>
+</tr>
+<tr class="row-even"><td><p>Chi-square</p></td>
+<td><p>Test independence in categorical data</p></td>
+<td><p>Voting preference vs gender</p></td>
+</tr>
+<tr class="row-odd"><td><p>Z-test</p></td>
+<td><p>Compare means with large samples</p></td>
+<td><p>Manufacturing quality control</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>When to use</strong>:</p>
+<ul>
+<li><p><strong>t-test</strong>: Small samples (n &lt; 30), comparing two groups.</p></li>
+<li><p><strong>ANOVA</strong>: Comparing more than two groups.</p></li>
+<li><p><strong>Chi-square</strong>: Analyzing relationships between categorical variables.</p></li>
+<li><p><strong>Z-test</strong>: Large samples (n ≥ 30), known population variance.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-central-limit-theorem-clt-in-machine-learning">
+<h1>The Central Limit Theorem (CLT) in Machine Learning<a class="headerlink" href="#the-central-limit-theorem-clt-in-machine-learning" title="Link to this heading">#</a></h1>
+<p>The Central Limit Theorem (CLT) is a fundamental principle explaining why averages (or sums) of data tend to follow a <strong>normal (bell-shaped) distribution</strong>, even if the original data isn’t normally distributed. This theorem is crucial in ML for reliable inferences.</p>
+<hr class="docutils" />
+<section id="core-principles-of-clt">
+<h2>1. Core Principles of CLT<a class="headerlink" href="#core-principles-of-clt" title="Link to this heading">#</a></h2>
+<section id="theorem-statement">
+<h3>Theorem Statement<a class="headerlink" href="#theorem-statement" title="Link to this heading">#</a></h3>
+<p>For any population with a mean <strong>μ</strong> and standard deviation <strong>σ</strong>, the sampling distribution of the sample means will:</p>
+<ul class="simple">
+<li><p>Approach a normal distribution as the sample size (n) increases (typically n ≥ 30).</p></li>
+<li><p>Have a mean equal to the population mean (μ).</p></li>
+<li><p>Have a standard error equal to σ/√n.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="key-conditions">
+<h3>Key Conditions<a class="headerlink" href="#key-conditions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Sample Size</strong>: Generally, n ≥ 30 is sufficient, but for highly skewed data, larger samples may be needed.</p></li>
+<li><p><strong>Finite Variance</strong>: The population must have a finite variance (most real-world data satisfies this).</p></li>
+<li><p><strong>Random Sampling</strong>: Samples must be randomly selected and representative of the population.</p></li>
+<li><p><strong>Independence</strong>: Observations should be independent of each other.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="why-it-matters">
+<h3>Why It Matters<a class="headerlink" href="#why-it-matters" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Real-world data is often messy</strong> (e.g., incomes, test scores, website clicks). The CLT allows us to treat averages of this data as normally distributed, even if the raw data isn’t.</p></li>
+<li><p>This is why statistical methods like hypothesis testing and confidence intervals work reliably in practice.</p></li>
+</ul>
+<p><strong>Example</strong>:<br />
+Imagine rolling a die 50 times and calculating the average roll. Repeat this process many times. While individual rolls are equally likely to be 1–6 (uniform distribution), the averages of those 50-roll samples will cluster around 3.5 (the true average) in a bell-shaped curve. The larger the sample size, the tighter the cluster around the mean.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="why-clt-matters-in-ai-ml">
+<h2>2. Why CLT Matters in AI/ML<a class="headerlink" href="#why-clt-matters-in-ai-ml" title="Link to this heading">#</a></h2>
+<p>The CLT underpins many statistical methods used in ML, enabling reliable inference and model evaluation.</p>
+<ul class="simple">
+<li><p><strong>Confidence Intervals</strong>: The CLT justifies confidence intervals for model performance metrics, helping us understand prediction reliability.</p></li>
+<li><p><strong>Model Assumptions</strong>: Many algorithms, like Linear Regression, assume residuals (errors) are normally distributed, which is often reasonable due to the CLT.</p></li>
+</ul>
+<hr class="docutils" />
+<section id="foundational-applications">
+<h3>Foundational Applications<a class="headerlink" href="#foundational-applications" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Model Evaluation</strong>: Use the CLT to calculate confidence intervals for accuracy metrics.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate 95% CI for model accuracy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.stats.proportion</span><span class="w"> </span><span class="kn">import</span> <span class="n">proportion_confint</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="mf">0.85</span>  <span class="c1"># Model accuracy</span>
+<span class="n">n_samples</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># Number of test samples</span>
+<span class="n">ci_low</span><span class="p">,</span> <span class="n">ci_high</span> <span class="o">=</span> <span class="n">proportion_confint</span><span class="p">(</span><span class="n">accuracy</span> <span class="o">*</span> <span class="n">n_samples</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;95% CI for accuracy: (</span><span class="si">{</span><span class="n">ci_low</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">ci_high</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Error Analysis</strong>: Validate the normality assumption in regression residuals using the CLT.</p></li>
+<li><p><strong>Algorithm Design</strong>: The CLT supports strategies like weight initialization in neural networks, where averages of random weights tend to be normally distributed.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="real-world-impact">
+<h3>Real-World Impact<a class="headerlink" href="#real-world-impact" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scenario</p></th>
+<th class="head"><p>CLT Application</p></th>
+<th class="head"><p>Benefit</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A/B Testing</p></td>
+<td><p>Compare group means</p></td>
+<td><p>Reliable feature rollout decisions</p></td>
+</tr>
+<tr class="row-odd"><td><p>Quality Control</p></td>
+<td><p>Monitor process averages</p></td>
+<td><p>Early anomaly detection</p></td>
+</tr>
+<tr class="row-even"><td><p>Risk Modeling</p></td>
+<td><p>Estimate portfolio returns</p></td>
+<td><p>Robust financial predictions</p></td>
+</tr>
+<tr class="row-odd"><td><p>Healthcare</p></td>
+<td><p>Analyze treatment effects</p></td>
+<td><p>Evidence-based medical decisions</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="practical-implementation-guide">
+<h2>3. Practical Implementation Guide<a class="headerlink" href="#practical-implementation-guide" title="Link to this heading">#</a></h2>
+<section id="step-1-data-collection">
+<h3>Step 1: Data Collection<a class="headerlink" href="#step-1-data-collection" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Ensure a minimum sample size (e.g., n ≥ 30 per group).</p></li>
+<li><p>Use random sampling to avoid bias.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="step-2-distribution-analysis">
+<h3>Step 2: Distribution Analysis<a class="headerlink" href="#step-2-distribution-analysis" title="Link to this heading">#</a></h3>
+<p>Visualize the distribution of sample means to observe the CLT in action.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Simulate population data (exponential distribution)</span>
+<span class="n">population</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+
+<span class="c1"># Generate sample means (n=500, repeated 1000 times)</span>
+<span class="n">sample_means</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="mi">500</span><span class="p">))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)]</span>
+
+<span class="c1"># Plot distributions</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Raw Data Distribution (Exponential)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">sample_means</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of Sample Means (Normal)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Explanation</strong>: The left plot shows the skewed population data, while the right plot shows the sample means are normally distributed, illustrating the CLT.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="step-3-statistical-validation">
+<h3>Step 3: Statistical Validation<a class="headerlink" href="#step-3-statistical-validation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Use the Shapiro-Wilk test to check for normality.</p></li>
+<li><p>Inspect QQ-plots for visual confirmation.</p></li>
+<li><p>Calculate the standard error to quantify precision.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="case-study-feline-food-preference">
+<h2>4. Case Study: Feline Food Preference<a class="headerlink" href="#case-study-feline-food-preference" title="Link to this heading">#</a></h2>
+<section id="experimental-design">
+<h3>Experimental Design<a class="headerlink" href="#experimental-design" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Population</strong>: All domestic cats in Metro City.</p></li>
+<li><p><strong>Sample</strong>: 200 randomly selected cats.</p></li>
+<li><p><strong>Procedure</strong>: Blind taste test with Brand A vs Brand B.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="results-analysis">
+<h3>Results Analysis<a class="headerlink" href="#results-analysis" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Brand</p></th>
+<th class="head"><p>Preferences</p></th>
+<th class="head"><p>Proportion</p></th>
+<th class="head"><p>95% CI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>132</p></td>
+<td><p>66%</p></td>
+<td><p>(59.2%, 72.8%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>68</p></td>
+<td><p>34%</p></td>
+<td><p>(27.2%, 40.8%)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>Confidence Interval Calculation</strong>: The 95% CI for Brand A is calculated using the formula for proportions: ( \hat{p} \pm 1.96 \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} ), where ( \hat{p} = 0.66 ) and ( n = 200 ).</p></li>
+<li><p><strong>Conclusion</strong>: The p-value for the difference in preferences is less than 0.001, providing strong evidence that cats prefer Brand A.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="case-study-model-performance-evaluation">
+<h2>5. Case Study: Model Performance Evaluation<a class="headerlink" href="#case-study-model-performance-evaluation" title="Link to this heading">#</a></h2>
+<section id="experimental-setup">
+<h3>Experimental Setup<a class="headerlink" href="#experimental-setup" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Task</strong>: Image classification on CIFAR-10.</p></li>
+<li><p><strong>Model A</strong>: 88.2% accuracy (n=10,000 samples).</p></li>
+<li><p><strong>Model B</strong>: 87.5% accuracy (n=10,000 samples).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="clt-application">
+<h3>CLT Application<a class="headerlink" href="#clt-application" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p><strong>Calculate standard errors</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SE_A = √(0.882*(1-0.882)/10000) ≈ 0.0032
+SE_B = √(0.875*(1-0.875)/10000) ≈ 0.0033
+</pre></div>
+</div>
+</li>
+<li><p><strong>Construct 95% confidence intervals</strong>:</p>
+<ul class="simple">
+<li><p>Model A: 88.2% ± 1.96 × 0.32% → (87.57%, 88.83%)</p></li>
+<li><p>Model B: 87.5% ± 1.96 × 0.33% → (86.85%, 88.15%)</p></li>
+</ul>
+</li>
+<li><p><strong>Conclusion</strong>: The confidence intervals overlap, suggesting no statistically significant difference in performance between the two models.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-limitations-and-solutions">
+<h2>6. Key Limitations and Solutions<a class="headerlink" href="#key-limitations-and-solutions" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Limitation</p></th>
+<th class="head"><p>Impact on ML</p></th>
+<th class="head"><p>Mitigation Strategy</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Small Sample Sizes</p></td>
+<td><p>Unreliable confidence intervals</p></td>
+<td><p>Use bootstrapping or larger samples</p></td>
+</tr>
+<tr class="row-odd"><td><p>Correlated Data</p></td>
+<td><p>Invalidates independence assumption</p></td>
+<td><p>Use time-series methods or adjust for correlation</p></td>
+</tr>
+<tr class="row-even"><td><p>High Dimensionality</p></td>
+<td><p>Slower convergence to normality</p></td>
+<td><p>Apply dimensionality reduction techniques</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>Additional Note</strong>: For small samples or non-normal data, consider non-parametric methods or Bayesian approaches.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="hypothesis-testing">
+<h1>Hypothesis Testing<a class="headerlink" href="#hypothesis-testing" title="Link to this heading">#</a></h1>
+<p>Hypothesis testing is a statistical method used to determine whether a claim about data is true or false. It helps us decide if observed patterns are real or just due to random chance.</p>
+<hr class="docutils" />
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>Hypothesis testing evaluates claims by comparing data to a baseline assumption. For example, imagine your friend says, “This coin always lands on heads!” You flip it 10 times and get 9 heads. Is this luck, or is the coin biased? Hypothesis testing gives you the tools to find out.</p>
+<section id="scenario">
+<h3>Scenario<a class="headerlink" href="#scenario" title="Link to this heading">#</a></h3>
+<p>Your friend claims: <em>“This coin is magic! It <em>always</em> lands on Heads!”</em><br />
+You’re skeptical. To test this claim, you flip the coin 10 times.<br />
+<strong>Result</strong>: It lands on Heads 9 times and Tails 1 time.</p>
+</section>
+<section id="investigation-steps">
+<h3>Investigation Steps<a class="headerlink" href="#investigation-steps" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Null Hypothesis (H₀):</strong> “The coin is normal (50/50 chance)”</p></li>
+<li><p><strong>Alternative Hypothesis (H₁):</strong> “The coin is biased toward Heads”</p></li>
+<li><p><strong>Evidence:</strong> 9 Heads in 10 flips</p></li>
+<li><p><strong>p-value Calculation:</strong> Probability of getting ≥9 Heads if H₀ is true = <strong>1.07%</strong></p></li>
+<li><p><strong>Decision:</strong> Since 1.07% &lt; 5% significance level, reject H₀</p></li>
+</ol>
+<p><em>Conclusion: The coin is likely biased.</em></p>
+</section>
+<section id="how-it-works">
+<h3>How It Works<a class="headerlink" href="#how-it-works" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>State a default assumption</strong> (e.g., “The coin is fair”).</p></li>
+<li><p><strong>Test a claim</strong> (e.g., “The coin favors heads”).</p></li>
+<li><p><strong>Calculate the odds</strong> of your results happening by chance.</p></li>
+<li><p><strong>Decide</strong> if the evidence supports the claim.</p></li>
+</ol>
+<p>In the coin example, the chance of getting 9+ heads with a fair coin is 1.07%. Since this is below a common threshold (5%), we conclude the coin is likely biased.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="hypothesis-testing-workflow">
+<h2>Hypothesis Testing Workflow<a class="headerlink" href="#hypothesis-testing-workflow" title="Link to this heading">#</a></h2>
+<p>Here’s a simple flowchart of the process:</p>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+A[State Hypotheses] --&gt; B[Choose Test]
+B --&gt; C[Set Threshold (α)]
+C --&gt; D[Collect Data]
+D --&gt; E[Calculate Statistic]
+E --&gt; F[Find p-value]
+F --&gt; G{Decision}
+G --&gt;|p &lt; α| H[Reject Default]
+G --&gt;|p ≥ α| I[Keep Default]
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="key-concepts">
+<h2>Key Concepts<a class="headerlink" href="#key-concepts" title="Link to this heading">#</a></h2>
+<p>These terms are the building blocks of hypothesis testing:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Definition</p></th>
+<th class="head"><p>Example (ML Context)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Null Hypothesis (H₀)</strong></p></td>
+<td><p>The default assumption (no effect)</p></td>
+<td><p>“This model’s accuracy is average.”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Alternative Hypothesis (H₁)</strong></p></td>
+<td><p>The claim you’re testing</p></td>
+<td><p>“This model’s accuracy is above average.”</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>p-value</strong></p></td>
+<td><p>Chance of seeing your data if H₀ is true</p></td>
+<td><p>p=0.03 (3% chance if no effect)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Significance Level (α)</strong></p></td>
+<td><p>Cutoff for rejecting H₀ (usually 0.05 or 5%)</p></td>
+<td><p>α=0.05</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h2>🧪 Common Statistical Tests<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Different tests fit different situations. Here’s a rundown with ML relevance:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Test</p></th>
+<th class="head"><p>Use Case</p></th>
+<th class="head"><p>ML Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Z-Test</strong></p></td>
+<td><p>Compare a sample to a known population</p></td>
+<td><p>“Is this model’s error lower than 0.1?”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>T-Test</strong></p></td>
+<td><p>Compare means with small samples</p></td>
+<td><p>“Does Model A beat Model B on accuracy?”</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chi-Square</strong></p></td>
+<td><p>Analyze categorical data</p></td>
+<td><p>“Do predictions match true labels?”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>ANOVA</strong></p></td>
+<td><p>Compare 3+ groups</p></td>
+<td><p>“Which of 5 models performs best?”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="details">
+<h3>Details<a class="headerlink" href="#details" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Z-Test</strong>: Use when you know the population standard deviation or have a large sample (n ≥ 30). Common in ML for validating model performance against benchmarks.</p></li>
+<li><p><strong>T-Test</strong>: Best for small samples (n &lt; 30) with unknown variance. Useful in DL when comparing two models on limited test data.</p></li>
+<li><p><strong>Chi-Square</strong>: Tests relationships in categorical data, like label distributions in classification tasks.</p></li>
+<li><p><strong>ANOVA</strong>: Compares multiple groups, such as testing different neural network architectures.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="error-types">
+<h2>Error Types<a class="headerlink" href="#error-types" title="Link to this heading">#</a></h2>
+<p>Mistakes happen in hypothesis testing. Here’s what they mean:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Error Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>ML Consequence</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Type I (False Positive)</strong></p></td>
+<td><p>Wrongly reject H₀</p></td>
+<td><p>“This model is better” (but it’s not)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Type II (False Negative)</strong></p></td>
+<td><p>Miss a true effect</p></td>
+<td><p>“No difference” (but there is one)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In ML, a Type I error might lead you to deploy a weak model, while a Type II error might make you overlook a strong one.</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Practical Implementation Guide<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Follow these steps to test a hypothesis:</p>
+<ol class="arabic simple">
+<li><p><strong>Set Hypotheses</strong></p>
+<ul class="simple">
+<li><p>H₀: No effect (e.g., “Model accuracy = 80%”)</p></li>
+<li><p>H₁: Effect exists (e.g., “Accuracy &gt; 80%”)</p></li>
+</ul>
+</li>
+<li><p><strong>Pick a Test</strong></p>
+<ul class="simple">
+<li><p>Small sample? Use T-test.</p></li>
+<li><p>Categories? Use Chi-Square.</p></li>
+<li><p>Many groups? Use ANOVA.</p></li>
+</ul>
+</li>
+<li><p><strong>Choose α</strong></p>
+<ul class="simple">
+<li><p>Typically 0.05 (5% risk of error).</p></li>
+</ul>
+</li>
+<li><p><strong>Calculate Statistic</strong></p>
+<ul class="simple">
+<li><p>Z-score: ( Z = \frac{\text{sample mean} - \text{population mean}}{\text{std dev} / \sqrt{n}} )</p></li>
+<li><p>T-score: Similar, but uses sample standard deviation.</p></li>
+</ul>
+</li>
+<li><p><strong>Decide</strong></p>
+<ul class="simple">
+<li><p>p &lt; α: Reject H₀ (evidence supports H₁).</p></li>
+<li><p>p ≥ α: Stick with H₀ (not enough evidence).</p></li>
+</ul>
+</li>
+</ol>
+<section id="code-example-z-test">
+<h3>Code Example: Z-Test<a class="headerlink" href="#code-example-z-test" title="Link to this heading">#</a></h3>
+<p>Test if a model’s average error (0.12) differs from a target (0.10) with known standard deviation (0.05, n=100):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">sample_mean</span> <span class="o">=</span> <span class="mf">0.12</span>
+<span class="n">pop_mean</span> <span class="o">=</span> <span class="mf">0.10</span>
+<span class="n">pop_std</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">z_score</span> <span class="o">=</span> <span class="p">(</span><span class="n">sample_mean</span> <span class="o">-</span> <span class="n">pop_mean</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">pop_std</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">p_value</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">z_score</span><span class="p">)))</span>  <span class="c1"># Two-tailed</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Z-score: </span><span class="si">{</span><span class="n">z_score</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, p-value: </span><span class="si">{</span><span class="n">p_value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Output: Z-score: 4.00, p-value: 0.0001</span>
+</pre></div>
+</div>
+<p>Since p &lt; 0.05, the error is significantly different from 0.10.</p>
+</section>
+<section id="code-example-t-test">
+<h3>Code Example: T-Test<a class="headerlink" href="#code-example-t-test" title="Link to this heading">#</a></h3>
+<p>Compare a DL model’s accuracy (sample mean = 0.85, n=20) to a baseline (0.80):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">accuracies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>  <span class="c1"># Simulated data</span>
+<span class="n">t_stat</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">accuracies</span><span class="p">,</span> <span class="mf">0.80</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;T-statistic: </span><span class="si">{</span><span class="n">t_stat</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, p-value: </span><span class="si">{</span><span class="n">p_value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Example Output: T-statistic: 2.50, p-value: 0.0213</span>
+</pre></div>
+</div>
+<p>p &lt; 0.05 suggests the model beats the baseline.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="case-study-1-z-test-exam-scores">
+<h2>Case Study 1: Z-Test (Exam Scores)<a class="headerlink" href="#case-study-1-z-test-exam-scores" title="Link to this heading">#</a></h2>
+<p>A teacher claims that the mean score of students in his class is greater than 82, with a standard deviation of 20. A sample of 87 students had a mean score of 90. Test the claim at a 5% significance level.</p>
+<p><strong>Problem</strong>: A teacher claims their class (n=87, mean=90, std=20) beats the national average (82). Test at α=0.05.</p>
+<p><strong>Steps</strong>:</p>
+<ol class="arabic simple">
+<li><p>H₀: Mean ≤ 82<br />
+H₁: Mean &gt; 82</p></li>
+<li><p>Z = ( \frac{90 - 82}{20 / \sqrt{87}} = 3.73 )</p></li>
+<li><p>p-value = 0.0001 &lt; 0.05</p></li>
+</ol>
+<p><strong>Conclusion</strong>: Reject H₀. The class outperforms the average.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">z_stat</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span> <span class="o">-</span> <span class="mi">82</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">20</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">87</span><span class="p">))</span>
+<span class="n">p_value</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z_stat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p-value: </span><span class="si">{</span><span class="n">p_value</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: 0.000096</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="case-study-2-t-test-product-weights">
+<h2>Case Study 2: T-Test (Product Weights)<a class="headerlink" href="#case-study-2-t-test-product-weights" title="Link to this heading">#</a></h2>
+<p>A manufacturer claims the average weight of a bag of potato chips is 150 grams. A sample of 25 bags has an average weight of 148 grams with a standard deviation of 5 grams. Test the claim at a 5% significance level.</p>
+<p><strong>Problem</strong>: Are potato chip bags (n=25, mean=148g, std=5g) under the claimed 150g? Use α=0.05.</p>
+<p><strong>Steps</strong>:</p>
+<ol class="arabic simple">
+<li><p>H₀: Mean = 150<br />
+H₁: Mean &lt; 150</p></li>
+<li><p>T = ( \frac{148 - 150}{5 / \sqrt{25}} = -2.0 )</p></li>
+<li><p>p-value = 0.0285 &lt; 0.05</p></li>
+</ol>
+<p><strong>Conclusion</strong>: Reject H₀. Bags are underweight.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t_stat</span> <span class="o">=</span> <span class="p">(</span><span class="mi">148</span> <span class="o">-</span> <span class="mi">150</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">p_value</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">t_stat</span><span class="p">,</span> <span class="n">df</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p-value: </span><span class="si">{</span><span class="n">p_value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: 0.0285</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="case-study-3-chi-square-dice-fairness">
+<h2>Case Study 3: Chi-Square (Dice Fairness)<a class="headerlink" href="#case-study-3-chi-square-dice-fairness" title="Link to this heading">#</a></h2>
+<p><strong>Problem</strong>: Is a die fair? Rolls (n=120): [22, 17, 20, 26, 22, 13].</p>
+<p><strong>Steps</strong>:</p>
+<ol class="arabic simple">
+<li><p>H₀: Die is fair (expected = 20 per face)<br />
+H₁: Die is biased</p></li>
+<li><p>( \chi^2 = \sum \frac{(\text{observed} - 20)^2}{20} = 5.1 )</p></li>
+<li><p>p-value = 0.404 &gt; 0.05</p></li>
+</ol>
+<p><strong>Conclusion</strong>: Fail to reject H₀. No evidence of bias.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">observed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="n">chi2</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">chisquare</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Chi-Square: </span><span class="si">{</span><span class="n">chi2</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">, p-value: </span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: 5.1, 0.404</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="advanced-inferential-methods">
+<h2><strong>4. Advanced Inferential Methods</strong><a class="headerlink" href="#advanced-inferential-methods" title="Link to this heading">#</a></h2>
+<section id="a-analysis-of-variance-anova">
+<h3><strong>a. Analysis of Variance (ANOVA)</strong><a class="headerlink" href="#a-analysis-of-variance-anova" title="Link to this heading">#</a></h3>
+<p>Compare means across multiple groups.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Three groups of sales</span>
+<span class="n">group1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">group2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">105</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">group3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">110</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="c1"># One-way ANOVA</span>
+<span class="n">f_stat</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">f_oneway</span><span class="p">(</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2</span><span class="p">,</span> <span class="n">group3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ANOVA:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;F-statistic:&quot;</span><span class="p">,</span> <span class="n">f_stat</span><span class="p">)</span>  <span class="c1"># Output: e.g., 4.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;p-value:&quot;</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>     <span class="c1"># Output: e.g., 0.013</span>
+<span class="c1"># Insight: p &lt; 0.05, reject H0 (at least one group differs)</span>
+</pre></div>
+</div>
+</section>
+<section id="b-regression-analysis">
+<h3><strong>b. Regression Analysis</strong><a class="headerlink" href="#b-regression-analysis" title="Link to this heading">#</a></h3>
+<p>Infer relationships between variables.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
+
+<span class="c1"># Add predictor (e.g., advertising spend)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Ad_Spend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Ad_Spend&quot;</span><span class="p">])</span>  <span class="c1"># Add intercept</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Store_A&quot;</span><span class="p">]</span>
+
+<span class="c1"># Linear regression</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+<span class="c1"># Output: Coefficients, p-values, R-squared, etc.</span>
+<span class="c1"># Insight: Check p-values for significance of Ad_Spend</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="pro-tips">
+<h2>Pro Tips<a class="headerlink" href="#pro-tips" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Report p-values</strong>: Don’t just say “significant.”</p></li>
+<li><p><strong>Check Effect Size</strong>: A tiny p-value doesn’t always mean a big impact.</p></li>
+<li><p><strong>Verify Assumptions</strong>: Tests assume normality or equal variance—check your data.</p></li>
+<li><p><strong>Adjust for Multiple Tests</strong>: Use corrections like Bonferroni in ML experiments.</p></li>
+<li><p><strong>Use Confidence Intervals</strong>: They show a range of plausible values, not just a yes/no.</p></li>
+</ul>
+<p><em>“Statistical thinking will one day be as necessary for efficient citizenship as the ability to read and write.”</em> - H.G. Wells</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\0_maths"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1_descriptive.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Descriptive Statistics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5_calculus.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Calculus</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Inferential Statistics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Inferential Statistics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-components">Core Components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-objectives"><strong>Key Objectives</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-statistical-concepts">Key Statistical Concepts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-analysis">1. Population vs Sample Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-management">2. Uncertainty Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing-framework">3. Hypothesis Testing Framework</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-analysis-in-modeling">4. Error Analysis in Modeling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#essential-statistical-tools">Essential Statistical Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confidence-interval-construction">1. Confidence Interval Construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-statistical-tests">2. Common Statistical Tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-central-limit-theorem-clt-in-machine-learning">The Central Limit Theorem (CLT) in Machine Learning</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-principles-of-clt">1. Core Principles of CLT</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-statement">Theorem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-conditions">Key Conditions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-matters">Why It Matters</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-clt-matters-in-ai-ml">2. Why CLT Matters in AI/ML</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#foundational-applications">Foundational Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#real-world-impact">Real-World Impact</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-implementation-guide">3. Practical Implementation Guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-data-collection">Step 1: Data Collection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-distribution-analysis">Step 2: Distribution Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-statistical-validation">Step 3: Statistical Validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-feline-food-preference">4. Case Study: Feline Food Preference</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-design">Experimental Design</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-analysis">Results Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-model-performance-evaluation">5. Case Study: Model Performance Evaluation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-setup">Experimental Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clt-application">CLT Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-limitations-and-solutions">6. Key Limitations and Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing">Hypothesis Testing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario">Scenario</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#investigation-steps">Investigation Steps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works">How It Works</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing-workflow">Hypothesis Testing Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts">Key Concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">🧪 Common Statistical Tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details">Details</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-types">Error Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Practical Implementation Guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-example-z-test">Code Example: Z-Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-example-t-test">Code Example: T-Test</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-1-z-test-exam-scores">Case Study 1: Z-Test (Exam Scores)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-2-t-test-product-weights">Case Study 2: T-Test (Product Weights)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-3-chi-square-dice-fairness">Case Study 3: Chi-Square (Dice Fairness)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-inferential-methods"><strong>4. Advanced Inferential Methods</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-analysis-of-variance-anova"><strong>a. Analysis of Variance (ANOVA)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-regression-analysis"><strong>b. Regression Analysis</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pro-tips">Pro Tips</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gajanesh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright © 2025 Gajanesh. All rights reserved..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
