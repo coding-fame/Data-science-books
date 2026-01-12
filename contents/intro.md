@@ -1,59 +1,57 @@
 
----
-
 # Machine Learning
-- [ML: Essential Concepts](ML.md)
+- [ML: Essential Concepts](ML_Concepts.md)
 
 ---
 
 ## Mathematics
-- [Math: Essential Maths](0_maths/0_essential.ipynb)
-- [1: Fundamentals of Statistics](0_maths/1_statistics_fundamentals.ipynb)
-  - [1: Description Statistics](0_maths/1_descriptive.ipynb)
-  - [1.2: Measures of Spread](0_maths/3_inferential.ipynb)
-- [2: Probability](0_maths/2_probability.ipynb)
-- [3: Inferential Statistics](0_maths/3_inferential.ipynb)
-- [4: Linear Algebra](0_maths/4_linear_algebra.ipynb)
-- [5: Calculus](0_maths/5_calculus.ipynb)
+- [Math: Essential Maths](0_maths/0_essential.md)
+- [1: Fundamentals of Statistics](0_maths/1_statistics_fundamentals.md)
+  - [1: Description Statistics](0_maths/1_descriptive.md)
+  - [1.2: Measures of Spread](0_maths/3_inferential.md)
+- [2: Probability](0_maths/2_probability.md)
+- [3: Inferential Statistics](0_maths/3_inferential.md)
+- [4: Linear Algebra](0_maths/4_linear_algebra.md)
+- [5: Calculus](0_maths/5_calculus.md)
 
 ---
 
 ### Data Visualization
-- [2: Data Visualization](2_pandas/3_visualization.ipynb)
+- [2: Data Visualization](2_pandas/3_visualization.md)
 
 ---
 
 ## Python for Machine Learning
-- [1: Python Basics](1_python/1_basics.ipynb)
-- [2: Advanced Python](1_python/2_advance.ipynb)
-- [3: Data Structures](1_python/3_data_structures.ipynb)
-- [4: Modules and Packages](1_python/3_data_structures.ipynb)
-- [5: Functions](1_python/5_functions.ipynb)
-- [6: Object-Oriented Programming (OOPs)](1_python/6_oop.ipynb)
-- [7: Error Handling](1_python/7_error_handling.ipynb)
-- [8: Exceptions Handling](1_python/8_exceptions.ipynb)
-- [9: Regex](1_python/9_regex.ipynb)
+- [1: Python Basics](1_python/1_basics.md)
+- [2: Advanced Python](1_python/2_advance.md)
+- [3: Data Structures](1_python/3_data_structures.md)
+- [4: Modules and Packages](1_python/3_data_structures.md)
+- [5: Functions](1_python/5_functions.md)
+- [6: Object-Oriented Programming (OOPs)](1_python/6_oop.md)
+- [7: Error Handling](1_python/7_error_handling.md)
+- [8: Exceptions Handling](1_python/8_exceptions.md)
+- [9: Regex](1_python/9_regex.md)
 
 ---
 
 ## Pandas for Data Analysis
-- [1: Series](2_pandas/1_series.ipynb)
-- [2: Pandas DataFrame](2_pandas/2_dataframes.ipynb)
+- [1: Series](2_pandas/1_series.md)
+- [2: Pandas DataFrame](2_pandas/2_dataframes.md)
 
 ---
 
 ## NumPy for Numerical Computing
-- [1: NumPy for Numerical Computing](2_numpy/1_numpy.ipynb)
+- [1: NumPy for Numerical Computing](2_numpy/1_numpy.md)
 
 ---
 
 ## Exploratory Data Analysis (EDA)
-- [Exploratory Data Analysis](2_pandas/4_eda.ipynb)
+- [Exploratory Data Analysis](2_pandas/4_eda.md)
 
 ---
 
 ## Feature Engineering
-- [Feature Engineering](2_pandas/5_feature_engineering.ipynb)
+- [Feature Engineering](2_pandas/5_feature_engineering.md)
 
 ---
 
@@ -145,4 +143,4 @@
 - [3: MLflow](6_interview/mlflow.md)
 - [4: YAML](6_interview/yaml.md)
 
----
+
